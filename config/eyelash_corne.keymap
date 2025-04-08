@@ -62,7 +62,7 @@
                          &mt LCTRL LS(N8)  &kp LGUI  &lt 3 SPACE                                                &lt 3 ENTER  &kp RALT  &kp RALT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp LS(LEFT) LS(RIGHT)>;
         };
 
         lower_layer {
@@ -74,7 +74,7 @@
                                          &trans  &trans  &trans                                                                          &trans     &kp KP_NUMBER_0  &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         raise_layer {
