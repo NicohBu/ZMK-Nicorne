@@ -38,9 +38,9 @@
         bt_encoder: bt_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&bt BT_PRV>, <&bt BT_NXT>;
+            bindings = <&bt BT_NXT>, <&bt BT_PRV>;
 
-            tap-ms = <50>;
+            tap-ms = <30>;
         };
 
         cw_mod: caps_word_mod {
@@ -70,7 +70,7 @@
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+        bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
 
         tap-ms = <100>;
     };
@@ -116,7 +116,7 @@
                          &mt LCTRL LS(N8)  &kp LGUI  &lt 3 SPACE                                               &lt 3 ENTER  &kp RALT  &lt 1 DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp LS(LEFT) LS(RIGHT)>;
+            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
         };
 
         lower_layer {
