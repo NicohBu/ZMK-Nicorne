@@ -46,8 +46,8 @@ layers:
   - {t: Sft+8, h: '$$mdi:apple-keyboard-control$$', s: Sft+*}
   - LGUI
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - {t: '$$mdi:keyboard-return$$', h: Fn}
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:keyboard-space$$', h: Fn}
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
   NUMBER:
   - {type: held}
