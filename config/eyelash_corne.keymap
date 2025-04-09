@@ -40,7 +40,7 @@
             #sensor-binding-cells = <0>;
             bindings = <&bt BT_PRV>, <&bt BT_NXT>;
 
-            tap-ms = <220>;
+            tap-ms = <50>;
         };
 
         cw_mod: caps_word_mod {
@@ -146,10 +146,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&kp F12      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                       &rgb_ug RGB_BRI                   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&bt BT_NXT   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none   &none   &none   &none   &none    &none
-&bootloader  &out OUT_USB  &out OUT_BLE  &none         &none         &none         &bt BT_CLR                     &rgb_ug RGB_BRD                   &none   &none   &none   &none   &none    &bootloader
-                                         &none         &none         &none                                                                          &none   &none   &none
+&kp F12      &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                       &rgb_ug RGB_BRI                   &kp F6  &kp F7        &kp F8  &kp F9  &kp F10  &kp F11
+&bt BT_NXT   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none   &none         &none   &none   &none    &none
+&bootloader  &out OUT_USB  &out OUT_BLE  &none         &none         &none         &bt BT_CLR                     &rgb_ug RGB_BRD                   &none   &none         &none   &none   &none    &bootloader
+                                         &none         &none         &none                                                                          &none   &kp LEFT_ALT  &none
             >;
 
             sensor-bindings = <&bt_encoder>;
