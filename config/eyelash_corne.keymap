@@ -110,10 +110,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&lt 1 ESC  &kp Q  &kp W  &kp E             &kp R     &kp T                                &kp UP               &kp Y        &kp U     &kp I      &kp O    &kp P     &kp BSPC
-&lt 2 TAB  &kp A  &kp S  &kp D             &kp F     &kp G                      &kp LEFT  &kp HOME  &kp RIGHT  &kp H        &kp J     &kp K      &kp L    &kp SEMI  &mt KP_ASTERISK LBKT
-&td0       &kp Z  &kp X  &kp C             &kp V     &kp B        &kp C_MUTE              &kp DOWN             &kp N        &kp M     &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT ENTER
-                         &mt LCTRL LS(N8)  &kp LGUI  &lt 3 SPACE                                               &lt 3 ENTER  &kp RALT  &lt 1 DEL
+&lt 1 ESC  &kp Q  &kp W  &kp E             &kp R     &kp T                                &kp UP               &kp Y        &kp U           &kp I      &kp O    &kp P     &kp BSPC
+&lt 2 TAB  &kp A  &kp S  &kp D             &kp F     &kp G                      &kp LEFT  &kp HOME  &kp RIGHT  &kp H        &kp J           &kp K      &kp L    &kp SEMI  &mt KP_ASTERISK LBKT
+&td0       &kp Z  &kp X  &kp C             &kp V     &kp B        &kp C_MUTE              &kp DOWN             &kp N        &kp M           &kp COMMA  &kp DOT  &kp FSLH  &mt RSHIFT ENTER
+                         &mt LCTRL LS(N8)  &kp LGUI  &lt 3 SPACE                                               &lt 3 SPACE  &mt RALT ENTER  &lt 1 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
