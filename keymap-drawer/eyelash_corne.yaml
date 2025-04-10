@@ -38,7 +38,7 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:arrow-down-bold$$
   - N
-  - M
+  - {t: M, h: '&oneshot C_AL_MAIL'}
   - {t: ',', h: '&oneshot NUBS', s: <}
   - {t: ., h: '&oneshot LS(NUBS)', s: '>'}
   - {t: /, s: '?'}
@@ -77,7 +77,7 @@ layers:
   - KP 6
   - KP DIVIDE
   - KP ASTERISK
-  - KP NUMLOCK
+  - {t: KP NUMLOCK, h: '&oneshot K_CALC'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
