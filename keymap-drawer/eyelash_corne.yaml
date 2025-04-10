@@ -12,10 +12,10 @@ layers:
   - U
   - I
   - O
-  - P
+  - {t: P, h: Sft+Gui+S}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
-  - A
+  - {t: A, h: Ctl+A}
   - S
   - D
   - {t: F, h: Ctl+F}
