@@ -120,9 +120,9 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&lt 1 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                          &kp UP               &shortcut LC(Y) Y  &kp U                 &kp I                 &kp O                   &kp P     &kp BSPC
-&lt 2 TAB  &kp A              &kp S              &kp D              &shortcut LC(F) F  &kp G                            &kp LEFT  &kp HOME  &kp RIGHT  &kp H              &shortcut LEFT_ALT J  &kp K                 &kp L                   &kp SEMI  &shortcut KP_ASTERISK LBKT
-&td0       &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp C_MUTE              &kp DOWN             &kp N              &kp M                 &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH  &mt RSHIFT ENTER
+&lt 1 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                          &kp UP               &shortcut LC(Y) Y  &kp U                 &kp I                 &kp O                   &shortcut LS(LG(S)) P  &kp BSPC
+&lt 2 TAB  &shortcut LC(A) A  &kp S              &kp D              &shortcut LC(F) F  &kp G                            &kp LEFT  &kp HOME  &kp RIGHT  &kp H              &shortcut LEFT_ALT J  &kp K                 &kp L                   &kp SEMI               &shortcut KP_ASTERISK LBKT
+&td0       &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp C_MUTE              &kp DOWN             &kp N              &kp M                 &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH               &mt RSHIFT ENTER
                                                  &kp LCTRL          &kp LGUI           &lt 3 SPACE                                                     &lt 3 SPACE        &mt RALT ENTER        &lt 1 DEL
             >;
 
