@@ -8,7 +8,7 @@ layers:
   - R
   - {t: T, h: Ctl+T}
   - $$mdi:arrow-up-bold$$
-  - Y
+  - {t: Y, h: Ctl+Y}
   - U
   - I
   - O
@@ -39,8 +39,8 @@ layers:
   - $$mdi:arrow-down-bold$$
   - N
   - M
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - {t: ',', h: NUBS, s: <}
+  - {t: ., h: Sft+NUBS, s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-control$$
@@ -57,11 +57,11 @@ layers:
   - '&as N4'
   - '&as N5'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - KP PLUS
   - KP 7
   - KP 8
   - KP 9
   - KP SUBTRACT
+  - KP PLUS
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&as N6'
@@ -72,11 +72,11 @@ layers:
   - {t: '$$mdi:skip-previous$$', h: RW}
   - $$mdi:play-pause$$
   - {t: '$$mdi:skip-next$$', h: FAST FORWARD}
-  - KP ASTERISK
   - KP 4
   - KP 5
   - KP 6
   - KP DIVIDE
+  - KP ASTERISK
   - KP NUMLOCK
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -86,12 +86,12 @@ layers:
   - {t: '=', s: +}
   - $$mdi:volume-off$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - KP 0
   - KP 1
   - KP 2
   - KP 3
-  - KP DOT
-  - KP ENTER
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -114,38 +114,38 @@ layers:
   - {t: '=', s: +}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - HOME
+  - {t: HOME, h: Ctl+HOME}
   - $$mdi:arrow-up-bold$$
-  - END
-  - $$mdi:pan-up$$
+  - {t: END, h: Ctl+END}
+  - PG UP
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - PG UP
-  - $
-  - '%'
-  - ^
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - .
   - '#'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '&as NUBS'
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - $$mdi:pan-down$$
+  - PG DN
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - PG DN
-  - '!'
-  - '@'
-  - '#'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - Sft+.
   - Sft+#
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - )
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - F12
