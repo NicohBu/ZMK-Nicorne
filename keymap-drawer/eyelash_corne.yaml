@@ -6,7 +6,7 @@ layers:
   - W
   - E
   - R
-  - {t: Ctl+T, h: T}
+  - {t: T, h: Ctl+T}
   - $$mdi:arrow-up-bold$$
   - Y
   - U
@@ -18,22 +18,22 @@ layers:
   - A
   - S
   - D
-  - {t: Ctl+F, h: F}
+  - {t: F, h: Ctl+F}
   - G
   - $$mdi:arrow-left-bold$$
   - HOME
   - $$mdi:arrow-right-bold$$
   - H
-  - {t: '$$mdi:apple-keyboard-option$$', h: J}
+  - {t: J, h: '$$mdi:apple-keyboard-option$$'}
   - K
   - L
   - {t: ;, s: ':'}
   - {t: '[', h: KP ASTERISK, s: '{'}
   - '&td0'
-  - {t: Ctl+Z, h: Z}
-  - {t: Ctl+X, h: X}
-  - {t: Ctl+C, h: C}
-  - {t: Ctl+V, h: V}
+  - {t: Z, h: Ctl+Z}
+  - {t: X, h: Ctl+X}
+  - {t: C, h: Ctl+C}
+  - {t: V, h: Ctl+V}
   - B
   - $$mdi:volume-off$$
   - $$mdi:arrow-down-bold$$
@@ -43,7 +43,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: Sft+8, h: '$$mdi:apple-keyboard-control$$', s: Sft+*}
+  - $$mdi:apple-keyboard-control$$
   - LGUI
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
