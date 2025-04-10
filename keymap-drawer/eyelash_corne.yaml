@@ -6,48 +6,48 @@ layers:
   - W
   - E
   - R
-  - {t: T, h: '&os LC(T)'}
+  - {t: T, h: '&oneshot LC(T)'}
   - $$mdi:arrow-up-bold$$
-  - {t: Y, h: '&os LC(Y)'}
+  - {t: Y, h: '&oneshot LC(Y)'}
   - U
   - I
   - O
-  - {t: P, h: '&os LS(LG(S))'}
+  - {t: P, h: Sft+Gui+S}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
-  - {t: A, h: '&os LC(A)'}
+  - {t: A, h: '&oneshot LC(A)'}
   - S
   - D
-  - {t: F, h: '&os LC(F)'}
+  - {t: F, h: '&oneshot LC(F)'}
   - G
   - $$mdi:arrow-left-bold$$
   - HOME
   - $$mdi:arrow-right-bold$$
   - H
-  - {t: J, h: '&os LEFT_ALT'}
+  - {t: J, h: '&oneshot LEFT_ALT'}
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '[', h: '&os KP_ASTERISK', s: '{'}
+  - {t: '[', h: '&oneshot KP_ASTERISK', s: '{'}
   - '&td0'
-  - {t: Z, h: '&os LC(Z)'}
-  - {t: X, h: '&os LC(X)'}
-  - {t: C, h: '&os LC(C)'}
-  - {t: V, h: '&os LC(V)'}
+  - {t: Z, h: '&oneshot LC(Z)'}
+  - {t: X, h: '&oneshot LC(X)'}
+  - {t: C, h: '&oneshot LC(C)'}
+  - {t: V, h: '&oneshot LC(V)'}
   - B
   - $$mdi:volume-off$$
   - $$mdi:arrow-down-bold$$
   - N
   - M
-  - {t: ',', h: '&os NUBS', s: <}
-  - {t: ., h: '&os LS(NUBS)', s: '>'}
+  - {t: ',', h: '&oneshot NUBS', s: <}
+  - {t: ., h: '&oneshot LS(NUBS)', s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-control$$
   - LGUI
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-option$$'}
+  - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
   NUMBER:
   - {type: held}
@@ -69,9 +69,9 @@ layers:
   - '&as N8'
   - '&as N9'
   - '&as N0'
-  - {t: '$$mdi:skip-previous$$', h: '&os C_RW'}
+  - {t: '$$mdi:skip-previous$$', h: '&oneshot C_RW'}
   - $$mdi:play-pause$$
-  - {t: '$$mdi:skip-next$$', h: '&os C_FAST_FORWARD'}
+  - {t: '$$mdi:skip-next$$', h: '&oneshot C_FAST_FORWARD'}
   - KP 4
   - KP 5
   - KP 6
@@ -95,7 +95,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP ENTER
+  - {t: KP 0, h: '&oneshot KP_ENTER'}
   - KP 0
   - {t: KP DOT, type: held alternate}
   SYMBOL:
@@ -114,9 +114,9 @@ layers:
   - {t: '=', s: +}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: HOME, h: '&os LC(HOME)'}
+  - {t: HOME, h: '&oneshot LC(HOME)'}
   - $$mdi:arrow-up-bold$$
-  - {t: END, h: '&os LC(END)'}
+  - {t: END, h: '&oneshot LC(END)'}
   - PG UP
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
@@ -149,10 +149,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - F12
-  - {t: F1, h: '&os LA(LC(F1))'}
-  - {t: F2, h: '&os LC(LA(F2))'}
-  - {t: F3, h: '&os LC(LA(F3))'}
-  - {t: F4, h: '&os LC(LA(F4))'}
+  - {t: F1, h: '&oneshot LA(LC(F1))'}
+  - {t: F2, h: '&oneshot LC(LA(F2))'}
+  - {t: F3, h: '&oneshot LC(LA(F3))'}
+  - {t: F4, h: '&oneshot LC(LA(F4))'}
   - F5
   - RGB BRI
   - F6
