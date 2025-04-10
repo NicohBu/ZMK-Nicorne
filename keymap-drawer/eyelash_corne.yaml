@@ -6,41 +6,41 @@ layers:
   - W
   - E
   - R
-  - {t: T, h: Ctl+T}
+  - {t: T, h: '&os LC(T)'}
   - $$mdi:arrow-up-bold$$
-  - {t: Y, h: Ctl+Y}
+  - {t: Y, h: '&os LC(Y)'}
   - U
   - I
   - O
-  - {t: P, h: Sft+Gui+S}
+  - {t: P, h: '&os LS(LG(S))'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
-  - {t: A, h: Ctl+A}
+  - {t: A, h: '&os LC(A)'}
   - S
   - D
-  - {t: F, h: Ctl+F}
+  - {t: F, h: '&os LC(F)'}
   - G
   - $$mdi:arrow-left-bold$$
   - HOME
   - $$mdi:arrow-right-bold$$
   - H
-  - {t: J, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: J, h: '&os LEFT_ALT'}
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '[', h: KP ASTERISK, s: '{'}
+  - {t: '[', h: '&os KP_ASTERISK', s: '{'}
   - '&td0'
-  - {t: Z, h: Ctl+Z}
-  - {t: X, h: Ctl+X}
-  - {t: C, h: Ctl+C}
-  - {t: V, h: Ctl+V}
+  - {t: Z, h: '&os LC(Z)'}
+  - {t: X, h: '&os LC(X)'}
+  - {t: C, h: '&os LC(C)'}
+  - {t: V, h: '&os LC(V)'}
   - B
   - $$mdi:volume-off$$
   - $$mdi:arrow-down-bold$$
   - N
   - M
-  - {t: ',', h: NUBS, s: <}
-  - {t: ., h: Sft+NUBS, s: '>'}
+  - {t: ',', h: '&os NUBS', s: <}
+  - {t: ., h: '&os LS(NUBS)', s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-control$$
@@ -69,9 +69,9 @@ layers:
   - '&as N8'
   - '&as N9'
   - '&as N0'
-  - {t: '$$mdi:skip-previous$$', h: RW}
+  - {t: '$$mdi:skip-previous$$', h: '&os C_RW'}
   - $$mdi:play-pause$$
-  - {t: '$$mdi:skip-next$$', h: FAST FORWARD}
+  - {t: '$$mdi:skip-next$$', h: '&os C_FAST_FORWARD'}
   - KP 4
   - KP 5
   - KP 6
@@ -114,9 +114,9 @@ layers:
   - {t: '=', s: +}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: HOME, h: Ctl+HOME}
+  - {t: HOME, h: '&os LC(HOME)'}
   - $$mdi:arrow-up-bold$$
-  - {t: END, h: Ctl+END}
+  - {t: END, h: '&os LC(END)'}
   - PG UP
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
@@ -149,10 +149,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - F12
-  - {t: F1, h: Alt+Ctl+F1}
-  - {t: F2, h: Ctl+Alt+F2}
-  - {t: F3, h: Ctl+Alt+F3}
-  - {t: F4, h: Ctl+Alt+F4}
+  - {t: F1, h: '&os LA(LC(F1))'}
+  - {t: F2, h: '&os LC(LA(F2))'}
+  - {t: F3, h: '&os LC(LA(F3))'}
+  - {t: F4, h: '&os LC(LA(F4))'}
   - F5
   - RGB BRI
   - F6
