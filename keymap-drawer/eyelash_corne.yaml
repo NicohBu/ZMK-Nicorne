@@ -6,7 +6,7 @@ layers:
   - W
   - E
   - R
-  - T
+  - {t: Ctl+T, h: T}
   - $$mdi:arrow-up-bold$$
   - Y
   - U
@@ -18,22 +18,22 @@ layers:
   - A
   - S
   - D
-  - F
+  - {t: Ctl+F, h: F}
   - G
   - $$mdi:arrow-left-bold$$
   - HOME
   - $$mdi:arrow-right-bold$$
   - H
-  - J
+  - {t: '$$mdi:apple-keyboard-option$$', h: J}
   - K
   - L
   - {t: ;, s: ':'}
   - {t: '[', h: KP ASTERISK, s: '{'}
   - '&td0'
-  - Z
-  - X
-  - C
-  - V
+  - {t: Ctl+Z, h: Z}
+  - {t: Ctl+X, h: X}
+  - {t: Ctl+C, h: C}
+  - {t: Ctl+V, h: V}
   - B
   - $$mdi:volume-off$$
   - $$mdi:arrow-down-bold$$
