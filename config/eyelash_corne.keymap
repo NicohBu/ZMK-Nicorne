@@ -141,10 +141,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&lt 1 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                          &kp UP               &shortcut LC(Y) Y  &kp U                 &kp I                 &kp O                   &hrm LS(LG(S)) P  &kp BSPC
-&lt 2 TAB  &shortcut LC(A) A  &kp S              &kp D              &shortcut LC(F) F  &kp G                            &kp LEFT  &kp HOME  &kp RIGHT  &kp H              &shortcut LEFT_ALT J  &kp K                 &kp L                   &kp SEMI          &shortcut KP_ASTERISK LBKT
-&td0       &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp C_MUTE              &kp DOWN             &kp N              &kp M                 &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH          &mt RSHIFT ENTER
-                                                 &kp LCTRL          &kp LGUI           &lt 3 SPACE                                                     &lt 3 SPACE        &kp RALT              &lt 1 DEL
+&lt 1 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                          &kp UP               &shortcut LC(Y) Y  &kp U            &kp I                 &kp O                   &shortcut LS(LG(S)) P  &kp BSPC
+&lt 2 TAB  &shortcut LC(A) A  &kp S              &kp D              &shortcut LC(F) F  &kp G                            &kp LEFT  &kp HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J  &kp K                 &kp L                   &kp SEMI               &shortcut KP_ASTERISK LBKT
+&td0       &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp C_MUTE              &kp DOWN             &kp N              &kp M            &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH               &mt RSHIFT ENTER
+                                                 &kp LCTRL          &kp LGUI           &lt 3 SPACE                                                     &lt 3 SPACE        &kp RALT         &lt 1 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
@@ -153,10 +153,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&trans  &as N1  &as N2  &as N3  &as N4     &as N5                                          &none                                      &kp KP_N7                 &kp KP_N8        &kp KP_N9   &kp KP_SUBTRACT  &kp KP_PLUS      &kp BSPC
-&trans  &as N6  &as N7  &as N8  &as N9     &as N0                   &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FAST_FORWARD C_NEXT  &kp KP_N4                 &kp KP_N5        &kp KP_N6   &kp KP_DIVIDE    &kp KP_ASTERISK  &kp KP_NUMLOCK
-&trans  &trans  &trans  &trans  &kp UNDER  &kp EQUAL  &kp C_MUTE                           &none                                      &kp KP_N1                 &kp KP_N2        &kp KP_N3   &trans           &trans           &trans
-                        &trans  &trans     &trans                                                                                     &shortcut KP_ENTER KP_N0  &kp KP_NUMBER_0  &kp KP_DOT
+&trans  &as N1  &as N2  &as N3  &as N4     &as N5                                          &none                                      &kp KP_N7            &kp KP_N8        &kp KP_N9   &kp KP_SUBTRACT  &kp KP_PLUS      &kp BSPC
+&trans  &as N6  &as N7  &as N8  &as N9     &as N0                   &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FAST_FORWARD C_NEXT  &kp KP_N4            &kp KP_N5        &kp KP_N6   &kp KP_DIVIDE    &kp KP_ASTERISK  &kp KP_NUMLOCK
+&trans  &trans  &trans  &trans  &kp UNDER  &kp EQUAL  &kp C_MUTE                           &none                                      &kp KP_N1            &kp KP_N2        &kp KP_N3   &trans           &trans           &trans
+                        &trans  &trans     &trans                                                                                     &hrm KP_ENTER KP_N0  &kp KP_NUMBER_0  &kp KP_DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -177,10 +177,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&kp F12      &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                       &rgb_ug RGB_BRI                   &kp F6  &kp F7        &kp F8  &kp F9  &kp F10  &kp F11
-&bt BT_NXT   &bt BT_SEL 0             &bt BT_SEL 1             &bt BT_SEL 2             &bt BT_SEL 3             &bt BT_SEL 4                &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none   &none         &none   &none   &none    &none
-&bootloader  &out OUT_USB             &out OUT_BLE             &none                    &none                    &none         &bt BT_CLR                     &rgb_ug RGB_BRD                   &none   &none         &none   &none   &none    &bootloader
-                                                               &none                    &none                    &none                                                                          &none   &kp LEFT_ALT  &none
+&kp F12      &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                       &rgb_ug RGB_BRI                   &kp F6      &kp F7        &kp F8  &kp F9  &kp F10  &kp F11
+&trans       &bt BT_SEL 0             &bt BT_SEL 1             &bt BT_SEL 2             &bt BT_SEL 3             &bt BT_SEL 4                &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none       &none         &none   &none   &none    &kp F12
+&bootloader  &out OUT_USB             &out OUT_BLE             &none                    &none                    &sys_reset    &bt BT_CLR                     &rgb_ug RGB_BRD                   &sys_reset  &none         &none   &none   &none    &bootloader
+                                                               &none                    &none                    &none                                                                          &none       &kp LEFT_ALT  &none
             >;
 
             sensor-bindings = <&bt_encoder>;
