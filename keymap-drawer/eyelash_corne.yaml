@@ -56,7 +56,7 @@ layers:
   - '&as N3'
   - '&as N4'
   - '&as N5'
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - KP PLUS
   - KP 7
   - KP 8
@@ -69,9 +69,9 @@ layers:
   - '&as N8'
   - '&as N9'
   - '&as N0'
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:skip-previous$$', h: RW}
+  - $$mdi:play-pause$$
+  - {t: '$$mdi:skip-next$$', h: FAST FORWARD}
   - KP ASTERISK
   - KP 4
   - KP 5
@@ -85,7 +85,7 @@ layers:
   - _
   - {t: '=', s: +}
   - $$mdi:volume-off$$
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - KP 0
   - KP 1
   - KP 2
