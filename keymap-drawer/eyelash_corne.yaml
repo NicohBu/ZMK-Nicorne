@@ -149,10 +149,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - F12
-  - F1
-  - F2
-  - F3
-  - F4
+  - {t: F1, h: Alt+Ctl+F1}
+  - {t: F2, h: Ctl+Alt+F2}
+  - {t: F3, h: Ctl+Alt+F3}
+  - {t: F4, h: Ctl+Alt+F4}
   - F5
   - RGB BRI
   - F6
