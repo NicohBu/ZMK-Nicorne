@@ -21,7 +21,7 @@ layers:
   - {t: F, h: '&oneshot LC(F)'}
   - G
   - $$mdi:arrow-left-bold$$
-  - HOME
+  - {t: HOME, h: '&oneshot END'}
   - $$mdi:arrow-right-bold$$
   - H
   - {t: J, h: '$$mdi:apple-keyboard-option$$'}
