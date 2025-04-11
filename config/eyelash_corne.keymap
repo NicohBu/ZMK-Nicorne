@@ -65,7 +65,7 @@
 
         shortcut: shortcut {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&oneshotrgb>, <&kp>;
+            bindings = <&oneshot>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
