@@ -46,7 +46,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - LGUI
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - '&rgblayer3 RGB_COLOR_HSB_VAL SPACE'
+  - {t: '$$mdi:keyboard-space$$', h: '&rgblayer3'}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
   NUMBER:
