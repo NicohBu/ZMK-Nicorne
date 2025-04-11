@@ -36,7 +36,7 @@
     };
 
     underglow: underglow {
-        chain-length = <12>; // Reemplaza 12 con la cantidad real de LEDs que usas
+        chain-length = <42>;  /* Ajusta 12 al número real de LEDs de tu tira */
         color-mapping = <0x000000 0x0000FF 0x800080 0xFF0000>;
         effect = "rainbow_swirl";
     };
@@ -103,7 +103,6 @@
         bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
         tap-ms = <100>;
     };
-
 
     macros {
         shift: shift {
