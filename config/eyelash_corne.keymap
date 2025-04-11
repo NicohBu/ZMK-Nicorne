@@ -133,7 +133,7 @@
 
             label = "one_shot";
         };
-
+/*
         rgblayer: rgblayer {
             compatible = "zmk,behavior-macro-three-param";  // Cambiado a three-param
             #binding-cells = <3>;  // Ahora acepta 3 parámetros
@@ -149,6 +149,7 @@
 
             label = "RGBLAYER";
         };
+/*
     };
 
     keymap {
