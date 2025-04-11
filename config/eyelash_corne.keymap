@@ -36,7 +36,8 @@
     };
 
     underglow: underglow {
-        chain-length = <42>;  /* Ajusta 12 al número real de LEDs de tu tira */
+        compatible = "zmk,led-strip";
+        chain-length = <42>;  /* Ajusta 12 al número real de LEDs */
         color-mapping = <0x000000 0x0000FF 0x800080 0xFF0000>;
         effect = "rainbow_swirl";
     };
@@ -103,6 +104,7 @@
         bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
         tap-ms = <100>;
     };
+
 
     macros {
         shift: shift {
