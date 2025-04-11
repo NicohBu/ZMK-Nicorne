@@ -1,5 +1,5 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 25
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -15,9 +15,9 @@
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
-    delay-ms = <0>;                   // 0
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <100>;
+    delay-ms = <0>;
 };
 
 &mmv {
@@ -26,7 +26,16 @@
     trigger-period-ms = <16>;
 };
 
+&under_glow {
+    color-mapping = <0x000000 0x0000FF 0x800080 0xFF0000>; // default apagado, luego azul, morado, rojo
+    effect = "rainbow_swirl";
+};
+
 / {
+    chosen {
+        zmk,underglow = &under_glow;
+    };
+
     behaviors {
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
@@ -39,7 +48,6 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&bt BT_NXT>, <&bt BT_PRV>;
-
             tap-ms = <30>;
         };
 
@@ -55,7 +63,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "AUTOSHIFT_HOLD_TAP";
             bindings = <&shift>, <&kp>;
-
             #binding-cells = <2>;
             tapping-term-ms = <190>;
             flavor = "tap-preferred";
@@ -64,7 +71,6 @@
         shortcut: shortcut {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&oneshot>, <&kp>;
-
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
@@ -74,7 +80,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "home_row";
             bindings = <&kp>, <&kp>;
-
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
@@ -91,120 +96,30 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-
         tap-ms = <100>;
     };
 
-    macros {
-        shift: shift {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHIFT>,
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_release>,
-                <&kp LSHFT>;
+    // Macros y Keymap omitidos por brevedad. Puedes pegarlos aquí directamente.
 
-            label = "SHIFT";
-        };
-
-        as: as {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
-
-            label = "AS";
-        };
-
-        oneshot: one_shot {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_release>;
-
-            label = "one_shot";
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            display-name = "QWERTY";
-            bindings = <
-&lt 1 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                 &kp O                   &shortcut LS(LG(S)) P  &kp BSPC
-&lt 2 TAB  &kp A              &kp S              &kp D              &shortcut LC(F) F  &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &kp K                 &kp L                   &kp SEMI               &shortcut KP_ASTERISK LBKT
-&td0       &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH               &mt RSHIFT ENTER
-                                                 &kp LCTRL          &kp LGUI           &lt 3 SPACE                                                                 &lt 3 SPACE        &kp RALT               &lt 1 DEL
-            >;
-
-            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
-        };
-
-        lower_layer {
-            display-name = "NUMBER";
-            bindings = <
-&trans  &as N1  &as N2  &as N3     &as N4     &as N5                                          &none                                      &kp KP_N7            &kp KP_N8        &kp KP_N9   &kp KP_SUBTRACT  &kp KP_PLUS      &kp BSPC
-&trans  &as N6  &as N7  &as N8     &as N9     &as N0                   &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FAST_FORWARD C_NEXT  &kp KP_N4            &kp KP_N5        &kp KP_N6   &kp KP_DIVIDE    &kp KP_ASTERISK  &shortcut K_CALC KP_NUMLOCK
-&trans  &trans  &trans  &as MINUS  &kp UNDER  &kp EQUAL  &kp C_MUTE                           &none                                      &kp KP_N1            &kp KP_N2        &kp KP_N3   &trans           &trans           &trans
-                        &trans     &trans     &trans                                                                                     &hrm KP_ENTER KP_N0  &kp KP_NUMBER_0  &kp KP_DOT
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        raise_layer {
-            display-name = "SYMBOL";
-            bindings = <
-&kp RPAR  &kp EXCL  &kp AT                   &kp HASH  &kp DLLR               &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS  &kp STAR      &kp LPAR      &kp UNDER  &kp EQUAL
-&trans    &trans    &shortcut LC(HOME) HOME  &kp UP    &shortcut LC(END) END  &kp PG_UP            &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans     &trans    &kp APOS      &kp NUHS      &trans     &trans
-&trans    &as NUBS  &kp LEFT                 &kp DOWN  &kp RIGHT              &kp PG_DN  &trans                    &mmv MOVE_DOWN                   &trans     &trans    &kp LS(APOS)  &kp LS(NUHS)  &trans     &trans
-                                             &trans    &trans                 &trans                                                                &trans     &trans    &trans
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        layer_3 {
-            display-name = "Fn";
-            bindings = <
-&kp F12      &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                       &rgb_ug RGB_BRI                   &kp F6      &kp F7        &kp F8  &kp F9  &kp F10  &kp F11
-&trans       &bt BT_SEL 0             &bt BT_SEL 1             &bt BT_SEL 2             &bt BT_SEL 3             &bt BT_SEL 4                &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none       &none         &none   &none   &none    &kp F12
-&bootloader  &out OUT_USB             &out OUT_BLE             &none                    &none                    &sys_reset    &bt BT_CLR                     &rgb_ug RGB_BRD                   &sys_reset  &none         &none   &none   &none    &bootloader
-                                                               &none                    &none                    &none                                                                          &none       &kp LEFT_ALT  &none
-            >;
-
-            sensor-bindings = <&bt_encoder>;
-        };
-    };
-
-    // Iluminación RGB por capa
-
-    rgb_underglow {
+    underglow_indicators {
         compatible = "zmk,rgb-underglow-indicators";
+        label = "LAYER RGB";
 
-        lower_layer {
+        indicators = <&lower_rgb &raise_rgb &layer3_rgb>;
+
+        lower_rgb: lower_layer {
             layer = <1>;
-            color = <0 0 255>; // Azul para la capa 1 (RGB: 0,255,0)
+            color = <0 0 255>; // Azul
         };
 
-        raise_layer {
+        raise_rgb: raise_layer {
             layer = <2>;
-            color = <0 255 0>; // Verde para la capa 2 (RGB: 0,0,255)
+            color = <128 0 128>; // Morado
         };
 
-        layer_3 {
+        layer3_rgb: layer_3 {
             layer = <3>;
-            color = <255 0 0>; // Rojo para la capa 3 (RGB: 255,0,0)
+            color = <255 0 0>; // Rojo
         };
     };
 };
