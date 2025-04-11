@@ -135,15 +135,15 @@
         };
 
         rgblayer: rgblayer {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
+            compatible = "zmk,behavior-macro-three-param";  // Cambiado a three-param
+            #binding-cells = <3>;  // Ahora acepta 3 parámetros
             bindings =
-                <&macro_param_2to2 &rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER &macro_param_1to1>,
+                <&macro_param_3to3 &rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER &macro_param_1to1>,
                 <&macro_press>,
-                <&mo MACRO_PLACEHOLDER>,
+                <&lt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,  // Segundo MACRO_PLACEHOLDER será para la tecla
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_param_2to2 &lt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&rgb_ug RGB_TOG>;
 
