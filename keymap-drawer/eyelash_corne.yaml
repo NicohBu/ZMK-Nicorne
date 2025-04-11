@@ -6,41 +6,41 @@ layers:
   - W
   - E
   - R
-  - {t: T, h: '&oneshot_rgb LC(T)'}
+  - {t: T, h: '&oneshotrgb LC(T)'}
   - $$mdi:arrow-up-bold$$
-  - {t: Y, h: '&oneshot_rgb LC(Y)'}
+  - {t: Y, h: '&oneshotrgb LC(Y)'}
   - U
   - I
   - O
-  - {t: P, h: '&oneshot_rgb LS(LG(S))'}
+  - {t: P, h: '&oneshotrgb LS(LG(S))'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
   - A
   - S
   - D
-  - {t: F, h: '&oneshot_rgb LC(F)'}
+  - {t: F, h: '&oneshotrgb LC(F)'}
   - G
   - $$mdi:arrow-left-bold$$
-  - {t: HOME, h: '&oneshot_rgb END'}
+  - {t: HOME, h: '&oneshotrgb END'}
   - $$mdi:arrow-right-bold$$
   - H
   - {t: J, h: '$$mdi:apple-keyboard-option$$'}
   - K
   - L
   - {t: ;, s: ':'}
-  - {t: '[', h: '&oneshot_rgb KP_ASTERISK', s: '{'}
+  - {t: '[', h: '&oneshotrgb KP_ASTERISK', s: '{'}
   - '&td0'
-  - {t: Z, h: '&oneshot_rgb LC(Z)'}
-  - {t: X, h: '&oneshot_rgb LC(X)'}
-  - {t: C, h: '&oneshot_rgb LC(C)'}
-  - {t: V, h: '&oneshot_rgb LC(V)'}
+  - {t: Z, h: '&oneshotrgb LC(Z)'}
+  - {t: X, h: '&oneshotrgb LC(X)'}
+  - {t: C, h: '&oneshotrgb LC(C)'}
+  - {t: V, h: '&oneshotrgb LC(V)'}
   - B
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:arrow-down-bold$$
   - N
-  - {t: M, h: '&oneshot_rgb C_AL_MAIL'}
-  - {t: ',', h: '&oneshot_rgb NUBS', s: <}
-  - {t: ., h: '&oneshot_rgb LS(NUBS)', s: '>'}
+  - {t: M, h: '&oneshotrgb C_AL_MAIL'}
+  - {t: ',', h: '&oneshotrgb NUBS', s: <}
+  - {t: ., h: '&oneshotrgb LS(NUBS)', s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-control$$
@@ -69,15 +69,15 @@ layers:
   - '&as N8'
   - '&as N9'
   - '&as N0'
-  - {t: '$$mdi:skip-previous$$', h: '&oneshot_rgb C_RW'}
+  - {t: '$$mdi:skip-previous$$', h: '&oneshotrgb C_RW'}
   - $$mdi:play-pause$$
-  - {t: '$$mdi:skip-next$$', h: '&oneshot_rgb C_FAST_FORWARD'}
+  - {t: '$$mdi:skip-next$$', h: '&oneshotrgb C_FAST_FORWARD'}
   - KP 4
   - KP 5
   - KP 6
   - KP DIVIDE
   - KP ASTERISK
-  - {t: KP NUMLOCK, h: '&oneshot_rgb K_CALC'}
+  - {t: KP NUMLOCK, h: '&oneshotrgb K_CALC'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -114,9 +114,9 @@ layers:
   - {t: '=', s: +}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: HOME, h: '&oneshot_rgb LC(HOME)'}
+  - {t: HOME, h: '&oneshotrgb LC(HOME)'}
   - $$mdi:arrow-up-bold$$
-  - {t: END, h: '&oneshot_rgb LC(END)'}
+  - {t: END, h: '&oneshotrgb LC(END)'}
   - PG UP
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
@@ -149,10 +149,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - F12
-  - {t: F1, h: '&oneshot_rgb LA(LC(F1))'}
-  - {t: F2, h: '&oneshot_rgb LC(LA(F2))'}
-  - {t: F3, h: '&oneshot_rgb LC(LA(F3))'}
-  - {t: F4, h: '&oneshot_rgb LC(LA(F4))'}
+  - {t: F1, h: '&oneshotrgb LA(LC(F1))'}
+  - {t: F2, h: '&oneshotrgb LC(LA(F2))'}
+  - {t: F3, h: '&oneshotrgb LC(LA(F3))'}
+  - {t: F4, h: '&oneshotrgb LC(LA(F4))'}
   - F5
   - RGB BRI
   - F6
