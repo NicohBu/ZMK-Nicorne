@@ -35,7 +35,7 @@ layers:
   - {t: C, h: '&oneshot LC(C)'}
   - {t: V, h: '&oneshot LC(V)'}
   - B
-  - $$mdi:volume-off$$
+  - $$mdi:apple-keyboard-caps$$
   - $$mdi:arrow-down-bold$$
   - N
   - {t: M, h: '&oneshot C_AL_MAIL'}
@@ -46,7 +46,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - LGUI
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - '&l 3 SPACE'
+  - {t: '$$mdi:keyboard-space$$', h: Fn}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
   NUMBER:
@@ -193,6 +193,6 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
