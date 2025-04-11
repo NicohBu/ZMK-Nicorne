@@ -45,8 +45,8 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-control$$
   - LGUI
-  - '&rgblayer RGB_COLOR_HSB_VAL(0,100,50) 3'
-  - {t: '$$mdi:keyboard-space$$', h: Fn}
+  - '&rgblayer3 RGB_COLOR_HSB_VAL(0,100,50) 3'
+  - '&rgblayer3 RGB_COLOR_HSB_VAL(0,100,50) 3'
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
   NUMBER:
@@ -193,6 +193,6 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
