@@ -49,12 +49,10 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
             continue-list = <SPACE LCTRL RSHIFT LSHIFT COMMA SLASH LBRC RBRC APOS NUHS NUBS SEMI SINGLE_QUOTE FSLH LEFT RIGHT UP DOWN BSPC KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9 KP_N0 KP_SUBTRACT KP_DIVIDE KP_PLUS KP_ASTERISK HOME LBKT DEL>;
-            rgb {
-                layer = <4>;
-                color = <255 0 0>; // Rojo para cw_mod activado (RGB: 255,0,0)
-            };
-        };
-        
+                rgb {
+                   layer = <4>;
+                  color = <255 0 0>; // Rojo para cw_mod activado (RGB: 255,0,0)
+                };
         };
 
         as_ht: autoshift_hold_tap {
