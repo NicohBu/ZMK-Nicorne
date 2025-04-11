@@ -26,7 +26,7 @@
     trigger-period-ms = <16>;
 };
 
-&lt { flavor = "hold-preferred"; };
+&lt { flavor = "balanced"; };
 
 / {
     behaviors {
