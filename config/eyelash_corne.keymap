@@ -136,7 +136,7 @@
             label = "one_shot";
         };
 
-        oneshot_rgb: one_shot_rgb {
+        oneshotrgb: one_shot_rgb {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
