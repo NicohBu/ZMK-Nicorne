@@ -133,23 +133,38 @@
 
             label = "one_shot";
         };
-/*
+        
         rgblayer: rgblayer {
-            compatible = "zmk,behavior-macro-three-param";  // Cambiado a three-param
-            #binding-cells = <3>;  // Ahora acepta 3 parámetros
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
             bindings =
-                <&macro_param_3to3 &rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER &macro_param_1to1>,
+                <&macro_param_2to2 &rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER &macro_param_1to1>,
                 <&macro_press>,
-                <&lt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,  // Segundo MACRO_PLACEHOLDER será para la tecla
+                <&mo MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&macro_param_2to2 &lt MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&rgb_ug RGB_TOG>;
 
             label = "RGBLAYER";
         };
-*/
+
+            rgblayer2: rgblayer2 {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_param_2to2 &rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER &macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_TOG>;
+
+            label = "RGBLAYER2";
+        };
     };
 
     keymap {
