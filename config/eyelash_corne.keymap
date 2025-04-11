@@ -136,7 +136,7 @@
             label = "one_shot";
         };
 
-        oneshotrgb: one_shot_rgb {
+        oneshotrgb: oneshotrgb {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -154,7 +154,6 @@
                 <&macro_tap>,
                 <&rgb_ug RGB_EFF 3>;
 
-            label = "one_shot_rgb";
         };
     };
 
@@ -210,7 +209,7 @@
         };
     };
 
-    // Iluminación RGB por capa
+    #Iluminación RGB por capa
 
     rgb_underglow {
         compatible = "zmk,rgb-underglow-indicators";
