@@ -143,7 +143,7 @@
             label = "one_shot";
         };
 
-        rgblayer: rgblayer {
+        rgblayer1: rgblayer1 {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
@@ -156,7 +156,7 @@
                 <&macro_tap>,
                 <&rgb_ug RGB_TOG>;
 
-            label = "RGBLAYER";
+            label = "RGBLAYER_1";
         };
 
         rgblayer2: rgblayer2 {
@@ -172,7 +172,23 @@
                 <&macro_tap>,
                 <&rgb_ug RGB_TOG>;
 
-            label = "RGBLAYER2";
+            label = "RGBLAYER_2";
+        };
+
+        rgblayer3: rgblayer3 {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_param_2to2 &rgb_ug RGB_COLOR_HSB_CMD MACRO_PLACEHOLDER &macro_param_1to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&rgb_ug RGB_TOG>;
+
+            label = "RGBLAYER_3";
         };
     };
 
