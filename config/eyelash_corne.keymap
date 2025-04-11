@@ -65,7 +65,7 @@
 
         shortcut: shortcut {
             compatible = "zmk,behavior-hold-tap";
-            bindings = <&oneshot>, <&kp>;
+            bindings = <&oneshotrgb>, <&kp>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -135,26 +135,6 @@
 
             label = "one_shot";
         };
-
-        oneshotrgb: one_shot_rgb {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(320, 100, 60)>,
-                <&macro_wait_time 100>,
-                <&macro_tap>,
-                <&rgb_ug RGB_EFF 3>,
-                <&macro_wait_time 100>,
-                <&macro_tap>,
-                <&rgb_ug RGB_COLOR_HSB(320, 100, 60)>,
-                <&macro_wait_time 100>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_release>,
-                <&macro_tap>,
-                <&rgb_ug RGB_EFF 3>;
-
-        };
     };
 
     keymap {
@@ -208,7 +188,6 @@
             sensor-bindings = <&bt_encoder>;
         };
     };
-
 
     rgb_underglow {
         compatible = "zmk,rgb-underglow-indicators";
