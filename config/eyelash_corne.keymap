@@ -142,7 +142,7 @@
 
             label = "one_shot";
         };
-
+/*
         rgblayer1: rgblayer1 {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
@@ -189,6 +189,7 @@
 
     label = "RGBLAYER_3";
 };
+*/
     };
 
     keymap {
@@ -242,4 +243,25 @@
             sensor-bindings = <&bt_encoder>;
         };
     };
+
+ // Iluminación RGB por capa
+    rgb_underglow {
+        compatible = "zmk,rgb-underglow-indicators";
+        
+        layer_1 {
+            layer = <1>;
+            color = <0 0 255>; // Azul para la capa 1 (RGB: 0,255,0)
+        };
+        
+        layer_2 {
+            layer = <2>;
+            color = <0 255 0>; // Verde para la capa 2 (RGB: 0,0,255)
+        };
+
+        layer_3 {
+            layer = <3>;
+            color = <255 0 0>; // Rojo para la capa 3 (RGB: 255,0,0)
+        };
+    };
+
 };
