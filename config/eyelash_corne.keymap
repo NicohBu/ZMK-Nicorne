@@ -209,7 +209,6 @@
         };
     };
 
-    #Iluminación RGB por capa
 
     rgb_underglow {
         compatible = "zmk,rgb-underglow-indicators";
@@ -217,7 +216,6 @@
         default_layer {
             layer = <0>;
             effect = <3>;  // 3 es generalmente el efecto rainbow
-            // No especificamos un color aquí para permitir que el efecto rainbow funcione
         };
 
         lower_layer {
