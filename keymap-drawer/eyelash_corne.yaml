@@ -15,7 +15,7 @@ layers:
   - {t: P, h: '&oneshot LS(LG(S))'}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
-  - {t: A, h: '&oneshot LC(A)'}
+  - A
   - S
   - D
   - {t: F, h: '&oneshot LC(F)'}
@@ -45,8 +45,8 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-control$$
   - LGUI
-  - '&rgblayer3 RGB_COLOR_HSB_VAL(0,100,50) 3'
-  - '&rgblayer3 RGB_COLOR_HSB_VAL(0,100,50) 3'
+  - {t: '$$mdi:keyboard-space$$', h: Fn}
+  - {t: '$$mdi:keyboard-space$$', h: '&rgblayer3 RGB_COLOR_HSB_VAL(0,100,50)'}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
   NUMBER:
@@ -192,7 +192,7 @@ layers:
   - $$mdi:progress-download$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
