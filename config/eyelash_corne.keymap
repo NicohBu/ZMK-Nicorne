@@ -189,25 +189,30 @@
 
     // Iluminación RGB por capa
 
-    rgb_underglow {
-        compatible = "zmk,rgb-underglow-indicators";
-    
+rgb_underglow {
+    compatible = "zmk,rgb-underglow-indicators";
+
+        default_layer {
+            layer = <0>;
+            effect = <3>;  // 3 es generalmente el efecto rainbow
+            // No especificamos un color aquí para permitir que el efecto rainbow funcione
+        };
+
         lower_layer {
             layer = <1>;
             color = <0 0 255>; // Azul para la capa 1 (RGB: 0,0,255)
         };
-    
-        raise_layer {
+
+            raise_layer {
             layer = <2>;
             color = <128 0 128>; // Morado para la capa 2 (RGB: 128,0,128)
         };
-    
+
         layer_3 {
             layer = <3>;
             color = <255 0 0>; // Rojo para la capa 3 (RGB: 255,0,0)
         };
-        
-        // Para Caps Word, usa el state indicator en lugar de layer
+    
         caps_word {
             caps-word;
             color = <255 165 0>; // Naranja para caps word (RGB: 255,165,0)
