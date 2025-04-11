@@ -181,11 +181,9 @@
             bindings =
                 // Establece el color rojo para la capa 3
                 <&macro_tap &rgb_ug RGB_COLOR_HSB(0,100,81)>,
-                <&macro_press>
-                <&mo 3>,
+                <&macro_press &mo 3>,
                 <&macro_pause_for_release>,
-                <&macro_release>
-                <&mo 3>,
+                <&macro_release &mo 3>,
                 // Restaura el efecto base (efecto #3)
                 <&macro_tap &rgb_ug RGB_EFF 3>;  // Vuelve al efecto #3 configurado como predeterminado
 
