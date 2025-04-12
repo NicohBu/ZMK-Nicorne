@@ -30,15 +30,7 @@
 
 / {
     behaviors {
-        td_caps: td_caps {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp LSHIFT>, <&cw_mod>, <&none>, <&kp CAPSLOCK>;
-
-            label = "Shift / CapsWord / Mayusc.";
-        };
-
+        
         bt_encoder: bt_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -46,45 +38,7 @@
 
             tap-ms = <30>;
         };
-
-        cw_mod: caps_word_mod {
-            compatible = "zmk,behavior-caps-word";
-            label = "Caps Word EXCLUSIONS";
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            continue-list = <SPACE LCTRL RSHIFT LSHIFT COMMA SLASH LBRC RBRC APOS NUHS NUBS SEMI SINGLE_QUOTE FSLH LEFT RIGHT UP DOWN BSPC KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9 KP_N0 KP_SUBTRACT KP_DIVIDE KP_PLUS KP_ASTERISK HOME LBKT DEL>;
-        };
-
-        as_ht: autoshift_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "AUTOSHIFT_HOLD_TAP";
-            bindings = <&shift>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <190>;
-            flavor = "tap-preferred";
-        };
-
-        shortcut: shortcut {
-            compatible = "zmk,behavior-hold-tap";
-            bindings = <&oneshot>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            label = "Oneshot shortcut";
-        };
-
-        hrm: home_row {
-            compatible = "zmk,behavior-hold-tap";
-            label = "home_row";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-        };
-
+        
         hue_encoder: hue_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -103,6 +57,59 @@
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
 
+        scroll_encoder: scroll_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+        };
+        
+        as_ht: autoshift_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTOSHIFT_HOLD_TAP";
+            bindings = <&shift>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
+            flavor = "tap-preferred";
+        };
+
+        td_caps: td_caps {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&cw_mod>, <&none>, <&kp CAPSLOCK>;
+
+            label = "Shift / CapsWord / Mayusc.";
+        };
+
+        cw_mod: caps_word_mod {
+            compatible = "zmk,behavior-caps-word";
+            label = "Caps Word EXCLUSIONS";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            continue-list = <SPACE LCTRL RSHIFT LSHIFT COMMA SLASH LBRC RBRC APOS NUHS NUBS SEMI SINGLE_QUOTE FSLH LEFT RIGHT UP DOWN BSPC KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9 KP_N0 KP_SUBTRACT KP_DIVIDE KP_PLUS KP_ASTERISK HOME LBKT DEL>;
+        };
+        
+        hrm: home_row {
+            compatible = "zmk,behavior-hold-tap";
+            label = "home_row";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+        };
+
+        shortcut: shortcut {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&oneshot>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            label = "Oneshot shortcut";
+        };
+
         td_alt_mo2: td_alt_mo2 {
             compatible = "zmk,behavior-tap-dance";
             label = "Alt+&mo2";
@@ -118,11 +125,7 @@
         };
     };
 
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-    };
+
 
     macros {
         shift: shift {
