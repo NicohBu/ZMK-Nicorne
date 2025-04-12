@@ -1,10 +1,10 @@
 ---
 include:
-  - board: nice_nano
+  - board: eyelash_corne_left
     shield: corne_left nice_view_adapter nice_epaper
   #  shield: nice_view
     #snippet: zmk-usb-logging    # Uncomment to log over USB.
-  - board: nice_nano
+  - board: eyelash_corne_right
     shield: corne_right nice_view_adapter nice_epaper
   #  shield: nice_view
     #snippet: zmk-usb-logging
