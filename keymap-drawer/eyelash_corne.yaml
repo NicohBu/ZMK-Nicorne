@@ -44,10 +44,10 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - $$mdi:apple-keyboard-control$$
-  - LGUI
+  - '&td_gui_mo2'
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - '&td_layer2'
+  - '&td_alt_mo2'
   - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
   NUMBER:
   - {type: held}
