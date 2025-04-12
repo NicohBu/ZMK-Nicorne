@@ -38,6 +38,11 @@ config ZMK_SPLIT
 config BT_CTLR
     default BT
 
+if ZMK_DISPLAY
+
+config I2C
+    default y
+
 if USB
 
 config USB_NRFX
