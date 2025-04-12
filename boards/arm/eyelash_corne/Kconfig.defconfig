@@ -43,6 +43,8 @@ if ZMK_DISPLAY
 config I2C
     default y
 
+endif # ZMK_DISPLAY
+
 if USB
 
 config USB_NRFX
