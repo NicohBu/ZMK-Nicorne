@@ -15,7 +15,7 @@
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
-    acceleration-exponent = <1>;      // 0
+    acceleration-exponent = <2>;      // 0
     time-to-max-speed-ms = <100>;       // 300
     delay-ms = <0>;                   // 0
 };
@@ -99,15 +99,12 @@
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
-
     };
 
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
-
-        tap-ms = <100>;
     };
 
     macros {
@@ -202,33 +199,32 @@
         };
     };
 
-        underglow-layer {
-            compatible = "zmk,underglow-layer";
+    underglow-layer {
+        compatible = "zmk,underglow-layer";
 
-            default_layer {
-                layer = <0>;
-                effect = <3>;  // 3 es generalmente el efecto rainbow
-            };
-
-            lower_layer {
-                layer = <1>;
-                color = <RGB_COLOR_HSB(240, 100, 100)>;  // Azul
-            };
-
-            raise_layer {
-                layer = <2>;
-                color = <RGB_COLOR_HSB(270, 100, 100)>;  // Morado
-            };
-
-            layer_3 {
-                layer = <3>;
-                color = <RGB_COLOR_HSB(0, 100, 100)>;    // Rojo
-            };
-
-            caps_word {
-                caps-word;
-                color = <RGB_COLOR_HSB(30, 100, 100)>;   // Naranja
-            };
+        default_layer {
+            layer = <0>;
+            effect = <3>;  // 3 es generalmente el efecto rainbow
         };
 
+        lower_layer {
+            layer = <1>;
+            color = <RGB_COLOR_HSB(240, 100, 100)>;  // Azul
+        };
+
+        raise_layer {
+            layer = <2>;
+            color = <RGB_COLOR_HSB(270, 100, 100)>;  // Morado
+        };
+
+        layer_3 {
+            layer = <3>;
+            color = <RGB_COLOR_HSB(0, 100, 100)>;    // Rojo
+        };
+
+        caps_word {
+            caps-word;
+            color = <RGB_COLOR_HSB(30, 100, 100)>;   // Naranja
+        };
+    };
 };
