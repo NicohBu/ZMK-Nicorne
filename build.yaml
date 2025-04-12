@@ -15,8 +15,17 @@ include:
     shield: settings_reset
     #snippet: zmk-usb-logging
 
+ # - board: eyelash_corne_left
+ #   shield: corne_left nice_oled
+ # - board: eyelash_corne_right
+ #   shield: corne_right nice_oled
+ 
+    # nice_nano_v2 + nice_oled
   - board: eyelash_corne_left
     shield: corne_left nice_oled
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Nice_Corne_Oled\"
+    artifact-name: nice_corne_left_oled
+    snippet: studio-rpc-usb-uart
   - board: eyelash_corne_right
     shield: corne_right nice_oled
- 
+    artifact-name: nice_corne_right_oled
