@@ -15,8 +15,8 @@ include:
     shield: settings_reset
     #snippet: zmk-usb-logging
 
-  - board: nice_nano
-    shield: corne_left nice_view_adapter nice_epaper
+  - board: eyelash_corne_left
+    shield: nice_view nice_view_adapter nice_epaper
     #snippet: zmk-usb-logging    # Uncomment to log over USB.
-  - board: nice_nano
-    shield: corne_right nice_view_adapter nice_epaper
+  - board: eyelash_corne_right
+    shield: nice_view nice_view_adapter nice_epaper
