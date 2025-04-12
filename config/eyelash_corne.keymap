@@ -81,9 +81,21 @@
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
         };
+
+        hue_encoder: hue_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
+        };
+
+        sat_encoder: sat_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_SAI>, <&rgb_ug RGB_SAD>;
+        };
     };
 
-    rgb_encoder: rgb_encoder {
+    bright_encoder: bright_encoder {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
@@ -185,7 +197,7 @@
                                                                &none                    &none                    &none                                                                          &none       &kp LEFT_ALT  &none
             >;
 
-            sensor-bindings = <&bt_encoder>;
+            sensor-bindings = <&hue_encoder>;
         };
 
         both {
@@ -196,6 +208,8 @@
 &rgb_ug RGB_COLOR_HSB(0,80,30)  &rgb_ug RGB_COLOR_HSB(20,80,30)  &rgb_ug RGB_COLOR_HSB(40,80,30)  &rgb_ug RGB_COLOR_HSB(60,80,30)  &rgb_ug RGB_COLOR_HSB(80,80,30)  &rgb_ug RGB_COLOR_HSB(100,80,30)  &none           &none         &rgb_ug RGB_COLOR_HSB(120,80,30)  &rgb_ug RGB_COLOR_HSB(140,80,30)  &rgb_ug RGB_COLOR_HSB(160,80,30)  &rgb_ug RGB_COLOR_HSB(180,80,30)  &rgb_ug RGB_COLOR_HSB(200,80,30)  &rgb_ug RGB_COLOR_HSB(220,80,30)
                                                                                                   &trans                           &trans                           &trans                                                          &trans                            &trans                            &trans
             >;
+
+            sensor-bindings = <&sat_encoder>;
         };
     };
 
