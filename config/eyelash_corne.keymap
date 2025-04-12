@@ -26,15 +26,17 @@
     trigger-period-ms = <16>;
 };
 
-&lt { flavor = "balanced"; };
+&lt { flavor = "hold-preferred"; };
 
 / {
     behaviors {
-        td_caps: td0 {
+        td_caps: td_caps {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp LSHIFT>, <&cw_mod>, <&none>, <&kp CAPSLOCK>;
+
+            label = "Shift / CapsWord / Mayusc.";
         };
 
         bt_encoder: bt_encoder {
@@ -70,6 +72,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <220>;
+            label = "Oneshot shortcut";
         };
 
         hrm: home_row {
@@ -100,11 +103,18 @@
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
 
-        td_layer2: td_layer2 {
+        td_alt_mo2: td_alt_mo2 {
             compatible = "zmk,behavior-tap-dance";
             label = "Alt+&mo2";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_ALT>, <&mo 2>;
+        };
+
+        td_gui_mo2: td_gui_mo2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "GUI+&mo2";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&mo 2>;
         };
     };
 
@@ -163,7 +173,7 @@
 &lt 1 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                 &kp O                   &shortcut LS(LG(S)) P  &hrm DEL BACKSPACE
 &lt 2 TAB  &kp A              &kp S              &kp D              &shortcut LC(F) F  &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &kp K                 &kp L                   &kp SEMI               &shortcut KP_ASTERISK LBKT
 &td_caps   &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH               &mt RSHIFT ENTER
-                                                 &kp LCTRL          &kp LGUI           &lt 3 SPACE                                                                 &lt 3 SPACE        &td_layer2             &lt 1 DEL
+                                                 &kp LCTRL          &td_gui_mo2        &lt 3 SPACE                                                                 &lt 3 SPACE        &td_alt_mo2            &lt 1 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
