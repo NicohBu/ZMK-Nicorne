@@ -13,7 +13,7 @@ layers:
   - I
   - O
   - {t: P, h: '&oneshot LS(LG(S))'}
-  - {t: '$$mdi:backspace$$', h: '$$mdi:backspace-reverse-outline$$'}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
   - A
   - S
@@ -43,7 +43,7 @@ layers:
   - {t: ., h: '&oneshot LS(NUBS)', s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - $$mdi:apple-keyboard-control$$
+  - '&td_ctrl_mo1'
   - '&td_gui_mo2'
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
