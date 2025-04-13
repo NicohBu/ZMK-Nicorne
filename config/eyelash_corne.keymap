@@ -87,6 +87,16 @@
             continue-list = <SPACE LCTRL RSHIFT LSHIFT COMMA SLASH LBRC RBRC APOS NUHS NUBS SEMI SINGLE_QUOTE FSLH LEFT RIGHT UP DOWN BSPC KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9 KP_N0 KP_SUBTRACT KP_DIVIDE KP_PLUS KP_ASTERISK HOME LBKT DEL>;
         };
 
+        lt_hold: lt_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Hold-preferred";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <220>;
+        };
+
         hrm: home_row {
             compatible = "zmk,behavior-hold-tap";
             label = "home_row";
@@ -107,6 +117,13 @@
             label = "Oneshot shortcut";
         };
 
+        td_ctrl_mo1: td_ctrl_mo1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL+&mo1";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&mo 1>;
+        };
+
         td_alt_mo2: td_alt_mo2 {
             compatible = "zmk,behavior-tap-dance";
             label = "Alt+&mo2";
@@ -121,22 +138,6 @@
             bindings = <&kp LGUI>, <&mo 2>;
         };
 
-        td_ctrl_mo1: td_ctrl_mo1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CTRL+&mo1";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&mo 1>;
-        };
-
-        lt_hold: lt_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Hold-preferred";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <220>;
-        };
     };
 
     macros {
