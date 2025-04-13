@@ -219,6 +219,8 @@
         };
     };
 
+
+/*
     underglow-layer {
         compatible = "zmk,underglow-layer";
 
@@ -247,4 +249,7 @@
             color = <RGB_COLOR_HSB(30, 100, 100)>;   // Naranja
         };
     };
+*/
+
+
 };
