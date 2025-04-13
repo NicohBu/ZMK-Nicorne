@@ -15,11 +15,6 @@ endif # BOARD_EYELASH_CORNE_LEFT
 
 if BOARD_EYELASH_CORNE_LEFT || BOARD_EYELASH_CORNE_RIGHT
 
-//Lineas de prueba
-config I2C
-        default y
-//Lineas de prueba
-
 config BOARD
     default "eyelash_corne"
 
