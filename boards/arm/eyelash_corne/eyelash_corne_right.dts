@@ -6,7 +6,7 @@
 */
 
 #include "eyelash_corne.dtsi"
-#include "eyelash_corne_compatibility.dtsi"
+//#include "eyelash_corne_compatibility.dtsi"
 
 
 &default_transform {
