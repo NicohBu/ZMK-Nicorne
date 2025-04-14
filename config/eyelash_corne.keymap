@@ -177,6 +177,20 @@
 
             label = "one_shot";
         };
+
+        mo1_rgb: layer1_rgb {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mo 1 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(0,100,77)>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&rgb_ug RGB_EFR>;
+
+            label = "Lauyer 1+RGB";
+        };
+
     };
 
     keymap {
