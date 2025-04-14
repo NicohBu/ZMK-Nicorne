@@ -58,6 +58,8 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+
+            tap-ms = <20>;
         };
 
         as_ht: autoshift {
