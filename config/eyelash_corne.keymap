@@ -211,36 +211,21 @@
         mo1_rgb: layer1_rgb {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 1 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(224,100,72)>,
-                <&macro_release>,
-                <&rgb_ug RGB_EFR>;
-
+            bindings = <&mo 1 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(224,100,72) &rgb_ug RGB_EFR>;
             label = "Layer1+RGB";
         };
 
         mo2_rgb: mo2_rgb {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 2 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(275,100,72)>,
-                <&macro_release>,
-                <&rgb_ug RGB_EFR>;
-
+            bindings = <&mo 2 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(275,100,72) &rgb_ug RGB_EFR>;
             label = "Layer2+RGB";
         };
 
         mo3_rgb: mo3_rgb {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&mo 2 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(360,100,73)>,
-                <&macro_release>,
-                <&rgb_ug RGB_EFR>;
-
+            bindings = <&mo 3 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(360,100,73) &rgb_ug RGB_EFR>;
             label = "Layer 3_Red";
         };
     };
