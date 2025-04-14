@@ -137,7 +137,6 @@
             #binding-cells = <0>;
             bindings = <&kp LGUI>, <&mo 2>;
         };
-
     };
 
     macros {
@@ -173,7 +172,13 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &rgb_ug RGB_TOG &rgb_ug RGB_EFF>,
+                <&macro_tap>,
+                <&macro_wait_time 50>,
+                <&rgb_ug RGB_EFF>,
+                <&macro_tap>,
+                <&macro_wait_time 50>,
+                <&rgb_ug RGB_EFF &rgb_ug RGB_TOG>,
                 <&macro_release>;
 
             label = "one_shot";
