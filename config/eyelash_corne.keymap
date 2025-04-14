@@ -17,7 +17,6 @@
 &msc {
     acceleration-exponent = <10>;       // 0
     time-to-max-speed-ms = <100>;       // 300
-    tap-ms = <20>;
 };
 
 &mmv {
