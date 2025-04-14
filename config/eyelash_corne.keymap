@@ -212,8 +212,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(224,100,72)>,
                 <&macro_press>,
-                <&mo 1 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(224,100,72)>,
+                <&mo 1>,
                 <&macro_release>,
                 <&rgb_ug RGB_EFR>;
 
@@ -224,8 +225,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(275,100,72)>,
                 <&macro_press>,
-                <&mo 2 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(275,100,72)>,
+                <&mo 2>,
                 <&macro_release>,
                 <&rgb_ug RGB_EFR>;
 
@@ -236,8 +238,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(360,100,73)>,
                 <&macro_press>,
-                <&mo 3 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(360,100,73)>,
+                <&mo 3>,
                 <&macro_release>,
                 <&rgb_ug RGB_EFR>;
 
