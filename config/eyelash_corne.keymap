@@ -179,17 +179,7 @@
                 <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_press>,
-                <&macro_press>,
-                <&macro_press>,
-                <&macro_press>,
-                <&macro_press>,
-                <&macro_press>,
-                <&macro_press>,
-                <&macro_press>,
-                <&macro_press>,
-                <&macro_press>;
+                <&kp LSHFT>;
 
             label = "SHIFT";
         };
