@@ -28,35 +28,6 @@
 
 / {
 
-    underglow-layer {
-        compatible = "zmk,underglow-layer";
-
-        Default {
-            layer = <0>;
-            effect = <3>;  // 3 es generalmente el efecto rainbow
-        };
-
-        Number {
-            layer = <1>;
-            <&rgb_ug RGB_COLOR_HSB(240,100,100)>;  // Azul
-        };
-
-        Symbol {
-            layer = <2>;
-            <&rgb_ug RGB_COLOR_HSB(270,100,100)>;  // Morado
-        };
-
-        Fn {
-            layer = <3>;
-            <&rgb_ug RGB_COLOR_HSB(0,100,100)>;    // Rojo
-        };
-
-        caps_word {
-            caps-word;
-            <&rgb_ug RGB_COLOR_HSB(30,100,100)>;   // Naranja
-        };
-    };
-
     behaviors {
         bt_encoder: bt_encoder {
             compatible = "zmk,behavior-sensor-rotate";
@@ -261,5 +232,34 @@
         };
     };
 
+
+    underglow-layer {
+        compatible = "zmk,underglow-layer";
+
+        Default {
+            layer = <0>;
+            effect = <3>;  // 3 es generalmente el efecto rainbow
+        };
+
+        Number {
+            layer = <1>;
+            <&rgb_ug RGB_COLOR_HSB(240,100,100)>;  // Azul
+        };
+
+        Symbol {
+            layer = <2>;
+            <&rgb_ug RGB_COLOR_HSB(270,100,100)>;  // Morado
+        };
+
+        Fn {
+            layer = <3>;
+            <&rgb_ug RGB_COLOR_HSB(0,100,100)>;    // Rojo
+        };
+
+        caps_word {
+            caps-word;
+            <&rgb_ug RGB_COLOR_HSB(30,100,100)>;   // Naranja
+        };
+    };
 
 };
