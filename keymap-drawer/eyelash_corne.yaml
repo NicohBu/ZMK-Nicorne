@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
-  - {t: '$$mdi:keyboard-esc$$', h: NUMBER}
+  - {t: '$$mdi:keyboard-esc$$', h: '&mo1_rgb'}
   - Q
   - W
   - E
@@ -14,7 +14,7 @@ layers:
   - O
   - {t: P, h: '&oneshot LS(LG(S))'}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
+  - {t: '$$mdi:keyboard-tab$$', h: '&mo2_rgb'}
   - A
   - S
   - D
@@ -45,12 +45,12 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - '&td_ctrl_mo1'
   - '&td_gui_mo2'
-  - {t: '$$mdi:keyboard-space$$', h: Fn}
+  - {t: '$$mdi:keyboard-space$$', h: '&mo3_rgb'}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - '&td_alt_mo2'
   - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
   NUMBER:
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - '&as N1'
   - '&as N2'
   - '&as N3'
@@ -97,7 +97,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: KP 0, h: Sft+0}
   - {t: KP 0, h: Sft+4}
-  - {t: KP DOT, h: Sft+3, type: held alternate}
+  - {t: KP DOT, h: Sft+3, type: held}
   SYMBOL:
   - )
   - '!'
@@ -112,7 +112,7 @@ layers:
   - (
   - _
   - {t: '=', s: +}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - ^
   - '&'
   - '*'
@@ -192,7 +192,7 @@ layers:
   - $$mdi:progress-download$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
