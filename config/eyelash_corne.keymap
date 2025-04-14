@@ -210,7 +210,7 @@
         Symbol {
             display-name = "SYMBOL";
             bindings = <
-&kp RPAR  &kp EXCL   &kp AT         &kp HASH  &kp DLLR      &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS       &kp STAR      &kp LPAR      &kp UNDER          &kp EQUAL
+&kp PLUS  &kp EXCL   &kp AT         &kp HASH  &kp DLLR      &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS       &kp STAR      &kp LPAR      &kp UNDER          &kp EQUAL
 &trans    &kp CARET  &kp AMPS       &kp STAR  &kp LPAR      &kp RPAR             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PRCNT  &kp RA(MINUS)  &kp APOS      &kp NUHS      &as RIGHT_BRACKET  &as GRAVE
 &trans    &none      &kp RA(MINUS)  &kp NUBS  &kp LS(NUBS)  &none      &trans                    &mmv MOVE_DOWN                   &kp DLLR   &kp RA(GRAVE)  &kp LS(APOS)  &kp LS(NUHS)  &trans             &trans
                                     &trans    &trans        &trans                                                                &trans     &trans         &trans
