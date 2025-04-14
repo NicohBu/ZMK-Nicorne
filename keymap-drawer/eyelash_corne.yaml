@@ -99,7 +99,7 @@ layers:
   - {t: KP 0, h: Sft+4}
   - {t: KP DOT, h: Sft+3, type: held alternate}
   SYMBOL:
-  - )
+  - +
   - '!'
   - '@'
   - '#'
