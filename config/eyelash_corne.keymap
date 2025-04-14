@@ -38,22 +38,22 @@
 
         Number {
             layer = <1>;
-            &rgb_ug RGB_COLOR_HSB(240,100,100);  // Azul
+            &rgb_ug <RGB_COLOR_HSB(240,100,100)>;  // Azul
         };
 
         Symbol {
             layer = <2>;
-            &rgb_ug RGB_COLOR_HSB(270,100,100);  // Morado
+            &rgb_ug <RGB_COLOR_HSB(270,100,100)>;  // Morado
         };
 
         Fn {
             layer = <3>;
-            &rgb_ug RGB_COLOR_HSB(0,100,100);    // Rojo
+            &rgb_ug <RGB_COLOR_HSB(0,100,100)>;    // Rojo
         };
 
         caps_word {
             caps-word;
-            &rgb_ug RGB_COLOR_HSB(30,100,100);   // Naranja
+            &rgb_ug <RGB_COLOR_HSB(30,100,100)>;   // Naranja
         };
     };
 
