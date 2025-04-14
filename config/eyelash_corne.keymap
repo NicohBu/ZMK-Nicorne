@@ -224,7 +224,7 @@
             bindings = <
 &kp F12      &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                      &rgb_ug RGB_BRI                   &kp F6      &kp F7        &kp F8  &kp F9  &kp F10  &kp F11
 &trans       &bt BT_SEL 0             &bt BT_SEL 1             &bt BT_SEL 2             &bt BT_SEL 3             &bt BT_SEL 4               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none       &none         &none   &none   &none    &kp F12
-&bootloader  &out OUT_USB             &out OUT_BLE             &none                    &none                    &sys_reset    &soft_off                     &rgb_ug RGB_BRD                   &sys_reset  &none         &none   &none   &none    &bootloader
+&bootloader  &out OUT_USB             &out OUT_BLE             &none                    &soft_off                &sys_reset    &soft_off                     &rgb_ug RGB_BRD                   &sys_reset  &soft_off     &none   &none   &none    &bootloader
                                                                &none                    &none                    &none                                                                         &none       &kp LEFT_ALT  &none
             >;
 
