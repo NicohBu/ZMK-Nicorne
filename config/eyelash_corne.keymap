@@ -27,7 +27,6 @@
 };
 
 / {
-
     behaviors {
         bt_encoder: bt_encoder {
             compatible = "zmk,behavior-sensor-rotate";
@@ -232,7 +231,6 @@
         };
     };
 
-
     underglow-layer {
         compatible = "zmk,underglow-layer";
 
@@ -243,23 +241,22 @@
 
         Number {
             layer = <1>;
-            <&rgb_ug RGB_COLOR_HSB(240,100,100)>;  // Azul
+            color = <RGB_COLOR_HSB(240, 100, 100)>;  // Azul
         };
 
         Symbol {
             layer = <2>;
-            <&rgb_ug RGB_COLOR_HSB(270,100,100)>;  // Morado
+            color = <RGB_COLOR_HSB(270, 100, 100)>;  // Morado
         };
 
-        Fn {
+        layer_3 {
             layer = <3>;
-            <&rgb_ug RGB_COLOR_HSB(0,100,100)>;    // Rojo
+            color = <RGB_COLOR_HSB(0, 100, 100)>;    // Rojo
         };
 
         caps_word {
             caps-word;
-            <&rgb_ug RGB_COLOR_HSB(30,100,100)>;   // Naranja
+            color = <RGB_COLOR_HSB(30, 100, 100)>;   // Naranja
         };
     };
-
 };
