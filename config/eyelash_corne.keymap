@@ -179,7 +179,17 @@
                 <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_release>,
-                <&kp LSHFT>;
+                <&kp LSHFT>,
+                <&macro_press>,
+                <&macro_press>,
+                <&macro_press>,
+                <&macro_press>,
+                <&macro_press>,
+                <&macro_press>,
+                <&macro_press>,
+                <&macro_press>,
+                <&macro_press>,
+                <&macro_press>;
 
             label = "SHIFT";
         };
@@ -214,7 +224,6 @@
             bindings =
                 <&macro_press>,
                 <&mo 1 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(224,100,72)>,
-                <&macro_pause_for_release>,
                 <&macro_release>,
                 <&rgb_ug RGB_EFR>;
 
@@ -227,7 +236,6 @@
             bindings =
                 <&macro_press>,
                 <&mo 2 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(275,100,72)>,
-                <&macro_pause_for_release>,
                 <&macro_release>,
                 <&rgb_ug RGB_EFR>;
 
@@ -240,7 +248,6 @@
             bindings =
                 <&macro_press>,
                 <&mo 2 &rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(360,100,73)>,
-                <&macro_pause_for_release>,
                 <&macro_release>,
                 <&rgb_ug RGB_EFR>;
 
