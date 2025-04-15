@@ -16,8 +16,8 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
   - A
-  - S
-  - D
+  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '&oneshot LC(F)'}
   - G
   - $$mdi:arrow-left-bold$$
@@ -25,7 +25,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - H
   - {t: J, h: '$$mdi:apple-keyboard-option$$'}
-  - K
+  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
   - L
   - {t: ;, s: ':'}
   - {t: '[', h: '&oneshot KP_ASTERISK', s: '{'}
@@ -180,12 +180,12 @@ layers:
   - OUT USB
   - OUT BLE
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&soft_off'
+  - '&OFF'
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - '&soft_off'
   - RGB BRD
   - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - '&soft_off'
+  - '&OFF'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
