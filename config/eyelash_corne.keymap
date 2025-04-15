@@ -180,6 +180,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Togle_Colemak {
+            bindings = <&tog 1>;
+            key-positions = <0 13>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -196,12 +205,12 @@
         };
 
         Alpha_Alt {
-                display-name = "COLEMAK";
-                bindings = <
-&lt_hold 3 ESC  &kp Q                &kp W                &kp F                &kp P                &kp G                                         &kp UP                           &kp J          &kp L                    &kp U                   &kp Y                     &kp SEMI    &kp BACKSPACE
-&lt_hold 4 TAB  &kp A                &hrm LCTRL R         &hrm LALT S          &shortcut LC(T) T    &kp D                               &kp LEFT  &shortcut END HOME  &kp RIGHT    &kp H          &hrm LEFT_ALT N          &hrm RCTRL E            &kp I                     &kp O       &shortcut KP_ASTERISK LBKT
-&td_caps        &shortcut LC(Z) Z    &shortcut LC(X) X    &shortcut LC(C) C    &shortcut LC(V) V    &kp B               &kp CAPSLOCK              &kp DOWN                         &kp K          &shortcut C_AL_MAIL M    &shortcut NUBS COMMA    &shortcut LS(NUBS) DOT    &kp FSLH    &mt RSHIFT ENTER
-                                                          &td_ctrl_mo1         &td_gui_mo2          &lt_hold 2 SPACE                                                               &lt 2 SPACE    &td_alt_mo2              &lt 3 DEL
+            display-name = "COLEMAK";
+            bindings = <
+&lt_hold 3 ESC  &kp Q              &kp W              &kp F              &kp P              &kp G                                       &kp UP                         &kp J        &kp L                  &kp U                 &kp Y                   &kp SEMI  &kp BACKSPACE
+&lt_hold 4 TAB  &kp A              &hrm LCTRL R       &hrm LALT S        &shortcut LC(T) T  &kp D                             &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H        &hrm LEFT_ALT N        &hrm RCTRL E          &kp I                   &kp O     &shortcut KP_ASTERISK LBKT
+&td_caps        &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B             &kp CAPSLOCK              &kp DOWN                       &kp K        &shortcut C_AL_MAIL M  &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH  &mt RSHIFT ENTER
+                                                      &td_ctrl_mo1       &td_gui_mo2        &lt_hold 2 SPACE                                                           &lt 2 SPACE  &td_alt_mo2            &lt 3 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
