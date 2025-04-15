@@ -204,7 +204,7 @@
                                 &trans      &trans      &shortcut LS(N0) KP_ENTER                                                                 &hrm LS(N0) KP_ENTER  &hrm HASH KP_N0  &hrm PRCNT KP_DOT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         Symbol {
@@ -216,7 +216,7 @@
                                     &trans    &trans        &trans                                                                       &trans     &trans         &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Fn {
