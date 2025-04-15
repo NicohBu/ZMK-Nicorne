@@ -198,10 +198,10 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&trans  &as N1  &as N2  &as N3  &as N4     &as N5                                          &none                                      &kp KP_N7          &kp KP_N8          &kp KP_N9           &kp KP_SUBTRACT  &kp KP_PLUS      &hrm DEL BACKSPACE
-&trans  &as N6  &as N7  &as N8  &as N9     &as N0                   &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FAST_FORWARD C_NEXT  &kp KP_N4          &kp KP_N5          &kp KP_N6           &kp KP_DIVIDE    &kp KP_ASTERISK  &shortcut K_CALC KP_NUMLOCK
-&trans  &none   &none   &none   &kp PG_UP  &kp PG_DN  &kp C_MUTE                           &none                                      &kp KP_N1          &kp KP_N2          &kp KP_N3           &trans           &trans           &trans
-                        &trans  &trans     &trans                                                                                     &hrm LS(N0) KP_N0  &hrm LS(N4) KP_N0  &hrm LS(N3) KP_DOT
+&trans  &as N1    &as N2    &as N3    &as N4     &as N5                                          &none                                      &kp KP_N7             &kp KP_N8          &kp KP_N9           &kp KP_SUBTRACT             &kp KP_PLUS      &hrm DEL BACKSPACE
+&trans  &as N6    &as N7    &as N8    &as N9     &as N0                   &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FAST_FORWARD C_NEXT  &kp KP_N4             &kp KP_N5          &kp KP_N6           &kp KP_DIVIDE               &kp KP_ASTERISK  &shortcut K_CALC KP_NUMLOCK
+&trans  &kp RPAR  &kp DLLR  &kp HASH  &kp PG_UP  &kp PG_DN  &kp C_MUTE                           &none                                      &kp KP_N1             &kp KP_N2          &kp KP_N3           &shortcut LS(NUBS) LS(DOT)  &trans           &trans
+                            &trans    &trans     &trans                                                                                     &hrm LS(N0) KP_ENTER  &hrm LS(N4) KP_N0  &hrm LS(N3) KP_DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
