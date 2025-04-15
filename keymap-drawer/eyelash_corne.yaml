@@ -180,7 +180,7 @@ layers:
   - OUT USB
   - OUT BLE
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&studio_unlock'
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - '&soft_off'
   - RGB BRD
