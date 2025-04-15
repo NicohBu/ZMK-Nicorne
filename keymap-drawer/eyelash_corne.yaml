@@ -66,7 +66,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
   - A
   - {t: R, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: S, h: Sft+Gui+S}
   - {t: T, h: '&oneshot LC(T)'}
   - D
   - $$mdi:arrow-left-bold$$
