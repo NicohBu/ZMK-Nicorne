@@ -79,9 +79,9 @@ layers:
   - KP ASTERISK
   - {t: KP NUMLOCK, h: '&oneshot K_CALC'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - )
+  - $
+  - '#'
   - PG UP
   - PG DN
   - $$mdi:volume-off$$
@@ -89,13 +89,13 @@ layers:
   - KP 1
   - KP 2
   - KP 3
+  - {t: Sft+., h: '&oneshot LS(NUBS)', s: Sft+>}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: KP 0, h: Sft+0}
+  - {t: KP ENTER, h: Sft+0}
   - {t: KP 0, h: Sft+4}
   - {t: KP DOT, h: Sft+3, type: held alternate}
   SYMBOL:
