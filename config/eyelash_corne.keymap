@@ -262,17 +262,17 @@
         };
 
         Number {
-            layer = <1>;
+            layer = <2>;
             color = <RGB_COLOR_HSB(240, 100, 100)>;  // Azul
         };
 
         Symbol {
-            layer = <2>;
+            layer = <3>;
             color = <RGB_COLOR_HSB(270, 100, 100)>;  // Morado
         };
 
         layer_3 {
-            layer = <3>;
+            layer = <4>;
             color = <RGB_COLOR_HSB(0, 100, 100)>;    // Rojo
         };
 
