@@ -49,55 +49,55 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - '&td_alt_mo2'
   - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
-  Alpha_ALT:
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  COLEMAK:
+  - {t: '$$mdi:keyboard-esc$$', h: NUMBER}
+  - Q
+  - W
+  - F
+  - P
+  - G
+  - $$mdi:arrow-up-bold$$
+  - J
+  - L
+  - U
+  - Y
+  - {t: ;, s: ':'}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
+  - A
+  - {t: R, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: T, h: '&oneshot LC(T)'}
+  - D
+  - $$mdi:arrow-left-bold$$
+  - {t: HOME, h: '&oneshot END'}
+  - $$mdi:arrow-right-bold$$
+  - H
+  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: E, h: '$$mdi:apple-keyboard-control$$'}
+  - I
+  - O
+  - {t: '[', h: '&oneshot KP_ASTERISK', s: '{'}
+  - '&td_caps'
+  - {t: Z, h: '&oneshot LC(Z)'}
+  - {t: X, h: '&oneshot LC(X)'}
+  - {t: C, h: '&oneshot LC(C)'}
+  - {t: V, h: '&oneshot LC(V)'}
+  - B
+  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:arrow-down-bold$$
+  - K
+  - {t: M, h: '&oneshot C_AL_MAIL'}
+  - {t: ',', h: '&oneshot NUBS', s: <}
+  - {t: ., h: '&oneshot LS(NUBS)', s: '>'}
+  - {t: /, s: '?'}
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - '&td_ctrl_mo1'
+  - '&td_gui_mo2'
+  - {t: '$$mdi:keyboard-space$$', h: Fn}
+  - {t: '$$mdi:keyboard-space$$', h: Fn}
+  - '&td_alt_mo2'
+  - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
   Fn:
   - F12
   - {t: F1, h: '&oneshot LA(LC(F1))'}
