@@ -119,7 +119,7 @@ layers:
   - '&as N9'
   - '&as N0'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - $$mdi:play-pause$$
+  - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - KP 4
   - KP 5
