@@ -12,7 +12,7 @@ layers:
   - U
   - I
   - O
-  - {t: P, h: '&oneshot LS(LG(S))'}
+  - P
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
   - A
