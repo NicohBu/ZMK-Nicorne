@@ -99,7 +99,7 @@ layers:
   - '&td_alt'
   - $$mdi:backspace-reverse-outline$$
   NUMBER:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: NUMBER, h: toggle, type: held}
   - '&as N1'
   - '&as N2'
   - '&as N3'
@@ -148,8 +148,8 @@ layers:
   - {t: KP 0, h: '#'}
   - {t: KP DOT, h: '%'}
   SYMBOL:
-  - +
-  - '!'
+  - {t: SYMBOL, h: toggle}
+  - {t: '!', h: '&oneshot PLUS'}
   - '@'
   - '#'
   - $
@@ -161,7 +161,7 @@ layers:
   - (
   - _
   - {t: '=', s: +}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - ^
   - '&'
   - '*'
@@ -197,7 +197,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
-  - F12
+  - {t: Fn, h: toggle}
   - {t: F1, h: '&oneshot LA(LC(F1))'}
   - {t: F2, h: '&oneshot LC(LA(F2))'}
   - {t: F3, h: '&oneshot LC(LA(F3))'}
@@ -241,8 +241,8 @@ layers:
   - $$mdi:progress-download$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: Fn, h: toggle}
-  - {t: '$$mdi:minus-circle-outline$$', type: held}
+  - {t: Fn, h: toggle, type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
