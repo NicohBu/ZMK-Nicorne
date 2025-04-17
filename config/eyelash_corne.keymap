@@ -25,6 +25,8 @@
     trigger-period-ms = <16>;
 };
 
+&sl { release-after-ms = <1500>; };
+
 / {
     behaviors {
         bt_encoder: bt_encoder {
@@ -112,21 +114,21 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Alt+Symbol";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT>, <&tog 3>;
+            bindings = <&kp RIGHT_ALT>, <&sl 3>;
         };
 
         td_gui: td_gui {
             compatible = "zmk,behavior-tap-dance";
             label = "GUI+Symb";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&tog 3>;
+            bindings = <&kp LGUI>, <&sl 3>;
         };
 
         td_ctrl: td_ctrl {
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL+Numb";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&tog 2>;
+            bindings = <&kp LCTRL>, <&sl 2>;
         };
 
         tk_hold: tk_hold {
@@ -205,7 +207,7 @@
             display-name = "QWERTY";
             bindings = <
 &kt_hold 2 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                 &kp O                   &kp P     &kp BACKSPACE
-&kt_hold 3 TAB  &kp A              &hrm LS(LG(S)) S   &kp D              &shortcut LC(F) F  &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RCTRL K          &kp L                   &kp SEMI  &shortcut KP_ASTERISK LBKT
+&kt_hold 3 TAB  &kp A              &hrm LCTRL S       &hrm LGUI D        &hrm LALT F        &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K           &hrm RCTRL L            &kp SEMI  &shortcut KP_ASTERISK LBKT
 &td_caps        &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH  &mt RSHIFT ENTER
                                                       &td_ctrl           &td_gui            &kt_hold 4 SPACE                                                            &lt 4 SPACE        &td_alt                &kp DEL
             >;
