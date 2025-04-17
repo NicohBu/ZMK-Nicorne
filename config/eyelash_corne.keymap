@@ -145,7 +145,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <220>;
-            bindings = <&tog>, <&kp>;
+            bindings = <&sl>, <&kp>;
         };
     };
 
@@ -228,7 +228,7 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&trans  &as N1      &as N2      &as N3      &as N4      &as N5                                &mmv MOVE_UP                     &kp KP_N7             &kp KP_N8        &kp KP_N9          &kp KP_SUBTRACT             &kp KP_PLUS      &hrm DEL BACKSPACE
+&tog 2  &as N1      &as N2      &as N3      &as N4      &as N5                                &mmv MOVE_UP                     &kp KP_N7             &kp KP_N8        &kp KP_N9          &kp KP_SUBTRACT             &kp KP_PLUS      &hrm DEL BACKSPACE
 &trans  &as N6      &as N7      &as N8      &as N9      &as N0                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_N4             &kp KP_N5        &kp KP_N6          &kp KP_DIVIDE               &kp KP_ASTERISK  &shortcut K_CALC KP_NUMLOCK
 &trans  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N8)  &kp LS(N9)  &trans                    &mmv MOVE_DOWN                   &kp KP_N1             &kp KP_N2        &kp KP_N3          &shortcut LS(NUBS) LS(DOT)  &trans           &kp KP_ENTER
                                 &trans      &trans      &tog 2                                                                 &hrm LS(N0) KP_ENTER  &hrm HASH KP_N0  &hrm PRCNT KP_DOT
@@ -240,10 +240,10 @@
         Symbol {
             display-name = "SYMBOL";
             bindings = <
-&kp PLUS  &kp EXCL   &kp AT         &kp HASH  &kp DLLR      &kp PRCNT                                       &trans                           &kp CARET  &kp AMPS       &kp STAR      &kp LPAR      &kp UNDER          &kp EQUAL
-&trans    &kp CARET  &kp AMPS       &kp STAR  &kp LPAR      &kp RPAR                 &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FF C_NEXT  &kp PRCNT  &kp RA(MINUS)  &kp APOS      &kp NUHS      &as RIGHT_BRACKET  &as GRAVE
-&trans    &none      &kp RA(MINUS)  &kp NUBS  &kp LS(NUBS)  &none      &kp C_MUTE                           &trans                           &kp DLLR   &kp RA(GRAVE)  &kp LS(APOS)  &kp LS(NUHS)  &trans             &trans
-                                    &trans    &trans        &tog 3                                                                           &trans     &trans         &trans
+&tog 3  &shortcut PLUS EXCL  &kp AT         &kp HASH  &kp DLLR      &kp PRCNT                                       &trans                           &kp CARET  &kp AMPS       &kp STAR      &kp LPAR      &kp UNDER          &kp EQUAL
+&trans  &kp CARET            &kp AMPS       &kp STAR  &kp LPAR      &kp RPAR                 &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FF C_NEXT  &kp PRCNT  &kp RA(MINUS)  &kp APOS      &kp NUHS      &as RIGHT_BRACKET  &as GRAVE
+&trans  &none                &kp RA(MINUS)  &kp NUBS  &kp LS(NUBS)  &none      &kp C_MUTE                           &trans                           &kp DLLR   &kp RA(GRAVE)  &kp LS(APOS)  &kp LS(NUHS)  &trans             &trans
+                                            &trans    &trans        &tog 3                                                                           &trans     &trans         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -252,7 +252,7 @@
         Fn {
             display-name = "Fn";
             bindings = <
-&kp F12      &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                      &rgb_ug RGB_BRI                   &kp F6      &kp F7        &kp F8  &kp F9  &kp F10  &kp F11
+&tog 4       &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                      &rgb_ug RGB_BRI                   &kp F6      &kp F7        &kp F8  &kp F9  &kp F10  &kp F11
 &trans       &bt BT_SEL 0             &bt BT_SEL 1             &bt BT_SEL 2             &bt BT_SEL 3             &bt BT_SEL 4               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none       &none         &none   &none   &none    &kp F12
 &bootloader  &out OUT_USB             &out OUT_BLE             &none                    &none                    &sys_reset    &soft_off                     &rgb_ug RGB_BRD                   &sys_reset  &none         &none   &none   &none    &bootloader
                                                                &none                    &none                    &tog 4                                                                        &none       &kp LEFT_ALT  &none
