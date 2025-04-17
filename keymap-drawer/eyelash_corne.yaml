@@ -45,7 +45,7 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: NUMBER, h: '$$mdi:gesture-tap-hold$$'}
   - {t: SYMBOL, h: '$$mdi:gesture-tap-hold$$'}
-  - {t: '$$mdi:keyboard-space$$', h: Fn}
+  - {t: Fn, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - '&td_alt'
   - $$mdi:backspace-reverse-outline$$
@@ -92,14 +92,14 @@ layers:
   - {t: ., h: '&oneshot LS(NUBS)', s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - '&td_ctrl'
-  - '&td_gui'
-  - {t: '$$mdi:keyboard-space$$', h: Fn}
+  - {t: NUMBER, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: SYMBOL, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: Fn, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - '&td_alt'
   - $$mdi:backspace-reverse-outline$$
   NUMBER:
-  - {t: NUMBER, h: toggle, type: held}
+  - {type: held}
   - '&as N1'
   - '&as N2'
   - '&as N3'
@@ -143,13 +143,13 @@ layers:
   - KP ENTER
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: NUMBER, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: KP ENTER, h: Sft+0}
   - {t: KP 0, h: '#'}
   - {t: KP DOT, h: '%'}
   SYMBOL:
-  - {t: SYMBOL, h: toggle}
-  - {t: '!', h: '&oneshot PLUS'}
+  - +
+  - '!'
   - '@'
   - '#'
   - $
@@ -192,12 +192,12 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - {t: SYMBOL, h: toggle}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
-  - {t: Fn, h: toggle}
+  - F12
   - {t: F1, h: '&oneshot LA(LC(F1))'}
   - {t: F2, h: '&oneshot LC(LA(F2))'}
   - {t: F3, h: '&oneshot LC(LA(F3))'}
@@ -241,7 +241,7 @@ layers:
   - $$mdi:progress-download$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: Fn, h: toggle, type: held}
+  - {t: '$$mdi:minus-circle-outline$$', type: held}
   - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
