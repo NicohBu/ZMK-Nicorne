@@ -43,8 +43,8 @@ layers:
   - {t: ., h: '&oneshot LS(NUBS)', s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - '&td_ctrl'
-  - '&td_gui'
+  - {t: NUMBER, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: SYMBOL, h: '$$mdi:gesture-tap-hold$$'}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - '&td_alt'
@@ -141,7 +141,7 @@ layers:
   - {t: Sft+., h: '&oneshot LS(NUBS)', s: Sft+>}
   - {t: '$$mdi:transfer$$', type: trans}
   - KP ENTER
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: NUMBER, h: toggle}
   - {t: KP ENTER, h: Sft+0}
@@ -191,7 +191,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: SYMBOL, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
