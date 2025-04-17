@@ -17,7 +17,7 @@ layers:
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
   - A
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-option$$'}
+  - D
   - {t: F, h: '&oneshot LC(F)'}
   - G
   - $$mdi:arrow-left-bold$$
@@ -43,11 +43,11 @@ layers:
   - {t: ., h: '&oneshot LS(NUBS)', s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - '&td_ctrl_mo1'
-  - '&td_gui_mo2'
+  - {t: NUMBER, h: '$$mdi:apple-keyboard-control$$'}
+  - '&td_gui'
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - '&td_alt_mo2'
+  - {t: SYMBOL, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
   COLEMAK:
   - {t: '$$mdi:keyboard-esc$$', h: NUMBER}
@@ -92,14 +92,14 @@ layers:
   - {t: ., h: '&oneshot LS(NUBS)', s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - '&td_ctrl_mo1'
-  - '&td_gui_mo2'
+  - {t: NUMBER, h: '$$mdi:apple-keyboard-control$$'}
+  - '&td_gui'
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - '&td_alt_mo2'
+  - {t: SYMBOL, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
   NUMBER:
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - '&as N1'
   - '&as N2'
   - '&as N3'
@@ -143,10 +143,10 @@ layers:
   - KP ENTER
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: KP ENTER, h: '&oneshot LS(N0)'}
+  - {t: NUMBER, h: toggle}
   - {t: KP ENTER, h: Sft+0}
   - {t: KP 0, h: '#'}
-  - {t: KP DOT, h: '%', type: held alternate}
+  - {t: KP DOT, h: '%'}
   SYMBOL:
   - +
   - '!'
@@ -161,7 +161,7 @@ layers:
   - (
   - _
   - {t: '=', s: +}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - ^
   - '&'
   - '*'
@@ -192,7 +192,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: SYMBOL, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -241,8 +241,8 @@ layers:
   - $$mdi:progress-download$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: Fn, h: toggle}
   - {t: '$$mdi:minus-circle-outline$$', type: held}
-  - {t: '$$mdi:minus-circle-outline$$', type: held alternate}
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
