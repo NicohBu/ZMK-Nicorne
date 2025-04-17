@@ -16,7 +16,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
   - A
-  - {t: S, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: S, h: Sft+Gui+S}
   - D
   - {t: F, h: '&oneshot LC(F)'}
   - G
@@ -43,12 +43,12 @@ layers:
   - {t: ., h: '&oneshot LS(NUBS)', s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: NUMBER, h: '$$mdi:apple-keyboard-control$$'}
+  - '&td_ctrl'
   - '&td_gui'
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - {t: SYMBOL, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
+  - '&td_alt'
+  - $$mdi:backspace-reverse-outline$$
   COLEMAK:
   - {t: '$$mdi:keyboard-esc$$', h: NUMBER}
   - Q
@@ -65,7 +65,7 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
   - A
-  - {t: R, h: '$$mdi:apple-keyboard-control$$'}
+  - R
   - {t: S, h: Sft+Gui+S}
   - {t: T, h: '&oneshot LC(T)'}
   - D
@@ -92,12 +92,12 @@ layers:
   - {t: ., h: '&oneshot LS(NUBS)', s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: NUMBER, h: '$$mdi:apple-keyboard-control$$'}
+  - '&td_ctrl'
   - '&td_gui'
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - {t: SYMBOL, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: NUMBER}
+  - '&td_alt'
+  - $$mdi:backspace-reverse-outline$$
   NUMBER:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&as N1'
@@ -229,7 +229,7 @@ layers:
   - OUT USB
   - OUT BLE
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&studio_unlock'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - '&soft_off'
   - RGB BRD
