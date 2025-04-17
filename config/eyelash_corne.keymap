@@ -88,10 +88,10 @@
             continue-list = <SPACE LCTRL RSHIFT LSHIFT COMMA SLASH LBRC RBRC APOS NUHS NUBS SEMI SINGLE_QUOTE FSLH LEFT RIGHT UP DOWN BSPC KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9 KP_N0 KP_SUBTRACT KP_DIVIDE KP_PLUS KP_ASTERISK HOME LBKT DEL>;
         };
 
-        lt_hold: lt_hold {
+        tk_hold: tk_hold {
             compatible = "zmk,behavior-hold-tap";
-            label = "Hold-preferred";
-            bindings = <&mo>, <&kp>;
+            label = "TogKey_Hold-preferred";
+            bindings = <&kp>, <&tog>;
 
             #binding-cells = <2>;
             flavor = "hold-preferred";
@@ -132,11 +132,20 @@
             bindings = <&kp RIGHT_ALT>, <&mo 3>;
         };
 
-        td_gui_mo2: td_gui_mo2 {
+        td_gui: td_gui {
             compatible = "zmk,behavior-tap-dance";
-            label = "GUI+&mo2";
+            label = "GUI+Symb";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&mo 3>;
+            bindings = <&kp LGUI>, <&tog 3>;
+        };
+
+        kt_hold: kt_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KeyTog";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <220>;
+            bindings = <&tog>, <&kp>;
         };
     };
 
@@ -195,10 +204,10 @@
         Default {
             display-name = "QWERTY";
             bindings = <
-&lt_hold 2 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                 &kp O                   &shortcut LS(LG(S)) P  &kp BACKSPACE
-&lt_hold 3 TAB  &kp A              &hrm LCTRL S       &hrm LALT D        &shortcut LC(F) F  &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RCTRL K          &kp L                   &kp SEMI               &shortcut KP_ASTERISK LBKT
+&kt_hold 2 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                 &kp O                   &shortcut LS(LG(S)) P  &kp BACKSPACE
+&kt_hold 3 TAB  &kp A              &hrm LCTRL S       &kp D              &shortcut LC(F) F  &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RCTRL K          &kp L                   &kp SEMI               &shortcut KP_ASTERISK LBKT
 &td_caps        &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH               &mt RSHIFT ENTER
-                                                      &td_ctrl_mo1       &td_gui_mo2        &lt_hold 4 SPACE                                                            &lt 4 SPACE        &td_alt_mo2            &lt 2 DEL
+                                                      &tk_hold RCTRL 2   &td_gui            &kt_hold 4 SPACE                                                            &lt 4 SPACE        &tk_hold RALT 3        &kt_hold 2 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
@@ -207,10 +216,10 @@
         Alpha_Alt {
             display-name = "COLEMAK";
             bindings = <
-&lt_hold 2 ESC  &kp Q              &kp W              &kp F              &kp P              &kp G                                       &kp UP                         &kp J        &kp L                  &kp U                 &kp Y                   &kp SEMI  &kp BACKSPACE
-&lt_hold 3 TAB  &kp A              &hrm LCTRL R       &hrm LS(LG(S)) S   &shortcut LC(T) T  &kp D                             &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H        &hrm LEFT_ALT N        &hrm RCTRL E          &kp I                   &kp O     &shortcut KP_ASTERISK LBKT
+&kt_hold 2 ESC  &kp Q              &kp W              &kp F              &kp P              &kp G                                       &kp UP                         &kp J        &kp L                  &kp U                 &kp Y                   &kp SEMI  &kp BACKSPACE
+&kt_hold 3 TAB  &kp A              &hrm LCTRL R       &hrm LS(LG(S)) S   &shortcut LC(T) T  &kp D                             &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H        &hrm LEFT_ALT N        &hrm RCTRL E          &kp I                   &kp O     &shortcut KP_ASTERISK LBKT
 &td_caps        &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B             &kp CAPSLOCK              &kp DOWN                       &kp K        &shortcut C_AL_MAIL M  &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH  &mt RSHIFT ENTER
-                                                      &td_ctrl_mo1       &td_gui_mo2        &lt_hold 4 SPACE                                                           &lt 4 SPACE  &td_alt_mo2            &lt 2 DEL
+                                                      &tk_hold LCTRL 2   &td_gui            &kt_hold 4 SPACE                                                           &lt 4 SPACE  &tk_hold RALT 3        &kt_hold 2 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
@@ -219,10 +228,10 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&trans  &as N1      &as N2      &as N3      &as N4      &as N5                                               &mmv MOVE_UP                     &kp KP_N7             &kp KP_N8        &kp KP_N9          &kp KP_SUBTRACT             &kp KP_PLUS      &hrm DEL BACKSPACE
-&trans  &as N6      &as N7      &as N8      &as N9      &as N0                               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_N4             &kp KP_N5        &kp KP_N6          &kp KP_DIVIDE               &kp KP_ASTERISK  &shortcut K_CALC KP_NUMLOCK
-&trans  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N8)  &kp LS(N9)                 &trans                    &mmv MOVE_DOWN                   &kp KP_N1             &kp KP_N2        &kp KP_N3          &shortcut LS(NUBS) LS(DOT)  &trans           &kp KP_ENTER
-                                &trans      &trans      &shortcut LS(N0) KP_ENTER                                                             &hrm LS(N0) KP_ENTER  &hrm HASH KP_N0  &hrm PRCNT KP_DOT
+&trans  &as N1      &as N2      &as N3      &as N4      &as N5                                &mmv MOVE_UP                     &kp KP_N7             &kp KP_N8        &kp KP_N9          &kp KP_SUBTRACT             &kp KP_PLUS      &hrm DEL BACKSPACE
+&trans  &as N6      &as N7      &as N8      &as N9      &as N0                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_N4             &kp KP_N5        &kp KP_N6          &kp KP_DIVIDE               &kp KP_ASTERISK  &shortcut K_CALC KP_NUMLOCK
+&trans  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N8)  &kp LS(N9)  &trans                    &mmv MOVE_DOWN                   &kp KP_N1             &kp KP_N2        &kp KP_N3          &shortcut LS(NUBS) LS(DOT)  &trans           &kp KP_ENTER
+                                &trans      &trans      &tog 2                                                                 &hrm LS(N0) KP_ENTER  &hrm HASH KP_N0  &hrm PRCNT KP_DOT
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -234,7 +243,7 @@
 &kp PLUS  &kp EXCL   &kp AT         &kp HASH  &kp DLLR      &kp PRCNT                                       &trans                           &kp CARET  &kp AMPS       &kp STAR      &kp LPAR      &kp UNDER          &kp EQUAL
 &trans    &kp CARET  &kp AMPS       &kp STAR  &kp LPAR      &kp RPAR                 &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FF C_NEXT  &kp PRCNT  &kp RA(MINUS)  &kp APOS      &kp NUHS      &as RIGHT_BRACKET  &as GRAVE
 &trans    &none      &kp RA(MINUS)  &kp NUBS  &kp LS(NUBS)  &none      &kp C_MUTE                           &trans                           &kp DLLR   &kp RA(GRAVE)  &kp LS(APOS)  &kp LS(NUHS)  &trans             &trans
-                                    &trans    &trans        &trans                                                                           &trans     &trans         &trans
+                                    &trans    &trans        &tog 3                                                                           &trans     &trans         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -246,7 +255,7 @@
 &kp F12      &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                      &rgb_ug RGB_BRI                   &kp F6      &kp F7        &kp F8  &kp F9  &kp F10  &kp F11
 &trans       &bt BT_SEL 0             &bt BT_SEL 1             &bt BT_SEL 2             &bt BT_SEL 3             &bt BT_SEL 4               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none       &none         &none   &none   &none    &kp F12
 &bootloader  &out OUT_USB             &out OUT_BLE             &none                    &studio_unlock           &sys_reset    &soft_off                     &rgb_ug RGB_BRD                   &sys_reset  &none         &none   &none   &none    &bootloader
-                                                               &none                    &none                    &none                                                                         &none       &kp LEFT_ALT  &none
+                                                               &none                    &none                    &tog 4                                                                        &none       &kp LEFT_ALT  &none
             >;
 
             sensor-bindings = <&hue_encoder>;
