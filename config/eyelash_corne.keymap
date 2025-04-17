@@ -71,15 +71,6 @@
             flavor = "tap-preferred";
         };
 
-        td_caps: td_caps {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp LSHIFT>, <&cw_mod>, <&none>, <&kp CAPSLOCK>;
-
-            label = "Shift / CapsWord / Mayusc.";
-        };
-
         cw_mod: caps_word {
             compatible = "zmk,behavior-caps-word";
             label = "Caps Word EXCLUSIONS";
@@ -88,14 +79,13 @@
             continue-list = <SPACE LCTRL RSHIFT LSHIFT COMMA SLASH LBRC RBRC APOS NUHS NUBS SEMI SINGLE_QUOTE FSLH LEFT RIGHT UP DOWN BSPC KP_N1 KP_N2 KP_N3 KP_N4 KP_N5 KP_N6 KP_N7 KP_N8 KP_N9 KP_N0 KP_SUBTRACT KP_DIVIDE KP_PLUS KP_ASTERISK HOME LBKT DEL>;
         };
 
-        tk_hold: tk_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TogKey_Hold-preferred";
-            bindings = <&kp>, <&tog>;
+        td_caps: td_caps {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Shift/Caps Lock Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp LSHIFT>, <&cw_mod>, <&none>, <&kp CAPSLOCK>;
 
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <220>;
+            label = "Shift / CapsWord / Mayusc.";
         };
 
         hrm: home_row {
@@ -118,13 +108,6 @@
             label = "Oneshot shortcut";
         };
 
-        td_ctrl: td_ctrl {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CTRL+Numb";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&tog 2>;
-        };
-
         td_alt: td_alt {
             compatible = "zmk,behavior-tap-dance";
             label = "Alt+Symbol";
@@ -137,6 +120,23 @@
             label = "GUI+Symb";
             #binding-cells = <0>;
             bindings = <&kp LGUI>, <&tog 3>;
+        };
+
+        td_ctrl: td_ctrl {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL+Numb";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&tog 2>;
+        };
+
+        tk_hold: tk_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TogKey_Hold-preferred";
+            bindings = <&kp>, <&tog>;
+
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <220>;
         };
 
         kt_hold: kt_hold {
