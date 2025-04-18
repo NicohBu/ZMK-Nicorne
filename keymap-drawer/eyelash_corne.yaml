@@ -42,10 +42,10 @@ layers:
   - {t: ',', h: '&oneshot NUBS', s: <}
   - {t: ., h: '&oneshot LS(NUBS)', s: '>'}
   - {t: /, s: '?'}
-  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: SYMBOL, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: NUMBER, h: '$$mdi:gesture-tap-hold$$'}
   - {t: SYMBOL, h: '$$mdi:gesture-tap-hold$$'}
-  - {t: Fn, h: '$$mdi:gesture-tap-hold$$'}
+  - {t: '$$mdi:keyboard-return$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: Fn}
   - '&td_alt'
   - $$mdi:backspace-reverse-outline$$
@@ -189,7 +189,7 @@ layers:
   - Sft+.
   - Sft+#
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
