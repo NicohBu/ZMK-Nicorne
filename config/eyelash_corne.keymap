@@ -143,11 +143,20 @@
 
         kt_hold: kt_hold {
             compatible = "zmk,behavior-hold-tap";
-            label = "KeyTog";
+            label = "KeyStkLyr";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <220>;
             bindings = <&sl>, <&kp>;
+        };
+
+        Layer_Mod: Layer_Mod {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Mod+StkLyr";
+            bindings = <&kp>, <&sl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <190>;
         };
     };
 
@@ -208,8 +217,8 @@
             bindings = <
 &kt_hold 2 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                 &kp O                   &kp P     &kp BACKSPACE
 &kt_hold 3 TAB  &kp A              &hrm LCTRL S       &hrm LGUI D        &hrm LALT F        &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K           &hrm RCTRL L            &kp SEMI  &shortcut KP_ASTERISK LBKT
-&td_caps        &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH  &mt RSHIFT ENTER
-                                                      &sl 2              &sl 3              &sl 4                                                                       &lt 4 SPACE        &td_alt                &kp DEL
+&td_caps        &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH  &Layer_Mod RSHIFT 3
+                                                      &sl 2              &sl 3              &kt_hold 4 ENTER                                                            &lt 4 SPACE        &td_alt                &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
