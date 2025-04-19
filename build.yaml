@@ -4,10 +4,10 @@ include:
     shield: nice_view_adapter nice_epaper    
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n  
     snippet: studio-rpc-usb-uart
-    artifact-name: eyelash_corne_left
+    artifact-name: left_eyelash_corne
   - board: eyelash_corne_right
     shield: nice_view_adapter nice_epaper
-    artifact-name: eyelash_corne_right
+    artifact-name: right_eyelash_corne
   #- board: eyelash_corne_left
   #  shield: nice_view
     #snippet: zmk-usb-logging    # Uncomment to log over USB.
@@ -21,5 +21,5 @@ include:
   #  artifact-name: eyelash_corne_studio_left
   - board: eyelash_corne_left
     shield: settings_reset
-    artifact-name: settings_reset_eyelash_corne_left_right
+    artifact-name: settings_reset
     #snippet: zmk-usb-logging
