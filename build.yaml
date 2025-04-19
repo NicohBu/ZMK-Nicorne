@@ -2,7 +2,8 @@
 include:
   - board: eyelash_corne_left
     shield: nice_view_adapter nice_epaper    
-    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n  
+    snippet: studio-rpc-usb-uart
     artifact-name: eyelash_corne_left
   - board: eyelash_corne_right
     shield: nice_view_adapter nice_epaper
