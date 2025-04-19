@@ -210,7 +210,8 @@
 
         BtCLR {
             bindings = <&bt BT_CLR>;
-            key-positions = <13 14 15 16 17 18>;
+            key-positions = <31 32 33>;
+            layers = <4>;
         };
     };
 
