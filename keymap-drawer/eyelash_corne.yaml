@@ -248,3 +248,5 @@ layers:
 combos:
 - p: [0, 13]
   k: {t: COLEMAK, h: toggle}
+- p: [13, 14, 15, 16, 17, 18]
+  k: $$mdi:bluetooth-off$$
