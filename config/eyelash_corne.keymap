@@ -58,7 +58,7 @@
         scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+            bindings = <&scrl_dn_right>, <&scrl_up_left>;
 
             tap-ms = <20>;
         };
@@ -157,6 +157,24 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <190>;
+        };
+
+        scrl_up_left: scrl_up_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCRL_UP/LEFT";
+            bindings = <&msc SCRL_UP>, <&mmv MOVE_LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        scrl_dn_right: scrl_dn_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCRL_DOWN/RIGHT";
+            bindings = <&msc SCRL_UP>, <&mmv MOVE_LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
         };
     };
 
