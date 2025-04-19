@@ -20,4 +20,5 @@ include:
   #  artifact-name: eyelash_corne_studio_left
   - board: eyelash_corne_left
     shield: settings_reset
+    artifact-name: settings_reset_eyelash_corne_left_right
     #snippet: zmk-usb-logging
