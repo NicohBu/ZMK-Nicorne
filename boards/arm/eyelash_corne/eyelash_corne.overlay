@@ -1,0 +1,46 @@
+/*
+ * Copyright (c) 2024 Your Name // Puedes poner tu nombre o dejarlo genérico
+ * SPDX-License-Identifier: MIT
+ *
+ * Overlay para Nicorne Shield habilitando nice!view en SPI0.
+ * ASUME que los pines SCK/MOSI/MISO son los definidos en eyelash_corne.dtsi (P0.20, P0.17, P0.25)
+ * y que el pin CS es P0.06.
+ */
+
+/dts-v1/;
+#include <zephyr/dt-bindings/gpio/gpio.h> // Necesario para las flags GPIO
+
+/* Habilita el bus SPI0 (etiquetado como nice_view_spi en el .dtsi)
+   y define el dispositivo nice!view conectado a él. */
+&spi0 {
+    status = "okay"; // Asegura que el bus SPI esté habilitado
+
+    /* Define el dispositivo de pantalla nice!view */
+    nice_view: display@0 {
+        compatible = "nicekeyboards,nice-view"; // Driver específico nice!view
+        reg = <0>;                         // Dirección SPI (normalmente 0 para el primer dispositivo)
+        spi-max-frequency = <8000000>;     // Frecuencia SPI (8MHz es común, puedes probar 4MHz si hay problemas)
+        width = <160>;                     // Ancho estándar nice!view
+        height = <68>;                    // Alto estándar nice!view
+        rotation = <0>;                   // Rotación (0, 90, 180, 270) - ajusta si es necesario
+
+        /* Configuración del Chip Select (CS) - ¡¡¡ ADVERTENCIA !!! */
+        /* Mantenido como ACTIVE_HIGH según solicitud. El estándar para nice!view es ACTIVE_LOW. */
+        /* Es MUY PROBABLE que la pantalla NO funcione con ACTIVE_HIGH si tu hardware es estándar. */
+        /* ¡¡¡ VERIFICA QUE P0.06 ES EL PIN CS CORRECTO PARA TU PCB !!! */
+        cs-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>; // Mantenido ACTIVE_HIGH
+
+        /* Descomenta y ajusta si tu placa tiene control de energía dedicado para la pantalla */
+        // power-gpios = <&gpioX Y GPIO_ACTIVE_HIGH>; // Reemplaza X e Y
+
+        /* Descomenta y ajusta si tu placa tiene pin de reset dedicado para la pantalla */
+        // reset-gpios = <&gpioX Z GPIO_ACTIVE_LOW>; // Reemplaza X y Z
+    };
+};
+
+/* Asegura que ZMK sepa qué dispositivo usar como pantalla principal */
+/ {
+    chosen {
+        zmk,display = &nice_view; // Apunta al label 'nice_view' que definimos arriba
+    };
+};
