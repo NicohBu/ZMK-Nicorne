@@ -583,14 +583,6 @@ rect.held, rect.combo.held {
 <text x="28" y="77" class="combo tap layer-activator"><tspan style="font-size: 86%">COLEMAK</tspan></text>
 </a><text x="28" y="88" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-1">
-<path d="M168,95 l-121,8" class="combo"/>
-<path d="M168,95 l-65,7" class="combo"/>
-<path d="M168,95 l65,-4" class="combo"/>
-<path d="M168,95 l121,2" class="combo"/>
-<rect rx="6" ry="6" x="154" y="82" width="28" height="26" class="combo"/>
-<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="159" y="86" height="18" width="18.0" class="combo tap glyph mdi:bluetooth-off"/>
-</g>
 </g>
 </g>
 <g transform="translate(40, 318)" class="layer-COLEMAK">
@@ -872,14 +864,6 @@ rect.held, rect.combo.held {
 <a href="#COLEMAK">
 <text x="28" y="77" class="combo tap layer-activator"><tspan style="font-size: 86%">COLEMAK</tspan></text>
 </a><text x="28" y="88" class="combo hold">toggle</text>
-</g>
-<g class="combo combopos-1">
-<path d="M168,95 l-121,8" class="combo"/>
-<path d="M168,95 l-65,7" class="combo"/>
-<path d="M168,95 l65,-4" class="combo"/>
-<path d="M168,95 l121,2" class="combo"/>
-<rect rx="6" ry="6" x="154" y="82" width="28" height="26" class="combo"/>
-<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="159" y="86" height="18" width="18.0" class="combo tap glyph mdi:bluetooth-off"/>
 </g>
 </g>
 </g>
@@ -1202,14 +1186,6 @@ rect.held, rect.combo.held {
 <text x="28" y="77" class="combo tap layer-activator"><tspan style="font-size: 86%">COLEMAK</tspan></text>
 </a><text x="28" y="88" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-1">
-<path d="M168,95 l-121,8" class="combo"/>
-<path d="M168,95 l-65,7" class="combo"/>
-<path d="M168,95 l65,-4" class="combo"/>
-<path d="M168,95 l121,2" class="combo"/>
-<rect rx="6" ry="6" x="154" y="82" width="28" height="26" class="combo"/>
-<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="159" y="86" height="18" width="18.0" class="combo tap glyph mdi:bluetooth-off"/>
-</g>
 </g>
 </g>
 <g transform="translate(40, 955)" class="layer-SYMBOL">
@@ -1475,14 +1451,6 @@ rect.held, rect.combo.held {
 <a href="#COLEMAK">
 <text x="28" y="77" class="combo tap layer-activator"><tspan style="font-size: 86%">COLEMAK</tspan></text>
 </a><text x="28" y="88" class="combo hold">toggle</text>
-</g>
-<g class="combo combopos-1">
-<path d="M168,95 l-121,8" class="combo"/>
-<path d="M168,95 l-65,7" class="combo"/>
-<path d="M168,95 l65,-4" class="combo"/>
-<path d="M168,95 l121,2" class="combo"/>
-<rect rx="6" ry="6" x="154" y="82" width="28" height="26" class="combo"/>
-<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="159" y="86" height="18" width="18.0" class="combo tap glyph mdi:bluetooth-off"/>
 </g>
 </g>
 </g>
@@ -1759,12 +1727,10 @@ rect.held, rect.combo.held {
 </a><text x="28" y="88" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
-<path d="M168,95 l-121,8" class="combo"/>
-<path d="M168,95 l-65,7" class="combo"/>
-<path d="M168,95 l65,-4" class="combo"/>
-<path d="M168,95 l121,2" class="combo"/>
-<rect rx="6" ry="6" x="154" y="82" width="28" height="26" class="combo"/>
-<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="159" y="86" height="18" width="18.0" class="combo tap glyph mdi:bluetooth-off"/>
+<path d="M252,147 l-37,-4" class="combo"/>
+<path d="M252,147 l37,4" class="combo"/>
+<rect rx="6" ry="6" x="238" y="134" width="28" height="26" class="combo"/>
+<use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="243" y="138" height="18" width="18.0" class="combo tap glyph mdi:bluetooth-off"/>
 </g>
 </g>
 </g>
