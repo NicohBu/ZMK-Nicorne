@@ -207,6 +207,11 @@
             bindings = <&tog 1>;
             key-positions = <0 13>;
         };
+
+        BtCLR {
+            bindings = <&bt BT_CLR>;
+            key-positions = <13 14 15 16 17 18>;
+        };
     };
 
     keymap {
