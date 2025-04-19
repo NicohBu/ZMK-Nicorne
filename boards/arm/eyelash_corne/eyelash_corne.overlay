@@ -38,9 +38,21 @@
     };
 };
 
-/* Asegura que ZMK sepa qué dispositivo usar como pantalla principal */
+/* === Habilitar y configurar UART1 === */
+&uart1 {
+    status = "okay";        // Habilita el periférico UART1
+    current-speed = <115200>; // Establece baud rate (opcional, 115200 suele ser default)
+    /* Los pines por defecto (tx-pin = <26>, rx-pin = <27>) se heredarán */
+    /* del archivo dtsi base (nrf52840_qiaa.dtsi) si no se especifican aquí. */
+    /* ¡Asegúrate de que P0.26 y P0.27 estén realmente conectados a algo útil */
+    /* si planeas usar ZMK Studio, y que no los necesitas para I2C0! */
+};
+
+/* === Nodo Chosen actualizado === */
 / {
     chosen {
-        zmk,display = &nice_view; // Apunta al label 'nice_view' que definimos arriba
+        /* Asegúrate de mantener las otras entradas 'chosen' que ya tenías */
+        zmk,display = &nice_view;         // Pantalla nice!view
+        zmk,studio_rpc_uart = &uart1; // Asigna UART1 para ZMK Studio RPC
     };
 };
