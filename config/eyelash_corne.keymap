@@ -166,7 +166,7 @@
             bindings = <&msc SCRL_UP>, <&mmv MOVE_LEFT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         scrl_dn_right: scrl_dn_right {
@@ -175,7 +175,7 @@
             bindings = <&msc SCRL_UP>, <&mmv MOVE_LEFT>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
