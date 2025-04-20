@@ -3,13 +3,13 @@
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include "keys_es_latin_american.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
-#include "keys_es_latin_american.h"
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 1 2>; };
 
@@ -240,9 +240,9 @@
         Default {
             display-name = "QWERTY";
             bindings = <
-&kt_hold 2 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                 &kp O                   &kp P     &kp BACKSPACE
-&kt_hold 3 TAB  &kp A              &hrm LCTRL S       &hrm LGUI D        &hrm LALT F        &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K           &hrm RCTRL L            &kp SEMI  &shortcut KP_ASTERISK LBKT
-&td_caps        &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut NUBS COMMA  &shortcut LS(NUBS) DOT  &kp FSLH  &Layer_Mod RSHIFT 3
+&kt_hold 2 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                  &kp O                   &kp P           &kp BACKSPACE
+&kt_hold 3 TAB  &kp A              &hrm LCTRL S       &hrm LGUI D        &hrm LALT F        &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K            &hrm RCTRL L            &kp ES_N_TILDE  &shortcut KP_ASTERISK ES_ACUTE
+&td_caps        &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut ES_LT COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &Layer_Mod RSHIFT 3
                                                       &sl 2              &sl 3              &kt_hold 4 ENTER                                                            &lt 4 SPACE        &td_alt                &kp DEL
             >;
 
@@ -264,10 +264,10 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&trans  &as N1      &as N2      &as N3      &as N4      &as N5                                &mmv MOVE_UP                     &kp KP_N7             &kp KP_N8        &kp KP_N9          &kp KP_SUBTRACT             &kp KP_PLUS      &hrm DEL BACKSPACE
-&trans  &as N6      &as N7      &as N8      &as N9      &as N0                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_N4             &kp KP_N5        &kp KP_N6          &kp KP_DIVIDE               &kp KP_ASTERISK  &shortcut K_CALC KP_NUMLOCK
-&trans  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N8)  &kp LS(N9)  &trans                    &mmv MOVE_DOWN                   &kp KP_N1             &kp KP_N2        &kp KP_N3          &shortcut LS(NUBS) LS(DOT)  &trans           &kp KP_ENTER
-                                &trans      &trans      &trans                                                                 &hrm LS(N0) KP_ENTER  &hrm HASH KP_N0  &hrm PRCNT KP_DOT
+&trans  &as N1        &as N2       &as N3        &as N4       &as N5                                 &mmv MOVE_UP                     &kp KP_N7               &kp KP_N8           &kp KP_N9             &kp KP_SUBTRACT           &kp KP_PLUS      &hrm DEL BACKSPACE
+&trans  &as N6        &as N7       &as N8        &as N9       &as N0                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_N4               &kp KP_N5           &kp KP_N6             &kp KP_DIVIDE             &kp KP_ASTERISK  &shortcut K_CALC KP_NUMLOCK
+&trans  &kp ES_POUND  &kp ES_DLLR  &kp ES_PRCNT  &kp ES_LPAR  &kp ES_RPAR  &trans                    &mmv MOVE_DOWN                   &kp KP_N1               &kp KP_N2           &kp KP_N3             &shortcut ES_GT ES_COLON  &trans           &kp KP_ENTER
+                                   &trans        &trans       &trans                                                                  &hrm ES_EQUAL KP_ENTER  &hrm ES_HASH KP_N0  &hrm ES_PRCNT KP_DOT
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -276,10 +276,10 @@
         Symbol {
             display-name = "SYMBOL";
             bindings = <
-&kp PLUS  &kp EXCL   &kp AT         &kp HASH  &kp DLLR      &kp PRCNT                                       &trans                           &kp CARET  &kp AMPS       &kp STAR      &kp LPAR      &kp UNDER          &kp EQUAL
-&trans    &kp CARET  &kp AMPS       &kp STAR  &kp LPAR      &kp RPAR                 &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FF C_NEXT  &kp PRCNT  &kp RA(MINUS)  &kp APOS      &kp NUHS      &as RIGHT_BRACKET  &as GRAVE
-&trans    &none      &kp RA(MINUS)  &kp NUBS  &kp LS(NUBS)  &none      &kp C_MUTE                           &trans                           &kp DLLR   &kp RA(GRAVE)  &kp LS(APOS)  &kp LS(NUHS)  &trans             &trans
-                                    &trans    &trans        &trans                                                                           &trans     &trans         &trans
+&kp ES_IEXCL  &kp ES_EXCL  &kp ES_DQT   &kp ES_HASH  &kp ES_DLLR  &kp ES_PRCNT                                       &trans                           &kp ES_AMPS   &kp ES_SLASH  &kp ES_LPAR  &kp ES_RPAR  &kp ES_QMARK  &kp ES_IQMARK
+&trans        &kp ES_AMPS  &kp ES_FSLH  &kp ES_LPAR  &kp ES_RPAR  &kp ES_EQUAL                &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FF C_NEXT  &kp ES_PRCNT  &kp ES_BSLH   &kp ES_LBRC  &kp ES_RBRC  &as ES_PLUS   &as GRAVE
+&trans        &none        &kp ES_BSLH  &kp ES_LT    &kp ES_GT    &none         &kp C_MUTE                           &trans                           &kp ES_DLLR   &kp ES_NOT    &kp ES_LBKT  &kp ES_RBKT  &trans        &trans
+                                        &trans       &trans       &trans                                                                              &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
