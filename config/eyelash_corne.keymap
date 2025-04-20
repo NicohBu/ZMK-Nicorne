@@ -177,6 +177,13 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        Scroll: Scroll {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "SCROLL";
+            #sensor-binding-cells = <2>;
+            bindings = <&scrl_dn_right>, <&scrl_up_left>;
+        };
     };
 
     macros {
@@ -282,7 +289,7 @@
                                         &trans       &trans       &trans                                                                              &trans        &trans        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&Scroll 0 0>;
         };
 
         Fn {
