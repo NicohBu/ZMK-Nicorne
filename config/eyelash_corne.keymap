@@ -264,7 +264,7 @@
                                                       &sl 2              &sl 3              &kt_hold 4 ENTER                                                            &lt 4 SPACE        &td_alt                &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
+            sensor-bindings = <&Scroll_Test>;
         };
 
         Alpha_Alt {
