@@ -177,24 +177,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
-
-        Scroll: Scroll {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "SCROLL";
-            #sensor-binding-cells = <2>;
-            bindings = <&scrl_dn_right>, <&scrl_up_left>;
-
-            tap-ms = <20>;
-        };
-
-        Scroll_Test: Scroll_Test {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc MOVE_Y(-10)>, <&msc MOVE_Y(10)>;
-
-            tap-ms = <20>;
-            label = "SCROLL_TEST";
-        };
     };
 
     macros {
@@ -264,7 +246,7 @@
                                                       &sl 2              &sl 3              &kt_hold 4 ENTER                                                            &lt 4 SPACE        &td_alt                &kp DEL
             >;
 
-            sensor-bindings = <&Scroll_Test>;
+            sensor-bindings = <&none>;
         };
 
         Alpha_Alt {
@@ -300,7 +282,7 @@
                                         &trans       &trans       &trans                                                                              &trans        &trans        &trans
             >;
 
-            sensor-bindings = <&Scroll 0 0>;
+            sensor-bindings = <&none>;
         };
 
         Fn {
