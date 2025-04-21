@@ -279,7 +279,7 @@
                                    &trans        &trans       &trans                                                                  &hrm ES_EQUAL KP_ENTER  &hrm ES_HASH KP_N0  &hrm ES_PRCNT KP_DOT
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
         };
 
         Symbol {
