@@ -30,7 +30,6 @@
 
 / {
     behaviors {
-
         encdr_scrl: encdr_scrl {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
@@ -253,7 +252,7 @@
                                                       &sl 2              &sl 3              &kt_hold 4 ENTER                                                            &lt 4 SPACE        &td_alt                &kp DEL
             >;
 
-            sensor-bindings = <&none>;
+            sensor-bindings = <&encdr_scrl 0 0>;
         };
 
         Alpha_Alt {
