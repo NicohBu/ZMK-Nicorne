@@ -188,9 +188,9 @@
             tap-ms = <20>;
         };
 
-        scrl: scrl {
+        scrl_var: scrl_var {
             compatible = "zmk,behavior-sensor-rotate-var";
-            label = "SCRL";
+            label = "SCRL_var";
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
 
