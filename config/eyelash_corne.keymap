@@ -187,6 +187,15 @@
 
             tap-ms = <20>;
         };
+
+        scrl: scrl {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "SCRL";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+
+            tap-ms = <20>;
+        };
     };
 
     macros {
