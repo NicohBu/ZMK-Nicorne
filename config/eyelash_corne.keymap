@@ -177,6 +177,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        scrl: scrl {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            label = "SCRL";
+            #sensor-binding-cells = <2>;
+            bindings = <&scrl_dn_right>, <&scrl_up_left>;
+
+            tap-ms = <20>;
+        };
     };
 
     macros {
@@ -246,7 +255,7 @@
                                                       &sl 2              &sl 3              &kt_hold 4 ENTER                                                            &lt 4 SPACE        &td_alt                &kp DEL
             >;
 
-            sensor-bindings = <&encdr_scrl 0 0>;
+            sensor-bindings = <&scrl 0 0>;
         };
 
         Alpha_Alt {
