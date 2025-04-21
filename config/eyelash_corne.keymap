@@ -183,7 +183,7 @@
             compatible = "zmk,behavior-sensor-rotate-var";
             label = "SCRL";
             #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
+            bindings = <&scrl_dn_right>, <&scrl_up_left>;
 
             tap-ms = <20>;
         };
