@@ -30,6 +30,13 @@
 
 / {
     behaviors {
+
+        encdr_scrl: encdr_scrl {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&scrl_dn_right>, <&scrl_up_left>;
+        };
+
         bt_encoder: bt_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
