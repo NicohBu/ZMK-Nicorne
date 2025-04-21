@@ -265,7 +265,7 @@
                                                       &sl 2              &sl 3              &kt_hold 4 ENTER                                                            &lt 4 SPACE        &td_alt                &kp DEL
             >;
 
-            sensor-bindings = <&scrl SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
         };
 
         Alpha_Alt {
@@ -277,16 +277,16 @@
                                                       &sl 2              &sl 3              &kt_hold 4 ENTER                                                           &lt 4 SPACE  &td_alt                &kp DEL
             >;
 
-            sensor-bindings = <&scrl_var SCRL_RIGHT SCRL_LEFT>;
+            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
         };
 
         Number {
             display-name = "NUMBER";
             bindings = <
-&trans  &as N1        &as N2       &as N3        &as N4       &as N5                                 &mmv MOVE_UP                     &kp KP_PLUS             &kp KP_N7               &kp KP_N8           &kp KP_N9             &kp KP_SUBTRACT           &hrm DEL BACKSPACE
-&trans  &as N6        &as N7       &as N8        &as N9       &as N0                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_ASTERISK         &kp KP_N4               &kp KP_N5           &kp KP_N6             &kp KP_DIVIDE             &shortcut K_CALC KP_NUMLOCK
-&trans  &kp ES_POUND  &kp ES_DLLR  &kp ES_PRCNT  &kp ES_LPAR  &kp ES_RPAR  &trans                    &mmv MOVE_DOWN                   &trans                  &kp KP_N1               &kp KP_N2           &kp KP_N3             &shortcut ES_GT ES_COLON  &kp KP_ENTER
-                                   &trans        &trans       &trans                                                                  &hrm ES_EQUAL KP_ENTER  &hrm ES_HASH KP_N0      &hrm ES_PRCNT KP_DOT
+&trans  &as N1        &as N2       &as N3        &as N4       &as N5                                 &mmv MOVE_UP                     &kp KP_PLUS             &kp KP_N7           &kp KP_N8             &kp KP_N9  &kp KP_SUBTRACT           &hrm DEL BACKSPACE
+&trans  &as N6        &as N7       &as N8        &as N9       &as N0                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_ASTERISK         &kp KP_N4           &kp KP_N5             &kp KP_N6  &kp KP_DIVIDE             &shortcut K_CALC KP_NUMLOCK
+&trans  &kp ES_POUND  &kp ES_DLLR  &kp ES_PRCNT  &kp ES_LPAR  &kp ES_RPAR  &trans                    &mmv MOVE_DOWN                   &kp ES_DLLR             &kp KP_N1           &kp KP_N2             &kp KP_N3  &shortcut ES_GT ES_COLON  &kp KP_ENTER
+                                   &kp LCTRL     &kp LGUI     &kp LALT                                                                &hrm ES_EQUAL KP_ENTER  &hrm ES_HASH KP_N0  &hrm ES_PRCNT KP_DOT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
@@ -311,6 +311,17 @@
 &trans       &bt BT_SEL 0             &bt BT_SEL 1             &bt BT_SEL 2             &bt BT_SEL 3             &bt BT_SEL 4               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none       &none         &none   &none   &none    &kp F12
 &bootloader  &out OUT_USB             &out OUT_BLE             &none                    &none                    &sys_reset    &soft_off                     &rgb_ug RGB_BRD                   &sys_reset  &none         &none   &none   &none    &bootloader
                                                                &none                    &none                    &none                                                                         &none       &kp LEFT_ALT  &none
+            >;
+
+            sensor-bindings = <&hue_encoder>;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
 
             sensor-bindings = <&hue_encoder>;
