@@ -256,7 +256,7 @@
                                                       &sl 2              &sl 3              &kt_hold 4 ENTER                                                            &lt 4 SPACE        &td_alt                &kp DEL
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scrl SCRL_DOWN SCRL_UP>;
         };
 
         Alpha_Alt {
