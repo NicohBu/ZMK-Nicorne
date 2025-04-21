@@ -163,7 +163,7 @@
         scrl_up_left: scrl_up_left {
             compatible = "zmk,behavior-mod-morph";
             label = "SCRL_UP/LEFT";
-            bindings = <&msc SCRL_UP>, <&mmv MOVE_LEFT>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_LEFT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -172,7 +172,7 @@
         scrl_dn_right: scrl_dn_right {
             compatible = "zmk,behavior-mod-morph";
             label = "SCRL_DOWN/RIGHT";
-            bindings = <&msc SCRL_UP>, <&mmv MOVE_LEFT>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_RIGHT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -183,6 +183,17 @@
             label = "SCROLL";
             #sensor-binding-cells = <2>;
             bindings = <&scrl_dn_right>, <&scrl_up_left>;
+
+            tap-ms = <20>;
+        };
+
+        Scroll_Test: Scroll_Test {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <20>;
+            label = "SCROLL_TEST";
         };
     };
 
