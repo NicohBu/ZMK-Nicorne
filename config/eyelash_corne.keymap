@@ -60,7 +60,7 @@
         scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&scrl_dn_right>, <&scrl_up_left>;
+            bindings = <&none>, <&none>;
 
             tap-ms = <30>;
         };
@@ -160,42 +160,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <190>;
         };
-
-        scrl_up_left: scrl_up_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SCRL_UP/LEFT";
-            bindings = <&msc SCRL_UP>, <&msc SCRL_LEFT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        scrl_dn_right: scrl_dn_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SCRL_DOWN/RIGHT";
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_RIGHT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        scrl: scrl {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "SCRL";
-            #sensor-binding-cells = <2>;
-            bindings = <&scrl_dn_right>, <&scrl_up_left>;
-
-            tap-ms = <20>;
-        };
-
-        scrl_var: scrl_var {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            label = "SCRL_var";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
-
-            tap-ms = <20>;
-        };
     };
 
     macros {
@@ -231,7 +195,9 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_EFR &rgb_ug RGB_TOG>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &rgb_ug RGB_TOG &rgb_ug RGB_EFF>,
+                <&macro_wait_time 50>,
+                <&rgb_ug RGB_EFR &rgb_ug RGB_TOG>,
                 <&macro_release>;
 
             label = "one_shot";
@@ -283,10 +249,10 @@
         Number {
             display-name = "NUMBER";
             bindings = <
-&trans  &as N1        &as N2       &as N3        &as N4       &as N5                                 &mmv MOVE_UP                     &kp KP_N7               &kp KP_N8             &kp KP_N9  &kp KP_SUBTRACT           &kp KP_PLUS             &hrm DEL BACKSPACE
-&trans  &as N6        &as N7       &as N8        &as N9       &as N0                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_N4               &kp KP_N5             &kp KP_N6  &kp KP_DIVIDE             &kp KP_ASTERISK         &shortcut K_CALC KP_NUMLOCK
-&trans  &kp ES_POUND  &kp ES_DLLR  &kp ES_PRCNT  &kp ES_LPAR  &kp ES_RPAR  &trans                    &mmv MOVE_DOWN                   &kp KP_N1               &kp KP_N2             &kp KP_N3  &shortcut ES_GT ES_COLON  &kp ES_DLLR             &kp KP_ENTER
-                                   &kp LCTRL     &kp LGUI     &kp LALT                                                                &hrm ES_EQUAL KP_ENTER  &hrm ES_HASH KP_N0    &hrm ES_PRCNT KP_DOT
+&trans  &as N1        &as N2       &as N3        &as N4       &as N5                                 &mmv MOVE_UP                     &kp KP_N7               &kp KP_N8           &kp KP_N9             &kp KP_SUBTRACT           &kp KP_PLUS      &hrm DEL BACKSPACE
+&trans  &as N6        &as N7       &as N8        &as N9       &as N0                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_N4               &kp KP_N5           &kp KP_N6             &kp KP_DIVIDE             &kp KP_ASTERISK  &shortcut C_AL_CALC KP_NUMLOCK
+&trans  &kp ES_POUND  &kp ES_DLLR  &kp ES_PRCNT  &kp ES_LPAR  &kp ES_RPAR  &trans                    &mmv MOVE_DOWN                   &kp KP_N1               &kp KP_N2           &kp KP_N3             &shortcut ES_GT ES_COLON  &kp ES_DLLR      &kp KP_ENTER
+                                   &kp LCTRL     &kp LGUI     &kp LALT                                                                &hrm ES_EQUAL KP_ENTER  &hrm ES_HASH KP_N0  &hrm ES_PRCNT KP_DOT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
