@@ -106,11 +106,11 @@ layers:
   - '&as N4'
   - '&as N5'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - KP PLUS
   - KP 7
   - KP 8
   - KP 9
   - KP SUBTRACT
+  - KP PLUS
   - {t: '$$mdi:backspace$$', h: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&as N6'
@@ -121,11 +121,11 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - KP ASTERISK
   - KP 4
   - KP 5
   - KP 6
   - KP DIVIDE
+  - KP ASTERISK
   - {t: KP NUMLOCK, h: '&oneshot K_CALC'}
   - {t: '$$mdi:transfer$$', type: trans}
   - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 3 AND HASH))))
@@ -135,11 +135,11 @@ layers:
   - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS))))
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 4 AND DOLLAR))))
   - KP 1
   - KP 2
   - KP 3
   - '&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))) (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))'
+  - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 4 AND DOLLAR))))
   - KP ENTER
   - {t: '$$mdi:apple-keyboard-control$$', type: held alternate}
   - LGUI
