@@ -1,5 +1,5 @@
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 300   // 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 35    // 10
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -11,20 +11,29 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
+/ {
+    zip_scroll_scaler: zip_scroll_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        type = <INPUT_EV_REL>;
+        codes = <INPUT_REL_WHEEL INPUT_REL_HWHEEL>;
+        track-remainders;
+    };
+};
+
 &mmv_input_listener { input-processors = <&zip_xy_scaler 1 2>; };
 
-&msc_input_listener { input-processors = <&zip_scroll_scaler 4 1>; };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
-    acceleration-exponent = <10>;       // 0
-    time-to-max-speed-ms = <100>;       // 300
-    trigger-period-ms = <20>;
+    acceleration-exponent = <0>;       // 0
+    time-to-max-speed-ms = <0>;        // 300
+    delay-ms = <0>;                   // 0
 };
 
 &mmv {
     time-to-max-speed-ms = <500>;
     acceleration-exponent = <1>;
-    trigger-period-ms = <16>;
 };
 
 &sl { release-after-ms = <1500>; };
@@ -60,7 +69,7 @@
         scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&none>, <&none>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <30>;
         };
@@ -279,36 +288,36 @@
                                                                &none                    &none                    &none                                                                         &none       &kp LEFT_ALT  &none
             >;
 
-            sensor-bindings = <&hue_encoder>;
+            sensor-bindings = <&scroll_encoder>;
         };
     };
 
-    underglow-layer {
-        compatible = "zmk,underglow-layer";
-
-        Default {
-            layer = <0>;
-            effect = <3>;  // 3 es generalmente el efecto rainbow
-        };
-
-        Number {
-            layer = <2>;
-            color = <RGB_COLOR_HSB(240, 100, 100)>;  // Azul
-        };
-
-        Symbol {
-            layer = <3>;
-            color = <RGB_COLOR_HSB(270, 100, 100)>;  // Morado
-        };
-
-        layer_3 {
-            layer = <4>;
-            color = <RGB_COLOR_HSB(0, 100, 100)>;    // Rojo
-        };
-
-        caps_word {
-            caps-word;
-            color = <RGB_COLOR_HSB(30, 100, 100)>;   // Naranja
-        };
-    };
+//    underglow-layer {
+//        compatible = "zmk,underglow-layer";
+//
+//        Default {
+//            layer = <0>;
+//            effect = <3>;  // 3 es generalmente el efecto rainbow
+//        };
+//
+//        Number {
+//            layer = <2>;
+//            color = <RGB_COLOR_HSB(240, 100, 100)>;  // Azul
+//       };
+//
+//        Symbol {
+//            layer = <3>;
+//            color = <RGB_COLOR_HSB(270, 100, 100)>;  // Morado
+//        };
+//
+//        layer_3 {
+//            layer = <4>;
+//            color = <RGB_COLOR_HSB(0, 100, 100)>;    // Rojo
+//        };
+//
+//        caps_word {
+//            caps-word;
+//            color = <RGB_COLOR_HSB(30, 100, 100)>;   // Naranja
+//        };
+//    };
 };
