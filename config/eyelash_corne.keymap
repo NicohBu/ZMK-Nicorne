@@ -288,36 +288,36 @@
                                                                &none                    &none                    &none                                                                         &none       &kp LEFT_ALT  &none
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&hue_encoder>;
         };
     };
 
-//    underglow-layer {
-//        compatible = "zmk,underglow-layer";
-//
-//        Default {
-//            layer = <0>;
-//            effect = <3>;  // 3 es generalmente el efecto rainbow
-//        };
-//
-//        Number {
-//            layer = <2>;
-//            color = <RGB_COLOR_HSB(240, 100, 100)>;  // Azul
-//       };
-//
-//        Symbol {
-//            layer = <3>;
-//            color = <RGB_COLOR_HSB(270, 100, 100)>;  // Morado
-//        };
-//
-//        layer_3 {
-//            layer = <4>;
-//            color = <RGB_COLOR_HSB(0, 100, 100)>;    // Rojo
-//        };
-//
-//        caps_word {
-//            caps-word;
-//            color = <RGB_COLOR_HSB(30, 100, 100)>;   // Naranja
-//        };
-//    };
+    //    underglow-layer {
+    //        compatible = "zmk,underglow-layer";
+    //
+    //        Default {
+    //            layer = <0>;
+    //            effect = <3>;  // 3 es generalmente el efecto rainbow
+    //        };
+    //
+    //        Number {
+    //            layer = <2>;
+    //            color = <RGB_COLOR_HSB(240, 100, 100)>;  // Azul
+    //       };
+    //
+    //        Symbol {
+    //            layer = <3>;
+    //            color = <RGB_COLOR_HSB(270, 100, 100)>;  // Morado
+    //        };
+    //
+    //        layer_3 {
+    //            layer = <4>;
+    //            color = <RGB_COLOR_HSB(0, 100, 100)>;    // Rojo
+    //        };
+    //
+    //        caps_word {
+    //            caps-word;
+    //            color = <RGB_COLOR_HSB(30, 100, 100)>;   // Naranja
+    //        };
+    //    };
 };
