@@ -126,7 +126,7 @@ layers:
   - KP 6
   - KP DIVIDE
   - KP ASTERISK
-  - {t: KP NUMLOCK, h: '&oneshot K_CALC'}
+  - {t: KP NUMLOCK, h: '&oneshot C_AL_CALC'}
   - {t: '$$mdi:transfer$$', type: trans}
   - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 3 AND HASH))))
   - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 4 AND DOLLAR))))
