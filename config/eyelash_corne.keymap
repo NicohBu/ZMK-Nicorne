@@ -108,7 +108,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <278>;
         };
 
         shortcut: shortcut {
@@ -117,7 +117,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <298>;
             label = "Oneshot shortcut";
         };
 
@@ -234,10 +234,10 @@
         Default {
             display-name = "QWERTY";
             bindings = <
-&kt_hold 2 ESC  &kp Q              &kp W              &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                  &kp O                   &kp P           &kp BACKSPACE
-&kt_hold 3 TAB  &kp A              &hrm LCTRL S       &hrm LGUI D        &hrm LALT F        &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K            &hrm RCTRL L            &kp ES_N_TILDE  &shortcut KP_ASTERISK ES_ACUTE
-&td_caps        &shortcut LC(Z) Z  &shortcut LC(X) X  &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut ES_LT COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &Layer_Mod RSHIFT 3
-                                                      &kp LSHIFT         &sl 3              &kt_hold 4 ENTER                                                            &lt 2 SPACE        &td_alt                &lt 4 DEL
+&kt_hold 2 ESC         &kp Q              &kp W                  &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                  &kp O                   &kp P           &kp BACKSPACE
+&shortcut LG(TAB) TAB  &kp A              &shortcut LS(LG(S)) S  &hrm LGUI D        &hrm LALT F        &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K            &hrm RCTRL L            &kp ES_N_TILDE  &shortcut KP_ASTERISK ES_ACUTE
+&kp LCTRL              &shortcut LC(Z) Z  &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut ES_LT COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &sl 3
+                                                                 &td_caps           &sl 3              &kt_hold 4 ENTER                                                            &lt 2 SPACE        &td_alt                &lt 4 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
