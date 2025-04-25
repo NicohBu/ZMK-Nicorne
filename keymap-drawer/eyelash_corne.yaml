@@ -53,21 +53,21 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - Q
   - W
-  - F
+  - {t: F, h: '&oneshot LC(F)'}
   - P
   - G
   - $$mdi:arrow-up-bold$$
   - J
   - L
   - U
-  - Y
+  - {t: Y, h: '&oneshot LC(Y)'}
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - A
-  - {t: R, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: R, h: '&oneshot LS(LG(S))'}
   - {t: S, h: LGUI}
-  - {t: T, h: '&oneshot LALT'}
+  - {t: T, h: '$$mdi:apple-keyboard-option$$'}
   - D
   - $$mdi:arrow-left-bold$$
   - {t: HOME, h: '&oneshot END'}
