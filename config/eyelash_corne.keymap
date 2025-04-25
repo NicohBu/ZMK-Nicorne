@@ -127,6 +127,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <250>;
         };
+
+        mt_hold: mt_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_HOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
     };
 
     macros {
@@ -182,7 +191,7 @@
         BtCLR {
             bindings = <&bt BT_CLR>;
             key-positions = <31 32 33>;
-            layers = <5>;
+            layers = <4>;
         };
     };
 
@@ -194,8 +203,8 @@
             bindings = <
 &lt_hold 2 ESC             &shortcut ES_AT_SIGN Q  &kp W                  &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                  &kp O                   &kp P           &kp BACKSPACE
 &shortcut LC(LA(TAB)) TAB  &kp A                   &shortcut LS(LG(S)) S  &hrm LGUI D        &shortcut LC(F) F  &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K            &hrm RCTRL L            &kp ES_N_TILDE  &shortcut KP_ASTERISK ES_ACUTE
-&kp LALT                   &shortcut LC(Z) Z       &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut ES_LT COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &mo 4
-                                                                          &kp LCTRL          &lt_hold 5 SPACE   &td_caps                                                                    &lt 2 SPACE        &td_caps               &lt 5 DEL
+&kp LALT                   &shortcut LC(Z) Z       &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut ES_LT COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &mo 3
+                                                                          &kp LCTRL          &lt_hold 4 SPACE   &td_caps                                                                    &lt 2 SPACE        &td_caps               &lt 4 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
@@ -225,24 +234,12 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        x_Symbol_x {
-            display-name = "SYMBOL";
-            bindings = <
-&kp ES_IEXCL  &kp ES_EXCL  &kp ES_DQT   &kp ES_HASH  &kp ES_DLLR  &kp ES_PRCNT                                       &trans                           &kp ES_AMPS   &kp ES_SLASH  &kp ES_LPAR  &kp ES_RPAR  &kp ES_QMARK  &kp ES_IQMARK
-&trans        &kp ES_AMPS  &kp ES_FSLH  &kp ES_LPAR  &kp ES_RPAR  &kp ES_EQUAL                &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FF C_NEXT  &kp ES_PRCNT  &kp ES_BSLH   &kp ES_LBRC  &kp ES_RBRC  &as ES_PLUS   &as GRAVE
-&trans        &none        &kp ES_BSLH  &kp ES_LT    &kp ES_GT    &none         &kp C_MUTE                           &trans                           &kp ES_DLLR   &kp ES_NOT    &kp ES_LBKT  &kp ES_RBKT  &trans        &trans
-                                        &trans       &trans       &trans                                                                              &trans        &trans        &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
         Mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &mkp MCLK       &mkp LCLK       &mmv MOVE_UP    &mkp MB2         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &msc SCRL_DOWN  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans  &trans
-                        &trans  &trans  &trans                                    &trans          &trans          &trans
+&trans  &trans  &trans  &trans  &trans  &trans                               &mmv MOVE_UP                     &trans          &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans     &trans                    &mmv MOVE_DOWN                   &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+                        &trans  &trans  &mkp RCLK                                                             &mkp LCLK       &mkp MCLK       &trans
             >;
 
             label = "MOUSE";
@@ -258,6 +255,18 @@
             >;
 
             sensor-bindings = <&hue_encoder>;
+        };
+
+        x_Symbol_x {
+            display-name = "SYMBOL";
+            bindings = <
+&kp ES_IEXCL  &kp ES_EXCL  &kp ES_DQT   &kp ES_HASH  &kp ES_DLLR  &kp ES_PRCNT                                       &trans                           &kp ES_AMPS   &kp ES_SLASH  &kp ES_LPAR  &kp ES_RPAR  &kp ES_QMARK  &kp ES_IQMARK
+&trans        &kp ES_AMPS  &kp ES_FSLH  &kp ES_LPAR  &kp ES_RPAR  &kp ES_EQUAL                &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FF C_NEXT  &kp ES_PRCNT  &kp ES_BSLH   &kp ES_LBRC  &kp ES_RBRC  &as ES_PLUS   &as GRAVE
+&trans        &none        &kp ES_BSLH  &kp ES_LT    &kp ES_GT    &none         &kp C_MUTE                           &trans                           &kp ES_DLLR   &kp ES_NOT    &kp ES_LBKT  &kp ES_RBKT  &trans        &trans
+                                        &trans       &trans       &trans                                                                              &trans        &trans        &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 
