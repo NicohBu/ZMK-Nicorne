@@ -17,4 +17,4 @@ If you need a 3D model of this keyboard, email `380465425@qq.com`.
 
 ## Keymap Diagram
 
-![Diagram of config/eyelash_corne.keymap](https://raw.githubusercontent.com/NicohBu/zmk-Nicorne/4516553557e7083d064012dc037d67e2dcea286e/keymap-drawer/eyelash_corne.svg)
+![Diagram of config/eyelash_corne.keymap](https://github.com/NicohBu/zmk-Nicorne/blob/main/keymap-drawer/eyelash_corne.svg).
