@@ -36,7 +36,10 @@
     acceleration-exponent = <1>;
 };
 
-&sl { release-after-ms = <1500>; };
+&lt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <250>;
+};
 
 / {
     behaviors {
@@ -96,7 +99,7 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp LSHIFT>, <&cw_mod>, <&none>, <&kp CAPSLOCK>;
+            bindings = <&kp LSHIFT>, <&cw_mod>, <&kp CAPS>;
 
             label = "Shift / CapsWord / Mayusc.";
         };
@@ -108,7 +111,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <278>;
+            tapping-term-ms = <300>;
         };
 
         shortcut: shortcut {
@@ -117,57 +120,8 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <298>;
+            tapping-term-ms = <350>;
             label = "Oneshot shortcut";
-        };
-
-        td_alt: td_alt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Alt+Symbol";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_ALT>, <&sl 3>;
-        };
-
-        td_gui: td_gui {
-            compatible = "zmk,behavior-tap-dance";
-            label = "GUI+Symb";
-            #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&sl 3>;
-        };
-
-        td_ctrl: td_ctrl {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CTRL+Numb";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&sl 2>;
-        };
-
-        tk_hold: tk_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TogKey_Hold-preferred";
-            bindings = <&kp>, <&tog>;
-
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <220>;
-        };
-
-        kt_hold: kt_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "KeyStkLyr";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <220>;
-            bindings = <&sl>, <&kp>;
-        };
-
-        Layer_Mod: Layer_Mod {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Mod+StkLyr";
-            bindings = <&kp>, <&sl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <190>;
         };
     };
 
@@ -224,7 +178,7 @@
         BtCLR {
             bindings = <&bt BT_CLR>;
             key-positions = <31 32 33>;
-            layers = <4>;
+            layers = <5>;
         };
     };
 
@@ -234,10 +188,10 @@
         Default {
             display-name = "QWERTY";
             bindings = <
-&kt_hold 2 ESC         &kp Q              &kp W                  &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                  &kp O                   &kp P           &kp BACKSPACE
-&shortcut LG(TAB) TAB  &kp A              &shortcut LS(LG(S)) S  &hrm LGUI D        &hrm LALT F        &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K            &hrm RCTRL L            &kp ES_N_TILDE  &shortcut KP_ASTERISK ES_ACUTE
-&kp LCTRL              &shortcut LC(Z) Z  &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut ES_LT COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &sl 3
-                                                                 &td_caps           &sl 3              &kt_hold 4 ENTER                                                            &lt 2 SPACE        &td_alt                &lt 4 DEL
+&lt 2 ESC              &shortcut AT_SIGN Q  &kp W                  &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                  &kp O                   &kp P           &kp BACKSPACE
+&shortcut LG(TAB) TAB  &kp A                &shortcut LS(LG(S)) S  &hrm LGUI D        &hrm LALT F        &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K            &hrm RCTRL L            &kp ES_N_TILDE  &shortcut KP_ASTERISK ES_ACUTE
+&kp LCTRL              &shortcut LC(Z) Z    &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut ES_LT COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &mo 4
+                                                                   &td_caps           &mo 3              &lt 5 ENTER                                                                 &lt 2 SPACE        &mo 3                  &lt 5 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
@@ -255,19 +209,19 @@
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
         };
 
-        Number {
-            display-name = "NUMBER";
+        Symbol+Number {
+            display-name = "SYM|NUM";
             bindings = <
-&trans  &as N1        &as N2       &as N3        &as N4       &as N5                                 &mmv MOVE_UP                     &kp KP_N7               &kp KP_N8           &kp KP_N9             &kp KP_SUBTRACT           &kp KP_PLUS      &hrm DEL BACKSPACE
-&trans  &as N6        &as N7       &as N8        &as N9       &as N0                 &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp KP_N4               &kp KP_N5           &kp KP_N6             &kp KP_DIVIDE             &kp KP_ASTERISK  &shortcut C_AL_CALC KP_NUMLOCK
-&trans  &kp ES_POUND  &kp ES_DLLR  &kp ES_PRCNT  &kp ES_LPAR  &kp ES_RPAR  &trans                    &mmv MOVE_DOWN                   &kp KP_N1               &kp KP_N2           &kp KP_N3             &shortcut ES_GT ES_COLON  &kp ES_DLLR      &kp KP_ENTER
-                                   &kp LCTRL     &kp LGUI     &kp LALT                                                                &hrm ES_EQUAL KP_ENTER  &hrm ES_HASH KP_N0  &hrm ES_PRCNT KP_DOT
+&trans  &shortcut ES_IEXCL ES_EXCL  &shortcut ES_SQT ES_DQT     &kp ES_HASH                &kp ES_DLLR                &kp ES_PRCNT                                        &kp C_RW              &kp N7                       &kp N8                &kp N9                    &kp ES_MINUS              &kp ES_PLUS      &hrm DEL BACKSPACE
+&trans  &kp ES_AMPS                 &shortcut ES_BSLH ES_SLASH  &shortcut ES_LBRC ES_LPAR  &shortcut ES_RBRC ES_RPAR  &kp ES_EQUAL                            &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp N4                       &kp N5                &kp N6                    &kp KP_DIVIDE             &kp KP_ASTERISK  &kp C_AL_CALC
+&trans  &shortcut ES_DEG ES_PIPE    &shortcut ES_TILDE ES_NOT   &kp ES_LBKT                &kp ES_RBKT                &shortcut ES_IQMARK ES_QMARK  &trans                &kp C_FF              &kp N1                       &kp N2                &kp N3                    &shortcut ES_GT ES_COLON  &kp ES_DLLR      &shortcut ES_EQUAL KP_ENTER
+                                                                &trans                     &kp LGUI                   &kp LALT                                                                  &shortcut ES_EQUAL KP_ENTER  &shortcut ES_HASH N0  &shortcut ES_PERCENT DOT
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        Symbol {
+        x_Symbol_x {
             display-name = "SYMBOL";
             bindings = <
 &kp ES_IEXCL  &kp ES_EXCL  &kp ES_DQT   &kp ES_HASH  &kp ES_DLLR  &kp ES_PRCNT                                       &trans                           &kp ES_AMPS   &kp ES_SLASH  &kp ES_LPAR  &kp ES_RPAR  &kp ES_QMARK  &kp ES_IQMARK
@@ -277,6 +231,17 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        Mouse {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &mkp MCLK       &mkp LCLK       &mmv MOVE_UP    &mkp MB2         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &msc SCRL_DOWN  &msc SCRL_LEFT  &trans          &msc SCRL_RIGHT  &trans  &trans
+                        &trans  &trans  &trans                                    &trans          &trans          &trans
+            >;
+
+            label = "MOUSE";
         };
 
         Fn {
