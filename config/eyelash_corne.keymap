@@ -97,6 +97,7 @@
             bindings = <&mt_hold LSHIFT ENTER>, <&cw_mod>, <&kp CAPS>;
 
             label = "Shift / CapsWord / Mayusc.";
+            tapping-term-ms = <100>;
         };
 
         hrm: home_row {
