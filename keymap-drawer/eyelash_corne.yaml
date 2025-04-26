@@ -143,7 +143,7 @@ layers:
   - '&shortcut (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS))) KP_ENTER'
   - {t: '$$mdi:transfer$$', type: trans}
   - LGUI
-  - $$mdi:apple-keyboard-option$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '&shortcut (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS))) KP_ENTER', type: held alternate}
   - '&shortcut (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH))) N0'
   - '&shortcut (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT))) DOT'
