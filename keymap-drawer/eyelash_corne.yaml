@@ -45,9 +45,9 @@ layers:
   - MOUSE
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-space$$', h: Fn}
-  - '&td_caps'
+  - {t: '&td_caps', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-space$$', h: SYM_NUM}
-  - '&td_caps'
+  - {t: '&td_caps', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:backspace-reverse-outline$$', h: Fn}
   COLEMAK:
   - {t: '$$mdi:transfer$$', type: trans}
