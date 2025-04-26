@@ -142,7 +142,7 @@ layers:
   - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 4 AND DOLLAR))))
   - '&shortcut (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS))) KP_ENTER'
   - {t: '$$mdi:transfer$$', type: trans}
-  - LGUI
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '&shortcut (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS))) KP_ENTER', type: held alternate}
   - '&shortcut (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_3_AND_HASH))) N0'
