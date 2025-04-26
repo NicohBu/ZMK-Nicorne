@@ -94,7 +94,7 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
             #binding-cells = <0>;
-            bindings = <&mt LSHIFT ENTER>, <&cw_mod>, <&kp CAPS>;
+            bindings = <&mt_hold LSHIFT ENTER>, <&cw_mod>, <&kp CAPS>;
 
             label = "Shift / CapsWord / Mayusc.";
         };
