@@ -96,7 +96,7 @@
             #binding-cells = <0>;
             bindings = <&kp ENTER>, <&cw_mod>, <&kp CAPS>;
 
-            label = "Shift / CapsWord / Mayusc.";
+            label = "Enter / CapsWord / Mayusc.";
         };
 
         hrm: home_row {
@@ -136,7 +136,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <220>;
-            hold-while-undecided;
         };
     };
 
