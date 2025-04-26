@@ -228,7 +228,7 @@
 &trans  &shortcut ES_IEXCL ES_EXCL  &shortcut ES_SQT ES_DQT     &kp ES_HASH                &kp ES_DLLR                &kp ES_PRCNT                                        &kp C_RW              &kp N7                       &kp N8                &kp N9                    &kp ES_MINUS              &kp ES_PLUS      &hrm DEL BACKSPACE
 &trans  &kp ES_AMPS                 &shortcut ES_BSLH ES_SLASH  &shortcut ES_LBRC ES_LPAR  &shortcut ES_RBRC ES_RPAR  &kp ES_EQUAL                            &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp N4                       &kp N5                &kp N6                    &kp KP_DIVIDE             &kp KP_ASTERISK  &kp C_AL_CALC
 &trans  &shortcut ES_DEG ES_PIPE    &shortcut ES_TILDE ES_NOT   &kp ES_LBKT                &kp ES_RBKT                &shortcut ES_IQMARK ES_QMARK  &trans                &kp C_FF              &kp N1                       &kp N2                &kp N3                    &shortcut ES_GT ES_COLON  &kp ES_DLLR      &shortcut ES_EQUAL KP_ENTER
-                                                                &trans                     &kp LGUI                   &kp LALT                                                                  &shortcut ES_EQUAL KP_ENTER  &shortcut ES_HASH N0  &shortcut ES_PERCENT DOT
+                                                                &trans                     &kp LGUI                   &trans                                                                    &shortcut ES_EQUAL KP_ENTER  &shortcut ES_HASH N0  &shortcut ES_PERCENT DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
