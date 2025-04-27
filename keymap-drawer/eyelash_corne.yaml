@@ -107,21 +107,21 @@ layers:
   - G
   - $$mdi:arrow-up-bold$$
   - J
+  - L
   - I
   - U
   - '&shortcut ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))) Q'
-  - W
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - H
   - A
-  - {t: S, h: LGUI}
+  - {t: R, h: LGUI}
   - {t: T, h: '&oneshot LC(T)'}
   - {t: V, h: '&oneshot LC(V)'}
   - $$mdi:arrow-left-bold$$
   - {t: HOME, h: '&oneshot END'}
   - $$mdi:arrow-right-bold$$
-  - {t: M, h: '&oneshot C_AL_MAIL'}
+  - W
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
   - {t: E, h: RGUI}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
@@ -131,12 +131,12 @@ layers:
   - K
   - {t: X, h: '&oneshot LC(X)'}
   - {t: C, h: '&oneshot LC(C)'}
-  - R
+  - {t: S, h: '&oneshot LG(LS(S))'}
   - B
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:arrow-down-bold$$
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))
-  - L
+  - {t: M, h: '&oneshot C_AL_MAIL'}
   - '&shortcut ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))) (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))'
   - '&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))) ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))'
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
