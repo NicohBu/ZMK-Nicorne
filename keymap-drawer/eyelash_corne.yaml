@@ -113,8 +113,8 @@ layers:
   - W
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - H
   - {t: V, h: '&oneshot LC(V)'}
+  - H
   - {t: A, h: LGUI}
   - {t: S, h: '&oneshot LG(LS(S))'}
   - {t: T, h: '&oneshot LC(T)'}
