@@ -192,7 +192,6 @@
         Toggle_Rocorn {
             bindings = <&to 2>;
             key-positions = <12 27>;
-            layers = <2>;
         };
 
         BtCLR {
@@ -251,7 +250,7 @@
                                                                 &trans                     &trans                     &trans                                                                    &shortcut ES_EQUAL KP_ENTER  &shortcut ES_HASH N0  &shortcut ES_PERCENT DOT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp K_VOL_UP K_VOL_DN>;
         };
 
         Mouse {
