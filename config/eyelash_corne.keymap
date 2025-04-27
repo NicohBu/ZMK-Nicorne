@@ -229,7 +229,7 @@
         };
 
         Alpha_Ctm {
-            display-name = "COLEMAK";
+            display-name = "ROCORN";
             bindings = <
 &trans  &shortcut ES_AT Q  &kp U                  &kp E              &kp T              &kp G                             &kp UP                         &kp J   &kp L                  &kp I                     &shortcut LC(Y) Y       &kp ES_N_TILDE  &trans
 &trans  &kp K              &shortcut LS(LG(S)) R  &hrm LGUI A        &kp S              &kp D                   &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H   &hrm LEFT_ALT N        &hrm RGUI O               &hrm RCTRL P            &kp F           &trans
