@@ -113,11 +113,11 @@ layers:
   - W
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: V, h: '&oneshot LC(V)'}
   - H
-  - {t: A, h: LGUI}
-  - {t: S, h: '&oneshot LG(LS(S))'}
+  - A
+  - {t: S, h: LGUI}
   - {t: T, h: '&oneshot LC(T)'}
+  - {t: V, h: '&oneshot LC(V)'}
   - $$mdi:arrow-left-bold$$
   - {t: HOME, h: '&oneshot END'}
   - $$mdi:arrow-right-bold$$
@@ -199,9 +199,9 @@ layers:
   MOUSE:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Sft+HOME, h: '&oneshot LC(LS(HOME))'}
-  - {t: 'Sft+$$mdi:arrow-up-bold$$', h: '&oneshot LC(LS(UP))'}
-  - {t: Sft+END, h: '&oneshot LC(LS(END))'}
+  - {t: HOME, h: '&oneshot LC(HOME)'}
+  - {t: '$$mdi:arrow-up-bold$$', h: '&oneshot LC(UP)'}
+  - {t: END, h: '&oneshot LC(END)'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -212,9 +212,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: 'Sft+$$mdi:arrow-left-bold$$', h: '&oneshot LC(LS(LEFT))'}
-  - {t: 'Sft+$$mdi:arrow-down-bold$$', h: '&oneshot LC(LS(DOWN))'}
-  - {t: 'Sft+$$mdi:arrow-right-bold$$', h: '&oneshot LC(LS(RIGHT))'}
+  - {t: '$$mdi:arrow-left-bold$$', h: '&oneshot LC(LEFT)'}
+  - {t: '$$mdi:arrow-down-bold$$', h: '&oneshot LC(DOWN)'}
+  - {t: '$$mdi:arrow-right-bold$$', h: '&oneshot LC(RIGHT)'}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB4'
   - {t: '$$mdi:transfer$$', type: trans}
