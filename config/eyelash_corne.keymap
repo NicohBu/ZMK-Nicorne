@@ -231,10 +231,10 @@
         Alpha_Ctm {
             display-name = "ROCORN";
             bindings = <
-&trans  &shortcut LC(Z) Z  &shortcut LC(Y) Y  &shortcut LC(F) F  &kp P                  &kp G                                        &kp UP                         &kp J                  &kp I            &kp U                     &shortcut ES_AT Q       &kp W         &trans
-&trans  &shortcut LC(V) V  &kp H              &hrm LGUI A        &shortcut LG(LS(S)) S  &shortcut LC(T) T                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut C_AL_MAIL M  &hrm LEFT_ALT N  &hrm RGUI E               &hrm RCTRL D            &kp O         &trans
-&trans  &kp K              &shortcut LC(X) X  &shortcut LC(C) C  &kp R                  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &kp L            &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS  &trans
-                                              &trans             &trans                 &trans                                                                      &trans                 &trans           &trans
+&trans  &shortcut LC(Z) Z  &shortcut LC(Y) Y  &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp I            &kp U                     &shortcut ES_AT Q       &kp W         &trans
+&trans  &kp H              &kp A              &hrm LGUI S        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut C_AL_MAIL M  &hrm LEFT_ALT N  &hrm RGUI E               &hrm RCTRL D            &kp O         &trans
+&trans  &kp K              &shortcut LC(X) X  &shortcut LC(C) C  &kp R              &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &kp L            &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS  &trans
+                                              &trans             &trans             &trans                                                                      &trans                 &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
@@ -255,10 +255,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &shortcut LC(LS(HOME)) LS(HOME)  &shortcut LC(LS(UP)) LS(UP)      &shortcut LC(LS(END)) LS(END)      &trans                         &trans            &trans          &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &shortcut LC(LS(LEFT)) LS(LEFT)  &shortcut LC(LS(DOWN)) LS(DOWN)  &shortcut LC(LS(RIGHT)) LS(RIGHT)  &trans               &mkp MB4  &trans  &mkp MB5  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &trans                           &trans                           &trans                             &trans     &trans              &trans            &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-                                                 &trans                           &trans                             &mkp RCLK                                        &mkp LCLK       &mkp MCLK       &trans
+&trans  &trans  &shortcut LC(HOME) HOME  &shortcut LC(UP) UP      &shortcut LC(END) END      &trans                         &trans            &trans          &trans          &trans          &trans           &trans  &trans
+&trans  &trans  &shortcut LC(LEFT) LEFT  &shortcut LC(DOWN) DOWN  &shortcut LC(RIGHT) RIGHT  &trans               &mkp MB4  &trans  &mkp MB5  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &trans                   &trans                   &trans                     &trans     &trans              &trans            &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+                                         &trans                   &trans                     &mkp RCLK                                        &mkp LCLK       &mkp MCLK       &trans
             >;
 
             label = "MOUSE";
