@@ -190,7 +190,7 @@
         };
 
         Toggle_Rocorn {
-            bindings = <&to 2>;
+            bindings = <&tog 2>;
             key-positions = <12 27>;
         };
 
