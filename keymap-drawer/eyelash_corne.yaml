@@ -348,7 +348,6 @@ combos:
   k: {t: COLEMAK, h: toggle}
 - p: [12, 27]
   k: {t: ROCORN, h: toggle}
-  l: [ROCORN]
 - p: [31, 32, 33]
   k: $$mdi:bluetooth-off$$
   l: [Fn]
