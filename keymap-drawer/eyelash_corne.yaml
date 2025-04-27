@@ -98,6 +98,55 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  ROCORN:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '&shortcut ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))) Q'
+  - U
+  - E
+  - T
+  - G
+  - $$mdi:arrow-up-bold$$
+  - J
+  - L
+  - I
+  - {t: Y, h: '&oneshot LC(Y)'}
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - K
+  - {t: R, h: '&oneshot LS(LG(S))'}
+  - {t: A, h: LGUI}
+  - S
+  - D
+  - $$mdi:arrow-left-bold$$
+  - {t: HOME, h: '&oneshot END'}
+  - $$mdi:arrow-right-bold$$
+  - H
+  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: O, h: RGUI}
+  - {t: P, h: '$$mdi:apple-keyboard-control$$'}
+  - F
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Z, h: '&oneshot LC(Z)'}
+  - {t: X, h: '&oneshot LC(X)'}
+  - {t: C, h: '&oneshot LC(C)'}
+  - {t: V, h: '&oneshot LC(V)'}
+  - B
+  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:arrow-down-bold$$
+  - W
+  - {t: M, h: '&oneshot C_AL_MAIL'}
+  - '&shortcut ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))) (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))'
+  - '&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))) ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))'
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   SYM_NUM:
   - {type: held}
   - '&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_EQUAL_AND_PLUS)))) ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION))))'
@@ -150,6 +199,9 @@ layers:
   MOUSE:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Sft+HOME, h: '&oneshot LC(LS(HOME))'}
+  - {t: 'Sft+$$mdi:arrow-up-bold$$', h: '&oneshot LC(LS(UP))'}
+  - {t: Sft+END, h: '&oneshot LC(LS(END))'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -160,12 +212,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: 'Sft+$$mdi:arrow-left-bold$$', h: '&oneshot LC(LS(LEFT))'}
+  - {t: 'Sft+$$mdi:arrow-down-bold$$', h: '&oneshot LC(LS(DOWN))'}
+  - {t: 'Sft+$$mdi:arrow-right-bold$$', h: '&oneshot LC(LS(RIGHT))'}
   - {t: '$$mdi:transfer$$', type: trans}
   - '&mkp MB4'
   - {t: '$$mdi:transfer$$', type: trans}
@@ -297,6 +346,9 @@ layers:
 combos:
 - p: [0, 13]
   k: {t: COLEMAK, h: toggle}
+- p: [12, 27]
+  k: {t: ROCORN, h: toggle}
+  l: [ROCORN]
 - p: [31, 32, 33]
   k: $$mdi:bluetooth-off$$
   l: [Fn]
