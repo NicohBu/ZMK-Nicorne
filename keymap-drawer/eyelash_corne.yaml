@@ -100,43 +100,43 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   ROCORN:
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&shortcut ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))) Q'
-  - U
-  - E
-  - T
+  - {t: Z, h: '&oneshot LC(Z)'}
+  - {t: Y, h: '&oneshot LC(Y)'}
+  - {t: F, h: '&oneshot LC(F)'}
+  - P
   - G
   - $$mdi:arrow-up-bold$$
   - J
-  - L
   - I
-  - {t: Y, h: '&oneshot LC(Y)'}
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))
+  - U
+  - '&shortcut ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))) Q'
+  - W
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - K
-  - {t: R, h: '&oneshot LS(LG(S))'}
+  - H
+  - {t: V, h: '&oneshot LC(V)'}
   - {t: A, h: LGUI}
-  - S
-  - D
+  - {t: S, h: '&oneshot LG(LS(S))'}
+  - {t: T, h: '&oneshot LC(T)'}
   - $$mdi:arrow-left-bold$$
   - {t: HOME, h: '&oneshot END'}
   - $$mdi:arrow-right-bold$$
-  - H
+  - {t: M, h: '&oneshot C_AL_MAIL'}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: O, h: RGUI}
-  - {t: P, h: '$$mdi:apple-keyboard-control$$'}
-  - F
+  - {t: E, h: RGUI}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
+  - O
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Z, h: '&oneshot LC(Z)'}
+  - K
   - {t: X, h: '&oneshot LC(X)'}
   - {t: C, h: '&oneshot LC(C)'}
-  - {t: V, h: '&oneshot LC(V)'}
+  - R
   - B
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:arrow-down-bold$$
-  - W
-  - {t: M, h: '&oneshot C_AL_MAIL'}
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))
+  - L
   - '&shortcut ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))) (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))'
   - '&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))) ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))'
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
