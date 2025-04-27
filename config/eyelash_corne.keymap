@@ -232,7 +232,7 @@
             display-name = "ROCORN";
             bindings = <
 &trans  &shortcut LC(Z) Z  &shortcut LC(Y) Y  &shortcut LC(F) F  &kp P                  &kp G                                        &kp UP                         &kp J                  &kp I            &kp U                     &shortcut ES_AT Q       &kp W         &trans
-&trans  &kp H              &shortcut LC(V) V  &hrm LGUI A        &shortcut LG(LS(S)) S  &shortcut LC(T) T                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut C_AL_MAIL M  &hrm LEFT_ALT N  &hrm RGUI E               &hrm RCTRL D            &kp O         &trans
+&trans  &shortcut LC(V) V  &kp H              &hrm LGUI A        &shortcut LG(LS(S)) S  &shortcut LC(T) T                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut C_AL_MAIL M  &hrm LEFT_ALT N  &hrm RGUI E               &hrm RCTRL D            &kp O         &trans
 &trans  &kp K              &shortcut LC(X) X  &shortcut LC(C) C  &kp R                  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &kp L            &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS  &trans
                                               &trans             &trans                 &trans                                                                      &trans                 &trans           &trans
             >;
