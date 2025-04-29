@@ -121,7 +121,7 @@ layers:
   - $$mdi:arrow-left-bold$$
   - {t: HOME, h: '&oneshot END'}
   - $$mdi:arrow-right-bold$$
-  - W
+  - {t: S, h: '&oneshot LG(LS(S))'}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
   - {t: E, h: RGUI}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
