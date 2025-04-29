@@ -44,10 +44,10 @@ layers:
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
   - MOUSE
   - $$mdi:apple-keyboard-control$$
-  - {t: '&td_caps', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:keyboard-space$$', h: Fn}
+  - '&td_caps'
+  - {t: '$$mdi:keyboard-return$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: SYM_NUM}
-  - {t: '&td_caps', h: '$$mdi:apple-keyboard-shift$$'}
+  - '&td_caps'
   - {t: '$$mdi:backspace-reverse-outline$$', h: Fn}
   COLEMAK:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -130,7 +130,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: Z, h: '&oneshot LC(Z)'}
   - {t: X, h: '&oneshot LC(X)'}
-  - Ctl+K
+  - K
   - {t: C, h: '&oneshot LC(C)'}
   - B
   - $$mdi:apple-keyboard-caps$$
@@ -351,3 +351,6 @@ combos:
 - p: [31, 32, 33]
   k: $$mdi:bluetooth-off$$
   l: [Fn]
+- p: [41, 40]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
+  l: [QWERTY, COLEMAK, ROCORN]
