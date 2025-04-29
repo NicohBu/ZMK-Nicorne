@@ -100,8 +100,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   ROCORN:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Z, h: '&oneshot LC(Z)'}
   - {t: Y, h: '&oneshot LC(Y)'}
+  - W
   - {t: F, h: '&oneshot LC(F)'}
   - P
   - G
@@ -128,10 +128,10 @@ layers:
   - O
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - K
+  - {t: Z, h: '&oneshot LC(Z)'}
   - {t: X, h: '&oneshot LC(X)'}
+  - Ctl+K
   - {t: C, h: '&oneshot LC(C)'}
-  - {t: S, h: '&oneshot LG(LS(S))'}
   - B
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:arrow-down-bold$$
