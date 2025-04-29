@@ -231,10 +231,10 @@
         Alpha_Ctm {
             display-name = "ROCORN";
             bindings = <
-&trans  &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J           &kp L                  &kp I                     &kp U                   &shortcut ES_AT Q  &trans
-&trans  &kp H              &kp A              &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp W           &hrm LEFT_ALT N        &hrm RGUI E               &hrm RCTRL D            &kp O              &trans
-&trans  &shortcut LC(Z) Z  &shortcut LC(X) X  &kp LC(K)          &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE  &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &trans
-                                              &trans             &trans             &trans                                                                      &trans          &trans                 &trans
+&trans  &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp L                  &kp I                     &kp U                   &shortcut ES_AT Q  &trans
+&trans  &kp H              &kp A              &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &hrm RGUI E               &hrm RCTRL D            &kp O              &trans
+&trans  &shortcut LC(Z) Z  &shortcut LC(X) X  &kp LC(K)          &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &trans
+                                              &trans             &trans             &trans                                                                      &trans                 &trans                 &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
