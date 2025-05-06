@@ -36,6 +36,8 @@
     acceleration-exponent = <1>;
 };
 
+&lt { tapping-term-ms = <300>; };
+
 / {
     behaviors {
         bt_encoder: bt_encoder {
@@ -137,6 +139,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <220>;
         };
+
+        tilde_kp: tilde_kp {
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&tilde>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <350>;
+            label = "TILDE_KP";
+        };
     };
 
     macros {
@@ -179,6 +191,18 @@
 
             label = "one_shot";
         };
+
+        tilde: tilde_a {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&kp ES_ACUTE>,
+                <&macro_tap>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "TILDE_A";
+        };
     };
 
     combos {
@@ -213,8 +237,8 @@
         Default {
             display-name = "QWERTY";
             bindings = <
-&lt_hold 3 ESC             &shortcut ES_AT_SIGN Q  &kp W                  &kp E              &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &kp U                  &kp I                  &kp O                   &kp P           &kp BACKSPACE
-&shortcut LC(LA(TAB)) TAB  &kp A                   &shortcut LS(LG(S)) S  &hrm LGUI D        &shortcut LC(F) F  &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K            &hrm RCTRL L            &kp ES_N_TILDE  &shortcut KP_ASTERISK ES_ACUTE
+&lt_hold 3 ESC             &shortcut ES_AT_SIGN Q  &kp W                  &tilde_kp E E      &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &tilde_kp U U          &tilde_kp I I          &tilde_kp O O           &kp P           &kp BACKSPACE
+&shortcut LC(LA(TAB)) TAB  &tilde_kp A A           &shortcut LS(LG(S)) S  &hrm LGUI D        &shortcut LC(F) F  &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K            &hrm RCTRL L            &kp ES_N_TILDE  &shortcut KP_ASTERISK ES_ACUTE
 &kp LALT                   &shortcut LC(Z) Z       &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut ES_LT COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &mo 4
                                                                           &kp LCTRL          &td_caps           &lt_hold 5 ENTER                                                            &lt 3 SPACE        &td_caps               &lt 5 DEL
             >;
@@ -237,8 +261,8 @@
         Alpha_Ctm {
             display-name = "ROCORN";
             bindings = <
-&trans  &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp L                  &kp I                     &kp U                   &shortcut ES_AT Q  &trans
-&trans  &kp H              &kp A              &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &hrm RGUI E               &hrm RCTRL D            &kp O              &trans
+&trans  &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &trans
+&trans  &kp H              &tilde_kp A A      &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &trans
 &trans  &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K              &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &trans
                                               &trans             &trans             &trans                                                                      &trans                 &trans                 &trans
             >;
