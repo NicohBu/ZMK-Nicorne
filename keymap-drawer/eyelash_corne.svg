@@ -610,6 +610,10 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="910" y="148" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="915" y="152" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
 </g>
+<g class="combo combopos-3">
+<rect rx="6" ry="6" x="910" y="36" width="28" height="26" class="combo"/>
+<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="915" y="40" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
+</g>
 </g>
 </g>
 <g transform="translate(40, 318)" class="layer-COLEMAK">
@@ -893,6 +897,10 @@ rect.held, rect.combo.held {
 <g class="combo enter combopos-2">
 <rect rx="6" ry="6" x="910" y="148" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="915" y="152" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
+</g>
+<g class="combo combopos-3">
+<rect rx="6" ry="6" x="910" y="36" width="28" height="26" class="combo"/>
+<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="915" y="40" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
 </g>
 </g>
 </g>
@@ -1182,6 +1190,10 @@ rect.held, rect.combo.held {
 <g class="combo enter combopos-2">
 <rect rx="6" ry="6" x="910" y="148" width="28" height="26" class="combo enter"/>
 <use href="#mdi:keyboard-return" xlink:href="#mdi:keyboard-return" x="915" y="152" height="18" width="18.0" class="combo enter tap glyph mdi:keyboard-return"/>
+</g>
+<g class="combo combopos-3">
+<rect rx="6" ry="6" x="910" y="36" width="28" height="26" class="combo"/>
+<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="915" y="40" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
 </g>
 </g>
 </g>
@@ -1501,6 +1513,10 @@ rect.held, rect.combo.held {
 <text x="952" y="77" class="combo tap layer-activator">ROCORN</text>
 </a><text x="952" y="88" class="combo hold">toggle</text>
 </g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="910" y="36" width="28" height="26" class="combo"/>
+<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="915" y="40" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1274)" class="layer-MOUSE">
@@ -1770,6 +1786,10 @@ rect.held, rect.combo.held {
 <a href="#ROCORN">
 <text x="952" y="77" class="combo tap layer-activator">ROCORN</text>
 </a><text x="952" y="88" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="910" y="36" width="28" height="26" class="combo"/>
+<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="915" y="40" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
 </g>
 </g>
 </g>
@@ -2056,6 +2076,10 @@ rect.held, rect.combo.held {
 <path d="M252,147 l37,4" class="combo"/>
 <rect rx="6" ry="6" x="238" y="134" width="28" height="26" class="combo"/>
 <use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="243" y="138" height="18" width="18.0" class="combo tap glyph mdi:bluetooth-off"/>
+</g>
+<g class="combo combopos-3">
+<rect rx="6" ry="6" x="910" y="36" width="28" height="26" class="combo"/>
+<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="915" y="40" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
 </g>
 </g>
 </g>
@@ -2375,6 +2399,10 @@ rect.held, rect.combo.held {
 <a href="#ROCORN">
 <text x="952" y="77" class="combo tap layer-activator">ROCORN</text>
 </a><text x="952" y="88" class="combo hold">toggle</text>
+</g>
+<g class="combo combopos-2">
+<rect rx="6" ry="6" x="910" y="36" width="28" height="26" class="combo"/>
+<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="915" y="40" height="18" width="18.0" class="combo tap glyph mdi:backspace-reverse-outline"/>
 </g>
 </g>
 </g>

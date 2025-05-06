@@ -354,3 +354,5 @@ combos:
 - p: [41, 40]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [QWERTY, COLEMAK, ROCORN]
+- p: [12, 11]
+  k: $$mdi:backspace-reverse-outline$$
