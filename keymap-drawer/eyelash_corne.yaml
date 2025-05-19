@@ -260,11 +260,11 @@ layers:
   - F17
   - PAUSE BREAK
   - {t: '$$mdi:transfer$$', type: trans}
-  - '&kp_bt BT_SEL F6 0'
-  - '&kp_bt BT_SEL F7 1'
-  - '&kp_bt BT_SEL F8 2'
-  - '&kp_bt BT_SEL F9 3'
-  - '&kp_bt BT_SEL F10 4'
+  - {t: F6, h: '&bt_sel'}
+  - {t: F7, h: '&bt_sel 1'}
+  - {t: F8, h: '&bt_sel 2'}
+  - {t: F9, h: '&bt_sel 3'}
+  - {t: F10, h: '&bt_sel 4'}
   - RGB EFR
   - RGB TOG
   - RGB EFF
