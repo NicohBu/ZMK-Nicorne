@@ -149,6 +149,16 @@
             tapping-term-ms = <350>;
             label = "TILDE_KP";
         };
+
+        kp_bt: kp_bt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_BT";
+            bindings = <&bt>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+        };
     };
 
     macros {
@@ -209,12 +219,12 @@
         compatible = "zmk,combos";
 
         Toggle_Colemak {
-            bindings = <&tog 1>;
+            bindings = <&tog 2>;
             key-positions = <0 13>;
         };
 
-        Toggle_Rocorn {
-            bindings = <&tog 2>;
+        Toggle_Qwerty {
+            bindings = <&tog 1>;
             key-positions = <12 27>;
         };
 
@@ -227,23 +237,38 @@
         Enter {
             bindings = <&kp ENTER>;
             key-positions = <41 40>;
-            layers = <0 1 2>;
+        };
+
+        Del {
+            bindings = <&kp DEL>;
+            key-positions = <0 1>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        Default {
-            display-name = "QWERTY";
+        Alpha_Ctm {
+            display-name = "ROCORN";
             bindings = <
-&lt_hold 3 ESC             &shortcut ES_AT_SIGN Q  &kp W                  &tilde_kp E E      &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &tilde_kp U U          &tilde_kp I I          &tilde_kp O O           &kp P           &kp BACKSPACE
-&shortcut LC(LA(TAB)) TAB  &tilde_kp A A           &shortcut LS(LG(S)) S  &hrm LGUI D        &shortcut LC(F) F  &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K            &hrm RCTRL L            &kp ES_N_TILDE  &shortcut KP_ASTERISK ES_ACUTE
-&kp LALT                   &shortcut LC(Z) Z       &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut ES_LT COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &mo 4
-                                                                          &kp LCTRL          &td_caps           &lt_hold 5 ENTER                                                            &lt 3 SPACE        &td_caps               &lt 5 DEL
+&kp ESC                    &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &kp BSPC
+&shortcut LC(LA(TAB)) TAB  &kp H              &tilde_kp A A      &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &shortcut KP_ASTERISK ES_ACUTE
+&kp LALT                   &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K              &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 4
+                                                                 &kp LCTRL          &td_caps           &lt_hold 5 ENTER                                                            &lt 3 SPACE            &td_caps               &lt 5 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
+            label = "ROCORN";
+        };
+
+        QWERTY {
+            display-name = "QWERTY";
+            bindings = <
+&trans  &shortcut ES_AT_SIGN Q  &kp W                  &tilde_kp E E      &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &tilde_kp U U          &tilde_kp I I          &tilde_kp O O           &kp P           &trans
+&trans  &tilde_kp A A           &shortcut LS(LG(S)) S  &hrm LGUI D        &shortcut LC(F) F  &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K            &hrm RCTRL L            &kp ES_N_TILDE  &trans
+&trans  &shortcut LC(Z) Z       &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut ES_LT COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &trans
+                                                       &trans             &trans             &trans                                                                      &trans             &trans                 &trans
+            >;
         };
 
         Alpha_Alt {
@@ -254,21 +279,6 @@
 &trans  &shortcut LC(Z) Z  &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B   &kp CAPSLOCK              &kp DOWN                       &kp K   &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &trans
                                                   &trans             &trans             &trans                                                           &trans  &trans                 &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
-        };
-
-        Alpha_Ctm {
-            display-name = "ROCORN";
-            bindings = <
-&trans  &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &trans
-&trans  &kp H              &tilde_kp A A      &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &trans
-&trans  &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K              &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &trans
-                                              &trans             &trans             &trans                                                                      &trans                 &trans                 &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
-            label = "ROCORN";
         };
 
         Symbol+Number {
@@ -298,25 +308,24 @@
         Fn {
             display-name = "Fn";
             bindings = <
-&kp F12      &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                      &rgb_ug RGB_BRI                   &kp F6      &kp F7        &kp F8  &kp F9  &kp F10  &kp F11
-&trans       &bt BT_SEL 0             &bt BT_SEL 1             &bt BT_SEL 2             &bt BT_SEL 3             &bt BT_SEL 4               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &none       &none         &none   &none   &none    &kp F12
-&bootloader  &out OUT_USB             &out OUT_BLE             &none                    &none                    &sys_reset    &soft_off                     &rgb_ug RGB_BRD                   &sys_reset  &none         &none   &none   &none    &bootloader
-                                                               &kp LCTRL                &kp LALT                 &none                                                                         &none       &kp LEFT_ALT  &none
+&kp LALT     &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                             &rgb_ug RGB_BRI                   &kp F13     &kp F14  &kp F15  &kp F16  &kp F17  &kp PAUSE_BREAK
+&trans       &kp_bt BT_SEL F6 0       &kp_bt BT_SEL F7 1       &kp_bt BT_SEL F8 2       &kp_bt BT_SEL F9 3       &kp_bt BT_SEL F10 4               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp F18     &kp F19  &kp F20  &kp F21  &kp F22  &trans
+&bootloader  &out OUT_USB             &out OUT_BLE             &none                    &kp F11                  &kp F12              &soft_off                     &rgb_ug RGB_BRD                   &kp F23     &kp F24  &none    &none    &none    &bootloader
+                                                               &trans                   &trans                   &trans                                                                               &kp INSERT  &trans   &trans
             >;
 
             sensor-bindings = <&hue_encoder>;
         };
 
-        x_Symbol_x {
-            display-name = "SYMBOL";
+        Empty {
             bindings = <
-&kp ES_IEXCL  &kp ES_EXCL  &kp ES_DQT   &kp ES_HASH  &kp ES_DLLR  &kp ES_PRCNT                                       &trans                           &kp ES_AMPS   &kp ES_SLASH  &kp ES_LPAR  &kp ES_RPAR  &kp ES_QMARK  &kp ES_IQMARK
-&trans        &kp ES_AMPS  &kp ES_FSLH  &kp ES_LPAR  &kp ES_RPAR  &kp ES_EQUAL                &shortcut C_RW C_PREV  &kp C_PP  &shortcut C_FF C_NEXT  &kp ES_PRCNT  &kp ES_BSLH   &kp ES_LBRC  &kp ES_RBRC  &as ES_PLUS   &as GRAVE
-&trans        &none        &kp ES_BSLH  &kp ES_LT    &kp ES_GT    &none         &kp C_MUTE                           &trans                           &kp ES_DLLR   &kp ES_NOT    &kp ES_LBKT  &kp ES_RBKT  &trans        &trans
-                                        &trans       &trans       &trans                                                                              &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            label = "EMPTY";
         };
     };
 
