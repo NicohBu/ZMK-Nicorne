@@ -237,7 +237,6 @@
         Enter {
             bindings = <&kp ENTER>;
             key-positions = <41 40>;
-            layers = <1 2 0>;
         };
 
         Del {
@@ -265,13 +264,11 @@
         QWERTY {
             display-name = "QWERTY";
             bindings = <
-&lt_hold 3 ESC             &shortcut ES_AT_SIGN Q  &kp W                  &tilde_kp E E      &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &tilde_kp U U          &tilde_kp I I          &tilde_kp O O           &kp P           &kp BACKSPACE
-&shortcut LC(LA(TAB)) TAB  &tilde_kp A A           &shortcut LS(LG(S)) S  &hrm LGUI D        &shortcut LC(F) F  &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K            &hrm RCTRL L            &kp ES_N_TILDE  &shortcut KP_ASTERISK ES_ACUTE
-&kp LALT                   &shortcut LC(Z) Z       &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut ES_LT COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &mo 4
-                                                                          &kp LCTRL          &td_caps           &lt_hold 5 ENTER                                                            &lt 3 SPACE        &td_caps               &lt 5 DEL
+&trans  &shortcut ES_AT_SIGN Q  &kp W                  &tilde_kp E E      &kp R              &shortcut LC(T) T                            &kp UP                         &shortcut LC(Y) Y  &tilde_kp U U          &tilde_kp I I          &tilde_kp O O           &kp P           &trans
+&trans  &tilde_kp A A           &shortcut LS(LG(S)) S  &hrm LGUI D        &shortcut LC(F) F  &kp G                              &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H              &hrm LEFT_ALT J        &hrm RGUI K            &hrm RCTRL L            &kp ES_N_TILDE  &trans
+&trans  &shortcut LC(Z) Z       &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp N              &shortcut C_AL_MAIL M  &shortcut ES_LT COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &trans
+                                                       &trans             &trans             &trans                                                                      &trans             &trans                 &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
         };
 
         Alpha_Alt {
@@ -282,8 +279,6 @@
 &trans  &shortcut LC(Z) Z  &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B   &kp CAPSLOCK              &kp DOWN                       &kp K   &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &trans
                                                   &trans             &trans             &trans                                                           &trans  &trans                 &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
         };
 
         Symbol+Number {
@@ -322,15 +317,15 @@
             sensor-bindings = <&hue_encoder>;
         };
 
-        Fn_Alt {
+        Empty {
             bindings = <
-&tog 6  &kp F13  &kp F14  &kp F15  &kp F16  &kp F17                    &trans          &kp F18  &kp F19  &kp F20  &kp F21  &kp F22  &kp F23
-&trans  &trans   &trans   &trans   &trans   &trans             &trans  &trans  &trans  &trans   &trans   &trans   &trans   &trans   &kp F24
-&trans  &trans   &trans   &trans   &trans   &trans   &trans            &trans          &trans   &trans   &trans   &trans   &trans   &trans
-                          &trans   &trans   &trans                                     &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
 
-            label = "Fn_Alt";
+            label = "EMPTY";
         };
     };
 
