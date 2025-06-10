@@ -159,6 +159,15 @@
             flavor = "tap-preferred";
             tapping-term-ms = <300>;
         };
+
+        Back_Del: Back_Del {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACK_DEL";
+            bindings = <&kp BACKSPACE>, <&kp DEL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -238,7 +247,6 @@
         BtCLR {
             bindings = <&bt BT_CLR>;
             key-positions = <31 32 33>;
-            layers = <5>;
         };
 
         Enter {
@@ -250,6 +258,11 @@
             bindings = <&kp DEL>;
             key-positions = <0 1>;
         };
+
+        DobleSHIFT {
+            bindings = <&caps_word>;
+            key-positions = <43 46>;
+        };
     };
 
     keymap {
@@ -258,10 +271,10 @@
         Alpha_Ctm {
             display-name = "ROCORN";
             bindings = <
-&kp ESC                    &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &kp BSPC
-&shortcut LC(LA(TAB)) TAB  &kp H              &tilde_kp A A      &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &shortcut KP_ASTERISK ES_ACUTE
-&kp LALT                   &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K              &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 4
-                                                                 &kp LCTRL          &td_caps           &lt_hold 5 ENTER                                                            &lt 3 SPACE            &td_caps               &lt 5 DEL
+&kp ESC   &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &Back_Del
+&kp LWIN  &kp H              &tilde_kp A A      &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &lt 4 ASTERISK
+&kp LALT  &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K              &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 5
+                                                &kp LCTRL          &mt LSHIFT TAB     &lt_hold 6 ENTER                                                            &lt 3 SPACE            &mt RSHIFT TAB         &lt 6 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
@@ -303,13 +316,25 @@
         Mouse {
             display-name = "MOUSE";
             bindings = <
-&trans  &trans  &shortcut LC(HOME) HOME  &shortcut LC(UP) UP      &shortcut LC(END) END      &trans                         &trans            &trans          &trans          &trans          &trans           &trans  &trans
-&trans  &trans  &shortcut LC(LEFT) LEFT  &shortcut LC(DOWN) DOWN  &shortcut LC(RIGHT) RIGHT  &trans               &mkp MB4  &trans  &mkp MB5  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &trans                   &trans                   &trans                     &trans     &trans              &trans            &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-                                         &trans                   &trans                     &mkp RCLK                                        &mkp LCLK       &mkp MCLK       &trans
+&trans  &trans  &shortcut LC(HOME) HOME  &kp UP    &shortcut LC(END) END  &trans                         &trans            &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans  &trans
+&trans  &trans  &kp LEFT                 &kp DOWN  &kp RIGHT              &trans               &mkp MB4  &trans  &mkp MB5  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &kp K_PREV               &kp K_PP  &kp K_NEXT             &trans     &trans              &trans            &trans          &trans          &trans          &trans           &trans  &trans
+                                         &trans    &trans                 &mkp RCLK                                        &mkp LCLK       &mkp MCLK       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOL_UP K_VOL_DN>;
+        };
+
+        Move {
+            display-name = "ARROW";
+            bindings = <
+&trans  &trans          &shortcut LC(LS(HOME)) LS(HOME)  &kp LS(LC(UP))    &shortcut LC(LS(END)) LS(END)  &trans                    &trans          &trans    &kp HOME                     &kp UP                 &kp END                      &trans    &trans
+&trans  &trans          &kp LS(LC(LEFT))                 &kp LS(LC(DOWN))  &kp LS(LC(RIGHT))              &trans            &trans  &trans  &trans  &trans    &kp LEFT                     &kp DOWN               &kp RIGHT                    &trans    &trans
+&trans  &kp LC(LA(F1))  &kp LC(LA(F2))                   &kp LC(LA(F3))    &kp LC(LA(F4))                 &trans  &trans            &trans          &kp C_RW  &shortcut LC(C_PREV) C_PREV  &shortcut C_STOP C_PP  &shortcut LC(C_NEXT) C_NEXT  &kp C_FF  &trans
+                                                         &trans            &trans                         &trans                                    &kp C_PP  &trans                       &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Fn {
