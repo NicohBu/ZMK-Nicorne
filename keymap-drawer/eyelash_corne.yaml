@@ -13,8 +13,8 @@ layers:
   - {t: I, h: '&tilde I'}
   - {t: U, h: '&tilde U'}
   - '&shortcut ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))) Q'
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-tab$$', h: '&oneshot LC(LA(TAB))'}
+  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
+  - LWIN
   - H
   - {t: A, h: '&tilde A'}
   - {t: R, h: LGUI}
@@ -28,7 +28,7 @@ layers:
   - {t: E, h: '&tilde E'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: O, h: '&tilde O'}
-  - '&shortcut KP_ASTERISK (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE))'
+  - {t: '*', h: MOUSE}
   - $$mdi:apple-keyboard-option$$
   - {t: Z, h: '&oneshot LC(Z)'}
   - {t: X, h: '&oneshot LC(X)'}
@@ -42,12 +42,12 @@ layers:
   - '&shortcut ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))) (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))'
   - '&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))) ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))'
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
-  - MOUSE
+  - ARROW
   - $$mdi:apple-keyboard-control$$
-  - '&td_caps'
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: SYM_NUM}
-  - '&td_caps'
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:backspace-reverse-outline$$', h: Fn}
   QWERTY:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -200,25 +200,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: HOME, h: '&oneshot LC(HOME)'}
-  - {t: '$$mdi:arrow-up-bold$$', h: '&oneshot LC(UP)'}
+  - $$mdi:arrow-up-bold$$
   - {t: END, h: '&oneshot LC(END)'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:arrow-left-bold$$', h: '&oneshot LC(LEFT)'}
-  - {t: '$$mdi:arrow-down-bold$$', h: '&oneshot LC(DOWN)'}
-  - {t: '$$mdi:arrow-right-bold$$', h: '&oneshot LC(RIGHT)'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB4'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB5'
   - $$mdi:pan-up$$
   - $$mdi:pan-left$$
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
@@ -227,12 +212,13 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB4'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB5'
   - $$mdi:pan-down$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
@@ -241,9 +227,72 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - PREV
+  - PP
+  - NEXT
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  ARROW:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Sft+HOME, h: '&oneshot LC(LS(HOME))'}
+  - Sft+Ctl+$$mdi:arrow-up-bold$$
+  - {t: Sft+END, h: '&oneshot LC(LS(END))'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - END
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Sft+Ctl+$$mdi:arrow-left-bold$$
+  - Sft+Ctl+$$mdi:arrow-down-bold$$
+  - Sft+Ctl+$$mdi:arrow-right-bold$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Ctl+Alt+F1
+  - Ctl+Alt+F2
+  - Ctl+Alt+F3
+  - Ctl+Alt+F4
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - RW
+  - {t: '$$mdi:skip-previous$$', h: '&oneshot LC(C_PREV)'}
+  - {t: '$$mdi:play-pause$$', h: '&oneshot C_STOP'}
+  - {t: '$$mdi:skip-next$$', h: '&oneshot LC(C_NEXT)'}
+  - FF
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:play-pause$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
   - $$mdi:apple-keyboard-option$$
@@ -350,8 +399,9 @@ combos:
   k: {t: QWERTY, h: toggle}
 - p: [31, 32, 33]
   k: $$mdi:bluetooth-off$$
-  l: [Fn]
 - p: [41, 40]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [0, 1]
   k: $$mdi:backspace-reverse-outline$$
+- p: [43, 46]
+  k: $$mdi:alpha-w-box$$
