@@ -13,8 +13,8 @@ layers:
   - {t: I, h: '&tilde I'}
   - {t: U, h: '&tilde U'}
   - '&shortcut ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))) Q'
-  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
-  - LWIN
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:keyboard-tab$$', h: LWIN}
   - H
   - {t: A, h: '&tilde A'}
   - {t: R, h: LGUI}
@@ -28,7 +28,7 @@ layers:
   - {t: E, h: '&tilde E'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: O, h: '&tilde O'}
-  - {t: '*', h: MOUSE}
+  - '&lt 4 ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))))'
   - $$mdi:apple-keyboard-option$$
   - {t: Z, h: '&oneshot LC(Z)'}
   - {t: X, h: '&oneshot LC(X)'}
@@ -160,7 +160,7 @@ layers:
   - {t: '9', s: (}
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD RIGHT BRACKET AND RIGHT BRACE))
-  - {t: '$$mdi:backspace$$', h: '$$mdi:backspace-reverse-outline$$'}
+  - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 6 AND CARET))))
   - '&shortcut ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE)))) (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))'
@@ -224,7 +224,7 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - PREV
@@ -291,7 +291,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:play-pause$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Fn:
@@ -399,9 +399,12 @@ combos:
   k: {t: QWERTY, h: toggle}
 - p: [31, 32, 33]
   k: $$mdi:bluetooth-off$$
+  l: [Fn]
 - p: [41, 40]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [0, 1]
   k: $$mdi:backspace-reverse-outline$$
 - p: [43, 46]
   k: $$mdi:alpha-w-box$$
+- p: [12, 11]
+  k: $$mdi:backspace-reverse-outline$$
