@@ -36,7 +36,7 @@
     acceleration-exponent = <1>;
 };
 
-&lt { tapping-term-ms = <300>; };
+&sk { quick-release; };
 
 / {
     behaviors {
@@ -131,15 +131,6 @@
             require-prior-idle-ms = <1>;
         };
 
-        mt_hold: mt_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_HOLD";
-            bindings = <&kp>, <&td_caps>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <220>;
-        };
-
         tilde_kp: tilde_kp {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&tilde>, <&kp>;
@@ -167,6 +158,15 @@
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        mt_sk: mt_sk {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_SK";
+            bindings = <&sk>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
         };
     };
 
@@ -247,21 +247,32 @@
         BtCLR {
             bindings = <&bt BT_CLR>;
             key-positions = <31 32 33>;
+            layers = <6>;
+            timeout-ms = <100>;
         };
 
         Enter {
             bindings = <&kp ENTER>;
             key-positions = <41 40>;
+            timeout-ms = <100>;
         };
 
-        Del {
+        L_Del {
             bindings = <&kp DEL>;
             key-positions = <0 1>;
+            timeout-ms = <100>;
         };
 
         DobleSHIFT {
             bindings = <&caps_word>;
             key-positions = <43 46>;
+            timeout-ms = <150>;
+        };
+
+        R_Del {
+            bindings = <&kp DEL>;
+            key-positions = <12 11>;
+            timeout-ms = <100>;
         };
     };
 
@@ -271,10 +282,10 @@
         Alpha_Ctm {
             display-name = "ROCORN";
             bindings = <
-&kp ESC   &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &Back_Del
-&kp LWIN  &kp H              &tilde_kp A A      &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &lt 4 ASTERISK
-&kp LALT  &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K              &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 5
-                                                &kp LCTRL          &mt LSHIFT TAB     &lt_hold 6 ENTER                                                            &lt 3 SPACE            &mt RSHIFT TAB         &lt 6 DEL
+&kp ESC       &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &kp BACKSPACE
+&mt LWIN TAB  &kp H              &tilde_kp A A      &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &lt 4 ES_STAR
+&kp LALT      &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K              &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 5
+                                                    &kp LCTRL          &mt_sk LSHIFT TAB  &lt_hold 6 ENTER                                                            &lt 3 SPACE            &mt_sk RSHIFT TAB      &lt 6 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
@@ -304,7 +315,7 @@
         Symbol+Number {
             display-name = "SYM_NUM";
             bindings = <
-&trans  &shortcut ES_IEXCL ES_EXCL  &shortcut ES_SQT ES_DQT     &kp ES_HASH                &kp ES_DLLR                &kp ES_PRCNT                                        &kp C_RW              &kp N7                       &kp N8                &kp N9                    &kp ES_MINUS              &kp ES_PLUS      &hrm DEL BACKSPACE
+&trans  &shortcut ES_IEXCL ES_EXCL  &shortcut ES_SQT ES_DQT     &kp ES_HASH                &kp ES_DLLR                &kp ES_PRCNT                                        &kp C_RW              &kp N7                       &kp N8                &kp N9                    &kp ES_MINUS              &kp ES_PLUS      &Back_Del
 &trans  &kp ES_AMPS                 &shortcut ES_BSLH ES_SLASH  &shortcut ES_LBRC ES_LPAR  &shortcut ES_RBRC ES_RPAR  &kp ES_EQUAL                            &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp N4                       &kp N5                &kp N6                    &kp KP_DIVIDE             &kp KP_ASTERISK  &kp C_AL_CALC
 &trans  &shortcut ES_DEG ES_PIPE    &shortcut ES_TILDE ES_NOT   &kp ES_LBKT                &kp ES_RBKT                &shortcut ES_IQMARK ES_QMARK  &trans                &kp C_FF              &kp N1                       &kp N2                &kp N3                    &shortcut ES_GT ES_COLON  &kp ES_DLLR      &shortcut ES_EQUAL KP_ENTER
                                                                 &trans                     &trans                     &trans                                                                    &shortcut ES_EQUAL KP_ENTER  &shortcut ES_HASH N0  &shortcut ES_PERCENT DOT
@@ -328,10 +339,10 @@
         Move {
             display-name = "ARROW";
             bindings = <
-&trans  &trans          &shortcut LC(LS(HOME)) LS(HOME)  &kp LS(LC(UP))    &shortcut LC(LS(END)) LS(END)  &trans                    &trans          &trans    &kp HOME                     &kp UP                 &kp END                      &trans    &trans
-&trans  &trans          &kp LS(LC(LEFT))                 &kp LS(LC(DOWN))  &kp LS(LC(RIGHT))              &trans            &trans  &trans  &trans  &trans    &kp LEFT                     &kp DOWN               &kp RIGHT                    &trans    &trans
-&trans  &kp LC(LA(F1))  &kp LC(LA(F2))                   &kp LC(LA(F3))    &kp LC(LA(F4))                 &trans  &trans            &trans          &kp C_RW  &shortcut LC(C_PREV) C_PREV  &shortcut C_STOP C_PP  &shortcut LC(C_NEXT) C_NEXT  &kp C_FF  &trans
-                                                         &trans            &trans                         &trans                                    &kp C_PP  &trans                       &trans
+&trans  &trans          &shortcut LC(LS(HOME)) LS(HOME)  &kp LS(LC(UP))    &shortcut LC(LS(END)) LS(END)  &trans                    &trans          &trans     &kp HOME                     &kp UP                 &kp END                      &trans    &trans
+&trans  &trans          &kp LS(LC(LEFT))                 &kp LS(LC(DOWN))  &kp LS(LC(RIGHT))              &trans            &trans  &trans  &trans  &trans     &kp LEFT                     &kp DOWN               &kp RIGHT                    &trans    &trans
+&trans  &kp LC(LA(F1))  &kp LC(LA(F2))                   &kp LC(LA(F3))    &kp LC(LA(F4))                 &trans  &trans            &trans          &kp C_RW   &shortcut LC(C_PREV) C_PREV  &shortcut C_STOP C_PP  &shortcut LC(C_NEXT) C_NEXT  &kp C_FF  &trans
+                                                         &trans            &trans                         &trans                                    &kp ENTER  &trans                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
