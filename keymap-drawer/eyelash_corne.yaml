@@ -247,11 +247,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   ARROW:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Sft+HOME, h: '&oneshot LC(LS(HOME))'}
-  - Sft+Ctl+$$mdi:arrow-up-bold$$
-  - {t: Sft+END, h: '&oneshot LC(LS(END))'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - F13
+  - F14
+  - F15
+  - F16
+  - F17
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - HOME
@@ -260,11 +260,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+Ctl+$$mdi:arrow-left-bold$$
-  - Sft+Ctl+$$mdi:arrow-down-bold$$
-  - Sft+Ctl+$$mdi:arrow-right-bold$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - F18
+  - F19
+  - F20
+  - F21
+  - F22
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -275,11 +275,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Ctl+Alt+F1
-  - Ctl+Alt+F2
-  - Ctl+Alt+F3
-  - Ctl+Alt+F4
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - F23
+  - F24
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - RW
@@ -302,12 +302,12 @@ layers:
   - {t: F4, h: '&oneshot LC(LA(F4))'}
   - F5
   - RGB BRI
-  - F13
-  - F14
-  - F15
-  - F16
-  - F17
-  - PAUSE BREAK
+  - $$mdi:volume-off$$
+  - HOME
+  - $$mdi:arrow-up-bold$$
+  - END
+  - PG UP
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: F6, h: '&bt_sel'}
   - {t: F7, h: '&bt_sel 1'}
@@ -317,13 +317,13 @@ layers:
   - RGB EFR
   - RGB TOG
   - RGB EFF
-  - F18
-  - F19
-  - F20
-  - F21
-  - F22
+  - $$mdi:volume-high$$
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - PG DN
+  - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:progress-download$$
   - OUT USB
   - OUT BLE
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -331,12 +331,12 @@ layers:
   - F12
   - '&soft_off'
   - RGB BRD
-  - F23
-  - F24
+  - $$mdi:volume-low$$
+  - {t: PREVIOUS, h: '&oneshot C_REWIND'}
+  - Alt+PLAY PAUSE
+  - {t: '$$mdi:skip-next$$', h: '&oneshot C_FAST_FORWARD'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
@@ -393,11 +393,11 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [0, 13]
-  k: {t: COLEMAK, h: toggle}
-- p: [12, 27]
+- p: [13, 0]
   k: {t: QWERTY, h: toggle}
-- p: [31, 32, 33]
+- p: [27, 12]
+  k: {t: SYM_NUM, h: toggle}
+- p: [18, 17, 16]
   k: $$mdi:bluetooth-off$$
   l: [Fn]
 - p: [41, 40]
@@ -408,3 +408,13 @@ combos:
   k: $$mdi:alpha-w-box$$
 - p: [12, 11]
   k: $$mdi:backspace-reverse-outline$$
+- p: [33, 32]
+  k: $$mdi:progress-download$$
+  l: [Fn]
+- p: [36, 37]
+  k: $$mdi:progress-download$$
+  l: [Fn]
+- p: [7, 8]
+  k: $$mdi:keyboard-esc$$
+- p: [5, 4]
+  k: {t: '$$mdi:backspace$$', type: backspace}
