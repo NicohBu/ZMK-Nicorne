@@ -234,19 +234,21 @@
     combos {
         compatible = "zmk,combos";
 
-        Toggle_Colemak {
-            bindings = <&tog 2>;
-            key-positions = <0 13>;
-        };
-
         Toggle_Qwerty {
             bindings = <&tog 1>;
-            key-positions = <12 27>;
+            key-positions = <13 0>;
+            timeout-ms = <100>;
+        };
+
+        Toggle_SYM_NUM {
+            bindings = <&tog 3>;
+            key-positions = <27 12>;
+            timeout-ms = <100>;
         };
 
         BtCLR {
             bindings = <&bt BT_CLR>;
-            key-positions = <31 32 33>;
+            key-positions = <18 17 16>;
             layers = <6>;
             timeout-ms = <100>;
         };
@@ -273,6 +275,30 @@
             bindings = <&kp DEL>;
             key-positions = <12 11>;
             timeout-ms = <100>;
+        };
+
+        LBOOT {
+            bindings = <&bootloader>;
+            key-positions = <33 32>;
+            layers = <6>;
+            timeout-ms = <150>;
+        };
+
+        RBOOT {
+            bindings = <&bootloader>;
+            key-positions = <36 37>;
+            layers = <6>;
+            timeout-ms = <150>;
+        };
+
+        R_ESC {
+            bindings = <&kp ESC>;
+            key-positions = <7 8>;
+        };
+
+        L_BSPC {
+            bindings = <&kp BSPC>;
+            key-positions = <5 4>;
         };
     };
 
@@ -339,10 +365,10 @@
         Move {
             display-name = "ARROW";
             bindings = <
-&trans  &trans          &shortcut LC(LS(HOME)) LS(HOME)  &kp LS(LC(UP))    &shortcut LC(LS(END)) LS(END)  &trans                    &trans          &trans     &kp HOME                     &kp UP                 &kp END                      &trans    &trans
-&trans  &trans          &kp LS(LC(LEFT))                 &kp LS(LC(DOWN))  &kp LS(LC(RIGHT))              &trans            &trans  &trans  &trans  &trans     &kp LEFT                     &kp DOWN               &kp RIGHT                    &trans    &trans
-&trans  &kp LC(LA(F1))  &kp LC(LA(F2))                   &kp LC(LA(F3))    &kp LC(LA(F4))                 &trans  &trans            &trans          &kp C_RW   &shortcut LC(C_PREV) C_PREV  &shortcut C_STOP C_PP  &shortcut LC(C_NEXT) C_NEXT  &kp C_FF  &trans
-                                                         &trans            &trans                         &trans                                    &kp ENTER  &trans                       &trans
+&trans  &kp F13  &kp F14  &kp F15  &kp F16  &kp F17                    &trans          &trans     &kp HOME                     &kp UP                 &kp END                      &trans    &trans
+&trans  &kp F18  &kp F19  &kp F20  &kp F21  &kp F22            &trans  &trans  &trans  &trans     &kp LEFT                     &kp DOWN               &kp RIGHT                    &trans    &trans
+&trans  &none    &none    &none    &kp F23  &kp F24  &trans            &trans          &kp C_RW   &shortcut LC(C_PREV) C_PREV  &shortcut C_STOP C_PP  &shortcut LC(C_NEXT) C_NEXT  &kp C_FF  &trans
+                          &trans   &trans   &trans                                     &kp ENTER  &trans                       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -351,10 +377,10 @@
         Fn {
             display-name = "Fn";
             bindings = <
-&kp LALT     &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                      &rgb_ug RGB_BRI                   &kp F13     &kp F14  &kp F15  &kp F16  &kp F17  &kp PAUSE_BREAK
-&trans       &kp_bt 0 F6              &kp_bt 1 F7              &kp_bt 2 F8              &kp_bt 3 F9              &kp_bt 4 F10               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp F18     &kp F19  &kp F20  &kp F21  &kp F22  &trans
-&bootloader  &out OUT_USB             &out OUT_BLE             &none                    &kp F11                  &kp F12       &soft_off                     &rgb_ug RGB_BRD                   &kp F23     &kp F24  &none    &none    &none    &bootloader
-                                                               &trans                   &trans                   &trans                                                                        &kp INSERT  &trans   &trans
+&kp LALT  &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                      &rgb_ug RGB_BRI                   &kp C_MUTE         &kp HOME                       &kp UP                &kp END                          &kp PG_UP  &kp RCTRL
+&trans    &kp_bt 0 F6              &kp_bt 1 F7              &kp_bt 2 F8              &kp_bt 3 F9              &kp_bt 4 F10               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp C_VOLUME_UP    &kp LEFT                       &kp DOWN              &kp RIGHT                        &kp PG_DN  &kp RSHFT
+&trans    &out OUT_USB             &out OUT_BLE             &none                    &kp F11                  &kp F12       &soft_off                     &rgb_ug RGB_BRD                   &kp C_VOLUME_DOWN  &shortcut C_REWIND C_PREVIOUS  &kp LA(C_PLAY_PAUSE)  &shortcut C_FAST_FORWARD C_NEXT  &none      &kp ENTER
+                                                            &trans                   &trans                   &trans                                                                        &kp INSERT         &trans                         &trans
             >;
 
             sensor-bindings = <&hue_encoder>;
