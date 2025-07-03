@@ -333,7 +333,7 @@ layers:
   - RGB BRD
   - $$mdi:volume-low$$
   - {t: PREVIOUS, h: '&oneshot C_REWIND'}
-  - Alt+PLAY PAUSE
+  - PLAY PAUSE
   - {t: '$$mdi:skip-next$$', h: '&oneshot C_FAST_FORWARD'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:keyboard-return$$', type: enter}
