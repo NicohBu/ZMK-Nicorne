@@ -234,6 +234,8 @@
     combos {
         compatible = "zmk,combos";
 
+        // Layers
+
         Toggle_Qwerty {
             bindings = <&tog 1>;
             key-positions = <13 0>;
@@ -246,24 +248,7 @@
             timeout-ms = <100>;
         };
 
-        BtCLR {
-            bindings = <&bt BT_CLR>;
-            key-positions = <18 17 16>;
-            layers = <6>;
-            timeout-ms = <100>;
-        };
-
-        Enter {
-            bindings = <&kp ENTER>;
-            key-positions = <41 40>;
-            timeout-ms = <100>;
-        };
-
-        L_Del {
-            bindings = <&kp DEL>;
-            key-positions = <0 1>;
-            timeout-ms = <100>;
-        };
+        // Functions
 
         DobleSHIFT {
             bindings = <&caps_word>;
@@ -271,9 +256,10 @@
             timeout-ms = <150>;
         };
 
-        R_Del {
-            bindings = <&kp DEL>;
-            key-positions = <12 11>;
+        BtCLR {
+            bindings = <&bt BT_CLR>;
+            key-positions = <18 17 16>;
+            layers = <6>;
             timeout-ms = <100>;
         };
 
@@ -291,14 +277,34 @@
             timeout-ms = <150>;
         };
 
-        R_ESC {
-            bindings = <&kp ESC>;
-            key-positions = <7 8>;
+        // Combos
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <41 40>;
+            timeout-ms = <100>;
         };
 
         L_BSPC {
             bindings = <&kp BSPC>;
             key-positions = <5 4>;
+        };
+
+        L_DEL {
+            bindings = <&kp DEL>;
+            key-positions = <0 1>;
+            timeout-ms = <100>;
+        };
+
+        R_DEL {
+            bindings = <&kp DEL>;
+            key-positions = <12 11>;
+            timeout-ms = <100>;
+        };
+
+        R_ESC {
+            bindings = <&kp ESC>;
+            key-positions = <7 8>;
         };
     };
 
