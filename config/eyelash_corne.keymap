@@ -263,20 +263,6 @@
             timeout-ms = <100>;
         };
 
-        LBOOT {
-            bindings = <&bootloader>;
-            key-positions = <33 32>;
-            layers = <6>;
-            timeout-ms = <150>;
-        };
-
-        RBOOT {
-            bindings = <&bootloader>;
-            key-positions = <36 37>;
-            layers = <6>;
-            timeout-ms = <150>;
-        };
-
         // Combos
 
         Enter {
@@ -288,6 +274,7 @@
         L_BSPC {
             bindings = <&kp BSPC>;
             key-positions = <5 4>;
+            timeout-ms = <100>;
         };
 
         L_DEL {
@@ -305,6 +292,7 @@
         R_ESC {
             bindings = <&kp ESC>;
             key-positions = <7 8>;
+            timeout-ms = <100>;
         };
     };
 
@@ -383,10 +371,10 @@
         Fn {
             display-name = "Fn";
             bindings = <
-&kp LALT  &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                      &rgb_ug RGB_BRI                   &kp C_MUTE         &kp HOME                       &kp UP            &kp END                          &kp PG_UP  &kp RCTRL
-&trans    &kp_bt 0 F6              &kp_bt 1 F7              &kp_bt 2 F8              &kp_bt 3 F9              &kp_bt 4 F10               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp C_VOLUME_UP    &kp LEFT                       &kp DOWN          &kp RIGHT                        &kp PG_DN  &kp RSHFT
-&trans    &out OUT_USB             &out OUT_BLE             &none                    &kp F11                  &kp F12       &soft_off                     &rgb_ug RGB_BRD                   &kp C_VOLUME_DOWN  &shortcut C_REWIND C_PREVIOUS  &kp C_PLAY_PAUSE  &shortcut C_FAST_FORWARD C_NEXT  &none      &kp ENTER
-                                                            &trans                   &trans                   &trans                                                                        &kp INSERT         &trans                         &trans
+&kp LALT  &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                      &rgb_ug RGB_BRI                   &kp C_MUTE         &kp HOME                       &kp UP            &kp END                          &kp PG_UP    &kp RCTRL
+&trans    &kp_bt 0 F6              &kp_bt 1 F7              &kp_bt 2 F8              &kp_bt 3 F9              &kp_bt 4 F10               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp C_VOLUME_UP    &kp LEFT                       &kp DOWN          &kp RIGHT                        &kp PG_DN    &kp RSHFT
+&trans    &bootloader              &out OUT_TOG             &out OUT_TOG             &kp F11                  &kp F12       &soft_off                     &rgb_ug RGB_BRD                   &kp C_VOLUME_DOWN  &shortcut C_REWIND C_PREVIOUS  &kp C_PLAY_PAUSE  &shortcut C_FAST_FORWARD C_NEXT  &bootloader  &kp ENTER
+                                                            &trans                   &trans                   &trans                                                                        &trans             &trans                         &trans
             >;
 
             sensor-bindings = <&hue_encoder>;
