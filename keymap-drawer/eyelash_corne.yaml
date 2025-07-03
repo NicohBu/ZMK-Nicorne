@@ -397,24 +397,24 @@ combos:
   k: {t: QWERTY, h: toggle}
 - p: [27, 12]
   k: {t: SYM_NUM, h: toggle}
+- p: [43, 46]
+  k: $$mdi:alpha-w-box$$
 - p: [18, 17, 16]
   k: $$mdi:bluetooth-off$$
   l: [Fn]
-- p: [41, 40]
-  k: {t: '$$mdi:keyboard-return$$', type: enter}
-- p: [0, 1]
-  k: $$mdi:backspace-reverse-outline$$
-- p: [43, 46]
-  k: $$mdi:alpha-w-box$$
-- p: [12, 11]
-  k: $$mdi:backspace-reverse-outline$$
 - p: [33, 32]
   k: $$mdi:progress-download$$
   l: [Fn]
 - p: [36, 37]
   k: $$mdi:progress-download$$
   l: [Fn]
-- p: [7, 8]
-  k: $$mdi:keyboard-esc$$
+- p: [41, 40]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [5, 4]
   k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [0, 1]
+  k: $$mdi:backspace-reverse-outline$$
+- p: [12, 11]
+  k: $$mdi:backspace-reverse-outline$$
+- p: [7, 8]
+  k: $$mdi:keyboard-esc$$
