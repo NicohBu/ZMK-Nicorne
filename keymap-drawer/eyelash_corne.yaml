@@ -324,9 +324,9 @@ layers:
   - PG DN
   - $$mdi:apple-keyboard-shift$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - OUT USB
-  - OUT BLE
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:progress-download$$
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
+  - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - F11
   - F12
   - '&soft_off'
@@ -335,12 +335,12 @@ layers:
   - {t: PREVIOUS, h: '&oneshot C_REWIND'}
   - PLAY PAUSE
   - {t: '$$mdi:skip-next$$', h: '&oneshot C_FAST_FORWARD'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:progress-download$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - Ins
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   EMPTY:
@@ -401,12 +401,6 @@ combos:
   k: $$mdi:alpha-w-box$$
 - p: [18, 17, 16]
   k: $$mdi:bluetooth-off$$
-  l: [Fn]
-- p: [33, 32]
-  k: $$mdi:progress-download$$
-  l: [Fn]
-- p: [36, 37]
-  k: $$mdi:progress-download$$
   l: [Fn]
 - p: [41, 40]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
