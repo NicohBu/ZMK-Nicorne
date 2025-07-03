@@ -28,7 +28,7 @@ layers:
   - {t: E, h: '&tilde E'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: O, h: '&tilde O'}
-  - '&lt 4 ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))))'
+  - '&lt 3 ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))))'
   - $$mdi:apple-keyboard-option$$
   - {t: Z, h: '&oneshot LC(Z)'}
   - {t: X, h: '&oneshot LC(X)'}
@@ -42,7 +42,7 @@ layers:
   - '&shortcut ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))) (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))'
   - '&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))) ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))'
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
-  - ARROW
+  - Fn
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
@@ -98,55 +98,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  COLEMAK:
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&shortcut ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))) Q'
-  - W
-  - {t: F, h: '&oneshot LC(F)'}
-  - P
-  - G
-  - $$mdi:arrow-up-bold$$
-  - J
-  - L
-  - U
-  - {t: Y, h: '&oneshot LC(Y)'}
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - A
-  - {t: R, h: '&oneshot LS(LG(S))'}
-  - {t: S, h: LGUI}
-  - T
-  - D
-  - $$mdi:arrow-left-bold$$
-  - {t: HOME, h: '&oneshot END'}
-  - $$mdi:arrow-right-bold$$
-  - H
-  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: E, h: RGUI}
-  - {t: I, h: '$$mdi:apple-keyboard-control$$'}
-  - O
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Z, h: '&oneshot LC(Z)'}
-  - {t: X, h: '&oneshot LC(X)'}
-  - {t: C, h: '&oneshot LC(C)'}
-  - {t: V, h: '&oneshot LC(V)'}
-  - B
-  - $$mdi:apple-keyboard-caps$$
-  - $$mdi:arrow-down-bold$$
-  - K
-  - {t: M, h: '&oneshot C_AL_MAIL'}
-  - '&shortcut ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))) (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))'
-  - '&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))) ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))'
-  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   SYM_NUM:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_EQUAL_AND_PLUS)))) ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_1_AND_EXCLAMATION))))'
@@ -188,7 +139,7 @@ layers:
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
   - '&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))) (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))'
-  - ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 4 AND DOLLAR))))
+  - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
   - '&shortcut (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_0_AND_RIGHT_PARENTHESIS))) KP_ENTER'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -198,66 +149,17 @@ layers:
   - '&shortcut (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_5_AND_PERCENT))) DOT'
   MOUSE:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: HOME, h: '&oneshot LC(HOME)'}
-  - $$mdi:arrow-up-bold$$
-  - {t: END, h: '&oneshot LC(END)'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:pan-up$$
-  - $$mdi:pan-left$$
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - $$mdi:pan-right$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB4'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&mkp MB5'
-  - $$mdi:pan-down$$
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - PREV
-  - PP
-  - NEXT
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:mouse-right-click-outline$$
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  ARROW:
-  - {t: '$$mdi:transfer$$', type: trans}
   - F13
   - F14
   - F15
   - F16
   - F17
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - HOME
-  - $$mdi:arrow-up-bold$$
-  - END
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - MUTE2
+  - $$mdi:pan-left$$
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - $$mdi:pan-right$$
+  - $$mdi:pan-up$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - F18
@@ -265,14 +167,14 @@ layers:
   - F20
   - F21
   - F22
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB4'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&mkp MB5'
+  - VOLUME UP2
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - $$mdi:pan-down$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -280,20 +182,20 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F23
   - F24
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - VOLUME DOW2
+  - {t: PREVIOUS, h: '&oneshot C_REWIND'}
+  - PLAY PAUSE
+  - {t: NEXT, h: '&oneshot C_FAST_FORWARD'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - RW
-  - {t: '$$mdi:skip-previous$$', h: '&oneshot LC(C_PREV)'}
-  - {t: '$$mdi:play-pause$$', h: '&oneshot C_STOP'}
-  - {t: '$$mdi:skip-next$$', h: '&oneshot LC(C_NEXT)'}
-  - FF
-  - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:mouse-right-click-outline$$
+  - $$mdi:mouse-left-click-outline$$
+  - $$mdi:mouse-scroll-wheel$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   Fn:
   - $$mdi:apple-keyboard-option$$
   - {t: F1, h: '&oneshot LA(LC(F1))'}
@@ -336,10 +238,10 @@ layers:
   - PLAY PAUSE
   - {t: '$$mdi:skip-next$$', h: '&oneshot C_FAST_FORWARD'}
   - $$mdi:progress-download$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '$$mdi:keyboard-return$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
@@ -395,10 +297,13 @@ layers:
 combos:
 - p: [13, 0]
   k: {t: QWERTY, h: toggle}
+  l: [ROCORN, QWERTY]
 - p: [27, 12]
   k: {t: SYM_NUM, h: toggle}
+  l: [ROCORN, QWERTY, SYM_NUM]
 - p: [43, 46]
   k: $$mdi:alpha-w-box$$
+  l: [ROCORN, QWERTY]
 - p: [18, 17, 16]
   k: $$mdi:bluetooth-off$$
   l: [Fn]
@@ -412,3 +317,15 @@ combos:
   k: $$mdi:backspace-reverse-outline$$
 - p: [7, 8]
   k: $$mdi:keyboard-esc$$
+- p: [22, 23]
+  k: ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK))))
+  l: [ROCORN, QWERTY, SYM_NUM]
+- p: [23, 24]
+  k: ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS))))
+  l: [ROCORN, QWERTY, SYM_NUM]
+- p: [18, 17]
+  k: (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD EQUAL AND PLUS))
+  l: [ROCORN, QWERTY, SYM_NUM]
+- p: [17, 16]
+  k: (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE)))
+  l: [ROCORN, QWERTY, SYM_NUM]
