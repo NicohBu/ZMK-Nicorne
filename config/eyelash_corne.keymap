@@ -240,12 +240,14 @@
             bindings = <&tog 1>;
             key-positions = <13 0>;
             timeout-ms = <100>;
+            layers = <0 1>;
         };
 
         Toggle_SYM_NUM {
-            bindings = <&tog 3>;
+            bindings = <&tog 2>;
             key-positions = <27 12>;
             timeout-ms = <100>;
+            layers = <0 1 2>;
         };
 
         // Functions
@@ -254,12 +256,13 @@
             bindings = <&caps_word>;
             key-positions = <43 46>;
             timeout-ms = <150>;
+            layers = <0 1>;
         };
 
         BtCLR {
             bindings = <&bt BT_CLR>;
             key-positions = <18 17 16>;
-            layers = <6>;
+            layers = <4>;
             timeout-ms = <100>;
         };
 
@@ -294,6 +297,34 @@
             key-positions = <7 8>;
             timeout-ms = <100>;
         };
+
+        L_PAR {
+            bindings = <&kp ES_LPAR>;
+            key-positions = <22 23>;
+            layers = <0 1 2>;
+            timeout-ms = <80>;
+        };
+
+        R_PAR {
+            bindings = <&kp ES_RPAR>;
+            key-positions = <23 24>;
+            timeout-ms = <80>;
+            layers = <0 1 2>;
+        };
+
+        R_IQST {
+            bindings = <&kp ES_INVERTED_QUESTION>;
+            key-positions = <18 17>;
+            layers = <0 1 2>;
+            timeout-ms = <80>;
+        };
+
+        R_QST {
+            bindings = <&kp ES_QUESTION>;
+            key-positions = <17 16>;
+            timeout-ms = <80>;
+            layers = <0 1 2>;
+        };
     };
 
     keymap {
@@ -303,9 +334,9 @@
             display-name = "ROCORN";
             bindings = <
 &kp ESC       &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &kp BACKSPACE
-&mt LWIN TAB  &kp H              &tilde_kp A A      &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &lt 4 ES_STAR
-&kp LALT      &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K              &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 5
-                                                    &kp LCTRL          &mt_sk LSHIFT TAB  &lt_hold 6 ENTER                                                            &lt 3 SPACE            &mt_sk RSHIFT TAB      &lt 6 DEL
+&mt LWIN TAB  &kp H              &tilde_kp A A      &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &lt 3 ES_STAR
+&kp LALT      &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K              &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 4
+                                                    &kp LCTRL          &mt_sk LSHIFT TAB  &lt_hold 4 ENTER                                                            &lt 2 SPACE            &mt_sk RSHIFT TAB      &lt 4 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
@@ -322,22 +353,12 @@
             >;
         };
 
-        Alpha_Alt {
-            display-name = "COLEMAK";
-            bindings = <
-&trans  &shortcut ES_AT Q  &kp W                  &shortcut LC(F) F  &kp P              &kp G                             &kp UP                         &kp J   &kp L                  &kp U                     &shortcut LC(Y) Y       &kp ES_N_TILDE  &trans
-&trans  &kp A              &shortcut LS(LG(S)) R  &hrm LGUI S        &kp T              &kp D                   &kp LEFT  &shortcut END HOME  &kp RIGHT  &kp H   &hrm LEFT_ALT N        &hrm RGUI E               &hrm RCTRL I            &kp O           &trans
-&trans  &shortcut LC(Z) Z  &shortcut LC(X) X      &shortcut LC(C) C  &shortcut LC(V) V  &kp B   &kp CAPSLOCK              &kp DOWN                       &kp K   &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS    &trans
-                                                  &trans             &trans             &trans                                                           &trans  &trans                 &trans
-            >;
-        };
-
         Symbol+Number {
             display-name = "SYM_NUM";
             bindings = <
 &trans  &shortcut ES_IEXCL ES_EXCL  &shortcut ES_SQT ES_DQT     &kp ES_HASH                &kp ES_DLLR                &kp ES_PRCNT                                        &kp C_RW              &kp N7                       &kp N8                &kp N9                    &kp ES_MINUS              &kp ES_PLUS      &Back_Del
 &trans  &kp ES_AMPS                 &shortcut ES_BSLH ES_SLASH  &shortcut ES_LBRC ES_LPAR  &shortcut ES_RBRC ES_RPAR  &kp ES_EQUAL                            &kp C_PREV  &kp C_PP  &kp C_NEXT  &kp N4                       &kp N5                &kp N6                    &kp KP_DIVIDE             &kp KP_ASTERISK  &kp C_AL_CALC
-&trans  &shortcut ES_DEG ES_PIPE    &shortcut ES_TILDE ES_NOT   &kp ES_LBKT                &kp ES_RBKT                &shortcut ES_IQMARK ES_QMARK  &trans                &kp C_FF              &kp N1                       &kp N2                &kp N3                    &shortcut ES_GT ES_COLON  &kp ES_DLLR      &shortcut ES_EQUAL KP_ENTER
+&trans  &shortcut ES_DEG ES_PIPE    &shortcut ES_TILDE ES_NOT   &kp ES_LBKT                &kp ES_RBKT                &shortcut ES_IQMARK ES_QMARK  &trans                &kp C_FF              &kp N1                       &kp N2                &kp N3                    &shortcut ES_GT ES_COLON  &kp ES_MINUS     &shortcut ES_EQUAL KP_ENTER
                                                                 &trans                     &trans                     &trans                                                                    &shortcut ES_EQUAL KP_ENTER  &shortcut ES_HASH N0  &shortcut ES_PERCENT DOT
             >;
 
@@ -347,25 +368,13 @@
         Mouse {
             display-name = "MOUSE";
             bindings = <
-&trans  &trans  &shortcut LC(HOME) HOME  &kp UP    &shortcut LC(END) END  &trans                         &trans            &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans  &trans
-&trans  &trans  &kp LEFT                 &kp DOWN  &kp RIGHT              &trans               &mkp MB4  &trans  &mkp MB5  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &kp K_PREV               &kp K_PP  &kp K_NEXT             &trans     &trans              &trans            &trans          &trans          &trans          &trans           &trans  &trans
-                                         &trans    &trans                 &mkp RCLK                                        &mkp LCLK       &mkp MCLK       &trans
+&trans  &kp F13  &kp F14  &kp F15  &kp F16  &kp F17                       &none            &kp K_MUTE2         &msc SCRL_LEFT                 &mmv MOVE_UP      &msc SCRL_RIGHT                  &msc SCRL_UP    &trans
+&trans  &kp F18  &kp F19  &kp F20  &kp F21  &kp F22             &mkp MB4  &none  &mkp MB5  &kp K_VOLUME_UP2    &mmv MOVE_LEFT                 &mmv MOVE_DOWN    &mmv MOVE_RIGHT                  &msc SCRL_DOWN  &trans
+&trans  &none    &none    &none    &kp F23  &kp F24    &none              &none            &kp K_VOLUME_DOWN2  &shortcut C_REWIND K_PREVIOUS  &kp K_PLAY_PAUSE  &shortcut C_FAST_FORWARD K_NEXT  &none           &trans
+                          &none    &none    &mkp RCLK                                      &mkp LCLK           &mkp MCLK                      &none
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOL_UP K_VOL_DN>;
-        };
-
-        Move {
-            display-name = "ARROW";
-            bindings = <
-&trans  &kp F13  &kp F14  &kp F15  &kp F16  &kp F17                    &trans          &trans     &kp HOME                     &kp UP                 &kp END                      &trans    &trans
-&trans  &kp F18  &kp F19  &kp F20  &kp F21  &kp F22            &trans  &trans  &trans  &trans     &kp LEFT                     &kp DOWN               &kp RIGHT                    &trans    &trans
-&trans  &none    &none    &none    &kp F23  &kp F24  &trans            &trans          &kp C_RW   &shortcut LC(C_PREV) C_PREV  &shortcut C_STOP C_PP  &shortcut LC(C_NEXT) C_NEXT  &kp C_FF  &trans
-                          &trans   &trans   &trans                                     &kp ENTER  &trans                       &trans
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         Fn {
