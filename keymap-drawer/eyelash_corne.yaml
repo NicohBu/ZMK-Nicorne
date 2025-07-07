@@ -208,8 +208,8 @@ layers:
   - HOME
   - $$mdi:arrow-up-bold$$
   - END
-  - PG UP
-  - $$mdi:apple-keyboard-control$$
+  - {t: PgUp, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: F6, h: '&bt_sel'}
   - {t: F7, h: '&bt_sel 1'}
@@ -223,8 +223,8 @@ layers:
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - PG DN
-  - $$mdi:apple-keyboard-shift$$
+  - {t: PgDn, h: '$$mdi:apple-keyboard-shift$$'}
+  - RIGHT WIN
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
@@ -238,7 +238,7 @@ layers:
   - PLAY PAUSE
   - {t: '$$mdi:skip-next$$', h: '&oneshot C_FAST_FORWARD'}
   - $$mdi:progress-download$$
-  - {t: '$$mdi:keyboard-return$$', type: held}
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-option$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
