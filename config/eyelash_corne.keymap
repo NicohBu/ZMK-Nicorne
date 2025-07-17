@@ -264,7 +264,7 @@
         BtCLR {
             bindings = <&bt BT_CLR>;
             key-positions = <18 17 16>;
-            layers = <6>;
+            layers = <3>;
             timeout-ms = <100>;
         };
 
