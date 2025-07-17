@@ -246,7 +246,7 @@
         };
 
         Toggle_SYM_NUM {
-            bindings = <&tog 3>;
+            bindings = <&tog 4>;
             key-positions = <27 12>;
             timeout-ms = <100>;
             layers = <0 1 3>;
@@ -337,8 +337,8 @@
             bindings = <
 &kp ESC       &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &kp BACKSPACE
 &mt LWIN TAB  &kp H              &tilde_kp A A      &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &lt 2 ES_STAR
-&kp LALT      &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K              &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 6
-                                                    &kp LCTRL          &mt LSHIFT TAB     &lt_hold 6 ENTER                                                            &lt 3 SPACE            &mt RSHIFT TAB         &lt 6 DEL
+&kp LALT      &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K              &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 3
+                                                    &kp LCTRL          &mt LSHIFT TAB     &lt_hold 3 ENTER                                                            &lt 4 SPACE            &mt RSHIFT TAB         &lt 6 DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
