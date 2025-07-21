@@ -18,88 +18,6 @@ draw_config:
   small_pad: 2.0
   svg_extra_style: |
     #----------------------------------------------------
-    # CÓDIGO ANTIGUO COMENTADO CORRECTAMENTE EN YAML
-    #----------------------------------------------------
-    # /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
-    #
-    # svg.keymap {
-    #   font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
-    #   font-size: 12px;
-    #   font-weight: bold;
-    #   text-rendering: optimizeLegibility;
-    # }
-    #
-    # /* Color accent for held keys */
-    # rect.held, rect.combo.held {
-    #     fill: #ffc;
-    # }
-    #
-    # /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
-    # .sym_sub_text.tap {
-    #   translate: -5px 2px;
-    #   font-size: 20px;
-    # }
-    # .sym_sub_text.shifted {
-    #   translate: 10px 13px;
-    #   font-size: 10px;
-    #   opacity: 1.0;
-    # }
-    # .combo.sym_sub_text.tap {
-    #   translate: -1px 1px;
-    # }
-    # .combo.sym_sub_text.shifted {
-    #   translate: 7px 5px;
-    #   font-size: 10px;
-    #   opacity: 1.0;
-    # }
-    #
-    # /* Toggle */
-    # .toggle.shifted {
-    #   translate: -10px 12px;
-    # }
-    #
-    # .toggle.hold {
-    #   translate: 13px -23px;
-    # }
-    #
-    # /* Variant for tap-dances */
-    # .tap_dance.tap {
-    #   translate: -7px 0px;
-    #   font-size: 12px;
-    # }
-    # .tap_dance.shifted {
-    #   translate: 7px 17px;
-    #   font-size: 12px;
-    #   opacity: 1.0;
-    # }
-    #
-    # /* Variant for symbol next to symbol */
-    # .sym_by_sym.tap {
-    #   translate: -6px 0px;
-    # }
-    # .sym_by_sym.shifted {
-    #   translate: 10px 12px;
-    #   opacity: 1.0;
-    # }
-    #
-    # .combo.sym_by_sym.tap {
-    #   translate: -35px 0px;
-    # }
-    # .combo.sym_by_sym.shifted {
-    #   translate: 35px 20px;
-    #   opacity: 1.0;
-    # }
-    #
-    # .combo.sym_by_sym.hold {
-    #   visibility: hidden;
-    # }
-    #
-    # /* hide hold box for combo sym_by_sym */
-    # .combo.sym_by_sym.hold > path[stroke="none"][fill="none"] {
-    #   visibility: hidden;
-    # }
-
-    #----------------------------------------------------
     # MODIFICACIÓN: Estilos CSS para Tema Oscuro.
     # Funcionalidad: Reemplaza los estilos por defecto para aplicar un tema oscuro
     # al SVG y mantiene las reglas de posicionamiento de leyendas existentes.
@@ -203,35 +121,23 @@ parse_config:
     # Mouse
     "&msc SCRL_UP":
       tap: $$mdi:pan-up$$
-      hold: ''
-      shifted: ''
     "&msc SCRL_DOWN":
       tap: $$mdi:pan-down$$
-      hold: ''
-      shifted: ''
     "&msc SCRL_LEFT":
       tap: $$mdi:pan-left$$
-      hold: ''
-      shifted: ''
     "&msc SCRL_RIGHT":
       tap: $$mdi:pan-right$$
-      hold: ''
-      shifted: ''
     "&mmv MOVE_LEFT":
       tap: $$mdi:menu-left$$
-      hold: ''
       shifted: $$mdi:mouse$$
     "&mmv MOVE_RIGHT":
       tap: $$mdi:menu-right$$
-      hold: ''
       shifted: $$mdi:mouse$$
     "&mmv MOVE_UP":
       tap: $$mdi:menu-up$$
-      hold: ''
       shifted: $$mdi:mouse$$
     "&mmv MOVE_DOWN":
       tap: $$mdi:menu-down$$
-      hold: ''
       shifted: $$mdi:mouse$$
     "&mkp LCLK":
       tap: $$mdi:mouse-left-click-outline$$
@@ -244,38 +150,30 @@ parse_config:
     "&kt RSHIFT":
       tap: $$mdi:apple-keyboard-shift$$
       hold: $$mdi:toggle-switch$$
-
     # Empty
     "&none":
       tap: $$mdi:minus-circle-outline$$
       type: none
-
     # Whitespace
     "&bkspc_del":
       type: backspace
       tap: $$mdi:backspace$$
       shifted: $$mdi:backspace-reverse-outline$$
-
     # Bluetooth
     "&bt BT_SEL 0":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: 1
     "&bt BT_SEL 1":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: 2
     "&bt BT_SEL 2":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: 3
     "&bt BT_SEL 3":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: 4
     "&bt BT_SEL 4":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: 5
     "&out OUT_TOG":
       shifted: $$mdi:usb$$
@@ -283,11 +181,9 @@ parse_config:
       hold: $$mdi:bluetooth$$
     "&bt BT_PRV":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: $$mdi:arrow-up-bold$$
     "&bt BT_NXT":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: $$mdi:arrow-down-bold$$
     # Reset
     "&sys_reset":
@@ -297,50 +193,40 @@ parse_config:
       tap: $$mdi:progress-download$$
 
     #----------------------------------------------------
-    # ADICIÓN: Mapeado de comportamientos y macros personalizados.
-    # Funcionalidad: "Enseña" al drawer cómo interpretar los behaviors personalizados
-    # del keymap (ej. &shortcut, &tilde_kp) para que muestren símbolos simples
-    # en el SVG en lugar del código completo del binding.
+    # ADICIÓN CORREGIDA: Mapeado de comportamientos y macros personalizados.
+    # Funcionalidad: Usa expresiones regulares (con el prefijo "re:") para
+    # interpretar correctamente los behaviors personalizados y asignar leyendas simples
+    # a las teclas en el SVG.
     #----------------------------------------------------
-    "&shortcut":
+    "re:&shortcut ([^\\s]+) ([^\\s]+)":
       type: tap_dance
-      tap:
-        re: "&shortcut .*? (\\S+)$"
-        val: "$1"
-      hold:
-        re: "&shortcut (\\S+)"
-        val: "$1"
-    "&tilde_kp":
+      hold: "{0}"
+      tap: "{1}"
+    "re:&tilde_kp ([^\\s]+) [^\\s]+":
       type: tap_dance
-      tap:
-        re: "&tilde_kp .* (\\w+)"
-        val: "$1"
-      hold:
-        val: "~"
-    "&kp_bt":
+      tap: "{0}"
+      hold: "~"
+    "re:&kp_bt (\\d+) (\\w+)":
       type: tap_dance
-      tap:
-        re: "&kp_bt \\d (\\w+)"
-        val: "$1"
-      hold:
-        re: "&kp_bt (\\d)"
-        val: "$1"
+      tap: "{1}"
+      hold: "{0}"
+      shifted: "$$mdi:bluetooth-connect$$"
     "&Back_Del":
-        type: backspace
-        tap: $$mdi:backspace$$
-        shifted: $$mdi:backspace-reverse-outline$$
+      type: backspace
+      tap: $$mdi:backspace$$
+      shifted: $$mdi:backspace-reverse-outline$$
     "(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))":
-        tap: ";"
-        shifted: ":"
+      tap: ";"
+      shifted: ":"
     "((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK))))":
-        tap: "("
+      tap: "("
     "((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS))))":
-        tap: ")"
+      tap: ")"
     "(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD EQUAL AND PLUS))":
-        tap: "="
-        shifted: "+"
+      tap: "="
+      shifted: "+"
     "(LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE)))":
-        tap: "_"
+      tap: "_"
 
   # ZMK
   zmk_keycode_map:
@@ -502,13 +388,10 @@ parse_config:
     RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
     PAGE_UP:
       tap: 'PgUp'
-      shifted: ''
     PAGE_DOWN:
       tap: 'PgDn'
-      shifted: ''
     INSERT:
        tap: 'Ins'
-       shifted: ''
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
 
