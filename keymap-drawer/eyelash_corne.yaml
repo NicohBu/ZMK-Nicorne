@@ -2,43 +2,43 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   ROCORN:
   - $$mdi:keyboard-esc$$
-  - {t: Y, h: '&oneshot LC(Y)'}
+  - {t: Y, h: '$$mdi:redo$$'}
   - W
-  - {t: F, h: '&oneshot LC(F)'}
+  - {t: F, h: '$$mdi:magnify$$'}
   - P
   - G
   - $$mdi:arrow-up-bold$$
   - J
   - L
-  - Í
-  - Ú
+  - {t: I, h: Í}
+  - {t: U, h: Ú}
   - '&shortcut ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))) Q'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: LWIN}
   - H
-  - Á
+  - {t: A, h: Á}
   - {t: R, h: LGUI}
-  - {t: T, h: '&oneshot LC(T)'}
-  - {t: V, h: '&oneshot LC(V)'}
+  - {t: T, h: '$$mdi:tab-plus$$'}
+  - {t: V, h: '$$mdi:content-paste$$'}
   - $$mdi:arrow-left-bold$$
   - {t: HOME, h: '&oneshot END'}
   - $$mdi:arrow-right-bold$$
-  - {t: S, h: '&oneshot LG(LS(S))'}
+  - {t: S, h: '$$mdi:camera-outline$$'}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
-  - É
+  - {t: E, h: É}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - Ó
+  - {t: O, h: Ó}
   - '&lt 2 ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))))'
   - $$mdi:apple-keyboard-option$$
-  - {t: Z, h: '&oneshot LC(Z)'}
-  - {t: X, h: '&oneshot LC(X)'}
+  - {t: Z, h: '$$mdi:undo$$'}
+  - {t: X, h: '$$mdi:content-cut$$'}
   - K
-  - {t: C, h: '&oneshot LC(C)'}
+  - {t: C, h: '$$mdi:content-copy$$'}
   - B
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:arrow-down-bold$$
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))
-  - {t: M, h: '&oneshot C_AL_MAIL'}
+  - {t: M, h: '$$mdi:email-outline$$'}
   - '&shortcut ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))) (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))'
   - '&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))) ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))'
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
@@ -53,21 +53,21 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&shortcut (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q))) Q'
   - W
-  - É
+  - {t: E, h: É}
   - R
-  - {t: T, h: '&oneshot LC(T)'}
+  - {t: T, h: '$$mdi:tab-plus$$'}
   - $$mdi:arrow-up-bold$$
-  - {t: Y, h: '&oneshot LC(Y)'}
-  - Ú
-  - Í
-  - Ó
+  - {t: Y, h: '$$mdi:redo$$'}
+  - {t: U, h: Ú}
+  - {t: I, h: Í}
+  - {t: O, h: Ó}
   - P
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Á
+  - {t: A, h: Á}
   - {t: S, h: '&oneshot LS(LG(S))'}
   - {t: D, h: LGUI}
-  - {t: F, h: '&oneshot LC(F)'}
+  - {t: F, h: '$$mdi:magnify$$'}
   - G
   - $$mdi:arrow-left-bold$$
   - {t: HOME, h: '&oneshot END'}
@@ -79,15 +79,15 @@ layers:
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Z, h: '&oneshot LC(Z)'}
-  - {t: X, h: '&oneshot LC(X)'}
-  - {t: C, h: '&oneshot LC(C)'}
-  - {t: V, h: '&oneshot LC(V)'}
+  - {t: Z, h: '$$mdi:undo$$'}
+  - {t: X, h: '$$mdi:content-cut$$'}
+  - {t: C, h: '$$mdi:content-copy$$'}
+  - {t: V, h: '$$mdi:content-paste$$'}
   - B
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:arrow-down-bold$$
   - N
-  - {t: M, h: '&oneshot C_AL_MAIL'}
+  - {t: M, h: '$$mdi:email-outline$$'}
   - '&shortcut ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))) COMMA'
   - '&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))) ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))'
   - (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))
