@@ -26,7 +26,10 @@ draw_config:
       text-rendering: optimizeLegibility;
     }
 
-    /* Color accent for held keys is now handled by the tool's default */
+    /* Color accent for held keys */
+    # rect.held, rect.combo.held {
+    #     fill: #ffc;
+    # }
 
     /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
     .sym_sub_text.tap {
@@ -92,6 +95,7 @@ draw_config:
     .combo.sym_by_sym.hold > path[stroke="none"][fill="none"] {
       visibility: hidden;
     }
+
   shrink_wide_legends: 6
   glyph_tap_size: 18
   glyph_hold_size: 15
@@ -113,55 +117,185 @@ parse_config:
     type: trans
 
   raw_binding_map:
-    #----------------------------------------------------
-    # ADICIÓN CORREGIDA: Mapeo explícito y exhaustivo de comportamientos.
-    #----------------------------------------------------
-    # Mapeos para 'oneshot'
-    "&oneshot LC(Y)": { hold: "1-S Ctrl" }
-    "&oneshot LC(F)": { hold: "1-S Ctrl" }
-    "&oneshot LC(T)": { hold: "1-S Ctrl" }
-    "&oneshot LC(V)": { hold: "1-S Ctrl" }
-    "&oneshot LC(Z)": { hold: "1-S Ctrl" }
-    "&oneshot LC(X)": { hold: "1-S Ctrl" }
-    "&oneshot LC(C)": { hold: "1-S Ctrl" }
-    "&oneshot END": { hold: "1-S End" }
-    "&oneshot LG(LS(S))": { hold: "1-S $$mdi:content-save-all$$" }
-    "&oneshot C_AL_MAIL": { hold: "1-S $$mdi:email$$" }
-    "&oneshot C_REWIND": { hold: "1-S $$mdi:rewind$$" }
-    "&oneshot C_FAST_FORWARD": { hold: "1-S $$mdi:fast-forward$$" }
-    "&oneshot LA(LC(F1))": { hold: "1-S M-C-F1" }
-    "&oneshot LC(LA(F2))": { hold: "1-S C-M-F2" }
-    "&oneshot LC(LA(F3))": { hold: "1-S C-M-F3" }
-    "&oneshot LC(LA(F4))": { hold: "1-S C-M-F4" }
-    "&oneshot LS(LG(S))": { hold: "1-S $$mdi:content-save$$" }
-    
-    # Mapeos para 'tilde'
-    "&tilde I": { hold: "~" }
-    "&tilde U": { hold: "~" }
-    "&tilde A": { hold: "~" }
-    "&tilde E": { hold: "~" }
-    "&tilde O": { hold: "~" }
+# --- INICIO: Bloque de código añadido para manejar behaviors personalizados ---
+    # Reglas para comportamientos personalizados (behaviors) usando expresiones regulares.
+    # La sintaxis r"..." indica que la clave es una expresión regular.
+    # \1 y \2 son grupos de captura de la regex.
 
-    # Mapeos para 'shortcut' que son una sola unidad en el YAML
-    "'&shortcut ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))) Q'": { tap: "Q", hold: "@" }
-    "'< 2 ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))))'": { tap: "]", hold: "Mouse" }
-    "'&shortcut ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))) (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))'": { tap: ",", hold: "<" }
-    "'&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))) ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))'": { tap:".", hold: ">" }
-    
-    # Mapeo de combos con código HID complejo
-    "(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))": { tap: ";" }
-    "(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))": { tap: "-" }
-    "((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK))))": { tap: "(" }
-    "((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS))))": { tap: ")" }
-    "(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD EQUAL AND PLUS))": { tap: "=" }
-    "(LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD MINUS AND UNDERSCORE)))": { tap: "_" }
-    
-    # Mapeos originales que ya tenías y que funcionan
-    "&none": { tap: $$mdi:minus-circle-outline$$, type: none }
-    "&bootloader": { tap: $$mdi:progress-download$$ }
-    "&caps_word": { tap: $$mdi:alpha-w-box$$ }
-    "&soft_off": { tap: "$$mdi:power$$" }
-    "&out OUT_TOG": { tap: "$$mdi:usb$$", hold: "$$mdi:bluetooth$$" }
+    # 1. Para el behavior '&shortcut'
+    # Captura "&shortcut [param1] [param2]" -> hold: param1, tap: param2
+    r"^&shortcut (.*?) (.*?)$":
+      tap: '\2'
+      hold: '\1'
+
+    # 2. Para el behavior '&tilde_kp'
+    # Captura "&tilde_kp [param1] [param2]" -> hold: ~param1, tap: param2
+    r"^&tilde_kp (.*?) (.*?)$":
+      tap: '\2'
+      hold: '~\1'
+
+    # 3. Para los Home Row Mods '&hrm'
+    # Captura "&hrm [mod] [key]" -> hold: mod, tap: key
+    r"^&hrm (.*?) (.*?)$":
+      tap: '\2'
+      hold: '\1'
+
+    # 4. Para el Layer-Tap '<_hold'
+    # Captura "<_hold [layer] [key]" -> hold: L<layer>, tap: key
+    r"^<_hold (\d+) (.*?)$":
+      tap: '\2'
+      hold: 'L\1'
+
+    # 5. Para el behavior de Bluetooth '&kp_bt'
+    # Captura "&kp_bt [slot] [key]" -> hold: BT <slot>, tap: key
+    r"^&kp_bt (\d+) (.*?)$":
+      tap: '\2'
+      hold: 'BT\1'
+
+    # 6. Para el Mod-Morph '&Back_Del'
+    # tap: Backspace, shifted: Delete
+    "&Back_Del":
+      tap: Bksp
+      shifted: Del
+# --- FIN: Bloque de código añadido ---
+
+    # Layers
+    "<q 1 BACKSPACE":
+      tap:  $$mdi:backspace$$
+      hold: '$$mdi:navigation-variant$$'
+    "<q 3 TAB":
+      tap: $$mdi:keyboard-tab$$
+      hold: $$mdi:numeric$$
+    "<q 2 SPACE":
+      tap: $$mdi:keyboard-space$$
+      hold: $$mdi:symbol$$
+    "<q 3 ENTER":
+      tap: $$mdi:keyboard-return$$
+      hold: $$mdi:numeric$$
+    "<q 1 DELETE":
+      tap: $$mdi:backspace-reverse-outline$$
+      hold: $$mdi:navigation-variant$$
+    # Home rows
+    "&hm LEFT_GUI A":
+      tap: 'A'
+      shifted: $$mdi:apple-keyboard-command$$
+    "&hm LEFT_ALT S":
+      tap: 'S'
+      shifted: $$mdi:apple-keyboard-option$$
+    "&hm LEFT_CONTROL D":
+      tap: 'D'
+      shifted: $$mdi:apple-keyboard-control$$
+    "&hm LEFT_SHIFT F":
+      tap: 'F'
+      shifted: $$mdi:apple-keyboard-shift$$
+    "&hm RIGHT_SHIFT J":
+      tap: 'J'
+      shifted: $$mdi:apple-keyboard-shift$$
+    "&hm RIGHT_CONTROL K":
+      tap: 'K'
+      shifted: $$mdi:apple-keyboard-control$$
+    "&hm RIGHT_ALT L":
+      tap: 'L'
+      shifted: $$mdi:apple-keyboard-option$$
+    # self behaviors
+    "&hm LG(LS(V)) P":
+      tap: 'P'
+      shifted: $$mdi:content-copy$$
+    # Mouse
+    "&msc SCRL_UP":
+      tap: $$mdi:pan-up$$
+      hold: ''
+      shifted: ''
+    "&msc SCRL_DOWN":
+      tap: $$mdi:pan-down$$
+      hold: ''
+      shifted: ''
+    "&msc SCRL_LEFT":
+      tap: $$mdi:pan-left$$
+      hold: ''
+      shifted: ''
+    "&msc SCRL_RIGHT":
+      tap: $$mdi:pan-right$$
+      hold: ''
+      shifted: ''
+    "&mmv MOVE_LEFT":
+      tap: $$mdi:menu-left$$
+      hold: ''
+      shifted: $$mdi:mouse$$
+    "&mmv MOVE_RIGHT":
+      tap: $$mdi:menu-right$$
+      hold: ''
+      shifted: $$mdi:mouse$$
+    "&mmv MOVE_UP":
+      tap: $$mdi:menu-up$$
+      hold: ''
+      shifted: $$mdi:mouse$$
+    "&mmv MOVE_DOWN":
+      tap: $$mdi:menu-down$$
+      hold: ''
+      shifted: $$mdi:mouse$$
+    "&mkp LCLK":
+      tap: $$mdi:mouse-left-click-outline$$
+    "&mkp RCLK":
+      tap: $$mdi:mouse-right-click-outline$$
+    "&mkp MCLK":
+      tap: $$mdi:mouse-scroll-wheel$$
+    # Modifiers
+    "&caps_word": $$mdi:alpha-w-box$$
+    "&kt RSHIFT":
+      tap: $$mdi:apple-keyboard-shift$$
+      hold: $$mdi:toggle-switch$$
+
+    # Empty
+    "&none":
+      tap: $$mdi:minus-circle-outline$$
+      type: none
+
+    # Whitespace
+    "&bkspc_del":
+      type: backspace
+      tap: $$mdi:backspace$$
+      shifted: $$mdi:backspace-reverse-outline$$
+
+    # Bluetooth
+    "&bt BT_SEL 0":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 1
+    "&bt BT_SEL 1":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 2
+    "&bt BT_SEL 2":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 3
+    "&bt BT_SEL 3":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 4
+    "&bt BT_SEL 4":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: 5
+    "&out OUT_TOG":
+      shifted: $$mdi:usb$$
+      tap: $$mdi:toggle-switch$$
+      hold: $$mdi:bluetooth$$
+    "&bt BT_PRV":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: $$mdi:arrow-up-bold$$
+    "&bt BT_NXT":
+      shifted: $$mdi:bluetooth-connect$$
+      tap: ""
+      hold: $$mdi:arrow-down-bold$$
+    # Reset
+    "&sys_reset":
+      type: bootloader
+      tap: $$mdi:backup-restore$$
+    "&bootloader":
+      tap: $$mdi:progress-download$$
 
   # ZMK
   zmk_keycode_map:
@@ -258,9 +392,6 @@ parse_config:
       shifted: "}"
     RIGHT_BRACE: "}"
     RBRC: "}"
-    #----------------------------------------------------
-    # CORRECCIÓN DE SINTAXIS YAML
-    #----------------------------------------------------
     GRAVE:
       tap: "`"
       shifted: "~"
@@ -326,10 +457,13 @@ parse_config:
     RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
     PAGE_UP:
       tap: 'PgUp'
+      shifted: ''
     PAGE_DOWN:
       tap: 'PgDn'
+      shifted: ''
     INSERT:
        tap: 'Ins'
+       shifted: ''
     # "Meh" key
     LS(LC(LALT)): $$mdi:star-three-points$$
 
@@ -463,4 +597,4 @@ parse_config:
     combo_semicolon:
       key:
         shifted: ":"
-        hold: ";"```
+        hold: ";"
