@@ -16,12 +16,6 @@ draw_config:
   arc_radius: 6.0
   append_colon_to_layer_header: true
   small_pad: 2.0
-  #----------------------------------------------------
-  # MODIFICACIÓN: Restaurados los estilos de posicionamiento y fuente.
-  # Funcionalidad: Se mantiene el bloque de estilos original para asegurar que
-  # el tamaño de los iconos y la fuente sean correctos. Solo se elimina la regla
-  # de color 'fill: #ffc;' para volver al color por defecto de la herramienta.
-  #----------------------------------------------------
   svg_extra_style: |
     /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
 
@@ -121,28 +115,25 @@ parse_config:
   raw_binding_map:
     #----------------------------------------------------
     # ADICIÓN CORREGIDA: Mapeo explícito y exhaustivo de comportamientos.
-    # Funcionalidad: Se define una leyenda específica para CADA 'binding' complejo
-    # de forma individual. Este método es el más robusto para garantizar que el
-    # SVG muestre una leyenda simple en lugar del código completo del behavior.
     #----------------------------------------------------
     # Mapeos para 'oneshot'
-    "&oneshot LC(Y)": { hold: "1-Shot Ctrl" }
-    "&oneshot LC(F)": { hold: "1-Shot Ctrl" }
-    "&oneshot LC(T)": { hold: "1-Shot Ctrl" }
-    "&oneshot LC(V)": { hold: "1-Shot Ctrl" }
-    "&oneshot LC(Z)": { hold: "1-Shot Ctrl" }
-    "&oneshot LC(X)": { hold: "1-Shot Ctrl" }
-    "&oneshot LC(C)": { hold: "1-Shot Ctrl" }
-    "&oneshot END": { hold: "1-Shot End" }
-    "&oneshot LG(LS(S))": { hold: "1-Shot $$mdi:content-save-all$$" }
-    "&oneshot C_AL_MAIL": { hold: "1-Shot $$mdi:email$$" }
-    "&oneshot C_REWIND": { hold: "1-Shot $$mdi:rewind$$" }
-    "&oneshot C_FAST_FORWARD": { hold: "1-Shot $$mdi:fast-forward$$" }
-    "&oneshot LA(LC(F1))": { hold: "1-Shot M-C-F1" }
-    "&oneshot LC(LA(F2))": { hold: "1-Shot C-M-F2" }
-    "&oneshot LC(LA(F3))": { hold: "1-Shot C-M-F3" }
-    "&oneshot LC(LA(F4))": { hold: "1-Shot C-M-F4" }
-    "&oneshot LS(LG(S))": { hold: "1-Shot $$mdi:content-save$$" }
+    "&oneshot LC(Y)": { hold: "1-S Ctrl" }
+    "&oneshot LC(F)": { hold: "1-S Ctrl" }
+    "&oneshot LC(T)": { hold: "1-S Ctrl" }
+    "&oneshot LC(V)": { hold: "1-S Ctrl" }
+    "&oneshot LC(Z)": { hold: "1-S Ctrl" }
+    "&oneshot LC(X)": { hold: "1-S Ctrl" }
+    "&oneshot LC(C)": { hold: "1-S Ctrl" }
+    "&oneshot END": { hold: "1-S End" }
+    "&oneshot LG(LS(S))": { hold: "1-S $$mdi:content-save-all$$" }
+    "&oneshot C_AL_MAIL": { hold: "1-S $$mdi:email$$" }
+    "&oneshot C_REWIND": { hold: "1-S $$mdi:rewind$$" }
+    "&oneshot C_FAST_FORWARD": { hold: "1-S $$mdi:fast-forward$$" }
+    "&oneshot LA(LC(F1))": { hold: "1-S M-C-F1" }
+    "&oneshot LC(LA(F2))": { hold: "1-S C-M-F2" }
+    "&oneshot LC(LA(F3))": { hold: "1-S C-M-F3" }
+    "&oneshot LC(LA(F4))": { hold: "1-S C-M-F4" }
+    "&oneshot LS(LG(S))": { hold: "1-S $$mdi:content-save$$" }
     
     # Mapeos para 'tilde'
     "&tilde I": { hold: "~" }
@@ -153,11 +144,11 @@ parse_config:
 
     # Mapeos para 'shortcut' que son una sola unidad en el YAML
     "'&shortcut ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))) Q'": { tap: "Q", hold: "@" }
-    "'< 2 ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))))'": { tap: "]", hold: "Mouse" } # Asumiendo que va a la capa 2
+    "'< 2 ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))))'": { tap: "]", hold: "Mouse" }
     "'&shortcut ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE))) (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_COMMA_AND_LESS_THAN))'": { tap: ",", hold: "<" }
     "'&shortcut ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_NON_US_BACKSLASH_AND_PIPE)))) ((ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_PERIOD_AND_GREATER_THAN)))'": { tap:".", hold: ">" }
     
-    # Mapeos de combos con código HID complejo
+    # Mapeo de combos con código HID complejo
     "(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON))": { tap: ";" }
     "(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK))": { tap: "-" }
     "((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK))))": { tap: "(" }
@@ -267,6 +258,9 @@ parse_config:
       shifted: "}"
     RIGHT_BRACE: "}"
     RBRC: "}"
+    #----------------------------------------------------
+    # CORRECCIÓN DE SINTAXIS YAML
+    #----------------------------------------------------
     GRAVE:
       tap: "`"
       shifted: "~"
