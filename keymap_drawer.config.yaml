@@ -1,6 +1,4 @@
 draw_config:
-  n_columns: 1
-  draw_key_sides: true
   key_w: 60.0
   key_h: 56.0
   split_gap: 30.0
@@ -8,60 +6,24 @@ draw_config:
   combo_h: 26.0
   key_rx: 6.0
   key_ry: 6.0
+  dark_mode: auto
+  n_columns: 1
   inner_pad_w: 2.0
   inner_pad_h: 2.0
-  outer_pad_w: 40.0
+  outer_pad_w: 30.0
   outer_pad_h: 56.0
   line_spacing: 1.2
   arc_radius: 6.0
   append_colon_to_layer_header: true
   small_pad: 2.0
-# --- INICIO: Estilo visual (tema oscuro) ---
-# Reemplazado para coincidir con el estilo solicitado.
-  svg_extra_style: |
-    svg.keymap {
-        font-family: SF Pro, Ubuntu, "Roboto Slab", sans-serif;
-        font-size: 14px;
-        font-kerning: normal;
-        text-rendering: optimizeLegibility;
-        background-color: #242933;
-        color: #d3d7df;
-    }
-
-    .keymap .combo text, .keymap .key text {
-        fill: #d3d7df;
-    }
-
-    .keymap .combo.held text, .keymap .key.held text {
-        fill: #242933;
-    }
-
-    .keymap rect {
-        fill: #353b49;
-    }
-
-    .keymap rect.held {
-        fill: #e6e6e6;
-    }
-
-    .keymap .layer-header {
-        font-weight: 300;
-        fill: #6c7385;
-    }
-
-    .keymap .combo text.shifted, .keymap .key text.shifted {
-        font-size: 11px;
-        fill: #8f96a8;
-    }
-
-    .keymap .combo.held text.shifted, .keymap .key.held text.shifted {
-        fill: #242933;
-    }
-# --- FIN: Estilo visual (tema oscuro) ---
-  shrink_wide_legends: 6
-  glyph_tap_size: 18
-  glyph_hold_size: 15
-  glyph_shifted_size: 15
+  draw_key_sides: false
+  svg_extra_style: ''
+  footer_text: Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>
+  shrink_wide_legends: 7
+  style_layer_activators: true
+  glyph_tap_size: 14
+  glyph_hold_size: 12
+  glyph_shifted_size: 10
   glyphs: {}
   glyph_urls:
     tabler: https://unpkg.com/@tabler/icons/icons/outline/{}.svg
@@ -70,6 +32,7 @@ draw_config:
     mdil: https://raw.githubusercontent.com/Pictogrammers/MaterialDesignLight/master/svg/{}.svg
     material: https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/{}/default/48px.svg
   use_local_cache: true
+# --- FIN: draw_config ---
 
 parse_config:
   mark_alternate_layer_activators: true
@@ -81,53 +44,46 @@ parse_config:
   raw_binding_map:
 # --- INICIO: Mapeo de behaviors mejorado ---
 
-    # 1. Reglas explícitas para &tilde_kp para mostrar el carácter acentuado final.
-    # Esto toma prioridad sobre cualquier regla genérica.
-    "&tilde_kp A A": { tap: Á }
-    "&tilde_kp E E": { tap: É }
-    "&tilde_kp I I": { tap: Í }
-    "&tilde_kp O O": { tap: Ó }
-    "&tilde_kp U U": { tap: Ú }
+    # 1. Reglas explícitas para atajos comunes con íconos MDI.
+    #    Estas reglas se procesan primero y tienen prioridad sobre las genéricas.
+    "&shortcut LC(C) C": { tap: 'C', hold: '$$mdi:content-copy$$' }
+    "&shortcut LC(V) V": { tap: 'V', hold: '$$mdi:content-paste$$' }
+    "&shortcut LC(X) X": { tap: 'X', hold: '$$mdi:content-cut$$' }
+    "&shortcut LC(Z) Z": { tap: 'Z', hold: '$$mdi:undo$$' }
+    "&shortcut LC(Y) Y": { tap: 'Y', hold: '$$mdi:redo$$' }
+    "&shortcut LC(F) F": { tap: 'F', hold: '$$mdi:magnify$$' }
+    "&shortcut LC(T) T": { tap: 'T', hold: '$$mdi:tab-plus$$' }
+    "&shortcut LG(LS(S)) S": { tap: 'S', hold: '$$mdi:camera-outline$$' }
+    "&shortcut C_AL_MAIL M": { tap: 'M', hold: '$$mdi:email-outline$$' }
 
-    # 2. Para el behavior '&shortcut'
-    # Captura "&shortcut [param1] [param2]" -> hold: param1, tap: param2
-    # Esto ya funciona como pides, mostrando solo las variables del usuario.
+    # 2. Reglas explícitas para &tilde_kp con lógica invertida (tap=vocal, hold=acento).
+    "&tilde_kp A A": { tap: 'A', hold: 'Á' }
+    "&tilde_kp E E": { tap: 'E', hold: 'É' }
+    "&tilde_kp I I": { tap: 'I', hold: 'Í' }
+    "&tilde_kp O O": { tap: 'O', hold: 'Ó' }
+    "&tilde_kp U U": { tap: 'U', hold: 'Ú' }
+
+    # 3. Regla genérica para los &shortcut restantes (dibuja el texto del atajo).
+    #    Se aplica a cualquier &shortcut que no coincida con las reglas de arriba.
     r"^&shortcut (.*?) (.*?)$":
       tap: '\2'
       hold: '\1'
 
-    # 3. Para los Home Row Mods '&hrm'
-    # Captura "&hrm [mod] [key]" -> hold: mod, tap: key
-    r"^&hrm (.*?) (.*?)$":
-      tap: '\2'
-      hold: '\1'
-
-    # 4. Para el Layer-Tap '<_hold'
-    # Captura "<_hold [layer] [key]" -> hold: L<layer>, tap: key
-    r"^<_hold (\d+) (.*?)$":
-      tap: '\2'
-      hold: 'L\1'
-
-    # 5. Para el behavior de Bluetooth '&kp_bt'
-    # Captura "&kp_bt [slot] [key]" -> hold: BT <slot>, tap: key
-    r"^&kp_bt (\d+) (.*?)$":
-      tap: '\2'
-      hold: 'BT\1'
-
-    # 6. Para el Mod-Morph '&Back_Del'
-    # tap: Backspace, shifted: Delete
-    "&Back_Del":
-      tap: Bksp
-      shifted: Del
+    # 4. Reglas genéricas para otros behaviors personalizados.
+    r"^&hrm (.*?) (.*?)$": { tap: '\2', hold: '\1' }
+    r"^<_hold (\d+) (.*?)$": { tap: '\2', hold: 'L\1' }
+    r"^&kp_bt (\d+) (.*?)$": { tap: '\2', hold: 'BT\1' }
+    "&Back_Del": { tap: 'Bksp', shifted: 'Del' }
 # --- FIN: Mapeo de behaviors mejorado ---
 
-    # Layers
+    # Mapeos estándar (sin cambios)
     "<q 1 BACKSPACE":
       tap:  $$mdi:backspace$$
       hold: '$$mdi:navigation-variant$$'
     "<q 3 TAB":
       tap: $$mdi:keyboard-tab$$
       hold: $$mdi:numeric$$
+    # ... (el resto del archivo no necesita cambios)
     "<q 2 SPACE":
       tap: $$mdi:keyboard-space$$
       hold: $$mdi:symbol$$
@@ -137,7 +93,6 @@ parse_config:
     "<q 1 DELETE":
       tap: $$mdi:backspace-reverse-outline$$
       hold: $$mdi:navigation-variant$$
-    # Home rows
     "&hm LEFT_GUI A":
       tap: 'A'
       shifted: $$mdi:apple-keyboard-command$$
@@ -159,86 +114,60 @@ parse_config:
     "&hm RIGHT_ALT L":
       tap: 'L'
       shifted: $$mdi:apple-keyboard-option$$
-    # self behaviors
     "&hm LG(LS(V)) P":
       tap: 'P'
       shifted: $$mdi:content-copy$$
-    # Mouse
     "&msc SCRL_UP":
       tap: $$mdi:pan-up$$
-      hold: ''
-      shifted: ''
     "&msc SCRL_DOWN":
       tap: $$mdi:pan-down$$
-      hold: ''
-      shifted: ''
     "&msc SCRL_LEFT":
       tap: $$mdi:pan-left$$
-      hold: ''
-      shifted: ''
     "&msc SCRL_RIGHT":
       tap: $$mdi:pan-right$$
-      hold: ''
-      shifted: ''
     "&mmv MOVE_LEFT":
+      shifted: $$mdi:mouse$$
       tap: $$mdi:menu-left$$
-      hold: ''
-      shifted: $$mdi:mouse$$
     "&mmv MOVE_RIGHT":
+      shifted: $$mdi:mouse$$
       tap: $$mdi:menu-right$$
-      hold: ''
-      shifted: $$mdi:mouse$$
     "&mmv MOVE_UP":
+      shifted: $$mdi:mouse$$
       tap: $$mdi:menu-up$$
-      hold: ''
-      shifted: $$mdi:mouse$$
     "&mmv MOVE_DOWN":
-      tap: $$mdi:menu-down$$
-      hold: ''
       shifted: $$mdi:mouse$$
+      tap: $$mdi:menu-down$$
     "&mkp LCLK":
       tap: $$mdi:mouse-left-click-outline$$
     "&mkp RCLK":
       tap: $$mdi:mouse-right-click-outline$$
     "&mkp MCLK":
       tap: $$mdi:mouse-scroll-wheel$$
-    # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
     "&kt RSHIFT":
       tap: $$mdi:apple-keyboard-shift$$
       hold: $$mdi:toggle-switch$$
-
-    # Empty
     "&none":
       tap: $$mdi:minus-circle-outline$$
       type: none
-
-    # Whitespace
     "&bkspc_del":
       type: backspace
       tap: $$mdi:backspace$$
       shifted: $$mdi:backspace-reverse-outline$$
-
-    # Bluetooth
     "&bt BT_SEL 0":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: 1
     "&bt BT_SEL 1":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: 2
     "&bt BT_SEL 2":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: 3
     "&bt BT_SEL 3":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: 4
     "&bt BT_SEL 4":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: 5
     "&out OUT_TOG":
       shifted: $$mdi:usb$$
@@ -246,13 +175,10 @@ parse_config:
       hold: $$mdi:bluetooth$$
     "&bt BT_PRV":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: $$mdi:arrow-up-bold$$
     "&bt BT_NXT":
       shifted: $$mdi:bluetooth-connect$$
-      tap: ""
       hold: $$mdi:arrow-down-bold$$
-    # Reset
     "&sys_reset":
       type: bootloader
       tap: $$mdi:backup-restore$$
