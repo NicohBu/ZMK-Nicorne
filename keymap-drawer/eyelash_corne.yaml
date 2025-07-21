@@ -10,13 +10,13 @@ layers:
   - $$mdi:arrow-up-bold$$
   - J
   - L
-  - {t: I, h: '&tilde I'}
-  - {t: U, h: '&tilde U'}
+  - Í
+  - Ú
   - '&shortcut ((RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q)))) Q'
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:keyboard-tab$$', h: LWIN}
   - H
-  - {t: A, h: '&tilde A'}
+  - Á
   - {t: R, h: LGUI}
   - {t: T, h: '&oneshot LC(T)'}
   - {t: V, h: '&oneshot LC(V)'}
@@ -25,9 +25,9 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: S, h: '&oneshot LG(LS(S))'}
   - {t: N, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: E, h: '&tilde E'}
+  - É
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: O, h: '&tilde O'}
+  - Ó
   - '&lt 2 ((LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))))'
   - $$mdi:apple-keyboard-option$$
   - {t: Z, h: '&oneshot LC(Z)'}
@@ -53,18 +53,18 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&shortcut (RA(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_Q))) Q'
   - W
-  - {t: E, h: '&tilde E'}
+  - É
   - R
   - {t: T, h: '&oneshot LC(T)'}
   - $$mdi:arrow-up-bold$$
   - {t: Y, h: '&oneshot LC(Y)'}
-  - {t: U, h: '&tilde U'}
-  - {t: I, h: '&tilde I'}
-  - {t: O, h: '&tilde O'}
+  - Ú
+  - Í
+  - Ó
   - P
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: A, h: '&tilde A'}
+  - Á
   - {t: S, h: '&oneshot LS(LG(S))'}
   - {t: D, h: LGUI}
   - {t: F, h: '&oneshot LC(F)'}
