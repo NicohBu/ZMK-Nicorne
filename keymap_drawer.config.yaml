@@ -1,6 +1,5 @@
 draw_config:
-  n_columns: 1
-  draw_key_sides: true
+  # Configuraciones de forma y color copiadas del primer bloque
   key_w: 60.0
   key_h: 56.0
   split_gap: 30.0
@@ -8,15 +7,30 @@ draw_config:
   combo_h: 26.0
   key_rx: 6.0
   key_ry: 6.0
+  dark_mode: auto
+  n_columns: 1
+  separate_combo_diagrams: false
+  combo_diagrams_scale: 2
   inner_pad_w: 2.0
   inner_pad_h: 2.0
-  outer_pad_w: 40.0
+  outer_pad_w: 30.0 # Modificado
   outer_pad_h: 56.0
   line_spacing: 1.2
   arc_radius: 6.0
   append_colon_to_layer_header: true
   small_pad: 2.0
+  legend_rel_x: 0.0
+  legend_rel_y: 0.0
+  draw_key_sides: false # Modificado
+  key_side_pars:
+    rel_x: 0
+    rel_y: 4
+    rel_w: 12
+    rel_h: 12
+    rx: 4
+    ry: 4
   svg_extra_style: |
+    /* Estilos personalizados del usuario mantenidos */
     /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
 
     svg.keymap {
@@ -95,11 +109,12 @@ draw_config:
     .combo.sym_by_sym.hold > path[stroke="none"][fill="none"] {
       visibility: hidden;
     }
-
-  shrink_wide_legends: 6
-  glyph_tap_size: 18
-  glyph_hold_size: 15
-  glyph_shifted_size: 15
+  footer_text: Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a>
+  shrink_wide_legends: 7
+  style_layer_activators: true
+  glyph_tap_size: 14
+  glyph_hold_size: 12
+  glyph_shifted_size: 10
   glyphs: {}
   glyph_urls:
     tabler: https://unpkg.com/@tabler/icons/icons/outline/{}.svg
@@ -118,19 +133,19 @@ parse_config:
 
   raw_binding_map:
     # Layers
-    "&ltq 1 BACKSPACE":
+    "<q 1 BACKSPACE":
       tap:  $$mdi:backspace$$
       hold: '$$mdi:navigation-variant$$'
-    "&ltq 3 TAB":
+    "<q 3 TAB":
       tap: $$mdi:keyboard-tab$$
       hold: $$mdi:numeric$$
-    "&ltq 2 SPACE":
+    "<q 2 SPACE":
       tap: $$mdi:keyboard-space$$
       hold: $$mdi:symbol$$
-    "&ltq 3 ENTER":
+    "<q 3 ENTER":
       tap: $$mdi:keyboard-return$$
       hold: $$mdi:numeric$$
-    "&ltq 1 DELETE":
+    "<q 1 DELETE":
       tap: $$mdi:backspace-reverse-outline$$
       hold: $$mdi:navigation-variant$$
     # Home rows
@@ -520,6 +535,134 @@ parse_config:
     RG(RS(V)):
       tap: $$mdi:video$$
       hold: zoom
+      
+    # ------------ INICIO DEL BLOQUE IMPLEMENTADO ------------
+    # Comportamientos personalizados para el dibujante
+    "<_hold":
+      type: "mod-tap"
+      hold: "&mo"
+      tap: "&kp"
+    "&tilde_kp A A":
+      tap: "á"
+    "&tilde_kp E E":
+      tap: "é"
+    "&tilde_kp I I":
+      tap: "í"
+    "&tilde_kp O O":
+      tap: "ó"
+    "&tilde_kp U U":
+      tap: "ú"
+    "&shortcut":
+      type: "hold-tap"
+      tap: ""
+      hold: ""
+      
+    # Keycodes de Español (Latinoamérica)
+    ES_EXCLAMATION: "!"
+    ES_EXCL: "!"
+    ES_DOUBLE_QUOTES: '"'
+    ES_DQT: '"'
+    ES_HASH: "#"
+    ES_POUND: "#"
+    ES_DOLLAR: "$"
+    ES_DLLR: "$"
+    ES_PERCENT: "%"
+    ES_PRCNT: "%"
+    ES_AMPERSAND: "&"
+    ES_AMPS: "&"
+    ES_SINGLE_QUOTE: "'"
+    ES_SQT: "'"
+    ES_APOSTROPHE: "'"
+    ES_APOS: "'"
+    ES_LEFT_PARENTHESIS: "("
+    ES_LPAR: "("
+    ES_RIGHT_PARENTHESIS: ")"
+    ES_RPAR: ")"
+    ES_ASTERISK: "*"
+    ES_ASTRK: "*"
+    ES_STAR: "*"
+    ES_PLUS: "+"
+    ES_COMMA: ","
+    ES_MINUS: "-"
+    ES_PERIOD: "."
+    ES_DOT: "."
+    ES_SLASH: "/"
+    ES_FSLH: "/"
+    ES_N0: "0"
+    ES_N1: "1"
+    ES_N2: "2"
+    ES_N3: "3"
+    ES_N4: "4"
+    ES_N5: "5"
+    ES_N6: "6"
+    ES_N7: "7"
+    ES_N8: "8"
+    ES_N9: "9"
+    ES_COLON: ":"
+    ES_SEMICOLON: ";"
+    ES_SEMI: ";"
+    ES_LESS_THAN: "<"
+    ES_LT: "<"
+    ES_EQUAL: "="
+    ES_GREATER_THAN: ">"
+    ES_GT: ">"
+    ES_QUESTION: "?"
+    ES_QMARK: "?"
+    ES_AT_SIGN: "@"
+    ES_AT: "@"
+    ES_LEFT_BRACKET: "["
+    ES_LBKT: "["
+    ES_BACKSLASH: "\\"
+    ES_BSLH: "\\"
+    ES_RIGHT_BRACKET: "]"
+    ES_RBKT: "]"
+    ES_CARET: "^"
+    ES_UNDERSCORE: "_"
+    ES_UNDER: "_"
+    ES_GRAVE: "`"
+    ES_A: "a"
+    ES_B: "b"
+    ES_C: "c"
+    ES_D: "d"
+    ES_E: "e"
+    ES_F: "f"
+    ES_G: "g"
+    ES_H: "h"
+    ES_I: "i"
+    ES_J: "j"
+    ES_K: "k"
+    ES_L: "l"
+    ES_M: "m"
+    ES_N: "n"
+    ES_O: "o"
+    ES_P: "p"
+    ES_Q: "q"
+    ES_R: "r"
+    ES_S: "s"
+    ES_T: "t"
+    ES_U: "u"
+    ES_V: "v"
+    ES_W: "w"
+    ES_X: "x"
+    ES_Y: "y"
+    ES_Z: "z"
+    ES_LEFT_BRACE: "{"
+    ES_LBRC: "{"
+    ES_PIPE: "|"
+    ES_RIGHT_BRACE: "}"
+    ES_RBRC: "}"
+    ES_TILDE: "~"
+    ES_INVERTED_EXCLAMATION: "¡"
+    ES_IEXCL: "¡"
+    ES_UMLAUT: "¨"
+    ES_NOT: "¬"
+    ES_DEGREE: "°"
+    ES_DEG: "°"
+    ES_ACUTE: "´"
+    ES_INVERTED_QUESTION: "¿"
+    ES_IQMARK: "¿"
+    ES_N_TILDE: "ñ"
+    # ------------ FIN DEL BLOQUE IMPLEMENTADO ------------
 
   zmk_combos:
     combo_to_2:
