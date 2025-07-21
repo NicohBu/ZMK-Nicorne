@@ -246,84 +246,43 @@ path.combo {
 }
 /* End Tabler Icons Cleanup */
 
-/* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
-
+#----------------------------------------------------
+# MODIFICACIÓN: Estilos CSS para Tema Oscuro.
+# Funcionalidad: Reemplaza los estilos por defecto para aplicar un tema oscuro
+# al SVG y mantiene las reglas de posicionamiento de leyendas existentes.
+#----------------------------------------------------
 svg.keymap {
   font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
   font-size: 12px;
   font-weight: bold;
   text-rendering: optimizeLegibility;
+  background-color: #222;
 }
-
-/* Color accent for held keys */
+rect.key, rect.combo {
+  fill: #444;
+  stroke: #888;
+  stroke-width: 1;
+}
+text.key, text.combo, text.label {
+  fill: #ddd;
+}
 rect.held, rect.combo.held {
-    fill: #ffc;
+    fill: #335;
 }
-
-/* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
-.sym_sub_text.tap {
-  translate: -5px 2px;
-  font-size: 20px;
-}
-.sym_sub_text.shifted {
-  translate: 10px 13px;
-  font-size: 10px;
-  opacity: 1.0;
-}
-.combo.sym_sub_text.tap {
-  translate: -1px 1px;
-}
-.combo.sym_sub_text.shifted {
-  translate: 7px 5px;
-  font-size: 10px;
-  opacity: 1.0;
-}
-
-/* Toggle */
-.toggle.shifted {
-  translate: -10px 12px;
-}
-
-.toggle.hold {
-  translate: 13px -23px;
-}
-
-/* Variant for tap-dances */
-.tap_dance.tap {
-  translate: -7px 0px;
-  font-size: 12px;
-}
-.tap_dance.shifted {
-  translate: 7px 17px;
-  font-size: 12px;
-  opacity: 1.0;
-}
-
-/* Variant for symbol next to symbol */
-.sym_by_sym.tap {
-  translate: -6px 0px;
-}
-.sym_by_sym.shifted {
-  translate: 10px 12px;
-  opacity: 1.0;
-}
-
-.combo.sym_by_sym.tap {
-  translate: -35px 0px;
-}
-.combo.sym_by_sym.shifted {
-  translate: 35px 20px;
-  opacity: 1.0;
-}
-
-.combo.sym_by_sym.hold {
-  visibility: hidden;
-}
-
-/* hide hold box for combo sym_by_sym */
-.combo.sym_by_sym.hold > path[stroke="none"][fill="none"] {
-  visibility: hidden;
-}
+.sym_sub_text.tap { translate: -5px 2px; font-size: 20px; }
+.sym_sub_text.shifted { translate: 10px 13px; font-size: 10px; opacity: 1.0; }
+.combo.sym_sub_text.tap { translate: -1px 1px; }
+.combo.sym_sub_text.shifted { translate: 7px 5px; font-size: 10px; opacity: 1.0; }
+.toggle.shifted { translate: -10px 12px; }
+.toggle.hold { translate: 13px -23px; }
+.tap_dance.tap { translate: -7px 0px; font-size: 12px; }
+.tap_dance.shifted { translate: 7px 17px; font-size: 12px; opacity: 1.0; }
+.sym_by_sym.tap { translate: -6px 0px; }
+.sym_by_sym.shifted { translate: 10px 12px; opacity: 1.0; }
+.combo.sym_by_sym.tap { translate: -35px 0px; }
+.combo.sym_by_sym.shifted { translate: 35px 20px; opacity: 1.0; }
+.combo.sym_by_sym.hold { visibility: hidden; }
+.combo.sym_by_sym.hold > path[stroke="none"][fill="none"] { visibility: hidden; }
 </style>
 <g transform="translate(40, 0)" class="layer-ROCORN">
 <text x="0" y="28" class="label" id="ROCORN">ROCORN:</text>
@@ -1699,11 +1658,11 @@ rect.held, rect.combo.held {
 <tspan x="0" dy="-0.6em">KP</tspan><tspan x="0" dy="1.2em">MINUS</tspan>
 </text>
 </g>
-<g transform="translate(952, 49)" class="key keypos-12">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
-<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
-<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-9" y="-13" height="18" width="18.0" class="key tap glyph mdi:backspace"/>
-<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:backspace-reverse-outline"/>
+<g transform="translate(952, 49)" class="key backspace keypos-12">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key backspace side"/>
+<rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key backspace"/>
+<use href="#mdi:backspace" xlink:href="#mdi:backspace" x="-9" y="-13" height="18" width="18.0" class="key backspace tap glyph mdi:backspace"/>
+<use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="-8" y="-24" height="15" width="15.0" class="key backspace shifted glyph mdi:backspace-reverse-outline"/>
 </g>
 <g transform="translate(28, 105)" class="key trans keypos-13">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans side"/>
