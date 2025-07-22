@@ -4,6 +4,10 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
+#ifndef KEYMAP_DRAWER
+#include "keys_es_latin_american.h"
+#endif
+
 /* #include "keys_es_latin_american.h" */
 
 #include <behaviors.dtsi>
@@ -13,12 +17,8 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
-ifndef KEYMAP_DRAWER
 
-#include "keys_es_latin_american.h"
-
-endif {
-    /
+/ {
 
     zip_scroll_scaler: zip_scroll_scaler {
         compatible = "zmk,input-processor-scaler";
