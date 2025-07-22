@@ -18,9 +18,9 @@ Accesos directos a los archivos de configuración:
 ![Eyelash Corne 3x6+3](https://github.com/NicohBu/zmk-Nicorne/blob/main/keymap-drawer/eyelash_corne.svg)
 
 <details>
-<summary>Repositorio original</summary>
+<summary>Información adicional</summary>
   
-### (Eyelash Peripherals) Corne ZMK Repository
+## (Eyelash Peripherals) Corne ZMK Repository
 
 **This keyboard is not the same as [foostan's Corne](https://github.com/foostan/crkbd). It will not work with standard `corne` firmware.**
 
@@ -28,7 +28,7 @@ Accesos directos a los archivos de configuración:
 
 If you need a 3D model of this keyboard, email `380465425@qq.com`.
 
-### Instructions
+## Instructions
 
 1. [Fork this repository](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository).
 2. [Click the **Actions** tab and make sure the workflow is enabled](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/disabling-and-enabling-a-workflow#enabling-a-workflow).
