@@ -14,14 +14,10 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #ifndef KEYMAP_DRAWER
+#include "keys_es_latin_american.h"
+endif
 
-#include "keys_es_latin_american.h" // O el archivo de tu idioma
-
-#
-
-endif {
-    /
-
+/{
     zip_scroll_scaler: zip_scroll_scaler {
         compatible = "zmk,input-processor-scaler";
         #input-processor-cells = <2>;
