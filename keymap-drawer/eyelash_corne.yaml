@@ -1,105 +1,105 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   ROCORN:
-  - $$mdi:keyboard-esc$$
-  - {t: Y, h: '&oneshot LC(Y)'}
+  - ESC
+  - {t: Y, h: '$$mdi:redo$$'}
   - W
-  - {t: F, h: '&oneshot LC(F)'}
+  - {t: F, h: '$$mdi:magnify$$'}
   - P
   - G
-  - $$mdi:arrow-up-bold$$
+  - UP
   - J
   - L
-  - {t: I, h: '&tilde I'}
-  - {t: U, h: '&tilde U'}
-  - {t: Q, h: '&oneshot ES_AT'}
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-tab$$', h: LWIN}
+  - {t: I, h: Í}
+  - {t: U, h: Ú}
+  - {t: Q, h: '@'}
+  - BACKSPACE
+  - {t: TAB, h: LWIN}
   - H
-  - {t: A, h: '&tilde A'}
+  - {t: A, h: Á}
   - {t: R, h: LGUI}
-  - {t: T, h: '&oneshot LC(T)'}
-  - {t: V, h: '&oneshot LC(V)'}
-  - $$mdi:arrow-left-bold$$
+  - {t: T, h: '$$mdi:tab-plus$$'}
+  - {t: V, h: '$$mdi:content-paste$$'}
+  - LEFT
   - {t: HOME, h: '&oneshot END'}
-  - $$mdi:arrow-right-bold$$
-  - {t: S, h: '&oneshot LG(LS(S))'}
-  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: E, h: '&tilde E'}
-  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: O, h: '&tilde O'}
-  - {t: '*', h: MOUSE}
-  - $$mdi:apple-keyboard-option$$
-  - {t: Z, h: '&oneshot LC(Z)'}
-  - {t: X, h: '&oneshot LC(X)'}
+  - RIGHT
+  - {t: S, h: '$$mdi:camera-outline$$'}
+  - {t: N, h: LEFT ALT}
+  - {t: E, h: É}
+  - {t: D, h: RCTRL}
+  - {t: O, h: Ó}
+  - {t: ES STAR, h: MOUSE}
+  - LALT
+  - {t: Z, h: '$$mdi:undo$$'}
+  - {t: X, h: '$$mdi:content-cut$$'}
   - K
-  - {t: C, h: '&oneshot LC(C)'}
+  - {t: C, h: '$$mdi:content-copy$$'}
   - B
-  - $$mdi:apple-keyboard-caps$$
-  - $$mdi:arrow-down-bold$$
-  - ñ
-  - {t: M, h: '&oneshot C_AL_MAIL'}
-  - {t: ',', h: '&oneshot ES_LT'}
-  - {t: ., h: '&oneshot ES_GT'}
-  - '-'
+  - CAPSLOCK
+  - DOWN
+  - ES N TILDE
+  - {t: M, h: '$$mdi:email-outline$$'}
+  - {t: ES COMMA, h: '&oneshot ES_LT'}
+  - {t: ES DOT, h: '&oneshot ES_GT'}
+  - ES MINUS
   - Fn
-  - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:keyboard-return$$', h: Fn}
-  - {t: '$$mdi:keyboard-space$$', h: SYM_NUM}
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Fn}
+  - LCTRL
+  - {t: TAB, h: LSHIFT}
+  - {t: ENTER, h: Fn}
+  - {t: SPACE, h: SYM_NUM}
+  - {t: TAB, h: RSHIFT}
+  - {t: DEL, h: Fn}
   QWERTY:
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Q, h: '&oneshot ES_AT_SIGN'}
+  - {t: ▽, type: trans}
+  - {t: Q, h: '@'}
   - W
-  - {t: E, h: '&tilde E'}
+  - {t: E, h: É}
   - R
-  - {t: T, h: '&oneshot LC(T)'}
-  - $$mdi:arrow-up-bold$$
-  - {t: Y, h: '&oneshot LC(Y)'}
-  - {t: U, h: '&tilde U'}
-  - {t: I, h: '&tilde I'}
-  - {t: O, h: '&tilde O'}
+  - {t: T, h: '$$mdi:tab-plus$$'}
+  - UP
+  - {t: Y, h: '$$mdi:redo$$'}
+  - {t: U, h: Ú}
+  - {t: I, h: Í}
+  - {t: O, h: Ó}
   - P
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: A, h: '&tilde A'}
-  - {t: S, h: '&oneshot LS(LG(S))'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: A, h: Á}
+  - {t: S, h: '$$mdi:camera-outline$$'}
   - {t: D, h: LGUI}
-  - {t: F, h: '&oneshot LC(F)'}
+  - {t: F, h: '$$mdi:magnify$$'}
   - G
-  - $$mdi:arrow-left-bold$$
+  - LEFT
   - {t: HOME, h: '&oneshot END'}
-  - $$mdi:arrow-right-bold$$
+  - RIGHT
   - H
-  - {t: J, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: J, h: LEFT ALT}
   - {t: K, h: RGUI}
-  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
-  - ñ
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Z, h: '&oneshot LC(Z)'}
-  - {t: X, h: '&oneshot LC(X)'}
-  - {t: C, h: '&oneshot LC(C)'}
-  - {t: V, h: '&oneshot LC(V)'}
+  - {t: L, h: RCTRL}
+  - ES N TILDE
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: Z, h: '$$mdi:undo$$'}
+  - {t: X, h: '$$mdi:content-cut$$'}
+  - {t: C, h: '$$mdi:content-copy$$'}
+  - {t: V, h: '$$mdi:content-paste$$'}
   - B
-  - $$mdi:apple-keyboard-caps$$
-  - $$mdi:arrow-down-bold$$
+  - CAPSLOCK
+  - DOWN
   - N
-  - {t: M, h: '&oneshot C_AL_MAIL'}
-  - {t: ',', h: '&oneshot ES_LT', s: <}
-  - {t: ., h: '&oneshot ES_GT'}
-  - '-'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: M, h: '$$mdi:email-outline$$'}
+  - {t: ',', h: '&oneshot ES_LT'}
+  - {t: ES DOT, h: '&oneshot ES_GT'}
+  - ES MINUS
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   MOUSE:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ▽, type: trans}
   - F13
   - F14
   - F15
@@ -111,23 +111,23 @@ layers:
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - $$mdi:pan-right$$
   - $$mdi:pan-up$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - F18
   - F19
   - F20
   - F21
   - F22
-  - '&mkp MB4'
+  - {t: '$$mdi:arrow-u-left-top$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&mkp MB5'
+  - {t: '$$mdi:arrow-u-right-top$$', s: '$$mdi:mouse$$'}
   - VOLUME UP2
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:pan-down$$
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ▽, type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -136,12 +136,12 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - VOLUME DOW2
-  - {t: PREVIOUS, h: '&oneshot C_REWIND'}
+  - {t: PREVIOUS, h: '$$mdi:rewind$$'}
   - PLAY PAUSE
-  - {t: NEXT, h: '&oneshot C_FAST_FORWARD'}
+  - {t: NEXT, h: '$$mdi:fast-forward$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-left-click-outline$$
@@ -149,183 +149,183 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   Fn:
   - APP
-  - {t: F1, h: '&oneshot LA(LC(F1))'}
-  - {t: F2, h: '&oneshot LC(LA(F2))'}
-  - {t: F3, h: '&oneshot LC(LA(F3))'}
-  - {t: F4, h: '&oneshot LC(LA(F4))'}
+  - {t: F1, h: Ctrl+Alt+F1}
+  - {t: F2, h: Ctrl+Alt+F2}
+  - {t: F3, h: Ctrl+Alt+F3}
+  - {t: F4, h: Ctrl+Alt+F4}
   - F5
-  - RGB BRI
-  - $$mdi:volume-off$$
+  - $$mdi:brightness-7$$
+  - MUTE
   - HOME
-  - $$mdi:arrow-up-bold$$
+  - UP
   - END
-  - PgUp
-  - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: F6, h: '&bt_sel'}
-  - {t: F7, h: '&bt_sel 1'}
-  - {t: F8, h: '&bt_sel 2'}
-  - {t: F9, h: '&bt_sel 3'}
-  - {t: F10, h: '&bt_sel 4'}
-  - RGB EFR
-  - RGB TOG
-  - RGB EFF
-  - $$mdi:volume-high$$
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - PgDn
+  - PAGE UP
+  - {t: BACKSPACE, h: RCTRL}
+  - {t: ▽, type: trans}
+  - {t: F6, h: BT 1}
+  - {t: F7, h: BT 2}
+  - {t: F8, h: BT 3}
+  - {t: F9, h: BT 4}
+  - {t: F10, h: BT 5}
+  - $$mdi:palette-swatch-outline$$
+  - $$mdi:lightbulb-on-outline$$
+  - $$mdi:palette-swatch-outline$$
+  - VOLUME UP
+  - LEFT
+  - DOWN
+  - RIGHT
+  - PAGE DOWN
   - RIGHT WIN
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ▽, type: trans}
   - $$mdi:progress-download$$
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
   - F11
   - F12
-  - '&soft_off'
-  - RGB BRD
-  - $$mdi:volume-low$$
-  - {t: PREVIOUS, h: '&oneshot C_REWIND'}
+  - $$mdi:power$$
+  - $$mdi:brightness-4$$
+  - VOLUME DOWN
+  - {t: PREVIOUS, h: '$$mdi:rewind$$'}
   - PLAY PAUSE
-  - {t: '$$mdi:skip-next$$', h: '&oneshot C_FAST_FORWARD'}
+  - {t: NEXT, h: '$$mdi:fast-forward$$'}
   - $$mdi:progress-download$$
-  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$', type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ENTER, h: RSHIFT, type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held alternate}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - ENTER
+  - {t: ▽, type: trans}
   - {type: held alternate}
   SYM_NUM:
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '!', h: '&oneshot ES_IEXCL'}
-  - {t: '"', h: '&oneshot ES_SQT'}
-  - '#'
-  - $
-  - '%'
+  - {t: ▽, type: trans}
+  - {t: ES EXCL, h: ¡}
+  - {t: ES DQT, h: ''''}
+  - ES HASH
+  - ES DLLR
+  - ES PRCNT
   - RW
   - KP PLUS
-  - '7'
-  - '8'
-  - '9'
+  - ES 7
+  - ES 8
+  - ES 9
   - KP MINUS
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - '&'
-  - {t: /, h: '&oneshot ES_BSLH'}
-  - {t: (, h: '&oneshot ES_LBRC'}
-  - {t: ), h: '&oneshot ES_RBRC'}
-  - '='
-  - $$mdi:skip-previous$$
-  - $$mdi:play-pause$$
-  - $$mdi:skip-next$$
+  - {t: ▽, type: trans}
+  - ES AMPS
+  - {t: ES SLASH, h: \}
+  - {t: ES LPAR, h: '{'}
+  - {t: ES RPAR, h: '}'}
+  - ES EQUAL
+  - PREV
+  - PP
+  - NEXT
   - KP MULTIPLY
-  - '4'
-  - '5'
-  - '6'
+  - ES 4
+  - ES 5
+  - ES 6
   - KP DIVIDE
   - AL CALC
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '|', h: '&oneshot ES_DEG'}
-  - {t: ¬, h: '&oneshot ES_TILDE'}
-  - '['
-  - ']'
-  - {t: '?', h: '&oneshot ES_IQMARK'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ▽, type: trans}
+  - {t: ES PIPE, h: °}
+  - {t: ES NOT, h: '~'}
+  - ES LBKT
+  - ES RBKT
+  - {t: ES QMARK, h: ¿}
+  - {t: ▽, type: trans}
   - FF
-  - '0'
-  - '1'
-  - '2'
-  - '3'
-  - {t: KP DOT, h: '&oneshot ES_COLON'}
-  - {t: KP ENTER, h: '&oneshot ES_EQUAL'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: KP ENTER, h: '&oneshot ES_EQUAL', type: held}
-  - {t: '0', h: '&oneshot ES_HASH'}
-  - {t: ., h: '&oneshot ES_PERCENT', s: '>'}
+  - ES 0
+  - ES 1
+  - ES 2
+  - ES 3
+  - {t: KP DOT, h: ':'}
+  - {t: KP ENTER, h: '='}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: KP ENTER, h: '=', type: held}
+  - {t: ES 0, h: '#'}
+  - {t: ., h: '%'}
   EMPTY:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ▽, type: trans}
   - Q
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - p: [13, 0]
-  k: {t: QWERTY, h: toggle}
+  k: {t: '$$mdi:keyboard-close$$', type: toggle}
   l: [ROCORN, QWERTY]
 - p: [27, 12]
-  k: {t: SYM_NUM, h: toggle}
+  k: {t: '$$mdi:numeric$$', type: toggle}
   l: [ROCORN, QWERTY, Fn]
 - p: [43, 46]
   k: $$mdi:alpha-w-box$$
   l: [ROCORN, QWERTY]
 - p: [18, 17, 16]
-  k: $$mdi:bluetooth-off$$
+  k: BT CLR
   l: [Fn]
 - p: [41, 40]
-  k: {t: '$$mdi:keyboard-return$$', type: enter}
+  k: ENTER
 - p: [5, 4]
-  k: {t: '$$mdi:backspace$$', type: backspace}
+  k: BSPC
 - p: [0, 1]
-  k: $$mdi:backspace-reverse-outline$$
+  k: DEL
 - p: [12, 11]
-  k: $$mdi:backspace-reverse-outline$$
+  k: DEL
 - p: [7, 8]
-  k: $$mdi:keyboard-esc$$
+  k: ESC
 - p: [7, 23]
-  k: (
+  k: ES LPAR
   l: [ROCORN, QWERTY, Fn]
 - p: [22, 8]
-  k: )
+  k: ES RPAR
   l: [ROCORN, QWERTY, Fn]
 - p: [16, 4]
-  k: ¿
+  k: ES INVERTED QUESTION
   l: [ROCORN, QWERTY, Fn]
 - p: [17, 3]
-  k: '?'
+  k: ES QUESTION
   l: [ROCORN, QWERTY, Fn]
