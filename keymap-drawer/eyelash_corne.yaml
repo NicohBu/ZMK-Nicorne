@@ -247,7 +247,7 @@ layers:
   - {t: ., h: '&oneshot ES_PERCENT', s: '>'}
   EMPTY:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Q
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
