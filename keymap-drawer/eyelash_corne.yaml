@@ -228,8 +228,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: '|', h: °}
   - {t: ¬, h: '~'}
-  - {t: '[', h: '&oneshot ES_CARET'}
-  - {t: ']', h: '&oneshot ES_GRAVE'}
+  - {t: '[', h: ^}
+  - {t: ']', h: '`'}
   - {t: '?', h: ¿}
   - {t: ▽, type: trans}
   - $$mdi:fast-forward$$
