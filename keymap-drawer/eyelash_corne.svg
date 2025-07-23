@@ -688,17 +688,18 @@ svg.keymap {
 <text x="757" y="66" class="combo tap">)</text>
 </g>
 <g class="combo combopos-10">
-<path d="M281,59 v19 a6.0,6.0 0 0 1 -6.0,6.0 h-60" class="combo"/>
-<path d="M281,59 v-19 a6.0,6.0 0 0 0 -6.0,-6.0 h-4" class="combo"/>
-<rect rx="6" ry="6" x="267" y="46" width="28" height="26" class="combo"/>
-<text x="281" y="59" class="combo tap">¿</text>
+<rect rx="6" ry="6" x="210" y="46" width="28" height="26" class="combo"/>
+<text x="224" y="59" class="combo tap">¿</text>
 </g>
 <g class="combo combopos-11">
-<path d="M167,59 v25 a6.0,6.0 0 0 0 6.0,6.0 h60" class="combo"/>
-<path d="M167,59 v-25 a6.0,6.0 0 0 1 6.0,-6.0 h4" class="combo"/>
-<rect rx="6" ry="6" x="153" y="46" width="28" height="26" class="combo"/>
-<text x="167" y="59" class="combo tap">?</text>
+<rect rx="6" ry="6" x="210" y="46" width="28" height="26" class="combo"/>
+<text x="224" y="59" class="combo tap">?</text>
 </g>
+<g class="combo combopos-12">
+<rect rx="6" ry="6" x="266" y="137" width="28" height="26" class="combo"/>
+<a href="#SYM_NUM">
+<text x="280" y="150" class="combo tap layer-activator">SYM_NUM</text>
+</a></g>
 </g>
 </g>
 <g transform="translate(40, 340)" class="layer-QWERTY">
@@ -976,17 +977,18 @@ svg.keymap {
 <text x="757" y="66" class="combo tap">)</text>
 </g>
 <g class="combo combopos-10">
-<path d="M281,59 v19 a6.0,6.0 0 0 1 -6.0,6.0 h-60" class="combo"/>
-<path d="M281,59 v-19 a6.0,6.0 0 0 0 -6.0,-6.0 h-4" class="combo"/>
-<rect rx="6" ry="6" x="267" y="46" width="28" height="26" class="combo"/>
-<text x="281" y="59" class="combo tap">¿</text>
+<rect rx="6" ry="6" x="210" y="46" width="28" height="26" class="combo"/>
+<text x="224" y="59" class="combo tap">¿</text>
 </g>
 <g class="combo combopos-11">
-<path d="M167,59 v25 a6.0,6.0 0 0 0 6.0,6.0 h60" class="combo"/>
-<path d="M167,59 v-25 a6.0,6.0 0 0 1 6.0,-6.0 h4" class="combo"/>
-<rect rx="6" ry="6" x="153" y="46" width="28" height="26" class="combo"/>
-<text x="167" y="59" class="combo tap">?</text>
+<rect rx="6" ry="6" x="210" y="46" width="28" height="26" class="combo"/>
+<text x="224" y="59" class="combo tap">?</text>
 </g>
+<g class="combo combopos-12">
+<rect rx="6" ry="6" x="266" y="137" width="28" height="26" class="combo"/>
+<a href="#SYM_NUM">
+<text x="280" y="150" class="combo tap layer-activator">SYM_NUM</text>
+</a></g>
 </g>
 </g>
 <g transform="translate(40, 680)" class="layer-MOUSE">
@@ -1171,9 +1173,9 @@ svg.keymap {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(285, 209) rotate(12.0)" class="key none keypos-43">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-9" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(285, 209) rotate(12.0)" class="key trans keypos-43">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(348, 226) rotate(24.0)" class="key keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1187,9 +1189,9 @@ svg.keymap {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <use href="#mdi:mouse-scroll-wheel" xlink:href="#mdi:mouse-scroll-wheel" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:mouse-scroll-wheel"/>
 </g>
-<g transform="translate(756, 203)" class="key none keypos-47">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none"/>
-<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-9" y="-9" height="18" width="18.0" class="key none tap glyph mdi:minus-circle-outline"/>
+<g transform="translate(756, 203)" class="key trans keypos-47">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g class="combo enter combopos-0">
 <rect rx="6" ry="6" x="910" y="148" width="28" height="26" class="combo enter"/>
@@ -1477,17 +1479,18 @@ svg.keymap {
 <text x="757" y="66" class="combo tap">)</text>
 </g>
 <g class="combo combopos-9">
-<path d="M281,59 v19 a6.0,6.0 0 0 1 -6.0,6.0 h-60" class="combo"/>
-<path d="M281,59 v-19 a6.0,6.0 0 0 0 -6.0,-6.0 h-4" class="combo"/>
-<rect rx="6" ry="6" x="267" y="46" width="28" height="26" class="combo"/>
-<text x="281" y="59" class="combo tap">¿</text>
+<rect rx="6" ry="6" x="210" y="46" width="28" height="26" class="combo"/>
+<text x="224" y="59" class="combo tap">¿</text>
 </g>
 <g class="combo combopos-10">
-<path d="M167,59 v25 a6.0,6.0 0 0 0 6.0,6.0 h60" class="combo"/>
-<path d="M167,59 v-25 a6.0,6.0 0 0 1 6.0,-6.0 h4" class="combo"/>
-<rect rx="6" ry="6" x="153" y="46" width="28" height="26" class="combo"/>
-<text x="167" y="59" class="combo tap">?</text>
+<rect rx="6" ry="6" x="210" y="46" width="28" height="26" class="combo"/>
+<text x="224" y="59" class="combo tap">?</text>
 </g>
+<g class="combo combopos-11">
+<rect rx="6" ry="6" x="266" y="137" width="28" height="26" class="combo"/>
+<a href="#SYM_NUM">
+<text x="280" y="150" class="combo tap layer-activator">SYM_NUM</text>
+</a></g>
 </g>
 </g>
 <g transform="translate(40, 1359)" class="layer-SYM_NUM">
@@ -1636,15 +1639,15 @@ svg.keymap {
 <text x="0" y="0" class="key tap">[</text>
 <text x="0" y="24" class="key hold">^</text>
 </g>
-<g transform="translate(252, 147)" class="key keypos-32">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">]</text>
-<text x="0" y="24" class="key hold">`</text>
+<g transform="translate(252, 147)" class="key held alternate keypos-32">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held alternate"/>
+<text x="0" y="0" class="key held alternate tap">]</text>
+<text x="0" y="24" class="key held alternate hold">`</text>
 </g>
-<g transform="translate(308, 153)" class="key keypos-33">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">?</text>
-<text x="0" y="24" class="key hold">¿</text>
+<g transform="translate(308, 153)" class="key held alternate keypos-33">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held alternate"/>
+<text x="0" y="0" class="key held alternate tap">?</text>
+<text x="0" y="24" class="key held alternate hold">¿</text>
 </g>
 <g transform="translate(378, 153)" class="key trans keypos-34">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>

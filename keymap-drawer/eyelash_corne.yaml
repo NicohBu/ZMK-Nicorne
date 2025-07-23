@@ -142,11 +142,11 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: ▽, type: trans}
   - $$mdi:mouse-right-click-outline$$
   - $$mdi:mouse-left-click-outline$$
   - $$mdi:mouse-scroll-wheel$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: ▽, type: trans}
   Fn:
   - $$mdi:menu$$
   - {t: F1, h: Ctrl+Alt+F1}
@@ -229,8 +229,8 @@ layers:
   - {t: '|', h: °}
   - {t: ¬, h: '~'}
   - {t: '[', h: ^}
-  - {t: ']', h: '`'}
-  - {t: '?', h: ¿}
+  - {t: ']', h: '`', type: held alternate}
+  - {t: '?', h: ¿, type: held alternate}
   - {t: ▽, type: trans}
   - $$mdi:fast-forward$$
   - {t: '0', s: '='}
@@ -289,8 +289,9 @@ combos:
 - p: [16, 4]
   k: ¿
   l: [ROCORN, QWERTY, Fn]
-  a: right
 - p: [17, 3]
   k: '?'
   l: [ROCORN, QWERTY, Fn]
-  a: left
+- p: [33, 32]
+  k: SYM_NUM
+  l: [ROCORN, QWERTY, Fn]
