@@ -633,17 +633,17 @@ svg.keymap {
 <a href="#Fn">
 <text x="0" y="24" class="key hold layer-activator">Fn</text>
 </a></g>
-<g class="combo toggle combopos-0">
+<g class="combo combopos-0">
 <path d="M-15,77 v22 a6.0,6.0 0 0 0 6.0,6.0 h18" class="combo"/>
 <path d="M-15,77 v-22 a6.0,6.0 0 0 1 6.0,-6.0 h18" class="combo"/>
-<rect rx="6" ry="6" x="-29" y="64" width="28" height="26" class="combo toggle"/>
-<use href="#mdi:keyboard-close" xlink:href="#mdi:keyboard-close" x="-24" y="68" height="18" width="18.0" class="combo toggle tap glyph mdi:keyboard-close"/>
+<rect rx="6" ry="6" x="-29" y="64" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-close" xlink:href="#mdi:keyboard-close" x="-24" y="68" height="18" width="18.0" class="combo tap glyph mdi:keyboard-close"/>
 </g>
-<g class="combo toggle combopos-1">
+<g class="combo combopos-1">
 <path d="M995,77 v22 a6.0,6.0 0 0 1 -6.0,6.0 h-18" class="combo"/>
 <path d="M995,77 v-22 a6.0,6.0 0 0 0 -6.0,-6.0 h-18" class="combo"/>
-<rect rx="6" ry="6" x="981" y="64" width="28" height="26" class="combo toggle"/>
-<use href="#mdi:numeric" xlink:href="#mdi:numeric" x="986" y="68" height="18" width="18.0" class="combo toggle tap glyph mdi:numeric"/>
+<rect rx="6" ry="6" x="981" y="64" width="28" height="26" class="combo"/>
+<use href="#mdi:numeric" xlink:href="#mdi:numeric" x="986" y="68" height="18" width="18.0" class="combo tap glyph mdi:numeric"/>
 </g>
 <g class="combo combopos-2">
 <path d="M490,209 l-186,0" class="combo"/>
@@ -688,18 +688,21 @@ svg.keymap {
 <text x="757" y="66" class="combo tap">)</text>
 </g>
 <g class="combo combopos-10">
-<rect rx="6" ry="6" x="210" y="46" width="28" height="26" class="combo"/>
-<text x="224" y="59" class="combo tap">¿</text>
+<path d="M281,59 v19 a6.0,6.0 0 0 1 -6.0,6.0 h-60" class="combo"/>
+<path d="M281,59 v-19 a6.0,6.0 0 0 0 -6.0,-6.0 h-4" class="combo"/>
+<rect rx="6" ry="6" x="267" y="46" width="28" height="26" class="combo"/>
+<text x="281" y="59" class="combo tap">¿</text>
 </g>
 <g class="combo combopos-11">
-<rect rx="6" ry="6" x="210" y="46" width="28" height="26" class="combo"/>
-<text x="224" y="59" class="combo tap">?</text>
+<path d="M167,59 v25 a6.0,6.0 0 0 0 6.0,6.0 h60" class="combo"/>
+<path d="M167,59 v-25 a6.0,6.0 0 0 1 6.0,-6.0 h4" class="combo"/>
+<rect rx="6" ry="6" x="153" y="46" width="28" height="26" class="combo"/>
+<text x="167" y="59" class="combo tap">?</text>
 </g>
 <g class="combo combopos-12">
 <rect rx="6" ry="6" x="266" y="137" width="28" height="26" class="combo"/>
-<a href="#SYM_NUM">
-<text x="280" y="150" class="combo tap layer-activator">SYM_NUM</text>
-</a></g>
+<use href="#mdi:numeric" xlink:href="#mdi:numeric" x="271" y="141" height="18" width="18.0" class="combo tap glyph mdi:numeric"/>
+</g>
 </g>
 </g>
 <g transform="translate(40, 340)" class="layer-QWERTY">
@@ -922,17 +925,17 @@ svg.keymap {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g class="combo toggle combopos-0">
+<g class="combo combopos-0">
 <path d="M-15,77 v22 a6.0,6.0 0 0 0 6.0,6.0 h18" class="combo"/>
 <path d="M-15,77 v-22 a6.0,6.0 0 0 1 6.0,-6.0 h18" class="combo"/>
-<rect rx="6" ry="6" x="-29" y="64" width="28" height="26" class="combo toggle"/>
-<use href="#mdi:keyboard-close" xlink:href="#mdi:keyboard-close" x="-24" y="68" height="18" width="18.0" class="combo toggle tap glyph mdi:keyboard-close"/>
+<rect rx="6" ry="6" x="-29" y="64" width="28" height="26" class="combo"/>
+<use href="#mdi:keyboard-close" xlink:href="#mdi:keyboard-close" x="-24" y="68" height="18" width="18.0" class="combo tap glyph mdi:keyboard-close"/>
 </g>
-<g class="combo toggle combopos-1">
+<g class="combo combopos-1">
 <path d="M995,77 v22 a6.0,6.0 0 0 1 -6.0,6.0 h-18" class="combo"/>
 <path d="M995,77 v-22 a6.0,6.0 0 0 0 -6.0,-6.0 h-18" class="combo"/>
-<rect rx="6" ry="6" x="981" y="64" width="28" height="26" class="combo toggle"/>
-<use href="#mdi:numeric" xlink:href="#mdi:numeric" x="986" y="68" height="18" width="18.0" class="combo toggle tap glyph mdi:numeric"/>
+<rect rx="6" ry="6" x="981" y="64" width="28" height="26" class="combo"/>
+<use href="#mdi:numeric" xlink:href="#mdi:numeric" x="986" y="68" height="18" width="18.0" class="combo tap glyph mdi:numeric"/>
 </g>
 <g class="combo combopos-2">
 <path d="M490,209 l-186,0" class="combo"/>
@@ -977,18 +980,21 @@ svg.keymap {
 <text x="757" y="66" class="combo tap">)</text>
 </g>
 <g class="combo combopos-10">
-<rect rx="6" ry="6" x="210" y="46" width="28" height="26" class="combo"/>
-<text x="224" y="59" class="combo tap">¿</text>
+<path d="M281,59 v19 a6.0,6.0 0 0 1 -6.0,6.0 h-60" class="combo"/>
+<path d="M281,59 v-19 a6.0,6.0 0 0 0 -6.0,-6.0 h-4" class="combo"/>
+<rect rx="6" ry="6" x="267" y="46" width="28" height="26" class="combo"/>
+<text x="281" y="59" class="combo tap">¿</text>
 </g>
 <g class="combo combopos-11">
-<rect rx="6" ry="6" x="210" y="46" width="28" height="26" class="combo"/>
-<text x="224" y="59" class="combo tap">?</text>
+<path d="M167,59 v25 a6.0,6.0 0 0 0 6.0,6.0 h60" class="combo"/>
+<path d="M167,59 v-25 a6.0,6.0 0 0 1 6.0,-6.0 h4" class="combo"/>
+<rect rx="6" ry="6" x="153" y="46" width="28" height="26" class="combo"/>
+<text x="167" y="59" class="combo tap">?</text>
 </g>
 <g class="combo combopos-12">
 <rect rx="6" ry="6" x="266" y="137" width="28" height="26" class="combo"/>
-<a href="#SYM_NUM">
-<text x="280" y="150" class="combo tap layer-activator">SYM_NUM</text>
-</a></g>
+<use href="#mdi:numeric" xlink:href="#mdi:numeric" x="271" y="141" height="18" width="18.0" class="combo tap glyph mdi:numeric"/>
+</g>
 </g>
 </g>
 <g transform="translate(40, 680)" class="layer-MOUSE">
@@ -1429,11 +1435,11 @@ svg.keymap {
 <g transform="translate(756, 203)" class="key held alternate keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held alternate"/>
 </g>
-<g class="combo toggle combopos-0">
+<g class="combo combopos-0">
 <path d="M995,77 v22 a6.0,6.0 0 0 1 -6.0,6.0 h-18" class="combo"/>
 <path d="M995,77 v-22 a6.0,6.0 0 0 0 -6.0,-6.0 h-18" class="combo"/>
-<rect rx="6" ry="6" x="981" y="64" width="28" height="26" class="combo toggle"/>
-<use href="#mdi:numeric" xlink:href="#mdi:numeric" x="986" y="68" height="18" width="18.0" class="combo toggle tap glyph mdi:numeric"/>
+<rect rx="6" ry="6" x="981" y="64" width="28" height="26" class="combo"/>
+<use href="#mdi:numeric" xlink:href="#mdi:numeric" x="986" y="68" height="18" width="18.0" class="combo tap glyph mdi:numeric"/>
 </g>
 <g class="combo combopos-1">
 <path d="M354,91 v1 a6.0,6.0 0 0 1 -6.0,6.0 h-21" class="combo"/>
@@ -1479,18 +1485,21 @@ svg.keymap {
 <text x="757" y="66" class="combo tap">)</text>
 </g>
 <g class="combo combopos-9">
-<rect rx="6" ry="6" x="210" y="46" width="28" height="26" class="combo"/>
-<text x="224" y="59" class="combo tap">¿</text>
+<path d="M281,59 v19 a6.0,6.0 0 0 1 -6.0,6.0 h-60" class="combo"/>
+<path d="M281,59 v-19 a6.0,6.0 0 0 0 -6.0,-6.0 h-4" class="combo"/>
+<rect rx="6" ry="6" x="267" y="46" width="28" height="26" class="combo"/>
+<text x="281" y="59" class="combo tap">¿</text>
 </g>
 <g class="combo combopos-10">
-<rect rx="6" ry="6" x="210" y="46" width="28" height="26" class="combo"/>
-<text x="224" y="59" class="combo tap">?</text>
+<path d="M167,59 v25 a6.0,6.0 0 0 0 6.0,6.0 h60" class="combo"/>
+<path d="M167,59 v-25 a6.0,6.0 0 0 1 6.0,-6.0 h4" class="combo"/>
+<rect rx="6" ry="6" x="153" y="46" width="28" height="26" class="combo"/>
+<text x="167" y="59" class="combo tap">?</text>
 </g>
 <g class="combo combopos-11">
 <rect rx="6" ry="6" x="266" y="137" width="28" height="26" class="combo"/>
-<a href="#SYM_NUM">
-<text x="280" y="150" class="combo tap layer-activator">SYM_NUM</text>
-</a></g>
+<use href="#mdi:numeric" xlink:href="#mdi:numeric" x="271" y="141" height="18" width="18.0" class="combo tap glyph mdi:numeric"/>
+</g>
 </g>
 </g>
 <g transform="translate(40, 1359)" class="layer-SYM_NUM">

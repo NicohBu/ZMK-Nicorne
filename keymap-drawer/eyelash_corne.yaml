@@ -247,12 +247,12 @@ layers:
   - {t: ., h: '%', s: ':'}
 combos:
 - p: [13, 0]
-  k: {t: '$$mdi:keyboard-close$$', type: toggle}
+  k: $$mdi:keyboard-close$$
   l: [ROCORN, QWERTY]
   a: left
   o: 0.25
 - p: [27, 12]
-  k: {t: '$$mdi:numeric$$', type: toggle}
+  k: $$mdi:numeric$$
   l: [ROCORN, QWERTY, Fn]
   a: right
   o: 0.25
@@ -289,9 +289,11 @@ combos:
 - p: [16, 4]
   k: ¿
   l: [ROCORN, QWERTY, Fn]
+  a: right
 - p: [17, 3]
   k: '?'
   l: [ROCORN, QWERTY, Fn]
+  a: left
 - p: [33, 32]
-  k: SYM_NUM
+  k: $$mdi:numeric$$
   l: [ROCORN, QWERTY, Fn]
