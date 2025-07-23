@@ -164,6 +164,8 @@ parse_config:
     '&oneshot ES_AT': '@'
     '&oneshot ES_AT_SIGN': '@'
     '&oneshot ES_NOT': '¬'
+    '&oneshot ES_CARET': '^'
+    '&oneshot ES_GRAVE': '`'
     '&oneshot ES_LESS_THAN': '<'
     '&oneshot ES_LT': '<'
     '&oneshot ES_GREATER_THAN': '>'
@@ -188,13 +190,6 @@ parse_config:
     ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK)))): '*'
     ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS)))): (
     (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS))): )
-
-   
-    # Comportamiento Home-row mods
-    #'&hrm LGUI': {tap: R, hold: '$$mdi:microsoft-windows$$'}
-    #'&hrm LEFT_ALT': {tap: N, hold: 'ALT GR'}
-    #'&hrm RCTRL': {tap: D, hold: '$$mdi:apple-keyboard-control$$'}
-    #'&hrm RGUI': {tap: K, hold: '$$mdi:microsoft-windows$$'}
 
 
     # Layer-Tap Hold
@@ -561,39 +556,5 @@ parse_config:
     R_PAR: {a: "right"}
     L_PAR: {a: "left"}
 
-    combo_to_2:
-      align: top
-    combo_to_3:
-      align: top
-    combo_bt_clear:
-      align: top
-      offset: 0.0
-    combo_mute:
-      align: top
-      offset: 0.15
-    combo_minus:
-      key:
-        shifted: _
-        hold: '-'
-    combo_equal:
-      key:
-        shifted: +
-        hold: '='
-    combo_backslash:
-      key:
-        shifted: '|'
-        hold: \
-    combo_lbkt:
-      key:
-        shifted: '{'
-        hold: '['
-    combo_rbkt:
-      key:
-        shifted: '}'
-        hold: ']'
-    combo_semicolon:
-      key:
-        shifted: ':'
-        hold: ;
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []
