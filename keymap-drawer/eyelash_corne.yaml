@@ -1,54 +1,54 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   ROCORN:
-  - ESC
+  - $$mdi:keyboard-esc$$
   - {t: Y, h: '$$mdi:redo$$'}
   - W
   - {t: F, h: '$$mdi:magnify$$'}
   - P
   - G
-  - UP
+  - $$mdi:arrow-up-bold$$
   - J
   - L
   - {t: I, h: Í}
   - {t: U, h: Ú}
   - {t: Q, h: '@'}
-  - BACKSPACE
-  - {t: TAB, h: LWIN}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:microsoft-windows$$'}
   - H
   - {t: A, h: Á}
-  - {t: R, h: LGUI}
+  - {t: R, h: '$$mdi:microsoft-windows$$'}
   - {t: T, h: '$$mdi:tab-plus$$'}
   - {t: V, h: '$$mdi:content-paste$$'}
-  - LEFT
-  - {t: HOME, h: '&oneshot END'}
-  - RIGHT
+  - $$mdi:arrow-left-bold$$
+  - {t: '$$mdi:arrow-collapse-left$$', h: '$$mdi:arrow-collapse-right$$'}
+  - $$mdi:arrow-right-bold$$
   - {t: S, h: '$$mdi:camera-outline$$'}
-  - {t: N, h: LEFT ALT}
+  - {t: N, h: ALT}
   - {t: E, h: É}
   - {t: D, h: RCTRL}
   - {t: O, h: Ó}
-  - {t: ES STAR, h: MOUSE}
-  - LALT
+  - {t: '*', h: MOUSE}
+  - ALT
   - {t: Z, h: '$$mdi:undo$$'}
   - {t: X, h: '$$mdi:content-cut$$'}
   - K
   - {t: C, h: '$$mdi:content-copy$$'}
   - B
-  - CAPSLOCK
-  - DOWN
-  - ES N TILDE
+  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:arrow-down-bold$$
+  - Ñ
   - {t: M, h: '$$mdi:email-outline$$'}
-  - {t: ES COMMA, h: '&oneshot ES_LT'}
-  - {t: ES DOT, h: '&oneshot ES_GT'}
-  - ES MINUS
+  - {t: ',', h: <, s: ;}
+  - {t: ., h: '>', s: ':'}
+  - {t: '-', s: _}
   - Fn
   - LCTRL
-  - {t: TAB, h: LSHIFT}
-  - {t: ENTER, h: Fn}
-  - {t: SPACE, h: SYM_NUM}
-  - {t: TAB, h: RSHIFT}
-  - {t: DEL, h: Fn}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:keyboard-return$$', h: Fn}
+  - {t: '$$mdi:keyboard-space$$', h: SYM_NUM}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: Fn}
   QWERTY:
   - {t: ▽, type: trans}
   - {t: Q, h: '@'}
@@ -56,7 +56,7 @@ layers:
   - {t: E, h: É}
   - R
   - {t: T, h: '$$mdi:tab-plus$$'}
-  - UP
+  - $$mdi:arrow-up-bold$$
   - {t: Y, h: '$$mdi:redo$$'}
   - {t: U, h: Ú}
   - {t: I, h: Í}
@@ -66,17 +66,17 @@ layers:
   - {t: ▽, type: trans}
   - {t: A, h: Á}
   - {t: S, h: '$$mdi:camera-outline$$'}
-  - {t: D, h: LGUI}
+  - {t: D, h: '$$mdi:microsoft-windows$$'}
   - {t: F, h: '$$mdi:magnify$$'}
   - G
-  - LEFT
-  - {t: HOME, h: '&oneshot END'}
-  - RIGHT
+  - $$mdi:arrow-left-bold$$
+  - {t: '$$mdi:arrow-collapse-left$$', h: '$$mdi:arrow-collapse-right$$'}
+  - $$mdi:arrow-right-bold$$
   - H
-  - {t: J, h: LEFT ALT}
-  - {t: K, h: RGUI}
+  - {t: J, h: ALT}
+  - {t: K, h: '$$mdi:microsoft-windows$$'}
   - {t: L, h: RCTRL}
-  - ES N TILDE
+  - Ñ
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: Z, h: '$$mdi:undo$$'}
@@ -84,13 +84,13 @@ layers:
   - {t: C, h: '$$mdi:content-copy$$'}
   - {t: V, h: '$$mdi:content-paste$$'}
   - B
-  - CAPSLOCK
-  - DOWN
+  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:arrow-down-bold$$
   - N
   - {t: M, h: '$$mdi:email-outline$$'}
-  - {t: ',', h: '&oneshot ES_LT'}
-  - {t: ES DOT, h: '&oneshot ES_GT'}
-  - ES MINUS
+  - {t: ',', h: <, s: ;}
+  - {t: ., h: '>', s: ':'}
+  - {t: '-', s: _}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -106,7 +106,7 @@ layers:
   - F16
   - F17
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - MUTE2
+  - $$mdi:volume-off$$
   - $$mdi:pan-left$$
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - $$mdi:pan-right$$
@@ -121,7 +121,7 @@ layers:
   - {t: '$$mdi:arrow-u-left-top$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:arrow-u-right-top$$', s: '$$mdi:mouse$$'}
-  - VOLUME UP2
+  - $$mdi:volume-high$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
@@ -135,10 +135,10 @@ layers:
   - F24
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - VOLUME DOW2
-  - {t: PREVIOUS, h: '$$mdi:rewind$$'}
-  - PLAY PAUSE
-  - {t: NEXT, h: '$$mdi:fast-forward$$'}
+  - $$mdi:volume-low$$
+  - {t: '$$mdi:skip-previous$$', h: '$$mdi:rewind$$'}
+  - $$mdi:play-pause$$
+  - {t: '$$mdi:skip-next$$', h: '$$mdi:fast-forward$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -148,19 +148,19 @@ layers:
   - $$mdi:mouse-scroll-wheel$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   Fn:
-  - APP
+  - $$mdi:menu$$
   - {t: F1, h: Ctrl+Alt+F1}
   - {t: F2, h: Ctrl+Alt+F2}
   - {t: F3, h: Ctrl+Alt+F3}
   - {t: F4, h: Ctrl+Alt+F4}
   - F5
   - $$mdi:brightness-7$$
-  - MUTE
-  - HOME
-  - UP
-  - END
-  - PAGE UP
-  - {t: BACKSPACE, h: RCTRL}
+  - $$mdi:volume-off$$
+  - $$mdi:arrow-collapse-left$$
+  - $$mdi:arrow-up-bold$$
+  - $$mdi:arrow-collapse-right$$
+  - $$mdi:chevron-double-up$$
+  - {t: '$$mdi:backspace$$', h: RCTRL}
   - {t: ▽, type: trans}
   - {t: F6, h: BT 1}
   - {t: F7, h: BT 2}
@@ -170,12 +170,12 @@ layers:
   - $$mdi:palette-swatch-outline$$
   - $$mdi:lightbulb-on-outline$$
   - $$mdi:palette-swatch-outline$$
-  - VOLUME UP
-  - LEFT
-  - DOWN
-  - RIGHT
-  - PAGE DOWN
-  - RIGHT WIN
+  - $$mdi:volume-high$$
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - $$mdi:chevron-double-down$$
+  - $$mdi:microsoft-windows$$
   - {t: ▽, type: trans}
   - $$mdi:progress-download$$
   - {t: '$$mdi:toggle-switch$$', h: '$$mdi:bluetooth$$', s: '$$mdi:usb$$'}
@@ -184,67 +184,67 @@ layers:
   - F12
   - $$mdi:power$$
   - $$mdi:brightness-4$$
-  - VOLUME DOWN
-  - {t: PREVIOUS, h: '$$mdi:rewind$$'}
-  - PLAY PAUSE
-  - {t: NEXT, h: '$$mdi:fast-forward$$'}
+  - $$mdi:volume-low$$
+  - {t: '$$mdi:skip-previous$$', h: '$$mdi:rewind$$'}
+  - $$mdi:play-pause$$
+  - {t: '$$mdi:skip-next$$', h: '$$mdi:fast-forward$$'}
   - $$mdi:progress-download$$
-  - {t: ENTER, h: RSHIFT, type: held}
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$', type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held alternate}
-  - ENTER
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: ▽, type: trans}
   - {type: held alternate}
   SYM_NUM:
   - {t: ▽, type: trans}
-  - {t: ES EXCL, h: ¡}
-  - {t: ES DQT, h: ''''}
-  - ES HASH
-  - ES DLLR
-  - ES PRCNT
-  - RW
-  - KP PLUS
-  - ES 7
-  - ES 8
-  - ES 9
-  - KP MINUS
+  - {t: '!', h: ¡}
+  - {t: '"', h: ''''}
+  - '#'
+  - $
+  - '%'
+  - $$mdi:rewind$$
+  - +
+  - {t: '7', s: /}
+  - {t: '8', s: (}
+  - {t: '9', s: )}
+  - '-'
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
   - {t: ▽, type: trans}
-  - ES AMPS
-  - {t: ES SLASH, h: \}
-  - {t: ES LPAR, h: '{'}
-  - {t: ES RPAR, h: '}'}
-  - ES EQUAL
-  - PREV
-  - PP
-  - NEXT
-  - KP MULTIPLY
-  - ES 4
-  - ES 5
-  - ES 6
-  - KP DIVIDE
-  - AL CALC
+  - '&'
+  - {t: /, h: \}
+  - {t: (, h: '{'}
+  - {t: ), h: '}'}
+  - '='
+  - $$mdi:skip-previous$$
+  - $$mdi:play-pause$$
+  - $$mdi:skip-next$$
+  - '*'
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: '&'}
+  - /
+  - $$mdi:calculator$$
   - {t: ▽, type: trans}
-  - {t: ES PIPE, h: °}
-  - {t: ES NOT, h: '~'}
-  - ES LBKT
-  - ES RBKT
-  - {t: ES QMARK, h: ¿}
+  - {t: '|', h: °}
+  - {t: ¬, h: '~'}
+  - '['
+  - ']'
+  - {t: '?', h: ¿}
   - {t: ▽, type: trans}
-  - FF
-  - ES 0
-  - ES 1
-  - ES 2
-  - ES 3
-  - {t: KP DOT, h: ':'}
-  - {t: KP ENTER, h: '='}
+  - $$mdi:fast-forward$$
+  - {t: '0', s: '='}
+  - {t: '1', s: '!'}
+  - {t: '2', s: '"'}
+  - {t: '3', s: '#'}
+  - {t: ., h: ':'}
+  - {t: '$$mdi:keyboard-return$$', h: '='}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: KP ENTER, h: '=', type: held}
-  - {t: ES 0, h: '#'}
-  - {t: ., h: '%'}
+  - {t: '$$mdi:keyboard-return$$', h: '=', type: held}
+  - {t: '0', h: '#', s: '='}
+  - {t: ., h: '%', s: ':'}
   EMPTY:
   - {t: ▽, type: trans}
   - Q
@@ -298,34 +298,48 @@ combos:
 - p: [13, 0]
   k: {t: '$$mdi:keyboard-close$$', type: toggle}
   l: [ROCORN, QWERTY]
+  a: left
+  o: 0.25
 - p: [27, 12]
   k: {t: '$$mdi:numeric$$', type: toggle}
   l: [ROCORN, QWERTY, Fn]
+  a: right
+  o: 0.25
 - p: [43, 46]
   k: $$mdi:alpha-w-box$$
   l: [ROCORN, QWERTY]
 - p: [18, 17, 16]
-  k: BT CLR
+  k: $$mdi:bluetooth-off$$
   l: [Fn]
+  a: right
+  o: 0.3
 - p: [41, 40]
-  k: ENTER
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [5, 4]
-  k: BSPC
+  k: {t: '$$mdi:backspace$$', type: backspace}
+  a: top
+  o: 0.25
 - p: [0, 1]
-  k: DEL
+  k: $$mdi:backspace-reverse-outline$$
 - p: [12, 11]
-  k: DEL
+  k: $$mdi:backspace-reverse-outline$$
 - p: [7, 8]
-  k: ESC
+  k: $$mdi:keyboard-esc$$
+  a: top
+  o: 0.25
 - p: [7, 23]
-  k: ES LPAR
+  k: (
   l: [ROCORN, QWERTY, Fn]
+  a: left
 - p: [22, 8]
-  k: ES RPAR
+  k: )
   l: [ROCORN, QWERTY, Fn]
+  a: right
 - p: [16, 4]
-  k: ES INVERTED QUESTION
+  k: ¿
   l: [ROCORN, QWERTY, Fn]
+  a: right
 - p: [17, 3]
-  k: ES QUESTION
+  k: '?'
   l: [ROCORN, QWERTY, Fn]
+  a: left
