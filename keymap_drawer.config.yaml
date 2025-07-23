@@ -125,20 +125,6 @@ parse_config:
     '&oneshot LC(T)': $$mdi:tab-plus$$
     '&oneshot LG(LS(S))': $$mdi:camera-outline$$
     '&oneshot LS(LG(S))': $$mdi:camera-outline$$
-    '&oneshot C_AL_MAIL': $$mdi:email-outline$$
-
-    '&oneshot C_REWIND': $$mdi:rewind$$
-    '&oneshot K_REWIND': $$mdi:skip-previous$$
-    '&oneshot C_FAST_FORWARD': $$mdi:fast-forward$$
-    '&oneshot K_FAST_FORWARD': $$mdi:fast-forward$$
-    '&oneshot C_PREVIOUS': $$mdi:skip-previous$$
-    '&oneshot K_PREVIOUS': $$mdi:skip-previous$$
-    '&oneshot K_NEXT': $$mdi:skip-next$$
-    '&oneshot C_NEXT': $$mdi:skip-next$$
-    '&oneshot K_PLAY_PAUSE': $$mdi:play-pause$$
-    '&oneshot C_PLAY_PAUSE': $$mdi:play-pause$$
-    '&oneshot K_PP': $$mdi:play-pause$$
-    '&oneshot C_PP': $$mdi:play-pause$$
    
     '&oneshot LA(LC(F1))': 'Ctrl+Alt+F1'
     '&oneshot LA(LC(F2))': 'Ctrl+Alt+F2'
@@ -148,30 +134,305 @@ parse_config:
     '&oneshot LC(LA(F2))': 'Ctrl+Alt+F2'
     '&oneshot LC(LA(F3))': 'Ctrl+Alt+F3'
     '&oneshot LC(LA(F4))': 'Ctrl+Alt+F4'
+    
+    # --- INICIO: BLOQUE DE KEYCODES ONESHOT ---
+    # Alfanuméricos
+    '&oneshot A': 'A'
+    '&oneshot B': 'B'
+    '&oneshot C': 'C'
+    '&oneshot D': 'D'
+    '&oneshot E': 'E'
+    '&oneshot F': 'F'
+    '&oneshot G': 'G'
+    '&oneshot H': 'H'
+    '&oneshot I': 'I'
+    '&oneshot J': 'J'
+    '&oneshot K': 'K'
+    '&oneshot L': 'L'
+    '&oneshot M': 'M'
+    '&oneshot N': 'N'
+    '&oneshot O': 'O'
+    '&oneshot P': 'P'
+    '&oneshot Q': 'Q'
+    '&oneshot R': 'R'
+    '&oneshot S': 'S'
+    '&oneshot T': 'T'
+    '&oneshot U': 'U'
+    '&oneshot V': 'V'
+    '&oneshot W': 'W'
+    '&oneshot X': 'X'
+    '&oneshot Y': 'Y'
+    '&oneshot Z': 'Z'
+    '&oneshot N1': '1'
+    '&oneshot N2': '2'
+    '&oneshot N3': '3'
+    '&oneshot N4': '4'
+    '&oneshot N5': '5'
+    '&oneshot N6': '6'
+    '&oneshot N7': '7'
+    '&oneshot N8': '8'
+    '&oneshot N9': '9'
+    '&oneshot N0': '0'
+    '&oneshot N_TILDE': 'Ñ'
+    '&oneshot ES_N_TILDE': 'Ñ'
 
+    # Símbolos
+    '&oneshot EXCL': '!'
+    '&oneshot EXCLAMATION': '!'
+    '&oneshot AT_SIGN': '@'
+    '&oneshot POUND': '#'
+    '&oneshot DLLR': '$'
+    '&oneshot DOLLAR': '$'
+    '&oneshot PRCNT': '%'
+    '&oneshot PERCENT': '%'
+    '&oneshot AMPS': '&'
+    '&oneshot AMPERSAND': '&'
+    '&oneshot ASTRK': '*'
+    '&oneshot STAR': '*'
+    '&oneshot ASTERISK': '*'
+    '&oneshot LPAR': '('
+    '&oneshot LEFT_PARENTHESIS': '('
+    '&oneshot RPAR': ')'
+    '&oneshot RIGHT_PARENTHESIS': ')'
+    '&oneshot PLUS': '+'
+    '&oneshot UNDER': '_'
+    '&oneshot UNDERSCORE': '_'
+    '&oneshot MINUS': '-'
+    '&oneshot FSLH': '/'
+    '&oneshot QMARK': '?'
+    '&oneshot QUESTION': '?'
+    '&oneshot BSLH': '\'
+    '&oneshot PIPE2': '|'
+    '&oneshot PIPE': '|'
+    '&oneshot NON_US_BACKSLASH': '\'
+    '&oneshot NUBS': '\'
+    '&oneshot NON_US_BSLH': '|'
+    '&oneshot SEMI': ';'
+    '&oneshot SINGLE_QUOTE': ''''
+    '&oneshot APOS': '.'
+    '&oneshot APOSTROPHE': '<'
+    '&oneshot DQT': '"'
+    '&oneshot DOUBLE_QUOTES': '"'
+    '&oneshot LESS_THAN': '<'
+    '&oneshot PERIOD': '.'
+    '&oneshot COMMA': ','
+    '&oneshot GREATER_THAN': '>'
+    '&oneshot LBKT': '['
+    '&oneshot LEFT_BRACKET': '['
+    '&oneshot LBRC': '{'
+    '&oneshot LEFT_BRACE': '{'
+    '&oneshot RBKT': ']'
+    '&oneshot RIGHT_BRACKET': ']'
+    '&oneshot RBRC': '}'
+    '&oneshot RIGHT_BRACE': '}'
+    '&oneshot TILDE2': '~'
+    '&oneshot TILDE': '~'
+    '&oneshot NUHS': '#'
+    '&oneshot NON_US_HASH': '#'
+    '&oneshot INVERTED_QUESTION': '¿'
+    '&oneshot GRAVE': '`'
+    '&oneshot CARET': '^'
+
+    # Símbolos específicos del layout ES
     '&oneshot ES_IEXCL': '¡'
-    '&oneshot ES_SQT': "'"
-    '&oneshot ES_BSLH': '\'
-    '&oneshot ES_LBRC': '{'
-    '&oneshot ES_RBRC': '}'
-    '&oneshot ES_DEG': '°'
-    '&oneshot ES_TILDE': '~'
-    '&oneshot ES_IQMARK': '¿'
-    '&oneshot ES_COLON': ':'
-    '&oneshot ES_EQUAL': '='
+    '&oneshot ES_EXCL': '!'
+    '&oneshot ES_DQT': '"'
     '&oneshot ES_HASH': '#'
+    '&oneshot ES_DOLLAR': '$'
+    '&oneshot ES_DLLR': '$'
     '&oneshot ES_PERCENT': '%'
+    '&oneshot ES_PRCNT': '%'
+    '&oneshot ES_AMPS': '&'
+    '&oneshot ES_SQT': ''''
+    '&oneshot ES_LPAR': '('
+    '&oneshot ES_RPAR': ')'
+    '&oneshot ES_STAR': '*'
+    '&oneshot ES_PLUS': '+'
+    '&oneshot ES_COMMA': ','
+    '&oneshot ES_MINUS': '-'
+    '&oneshot ES_DOT': '.'
+    '&oneshot ES_SLASH': '/'
+    '&oneshot ES_COLON': ':'
+    '&oneshot ES_SEMI': ';'
+    '&oneshot ES_LT': '<'
+    '&oneshot ES_LESS_THAN': '<'
+    '&oneshot ES_EQUAL': '='
+    '&oneshot ES_GT': '>'
+    '&oneshot ES_GREATER_THAN': '>'
+    '&oneshot ES_QMARK': '?'
+    '&oneshot ES_QUESTION': '?'
     '&oneshot ES_AT': '@'
     '&oneshot ES_AT_SIGN': '@'
+    '&oneshot ES_LBRC': '{'
+    '&oneshot ES_BSLH': '\'
+    '&oneshot ES_RBRC': '}'
+    '&oneshot ES_PIPE': '|'
+    '&oneshot ES_TILDE': '~'
+    '&oneshot ES_GRAVE': '`'
+    '&oneshot ES_IQMARK': '¿'
+    '&oneshot ES_DEG': '°'
     '&oneshot ES_NOT': '¬'
     '&oneshot ES_CARET': '^'
-    '&oneshot ES_GRAVE': '`'
-    '&oneshot ES_LESS_THAN': '<'
-    '&oneshot ES_LT': '<'
-    '&oneshot ES_GREATER_THAN': '>'
-    '&oneshot ES_GT': '>'
+
+    # Teclado numérico
+    '&oneshot KP_N0': '0'
+    '&oneshot KP_N1': '1'
+    '&oneshot KP_N2': '2'
+    '&oneshot KP_N3': '3'
+    '&oneshot KP_N4': '4'
+    '&oneshot KP_N5': '5'
+    '&oneshot KP_N6': '6'
+    '&oneshot KP_N7': '7'
+    '&oneshot KP_N8': '8'
+    '&oneshot KP_N9': '9'
+    '&oneshot KP_DIVIDE': '/'
+    '&oneshot KP_MINUS': '-'
+    '&oneshot KP_MULTIPLY': '*'
+    '&oneshot KP_PLUS': '+'
+    '&oneshot KP_DOT': '.'
+    '&oneshot KP_COMMA': ','
+    '&oneshot KP_EQUAL': '='
+    '&oneshot KP_ENTER': $$mdi:keyboard-return$$
+
+    # Modificadores
+    '&oneshot LCTRL': 'LCTRL'
+    '&oneshot LEFT_CONTROL': 'LCTRL'
+    '&oneshot LALT': 'ALT'
+    '&oneshot LEFT_ALT': 'ALT'
+    '&oneshot LSHFT': $$mdi:apple-keyboard-shift$$
+    '&oneshot LSHIFT': $$mdi:apple-keyboard-shift$$
+    '&oneshot LEFT_SHIFT': $$mdi:apple-keyboard-shift$$
+    '&oneshot LCMD': $$mdi:apple-keyboard-command$$
+    '&oneshot LGUI': $$mdi:microsoft-windows$$
+    '&oneshot LEFT_GUI': $$mdi:microsoft-windows$$
+    '&oneshot LWIN': $$mdi:microsoft-windows$$
+    '&oneshot RCTRL': 'RCTRL'
+    '&oneshot RIGHT_CONTROL': 'RCTRL'
+    '&oneshot RALT': 'ALTGR'
+    '&oneshot RIGHT_ALT': 'ALTGR'
+    '&oneshot RSHFT': $$mdi:apple-keyboard-shift$$
+    '&oneshot RSHIFT': $$mdi:apple-keyboard-shift$$
+    '&oneshot RIGHT_SHIFT': $$mdi:apple-keyboard-shift$$
+    '&oneshot RCMD': $$mdi:apple-keyboard-command$$
+    '&oneshot RG': $$mdi:apple-keyboard-command$$
+    '&oneshot RGUI': $$mdi:microsoft-windows$$
+    '&oneshot RIGHT_GUI': $$mdi:microsoft-windows$$
+    '&oneshot RWIN': $$mdi:microsoft-windows$$
+    '&oneshot RIGHT_WIN': $$mdi:microsoft-windows$$
+    '&oneshot LS(LC(LALT))': $$mdi:star-three-points$$
+
+    # Teclas de navegación y función
+    '&oneshot PSCRN': $$mdi:printer-outline$$
+    '&oneshot SYSREQ': 'SysRq'
+    '&oneshot COMPOSE': 'Comp'
+    '&oneshot RIGHT_COMMAND': $$mdi:apple-keyboard-command$$
+    '&oneshot PAGE_UP': $$mdi:chevron-double-up$$
+    '&oneshot PAGE_DOWN': $$mdi:chevron-double-down$$
     '&oneshot HOME': $$mdi:arrow-collapse-left$$
     '&oneshot END': $$mdi:arrow-collapse-right$$
+    '&oneshot INSERT': 'Ins'
+    '&oneshot UP': $$mdi:arrow-up-bold$$
+    '&oneshot UP_ARROW': $$mdi:arrow-up-bold$$
+    '&oneshot DOWN': $$mdi:arrow-down-bold$$
+    '&oneshot DOWN_ARROW': $$mdi:arrow-down-bold$$
+    '&oneshot LEFT': $$mdi:arrow-left-bold$$
+    '&oneshot LEFT_ARROW': $$mdi:arrow-left-bold$$
+    '&oneshot RIGHT': $$mdi:arrow-right-bold$$
+    '&oneshot RIGHT_ARROW': $$mdi:arrow-right-bold$$
+    '&oneshot ENTER': $$mdi:keyboard-return$$
+    '&oneshot RET': $$mdi:keyboard-return$$
+    '&oneshot ESC': $$mdi:keyboard-esc$$
+    '&oneshot ESCAPE': $$mdi:keyboard-esc$$
+    '&oneshot TAB': $$mdi:keyboard-tab$$
+    '&oneshot LS(TAB)': $$mdi:keyboard-tab-reverse$$
+    '&oneshot SPACE': $$mdi:keyboard-space$$
+    '&oneshot BSPC': $$mdi:backspace$$
+    '&oneshot BACKSPACE': $$mdi:backspace$$
+    '&oneshot DEL': $$mdi:backspace-reverse-outline$$
+    '&oneshot DELETE': $$mdi:backspace-reverse-outline$$
+    '&oneshot CAPS': $$mdi:apple-keyboard-caps$$
+    '&oneshot CAPSLOCK': $$mdi:apple-keyboard-caps$$
+    '&oneshot NUM_LOCK': 'NumLk'
+    '&oneshot SCROLL_LOCK': 'ScrLk'
+    '&oneshot PAUSE_BREAK': 'Pause'
+    '&oneshot PAUSE': 'Pause'
+
+    # Teclas de Función (F1-F24)
+    '&oneshot F1': 'F1'
+    '&oneshot F2': 'F2'
+    '&oneshot F3': 'F3'
+    '&oneshot F4': 'F4'
+    '&oneshot F5': 'F5'
+    '&oneshot F6': 'F6'
+    '&oneshot F7': 'F7'
+    '&oneshot F8': 'F8'
+    '&oneshot F9': 'F9'
+    '&oneshot F10': 'F10'
+    '&oneshot F11': 'F11'
+    '&oneshot F12': 'F12'
+    '&oneshot F13': 'F13'
+    '&oneshot F14': 'F14'
+    '&oneshot F15': 'F15'
+    '&oneshot F16': 'F16'
+    '&oneshot F17': 'F17'
+    '&oneshot F18': 'F18'
+    '&oneshot F19': 'F19'
+    '&oneshot F20': 'F20'
+    '&oneshot F21': 'F21'
+    '&oneshot F22': 'F22'
+    '&oneshot F23': 'F23'
+    '&oneshot F24': 'F24'
+
+    # Teclas de Medios y Sistema
+    '&oneshot C_MUTE': $$mdi:volume-off$$
+    '&oneshot C_VOL_UP': $$mdi:volume-high$$
+    '&oneshot C_VOLUME_UP': $$mdi:volume-high$$
+    '&oneshot C_VOL_DN': $$mdi:volume-low$$
+    '&oneshot C_VOLUME_DOWN': $$mdi:volume-low$$
+    '&oneshot C_NEXT': $$mdi:skip-next$$
+    '&oneshot C_PREV': $$mdi:skip-previous$$
+    '&oneshot C_SCAN_NEXT_TRACK': $$mdi:skip-next$$
+    '&oneshot C_SCAN_PREV_TRACK': $$mdi:skip-previous$$
+    '&oneshot C_STOP': $$mdi:stop$$
+    '&oneshot C_EJECT': $$mdi:eject$$
+    '&oneshot C_PLAY_PAUSE': $$mdi:play-pause$$
+    '&oneshot C_PP': $$mdi:play-pause$$
+    '&oneshot BT_CLR': $$mdi:bluetooth-off$$
+    '&oneshot BT_SEL': $$mdi:bluetooth-connect$$
+    '&oneshot C_BRI_UP': $$mdi:brightness-5$$
+    '&oneshot C_BRIGHTNESS_INC': $$mdi:brightness-5$$
+    '&oneshot C_BRI_DN': $$mdi:brightness-7$$
+    '&oneshot C_BRIGHTNESS_DEC': $$mdi:brightness-7$$
+    '&oneshot C_POWER': $$mdi:power-standby$$
+    '&oneshot C_SLEEP': $$mdi:power-sleep$$
+    '&oneshot C_WAKE': $$mdi:lightbulb-on$$
+    '&oneshot C_AL_LOCK': $$mdi:lock$$
+    '&oneshot K_CANCEL': $$mdi:close-box$$
+    '&oneshot K_FIND': $$mdi:apple-finder$$
+    '&oneshot K_APP': $$mdi:menu$$
+    '&oneshot K_MUTE2': $$mdi:volume-off$$
+    '&oneshot K_VOLUME_UP2': $$mdi:volume-high$$
+    '&oneshot K_VOLUME_DOWN2': $$mdi:volume-low$$
+    '&oneshot K_PLAY_PAUSE': $$mdi:play-pause$$
+    '&oneshot K_PP': $$mdi:play-pause$$
+    '&oneshot K_STOP': $$mdi:stop$$
+    '&oneshot K_NEXT': $$mdi:skip-next$$
+    '&oneshot K_PREVIOUS': $$mdi:skip-previous$$
+    '&oneshot K_REWIND': $$mdi:rewind$$
+    '&oneshot K_FAST_FORWARD': $$mdi:fast-forward$$
+    '&oneshot C_REWIND': $$mdi:rewind$$
+    '&oneshot C_FAST_FORWARD': $$mdi:fast-forward$$
+    '&oneshot C_AL_CALC': $$mdi:calculator$$
+    '&oneshot C_AL_MAIL': $$mdi:email-outline$$
+    '&oneshot C_AL_MY_COMPUTER': $$mdi:desktop-classic$$
+    '&oneshot C_AL_WWW_HOME': $$mdi:web$$
+    '&oneshot C_AL_WWW_SEARCH': $$mdi:magnify$$
+    '&oneshot C_AL_WWW_FAVORITES': $$mdi:star$$
+    '&oneshot C_AL_WWW_REFRESH': $$mdi:refresh$$
+    '&oneshot C_AL_WWW_STOP': $$mdi:stop-circle-outline$$
+    '&oneshot C_AL_WWW_FORWARD': $$mdi:arrow-right-bold-circle-outline$$
+    '&oneshot C_AL_WWW_BACK': $$mdi:arrow-left-bold-circle-outline$$
+    # --- FIN: BLOQUE DE KEYCODES ONESHOT ---
 
 
     '&tilde A': Á
@@ -179,17 +440,7 @@ parse_config:
     '&tilde I': Í
     '&tilde O': Ó
     '&tilde U': Ú
-     
-
-    (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SEMICOLON AND COLON)): ;
-    (ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD SLASH AND QUESTION MARK)): /
-    (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 3 AND HASH))): '#'
-    ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 4 AND DOLLAR)))): $
-    ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 5 AND PERCENT)))): '%'
-    ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 6 AND CARET)))): ^
-    ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 8 AND ASTERISK)))): '*'
-    ((LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 9 AND LEFT PARENTHESIS)))): (
-    (LS(ZMK HID USAGE(HID USAGE KEY, HID USAGE KEY KEYBOARD 0 AND RIGHT PARENTHESIS))): )
+    
 
 
     # Layer-Tap Hold
@@ -198,11 +449,6 @@ parse_config:
 
     # Mod-Tap
     '&mt LWIN': {tap: '$$mdi:keyboard-tab$$', hold: '$$mdi:microsoft-windows$$'}
-   
-   
-    # Toggles de capa
-    '&tog 1': {tap: "$$mdi:keyboard-close$$", type: toggle}
-    '&tog 4': {tap: "$$mdi:numeric$$", type: toggle}
 
    
     # Mod-Morph (Back_Del)
@@ -541,18 +787,27 @@ parse_config:
     HOME: $$mdi:arrow-collapse-left$$
     END: $$mdi:arrow-collapse-right$$
 
-
   # --- COMBOS ---
-
   zmk_combos:
 
-    Toggle_Qwerty: {a: "left", o: 0.25}
-    Toggle_SYM_NUM: {a: "right", o: 0.25}
+    Toggle_Qwerty: 
+      a: "left"
+      o: 0.25
+      key:
+       tap: "$$mdi:keyboard-close$$"
+    Toggle_SYM_NUM:
+      a: "right"
+      o: 0.25
+      key:
+       tap: "$$mdi:numeric$$"
+    MO_SYM_NUM:
+      key:
+       tap: "$$mdi:numeric$$"
     L_BSPC: {a: "top", o: 0.25}
     R_ESC: {a: "top", o: 0.25}
     BtCLR: {a: "right", o: 0.3}
-    R_IQST: {a: "right"}
-    R_QST: {a: "left"}
+    IQST: {a: "right"}
+    QST: {a: "left"}
     R_PAR: {a: "right"}
     L_PAR: {a: "left"}
 
