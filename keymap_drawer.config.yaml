@@ -163,6 +163,13 @@ parse_config:
     '&oneshot ES_PERCENT': '%'
     '&oneshot ES_AT': '@'
     '&oneshot ES_AT_SIGN': '@'
+    '&oneshot ES_NOT': '¬'
+    '&oneshot ES_LESS_THAN': '<'
+    '&oneshot ES_LT': '<'
+    '&oneshot ES_GREATER_THAN': '>'
+    '&oneshot ES_GT': '>'
+    '&oneshot HOME': $$mdi:arrow-collapse-left$$
+    '&oneshot END': $$mdi:arrow-collapse-right$$
 
 
     '&tilde A': Á
@@ -233,18 +240,21 @@ parse_config:
     '&bt_sel 3': 'BT 4'
     '&bt_sel 4': 'BT 5'
 
-    '&out OUT_TOG':
-      shifted: $$mdi:usb$$
-      tap: $$mdi:toggle-switch$$
-      hold: $$mdi:bluetooth$$
     '&bt BT_PRV':
       shifted: $$mdi:bluetooth-connect$$
       tap: ''
       hold: $$mdi:arrow-up-bold$$
+
     '&bt BT_NXT':
       shifted: $$mdi:bluetooth-connect$$
       tap: ''
       hold: $$mdi:arrow-down-bold$$
+
+    '&out OUT_TOG':
+      shifted: $$mdi:usb$$
+      tap: $$mdi:toggle-switch$$
+      hold: $$mdi:bluetooth$$
+
 
     # RGB
     '&rgb_ug RGB_TOG': '$$mdi:lightbulb-on-outline$$'
@@ -268,14 +278,14 @@ parse_config:
   layer_legend_map: {}
   mark_alternate_layer_activators: true
   modifier_fn_map:
-  left_ctrl: LCtrl
-  right_ctrl: RCtrl
-  left_shift: LShft
-  right_shift: RShft
-  left_alt: Alt
-  right_alt: AltGr
-  left_gui: LGui
-  right_gui: RGui
+  left_ctrl: LCTRL
+  right_ctrl: RCTRL
+  left_shift: LSHFT
+  right_shift: RSHFT
+  left_alt: ALT
+  right_alt: ALTGR
+  left_gui: $$mdi:microsoft-windows$$
+  right_gui: $$mdi:microsoft-windows$$
   keycode_combiner: '{mods}+{key}'
   mod_combiner: '{mod_1}+{mod_2}'
   special_combinations:
@@ -283,10 +293,10 @@ parse_config:
     left_ctrl+left_alt+left_shift: Meh
 
 
-    # --- KEYCODES DE QMK ---
-    qmk_remove_keycode_prefix:
-    - KC_
-    qmk_keycode_map:
+  # --- KEYCODES DE QMK ---
+  qmk_remove_keycode_prefix:
+  - KC_
+  qmk_keycode_map:
 
     XXXXXXX: ''
     'NO': ''
@@ -354,15 +364,15 @@ parse_config:
     GT: '>'
     QUESTION: '?'
     QUES: '?'
-    HOME: $$mdi:page-first$$
-    END: $$mdi:page-last$$
+    HOME: $$mdi:arrow-collapse-left$$
+    END: $$mdi:arrow-collapse-right$$
 
 
-    # --- KEYCODES DE ZMK ---
-    zmk_remove_keycode_prefix:
-    - ES_
+  # --- KEYCODES DE ZMK ---
+  zmk_remove_keycode_prefix:
+  - ES_
 
-    zmk_keycode_map:
+  zmk_keycode_map:
 
     EXCLAMATION: '!'
     EXCL: '!'
@@ -389,8 +399,8 @@ parse_config:
     MINUS: {t: '-', s: _}
     UNDERSCORE: _
     UNDER: _
-    SLASH: {t: /, s: '?'}
-    FSLH: {t: /, s: '?'}
+    SLASH: '/'
+    FSLH: '/'
     QUESTION: '?'
     QMARK: '?'
     BACKSLASH: {t: \, s: '|'}
@@ -408,6 +418,7 @@ parse_config:
     APOS: .
     DOUBLE_QUOTES: '"'
     DQT: '"'
+    NOT: '¬'
     LESS_THAN: <
     LT: <
     PERIOD: .
@@ -428,6 +439,7 @@ parse_config:
     NON_US_HASH: '#'
     NUHS: '#'
     TILDE2: '~'
+    INVERTED_QUESTION: '¿'
     N1: {t: 1, s: '!'}
     N2: {t: 2, s: '"'}
     N3: {t: 3, s: '#'}
@@ -442,6 +454,8 @@ parse_config:
     KP_MINUS: '-'
     KP_MULTIPLY: '*'
     KP_PLUS: '+'
+    KP_DOT: '.'
+    KP_ENTER: {tap: $$mdi:keyboard-return$$, type: enter}
 
     LCTRL: LCTRL
     LEFT_CONTROL: LCTRL
@@ -453,12 +467,15 @@ parse_config:
     LCMD: $$mdi:apple-keyboard-command$$
     LEFT_GUI: $$mdi:microsoft-windows$$
     LGUI: $$mdi:microsoft-windows$$
+    LWIN: $$mdi:microsoft-windows$$
+    RWIN: $$mdi:microsoft-windows$$
     RIGHT_GUI: $$mdi:microsoft-windows$$
+    RIGHT_WIN: $$mdi:microsoft-windows$$
     RGUI: $$mdi:microsoft-windows$$
-    RCTRL: $$mdi:apple-keyboard-control$$
-    RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
-    RALT: ALT GR
-    RIGHT_ALT: ALT GR
+    RCTRL: RCTRL
+    RIGHT_CONTROL: RCTRL
+    RALT: ALTGR
+    RIGHT_ALT: ALTGR
     RSHIFT: $$mdi:apple-keyboard-shift$$
     RIGHT_SHIFT: $$mdi:apple-keyboard-shift$$
     RSHFT: $$mdi:apple-keyboard-shift$$
@@ -526,20 +543,31 @@ parse_config:
     C_FF: $$mdi:fast-forward$$
     C_AL_CALC: $$mdi:calculator$$
     N_TILDE: Ñ
-    HOME: $$mdi:page-first$$
-    END: $$mdi:page-last$$
+    HOME: $$mdi:arrow-collapse-left$$
+    END: $$mdi:arrow-collapse-right$$
 
 
   # --- COMBOS ---
 
   zmk_combos:
+
+    Toggle_Qwerty: {a: "left", o: 0.25}
+    Toggle_SYM_NUM: {a: "right", o: 0.25}
+    L_BSPC: {a: "top", o: 0.25}
+    R_ESC: {a: "top", o: 0.25}
+    BtCLR: {a: "right", o: 0.3}
+    R_IQST: {a: "right"}
+    R_QST: {a: "left"}
+    R_PAR: {a: "right"}
+    L_PAR: {a: "left"}
+
     combo_to_2:
       align: top
     combo_to_3:
       align: top
     combo_bt_clear:
       align: top
-      offset: 0.03
+      offset: 0.0
     combo_mute:
       align: top
       offset: 0.15
