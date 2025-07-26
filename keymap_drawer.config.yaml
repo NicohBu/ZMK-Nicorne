@@ -486,11 +486,17 @@ parse_config:
 
 
     # BLUETOOTH
-    '&bt_sel 0': {t: $$mdi:bluetooth-connect$$, s: '1')
-    '&bt_sel 1': {t: $$mdi:bluetooth-connect$$, s: '2')
-    '&bt_sel 2': {t: $$mdi:bluetooth-connect$$, s: '3')
-    '&bt_sel 3': {t: $$mdi:bluetooth-connect$$, s: '4')
-    '&bt_sel 4': {t: $$mdi:bluetooth-connect$$, s: '5')
+    '&bt_sel 0': {t: $$mdi:bluetooth-connect$$, s: '1'}
+    '&bt_sel 1': {t: $$mdi:bluetooth-connect$$, s: '2'}
+    '&bt_sel 2': {t: $$mdi:bluetooth-connect$$, s: '3'}
+    '&bt_sel 3': {t: $$mdi:bluetooth-connect$$, s: '4'}
+    '&bt_sel 4': {t: $$mdi:bluetooth-connect$$, s: '5'}
+
+        # BLUETOOTH
+    '&kp_bt 0': BT 1
+    '&kp_bt 2': BT 2
+    '&kp_bt 3': BT 3
+    '&kp_bt 4': BT 4
 
     '&bt BT_PRV':
       shifted: $$mdi:bluetooth-connect$$
