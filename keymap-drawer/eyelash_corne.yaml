@@ -149,10 +149,10 @@ layers:
   - {t: ▽, type: trans}
   Fn:
   - $$mdi:menu$$
-  - {t: F1, h: Ctrl+Alt+F1}
-  - {t: F2, h: Ctrl+Alt+F2}
-  - {t: F3, h: Ctrl+Alt+F3}
-  - {t: F4, h: Ctrl+Alt+F4}
+  - {t: F1, h: PC 1}
+  - {t: F2, h: PC 2}
+  - {t: F3, h: PC 3}
+  - {t: F4, h: PC 4}
   - F5
   - $$mdi:brightness-7$$
   - $$mdi:volume-off$$
@@ -162,11 +162,11 @@ layers:
   - $$mdi:chevron-double-up$$
   - {t: '$$mdi:backspace$$', h: RCTRL}
   - {t: ▽, type: trans}
-  - {t: F6, h: BT 1}
-  - {t: F7, h: BT 2}
-  - {t: F8, h: BT 3}
-  - {t: F9, h: BT 4}
-  - {t: F10, h: BT 5}
+  - {t: F6, h: '$$mdi:bluetooth-connect$$'}
+  - {t: F7, h: '$$mdi:bluetooth-connect$$'}
+  - {t: F8, h: '$$mdi:bluetooth-connect$$'}
+  - {t: F9, h: '$$mdi:bluetooth-connect$$'}
+  - {t: F10, h: '$$mdi:bluetooth-connect$$'}
   - $$mdi:palette-swatch-outline$$
   - $$mdi:lightbulb-on-outline$$
   - $$mdi:palette-swatch-outline$$
