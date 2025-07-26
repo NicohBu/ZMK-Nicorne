@@ -24,12 +24,6 @@
 <svg id="mdi:arrow-right-bold">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-right-bold" viewBox="0 0 24 24"><path d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg>
 </svg>
-<svg id="mdi:arrow-u-left-top">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-u-left-top" viewBox="0 0 24 24"><path d="M20 13.5C20 17.09 17.09 20 13.5 20H6V18H13.5C16 18 18 16 18 13.5S16 9 13.5 9H7.83L10.91 12.09L9.5 13.5L4 8L9.5 2.5L10.92 3.91L7.83 7H13.5C17.09 7 20 9.91 20 13.5Z" /></svg>
-</svg>
-<svg id="mdi:arrow-u-right-top">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-u-right-top" viewBox="0 0 24 24"><path d="M10.5 18H18V20H10.5C6.91 20 4 17.09 4 13.5S6.91 7 10.5 7H16.17L13.08 3.91L14.5 2.5L20 8L14.5 13.5L13.09 12.09L16.17 9H10.5C8 9 6 11 6 13.5S8 18 10.5 18Z" /></svg>
-</svg>
 <svg id="mdi:arrow-up-bold">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-up-bold" viewBox="0 0 24 24"><path d="M15,20H9V12H4.16L12,4.16L19.84,12H15V20Z" /></svg>
 </svg>
@@ -71,6 +65,9 @@
 </svg>
 <svg id="mdi:content-paste">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-content-paste" viewBox="0 0 24 24"><path d="M19,20H5V4H7V7H17V4H19M12,2A1,1 0 0,1 13,3A1,1 0 0,1 12,4A1,1 0 0,1 11,3A1,1 0 0,1 12,2M19,2H14.82C14.4,0.84 13.3,0 12,0C10.7,0 9.6,0.84 9.18,2H5A2,2 0 0,0 3,4V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V4A2,2 0 0,0 19,2Z" /></svg>
+</svg>
+<svg id="mdi:cursor-default-click-outline">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-cursor-default-click-outline" viewBox="0 0 24 24"><path d="M11.5,11L17.88,16.37L17,16.55L16.36,16.67C15.73,16.8 15.37,17.5 15.65,18.07L15.92,18.65L17.28,21.59L15.86,22.25L14.5,19.32L14.24,18.74C13.97,18.15 13.22,17.97 12.72,18.38L12.21,18.78L11.5,19.35V11M10.76,8.69A0.76,0.76 0 0,0 10,9.45V20.9C10,21.32 10.34,21.66 10.76,21.66C10.95,21.66 11.11,21.6 11.24,21.5L13.15,19.95L14.81,23.57C14.94,23.84 15.21,24 15.5,24C15.61,24 15.72,24 15.83,23.92L18.59,22.64C18.97,22.46 19.15,22 18.95,21.63L17.28,18L19.69,17.55C19.85,17.5 20,17.43 20.12,17.29C20.39,16.97 20.35,16.5 20,16.21L11.26,8.86L11.25,8.87C11.12,8.76 10.95,8.69 10.76,8.69M15,10V8H20V10H15M13.83,4.76L16.66,1.93L18.07,3.34L15.24,6.17L13.83,4.76M10,0H12V5H10V0M3.93,14.66L6.76,11.83L8.17,13.24L5.34,16.07L3.93,14.66M3.93,3.34L5.34,1.93L8.17,4.76L6.76,6.17L3.93,3.34M7,10H2V8H7V10" /></svg>
 </svg>
 <svg id="mdi:email-outline">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-email-outline" viewBox="0 0 24 24"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg>
@@ -123,15 +120,6 @@
 <svg id="mdi:mouse">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-mouse" viewBox="0 0 24 24"><path d="M11,1.07C7.05,1.56 4,4.92 4,9H11M4,15A8,8 0 0,0 12,23A8,8 0 0,0 20,15V11H4M13,1.07V9H20C20,4.92 16.94,1.56 13,1.07Z" /></svg>
 </svg>
-<svg id="mdi:mouse-left-click-outline">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mouse-left-click-outline" viewBox="0 0 24 24"><path d="M13 9V1.07C13.7 1.16 14.37 1.33 15 1.59C17.33 2.53 19.11 4.53 19.75 7C19.91 7.64 20 8.31 20 9H13M17.66 7C17.18 5.65 16.23 4.5 15 3.81V7H17.66M6 15V13H18V15C18 16.59 17.37 18.12 16.24 19.24C15.12 20.37 13.59 21 12 21C10.41 21 8.88 20.37 7.76 19.24C6.63 18.12 6 16.59 6 15M4 15C4 17.12 4.84 19.16 6.34 20.66C7.84 22.16 9.88 23 12 23C14.12 23 16.16 22.16 17.66 20.66C19.16 19.16 20 17.12 20 15V11H4V15M11 9V1.07C7.06 1.56 4 4.92 4 9H11Z" /></svg>
-</svg>
-<svg id="mdi:mouse-right-click-outline">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mouse-right-click-outline" viewBox="0 0 24 24"><path d="M13 9V1.07C16.94 1.56 20 4.92 20 9H13M11 9V1.07C10.3 1.16 9.63 1.33 9 1.59C6.67 2.53 4.89 4.53 4.25 7C4.09 7.64 4 8.31 4 9H11M6.34 7C6.82 5.65 7.78 4.5 9 3.81V7H6.34M6 15V13H18V15C18 16.59 17.37 18.12 16.24 19.24C15.12 20.37 13.59 21 12 21C10.41 21 8.88 20.37 7.76 19.24C6.63 18.12 6 16.59 6 15M4 15C4 17.12 4.84 19.16 6.34 20.66C7.84 22.16 9.88 23 12 23C14.12 23 16.16 22.16 17.66 20.66C19.16 19.16 20 17.12 20 15V11H4V15Z" /></svg>
-</svg>
-<svg id="mdi:mouse-scroll-wheel">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-mouse-scroll-wheel" viewBox="0 0 24 24"><path d="M11 1.07C7.05 1.56 4 4.92 4 9H11V7.73C10.4 7.39 10 6.74 10 6V4C10 3.26 10.4 2.61 11 2.27V1.07M13 9V7.73C13.6 7.39 14 6.74 14 6V4C14 3.26 13.6 2.61 13 2.27V1.07C16.94 1.56 20 4.92 20 9H13M4 15C4 17.12 4.84 19.16 6.34 20.66C7.84 22.16 9.88 23 12 23C14.12 23 16.16 22.16 17.66 20.66C19.16 19.16 20 17.12 20 15V11H4V15M13 6V4C13 3.45 12.55 3 12 3C11.45 3 11 3.45 11 4V6C11 6.55 11.45 7 12 7C12.55 7 13 6.55 13 6Z" /></svg>
-</svg>
 <svg id="mdi:numeric">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-numeric" viewBox="0 0 24 24"><path d="M4,17V9H2V7H6V17H4M22,15C22,16.11 21.1,17 20,17H16V15H20V13H18V11H20V9H16V7H20A2,2 0 0,1 22,9V10.5A1.5,1.5 0 0,1 20.5,12A1.5,1.5 0 0,1 22,13.5V15M14,15V17H8V13C8,11.89 8.9,11 10,11H12V9H8V7H12A2,2 0 0,1 14,9V11C14,12.11 13.1,13 12,13H10V15H14Z" /></svg>
 </svg>
@@ -162,6 +150,9 @@
 <svg id="mdi:redo">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-redo" viewBox="0 0 24 24"><path d="M18.4,10.6C16.55,9 14.15,8 11.5,8C6.85,8 2.92,11.03 1.54,15.22L3.9,16C4.95,12.81 7.95,10.5 11.5,10.5C13.45,10.5 15.23,11.22 16.62,12.38L13,16H22V7L18.4,10.6Z" /></svg>
 </svg>
+<svg id="mdi:redo-variant">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-redo-variant" viewBox="0 0 24 24"><path d="M10.5,7A6.5,6.5 0 0,0 4,13.5A6.5,6.5 0 0,0 10.5,20H14V18H10.5C8,18 6,16 6,13.5C6,11 8,9 10.5,9H16.17L13.09,12.09L14.5,13.5L20,8L14.5,2.5L13.08,3.91L16.17,7H10.5M18,18H16V20H18V18Z" /></svg>
+</svg>
 <svg id="mdi:rewind">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-rewind" viewBox="0 0 24 24"><path d="M11.5,12L20,18V6M11,18V6L2.5,12L11,18Z" /></svg>
 </svg>
@@ -179,6 +170,9 @@
 </svg>
 <svg id="mdi:undo">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-undo" viewBox="0 0 24 24"><path d="M12.5,8C9.85,8 7.45,9 5.6,10.6L2,7V16H11L7.38,12.38C8.77,11.22 10.54,10.5 12.5,10.5C16.04,10.5 19.05,12.81 20.1,16L22.47,15.22C21.08,11.03 17.15,8 12.5,8Z" /></svg>
+</svg>
+<svg id="mdi:undo-variant">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-undo-variant" viewBox="0 0 24 24"><path d="M13.5,7A6.5,6.5 0 0,1 20,13.5A6.5,6.5 0 0,1 13.5,20H10V18H13.5C16,18 18,16 18,13.5C18,11 16,9 13.5,9H7.83L10.91,12.09L9.5,13.5L4,8L9.5,2.5L10.92,3.91L7.83,7H13.5M6,18H8V20H6V18Z" /></svg>
 </svg>
 <svg id="mdi:usb">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-usb" viewBox="0 0 24 24"><path d="M15,7V11H16V13H13V5H15L12,1L9,5H11V13H8V10.93C8.7,10.56 9.2,9.85 9.2,9C9.2,7.78 8.21,6.8 7,6.8C5.78,6.8 4.8,7.78 4.8,9C4.8,9.85 5.3,10.56 6,10.93V13A2,2 0 0,0 8,15H11V18.05C10.29,18.41 9.8,19.15 9.8,20A2.2,2.2 0 0,0 12,22.2A2.2,2.2 0 0,0 14.2,20C14.2,19.15 13.71,18.41 13,18.05V15H16A2,2 0 0,0 18,13V11H19V7H15Z" /></svg>
@@ -400,6 +394,16 @@ svg.keymap {
 /* hide hold box for combo sym_by_sym */
 .combo.sym_by_sym.hold > path[stroke="none"][fill="none"] {
   visibility: hidden;
+}
+
+    .trans,
+.held,
+.ghost {
+  opacity: 0.8;
+}
+
+.none {
+  opacity: 0.4;
 }
 </style>
 <g transform="translate(40, 0)" class="layer-ROCORN">
@@ -1079,8 +1083,9 @@ svg.keymap {
 </g>
 <g transform="translate(490, 97)" class="key keypos-19">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#mdi:arrow-u-left-top" xlink:href="#mdi:arrow-u-left-top" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:arrow-u-left-top"/>
-<use href="#mdi:mouse" xlink:href="#mdi:mouse" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:mouse"/>
+<use href="#mdi:cursor-default-click-outline" xlink:href="#mdi:cursor-default-click-outline" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:cursor-default-click-outline"/>
+<use href="#mdi:undo-variant" xlink:href="#mdi:undo-variant" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:undo-variant"/>
+<text x="0" y="-24" class="key shifted">4</text>
 </g>
 <g transform="translate(546, 97)" class="key none keypos-20">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key none"/>
@@ -1088,8 +1093,9 @@ svg.keymap {
 </g>
 <g transform="translate(602, 97)" class="key keypos-21">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#mdi:arrow-u-right-top" xlink:href="#mdi:arrow-u-right-top" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:arrow-u-right-top"/>
-<use href="#mdi:mouse" xlink:href="#mdi:mouse" x="-8" y="-24" height="15" width="15.0" class="key shifted glyph mdi:mouse"/>
+<use href="#mdi:cursor-default-click-outline" xlink:href="#mdi:cursor-default-click-outline" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:cursor-default-click-outline"/>
+<use href="#mdi:redo-variant" xlink:href="#mdi:redo-variant" x="-8" y="9" height="15" width="15.0" class="key hold glyph mdi:redo-variant"/>
+<text x="0" y="-24" class="key shifted">5</text>
 </g>
 <g transform="translate(672, 97)" class="key keypos-22">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1185,15 +1191,18 @@ svg.keymap {
 </g>
 <g transform="translate(348, 226) rotate(24.0)" class="key keypos-44">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#mdi:mouse-right-click-outline" xlink:href="#mdi:mouse-right-click-outline" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:mouse-right-click-outline"/>
+<use href="#mdi:cursor-default-click-outline" xlink:href="#mdi:cursor-default-click-outline" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:cursor-default-click-outline"/>
+<text x="0" y="-24" class="key shifted">2</text>
 </g>
 <g transform="translate(632, 224) rotate(-24.0)" class="key keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#mdi:mouse-left-click-outline" xlink:href="#mdi:mouse-left-click-outline" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:mouse-left-click-outline"/>
+<use href="#mdi:cursor-default-click-outline" xlink:href="#mdi:cursor-default-click-outline" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:cursor-default-click-outline"/>
+<text x="0" y="-24" class="key shifted">1</text>
 </g>
 <g transform="translate(695, 209) rotate(-12.0)" class="key keypos-46">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<use href="#mdi:mouse-scroll-wheel" xlink:href="#mdi:mouse-scroll-wheel" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:mouse-scroll-wheel"/>
+<use href="#mdi:cursor-default-click-outline" xlink:href="#mdi:cursor-default-click-outline" x="-9" y="-9" height="18" width="18.0" class="key tap glyph mdi:cursor-default-click-outline"/>
+<text x="0" y="-24" class="key shifted">3</text>
 </g>
 <g transform="translate(756, 203)" class="key trans keypos-47">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
