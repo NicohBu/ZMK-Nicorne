@@ -137,14 +137,14 @@ parse_config:
     '&oneshot LG(LS(S))': $$mdi:camera-outline$$
     '&oneshot LS(LG(S))': $$mdi:camera-outline$$
    
-    '&oneshot LA(LC(F1))': 'Ctrl+Alt+F1'
-    '&oneshot LA(LC(F2))': 'Ctrl+Alt+F2'
-    '&oneshot LA(LC(F3))': 'Ctrl+Alt+F3'
-    '&oneshot LA(LC(F4))': 'Ctrl+Alt+F4'
-    '&oneshot LC(LA(F1))': 'Ctrl+Alt+F1'
-    '&oneshot LC(LA(F2))': 'Ctrl+Alt+F2'
-    '&oneshot LC(LA(F3))': 'Ctrl+Alt+F3'
-    '&oneshot LC(LA(F4))': 'Ctrl+Alt+F4'
+    '&oneshot LA(LC(F1))': PC 1
+    '&oneshot LA(LC(F2))': PC 2
+    '&oneshot LA(LC(F3))': PC 3
+    '&oneshot LA(LC(F4))': PC 4
+    '&oneshot LC(LA(F1))': PC 1
+    '&oneshot LC(LA(F2))': PC 2
+    '&oneshot LC(LA(F3))': PC 3
+    '&oneshot LC(LA(F4))': PC 4
     
     # --- INICIO: BLOQUE DE KEYCODES ONESHOT ---
     # Alfanuméricos
@@ -486,21 +486,21 @@ parse_config:
 
 
     # BLUETOOTH
-    '&bt_sel 0': 'BT 1'
-    '&bt_sel 1': 'BT 2'
-    '&bt_sel 2': 'BT 3'
-    '&bt_sel 3': 'BT 4'
-    '&bt_sel 4': 'BT 5'
+    '&bt_sel 0': {t: $$mdi:bluetooth-connect$$, s: '1')
+    '&bt_sel 1': {t: $$mdi:bluetooth-connect$$, s: '2')
+    '&bt_sel 2': {t: $$mdi:bluetooth-connect$$, s: '3')
+    '&bt_sel 3': {t: $$mdi:bluetooth-connect$$, s: '4')
+    '&bt_sel 4': {t: $$mdi:bluetooth-connect$$, s: '5')
 
     '&bt BT_PRV':
       shifted: $$mdi:bluetooth-connect$$
       tap: ''
-      hold: $$mdi:arrow-up-bold$$
+      hold: $$mdi:arrow-left-bold$$
 
     '&bt BT_NXT':
       shifted: $$mdi:bluetooth-connect$$
       tap: ''
-      hold: $$mdi:arrow-down-bold$$
+      hold: $$mdi:arrow-right-bold$$
 
     '&out OUT_TOG':
       shifted: $$mdi:usb$$
