@@ -103,6 +103,17 @@ draw_config:
     .combo.sym_by_sym.hold > path[stroke="none"][fill="none"] {
       visibility: hidden;
     }
+
+        .trans,
+    .held,
+    .ghost {
+      opacity: 0.8;
+    }
+
+    .none {
+      opacity: 0.4;
+    }
+    
   footer_text: ''
   shrink_wide_legends: 8
   style_layer_activators: true
@@ -467,11 +478,11 @@ parse_config:
     '&mmv MOVE_DOWN': {t: $$mdi:menu-down$$, s: $$mdi:mouse$$}
     '&mmv MOVE_LEFT': {t: $$mdi:menu-left$$, s: $$mdi:mouse$$}
     '&mmv MOVE_RIGHT': {t: $$mdi:menu-right$$, s: $$mdi:mouse$$}
-    '&mkp LCLK': $$mdi:mouse-left-click-outline$$
-    '&mkp RCLK': $$mdi:mouse-right-click-outline$$
-    '&mkp MCLK': $$mdi:mouse-scroll-wheel$$
-    '&mkp MB4': {t: $$mdi:arrow-u-left-top$$, s: $$mdi:mouse$$}
-    '&mkp MB5': {t: $$mdi:arrow-u-right-top$$, s: $$mdi:mouse$$}
+    '&mkp LCLK': {t: $$mdi:cursor-default-click-outline$$, s: '1'}
+    '&mkp RCLK': {t: $$mdi:cursor-default-click-outline$$, s: '2'}
+    '&mkp MCLK': {t: $$mdi:cursor-default-click-outline$$, s: '3'}
+    '&mkp MB4': {t: $$mdi:cursor-default-click-outline$$, s: '4', h: $$mdi:undo-variant$$}
+    '&mkp MB5': {t: $$mdi:cursor-default-click-outline$$, s: '5', h: $$mdi:redo-variant$$}
 
 
     # BLUETOOTH
