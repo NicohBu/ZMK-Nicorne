@@ -28,7 +28,7 @@ layers:
   - {t: E, h: É}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: O, h: Ó}
-  - {t: '*', h: MOUSE}
+  - {t: '*', h: '$$mdi:mouse-scroll-wheel$$'}
   - $$mdi:apple-keyboard-option$$
   - {t: Z, h: '$$mdi:undo$$'}
   - {t: X, h: '$$mdi:content-cut$$'}
@@ -46,7 +46,7 @@ layers:
   - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
-  - {t: '$$mdi:keyboard-space$$', h: SYM_NUM}
+  - {t: '$$mdi:keyboard-space$$', h: '$$mdi:numeric$$'}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:backspace-reverse-outline$$', h: Fn}
   QWERTY:
@@ -126,7 +126,7 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - $$mdi:pan-down$$
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -149,12 +149,12 @@ layers:
   - {t: ▽, type: trans}
   Fn:
   - $$mdi:menu$$
-  - {t: F1, h: PC 1}
-  - {t: F2, h: PC 2}
-  - {t: F3, h: PC 3}
-  - {t: F4, h: PC 4}
+  - {t: F1, h: '$$mdi:desktop-classic$$', s: '1'}
+  - {t: F2, h: '$$mdi:desktop-classic$$', s: '2'}
+  - {t: F3, h: '$$mdi:desktop-classic$$', s: '3'}
+  - {t: F4, h: '$$mdi:desktop-classic$$', s: '4'}
   - F5
-  - $$mdi:brightness-7$$
+  - {t: '$$mdi:brightness-7$$', s: '$$mdi:plus-circle$$'}
   - $$mdi:volume-off$$
   - $$mdi:ray-end-arrow$$
   - $$mdi:arrow-up-bold$$
@@ -167,9 +167,9 @@ layers:
   - {t: F8, h: '&bt_sel 2'}
   - {t: F9, h: '&bt_sel 3'}
   - {t: F10, h: '&bt_sel 4'}
-  - $$mdi:palette-swatch-outline$$
+  - {t: '$$mdi:led-on$$', s: '$$mdi:chevron-left-circle$$'}
   - $$mdi:lightbulb-on-outline$$
-  - $$mdi:palette-swatch-outline$$
+  - {t: '$$mdi:led-on$$', s: '$$mdi:chevron-right-circle$$'}
   - $$mdi:volume-high$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -183,7 +183,7 @@ layers:
   - F11
   - F12
   - $$mdi:power$$
-  - $$mdi:brightness-4$$
+  - {t: '$$mdi:brightness-4$$', s: '$$mdi:minus-circle$$'}
   - $$mdi:volume-low$$
   - {t: '$$mdi:skip-previous$$', h: '$$mdi:rewind$$'}
   - $$mdi:play-pause$$
@@ -229,8 +229,8 @@ layers:
   - {t: '|', h: °}
   - {t: ¬, h: '~'}
   - {t: '[', h: ^}
-  - {t: ']', h: '`', type: held alternate}
-  - {t: '?', h: ¿, type: held alternate}
+  - {t: ']', h: '`'}
+  - {t: '?', h: ¿}
   - {t: ▽, type: trans}
   - $$mdi:fast-forward$$
   - {t: '0', s: '='}
@@ -242,7 +242,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '$$mdi:keyboard-return$$', h: '=', type: held}
+  - {t: '$$mdi:keyboard-return$$', h: '='}
   - {t: '0', h: '#', s: '='}
   - {t: ., h: '%', s: ':'}
 combos:
@@ -267,16 +267,12 @@ combos:
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [5, 4]
   k: {t: '$$mdi:backspace$$', type: backspace}
-  a: top
-  o: 0.25
 - p: [0, 1]
   k: $$mdi:backspace-reverse-outline$$
 - p: [12, 11]
   k: $$mdi:backspace-reverse-outline$$
 - p: [7, 8]
   k: $$mdi:keyboard-esc$$
-  a: top
-  o: 0.25
 - p: [7, 23]
   k: (
   l: [ROCORN, QWERTY, Fn]
