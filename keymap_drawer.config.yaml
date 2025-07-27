@@ -1,132 +1,374 @@
 draw_config:
-  key_w: 60
-  key_h: 56
-  split_gap: 30.0
-  combo_w: 28
-  combo_h: 26
-  key_rx: 6.0
-  key_ry: 6.0
-  dark_mode: true
-  n_columns: 1
-  separate_combo_diagrams: false
-  combo_diagrams_scale: 2
-  inner_pad_w: 2.0
-  inner_pad_h: 2.0
-  outer_pad_w: 40.0
-  outer_pad_h: 56.0
-  line_spacing: 1.2
-  arc_radius: 6.0
-  append_colon_to_layer_header: true
-  small_pad: 2.0
-  legend_rel_x: 0.0
-  legend_rel_y: 0.0
-  draw_key_sides: false
-  key_side_pars:
-    rel_x: 0
-    rel_y: 4
-    rel_w: 12
-    rel_h: 12
-    rx: 4
-    ry: 4
-  svg_extra_style: |
-    /* Estilos personalizados del usuario mantenidos */
-    /* For default sytles, see https://github.com/caksoylar/keymap-drawer/blob/main/keymap_drawer/config.py#L85 */
+  # key dimensions, non-ortho layouts use key_h for width as well
+  # key_w: 100 # This doesn't seem to do anything? 🤔
+  key_h: 80
 
+  # keys border radius
+  key_rx: 4
+  key_ry: 4
+
+  # key labels line spacing for multi-line labels
+  line_spacing: 1
+
+  # combo box dimensions
+  combo_w: 30
+  combo_h: 30
+
+  # padding from the edge of cap to top and bottom legends
+  small_pad: 4
+
+  # Padding between keys
+  inner_pad_w: 1.5
+  inner_pad_h: 1.5
+
+  # padding between layers
+  outer_pad_w: 0
+  outer_pad_h: 0
+
+  # gap between two halves for ortho layout generator
+  # split_gap: 20 # This doesn't seem to have any effect either? 🤔
+
+  # as it reads on the tin can, this comment is here for consistency
+  append_colon_to_layer_header: false
+
+  # shrink font size for legends wider than this many chars, set to 0 to disable
+  # ideal value depends on the font size defined in svg_style and width of the boxes
+  shrink_wide_legends: 3
+
+  # Glyphs dimensions
+  glyph_tap_size: 22
+  glyph_hold_size: 16
+  glyph_shifted_size: 16
+
+  # Custom CSS
+  svg_style: |
+    /* inherit to force styles through use tags */
+    svg path {
+        fill: inherit;
+    }
+
+    /* font and background color specifications */
     svg.keymap {
-      font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
-      font-size: 12px;
-      font-weight: bold;
-      text-rendering: optimizeLegibility;
+        /*
+         * =============================================
+         * ===== Bloque de Personalización de Tema =====
+         * =============================================
+         */
+
+        /* --- Colores Base --- */
+        --fondo-general: transparent;
+        --texto-principal: rgb(38, 50, 56);
+        --texto-capa: rgb(120, 144, 156);
+
+        /* --- Colores de Teclas Estándar --- */
+        --fondo-tecla: rgb(236, 239, 241);
+        --borde-tecla: white;
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: rgb(120, 144, 156);
+        --texto-tecla-hold: rgb(120, 144, 156);
+
+        /* --- Colores de Combos --- */
+        --fondo-combo: rgb(201, 211, 215);
+        --borde-combo: var(--fondo-combo);
+        --linea-combo: var(--borde-combo);
+        --texto-combo-tap: rgb(55, 71, 79);
+        --texto-combo-shift: rgb(120, 144, 156);
+        --texto-combo-hold: var(--texto-combo-tap);
+
+        /* --- Colores para Teclas Específicas (Overrides) --- */
+        
+        --texto-tecla-especial: rgb(136, 136, 136);
+        --fondo-tecla-especial: rgb(137, 143, 148);
+        --borde-tecla-especial: rgb(155, 158, 161);
+        --fondo-tecla-roja: rgb(229, 115, 115);
+        --borde-tecla-roja: rgb(239, 154, 154);
+        --fondo-tecla-verde: rgb(128, 203, 196);
+        --borde-tecla-verde: rgb(178, 223, 219);
+
+        /* --- Logo (opcional) --- */
+        --logo-path: none;
+        --logo-size: 12%;
+        --logo-position: 49.5% 5%;
+
+        /*
+         * ====================
+         * Theme Variables (NO TOCAR)
+         * ====================
+         */
+
+        --color--bg: var(--fondo-general);
+        --color--text: var(--texto-principal);
+        --color--layer--text: var(--texto-capa);
+        --color--key--bg: var(--fondo-tecla);
+        --color--key--border: var(--borde-tecla);
+        --color--key--text--tap: var(--texto-tecla-tap);
+        --color--key--text--shifted: var(--texto-tecla-shift);
+        --color--key--text--hold: var(--texto-tecla-hold);
+        --color--combo--bg: var(--fondo-combo);
+        --color--combo--border: var(--borde-combo);
+        --color--combo--dendron: var(--linea-combo);
+        --color--combo--text--tap: var(--texto-combo-tap);
+        --color--combo--text--shifted: var(--texto-combo-shift);
+        --color--combo--text--hold: var(--texto-combo-hold);
+
+        /*
+         * ====================
+         * /End Theme Variables
+         * ====================
+         */
+
+        font-family: system-ui, sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        font-kerning: normal;
+        text-rendering: optimizeLegibility;
+        fill: var(--color--text);
+        background-color: var(--color--bg);
+        background-image: var(--logo-path);
+        background-repeat: no-repeat;
+        background-position: var(--logo-position);
+        background-size: var(--logo-size) auto;
     }
 
-    /* Technique borrowed and extended from https://github.com/englmaxi/zmk-config/blob/master/keymap-drawer/config.yaml */
-    .sym_sub_text.tap {
-      translate: -5px 2px;
-      font-size: 20px;
-    }
-    .sym_sub_text.shifted {
-      translate: 10px 13px;
-      font-size: 10px;
-      opacity: 1.0;
-    }
-    .combo.sym_sub_text.tap {
-      translate: -1px 1px;
-    }
-    .combo.sym_sub_text.shifted {
-      translate: 7px 5px;
-      font-size: 10px;
-      opacity: 1.0;
+    rect,
+    path {
+      shape-rendering: geometricPrecision;
     }
 
-    /* Toggle */
-    .toggle.shifted {
-      translate: -10px 12px;
+    text {
+        text-anchor: middle;
+        dominant-baseline: middle;
+        line-height: 1;
     }
 
-    .toggle.hold {
-      translate: 13px -23px;
+    /* Layer labels */
+    text.label {
+        font-size: 36px;
+        text-anchor: start;
+        paint-order: stroke;
+        fill: var(--color--layer--text);
+        translate: 500px 100px;
     }
 
-    /* Variant for tap-dances */
-    .tap_dance.tap {
-      translate: -7px 0px;
-      font-size: 12px;
+
+    /* Keys */
+    rect.key,
+    rect.combo {
+        fill: var(--color--key--bg);
+        stroke: var(--color--key--border);
     }
-    .tap_dance.shifted {
-      translate: 7px 17px;
-      font-size: 12px;
-      opacity: 1.0;
+    .tap {
+      fill: var(--color--key--text--tap);
+    }
+    .shifted,
+    .hold {
+        font-size: 16px;
+        text-anchor: middle;
     }
 
-    /* Variant for symbol next to symbol */
-    .sym_by_sym.tap {
-      translate: -6px 0px;
+    .shifted {
+        dominant-baseline: hanging;
+        fill: var(--color--key--text--shifted);
+        translate: 26px 2px;
     }
-    .sym_by_sym.shifted {
-      translate: 10px 12px;
-      opacity: 1.0;
-    }
-
-    .combo.sym_by_sym.tap {
-      translate: -35px 0px;
-    }
-    .combo.sym_by_sym.shifted {
-      translate: 35px 20px;
-      opacity: 1.0;
+    .shifted.glyph {
+        translate: 26px 0px;
     }
 
-    .combo.sym_by_sym.hold {
-      visibility: hidden;
+    .hold {
+        dominant-baseline: ideographic;
+        fill: var(--color--key--text--hold);
+        translate: 26px 4px;
+    }
+    .hold.glyph {
+        translate: 26px 2px;
     }
 
-    /* hide hold box for combo sym_by_sym */
-    .combo.sym_by_sym.hold > path[stroke="none"][fill="none"] {
-      visibility: hidden;
+
+    /*
+     * Combos
+     */
+    .combo {
+      --color--key--bg: var(--color--combo--bg);
+      --color--key--border: var(--color--combo--border);
+      --color--key--text--tap: var(--color--combo--text--tap);
+      --color--key--text--shifted: var(--color--combo--text--shifted);
+      --color--key--text--hold: var(--color--combo--text--hold);
+    }
+    rect.combo {
+      opacity: 0.9;
+      stroke-width: 0;
+    }
+    path.combo {
+      stroke-width: 1;
+      stroke: var(--color--combo--dendron);
+      fill: none;
+    }
+    .combo.tap {
+      font-size: 16px;
+    }
+    .combo.shifted {
+      font-size: 13px;
+      translate: -9px -2px;
+    }
+    .combo.shifted.glyph {
+      translate: -9px -3px;
+    }
+    .combo.hold {
+      font-size: 16px;
+      translate: 0 0;
     }
 
-        .trans,
+    /*
+     * Transparent, None, and Ghost Keys
+     */
+    .trans,
     .held,
     .ghost {
-      opacity: 0.8;
+      opacity: 1.0;
     }
 
     .none {
-      opacity: 0.4;
+      opacity: 0.6;
     }
-    
+
+    /*
+     * Overrides
+     */
+    /* Outer column + thumb keys */
+    .keypos-0 .key,
+    .keypos-12 .key,
+    .keypos-13 .key,
+    .keypos-27 .key,
+    .keypos-28 .key,
+    .keypos-41 .key,
+    .keypos-42 .key,
+    .keypos-43 .key,
+    .keypos-44 .key,
+    .keypos-45 .key,
+    .keypos-46 .key,
+    .keypos-47 .key {
+        --color--key--bg: var(--fondo-tecla-especial);
+        --color--key--border: var(--borde-tecla-especial);
+        --color--key--text--shifted: var(--texto-tecla-especial);
+        --color--key--text--hold: var(--texto-tecla-especial);
+    }
+
+    .keypos-34 .key {
+        --color--key--bg: var(--fondo-tecla-roja);
+        --color--key--border: var(--borde-tecla-roja);
+        --color--key--text--shifted: var(--color--key--text--tap);
+        --color--key--text--hold: var(--color--key--text--tap);
+    }
+
+    .keypos-20 .key {
+        --color--key--bg: var(--fondo-tecla-verde);
+        --color--key--border: var(--borde-tecla-verde);
+    }
+
+    /* El resto del código no necesita cambios ya que hereda las variables */
+
+    .keypos-0 .shifted,
+    .keypos-1 .shifted,
+    .keypos-2 .shifted,
+    .keypos-3 .shifted,
+    .keypos-4 .shifted,
+    .keypos-5 .shifted,
+    .keypos-13 .shifted,
+    .keypos-14 .shifted,
+    .keypos-15 .shifted,
+    .keypos-16 .shifted,
+    .keypos-17 .shifted,
+    .keypos-18 .shifted,
+    .keypos-28 .shifted,
+    .keypos-29 .shifted,
+    .keypos-30 .shifted,
+    .keypos-31 .shifted,
+    .keypos-32 .shifted,
+    .keypos-33 .shifted,
+    .keypos-42 .shifted,
+    .keypos-43 .shifted,
+    .keypos-44 .shifted {
+      translate: -26px 2px;
+    }
+
+    .keypos-0 .hold,
+    .keypos-1 .hold,
+    .keypos-2 .hold,
+    .keypos-3 .hold,
+    .keypos-4 .hold,
+    .keypos-5 .hold,
+    .keypos-13 .hold,
+    .keypos-14 .hold,
+    .keypos-15 .hold,
+    .keypos-16 .hold,
+    .keypos-17 .hold,
+    .keypos-18 .hold,
+    .keypos-28 .hold,
+    .keypos-29 .hold,
+    .keypos-30 .hold,
+    .keypos-31 .hold,
+    .keypos-32 .hold,
+    .keypos-33 .hold,
+    .keypos-42 .hold,
+    .keypos-43 .hold,
+    .keypos-44 .hold {
+      translate: -26px 4px;
+    }
+
+    .keypos-0 .hold.glyph,
+    .keypos-1 .hold.glyph,
+    .keypos-2 .hold.glyph,
+    .keypos-3 .hold.glyph,
+    .keypos-4 .hold.glyph,
+    .keypos-5 .hold.glyph,
+    .keypos-13 .hold.glyph,
+    .keypos-14 .hold.glyph,
+    .keypos-15 .hold.glyph,
+    .keypos-16 .hold.glyph,
+    .keypos-17 .hold.glyph,
+    .keypos-18 .hold.glyph,
+    .keypos-28 .hold.glyph,
+    .keypos-29 .hold.glyph,
+    .keypos-30 .hold.glyph,
+    .keypos-31 .hold.glyph,
+    .keypos-32 .hold.glyph,
+    .keypos-33 .hold.glyph,
+    .keypos-42 .hold.glyph,
+    .keypos-43 .hold.glyph,
+    .keypos-44 .hold.glyph {
+      translate: -26px 2px;
+    }
+
+    .shifted.mdi\:alpha-w-box {
+      translate: 0px 8px;
+    }
+    .keypos-38 .shifted.mdi\:alpha-w-box,
+    .keypos-39 .shifted.mdi\:alpha-w-box {
+      translate: 0px 20px;
+    }
+
+    .hold.mdi\:gesture-tap-hold {
+      translate: 0px -8px;
+    }
+    .keypos-38 .hold.mdi\:gesture-tap-hold,
+    .keypos-39 .hold.mdi\:gesture-tap-hold {
+      translate: 0px -20px;
+    }
+
+    .key .mdi\:toggle-switch ~ .mdi\:usb {
+      translate: -22px 26px;
+    }
+    .key .mdi\:toggle-switch ~ .mdi\:bluetooth {
+      translate: 22px -26px;
+    }
   footer_text: ''
-  shrink_wide_legends: 8
   style_layer_activators: true
-  glyph_tap_size: 18
-  glyph_hold_size: 15
-  glyph_shifted_size: 15
   glyphs: {}
 parse_config:
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
-
-    # --- KEYCODES PERSONALIZADOS ---
     '&oneshot LC(Y)': $$mdi:redo$$
     '&oneshot LC(Z)': $$mdi:undo$$
     '&oneshot LC(F)': $$mdi:magnify$$
@@ -136,7 +378,6 @@ parse_config:
     '&oneshot LC(T)': $$mdi:tab-plus$$
     '&oneshot LG(LS(S))': $$mdi:camera-outline$$
     '&oneshot LS(LG(S))': $$mdi:camera-outline$$
-   
     '&oneshot LA(LC(F1))': PC 1
     '&oneshot LA(LC(F2))': PC 2
     '&oneshot LA(LC(F3))': PC 3
@@ -145,35 +386,32 @@ parse_config:
     '&oneshot LC(LA(F2))': PC 2
     '&oneshot LC(LA(F3))': PC 3
     '&oneshot LC(LA(F4))': PC 4
-    
-    # --- INICIO: BLOQUE DE KEYCODES ONESHOT ---
-    # Alfanuméricos
-    '&oneshot A': 'A'
-    '&oneshot B': 'B'
-    '&oneshot C': 'C'
-    '&oneshot D': 'D'
-    '&oneshot E': 'E'
-    '&oneshot F': 'F'
-    '&oneshot G': 'G'
-    '&oneshot H': 'H'
-    '&oneshot I': 'I'
-    '&oneshot J': 'J'
-    '&oneshot K': 'K'
-    '&oneshot L': 'L'
-    '&oneshot M': 'M'
-    '&oneshot N': 'N'
-    '&oneshot O': 'O'
-    '&oneshot P': 'P'
-    '&oneshot Q': 'Q'
-    '&oneshot R': 'R'
-    '&oneshot S': 'S'
-    '&oneshot T': 'T'
-    '&oneshot U': 'U'
-    '&oneshot V': 'V'
-    '&oneshot W': 'W'
-    '&oneshot X': 'X'
-    '&oneshot Y': 'Y'
-    '&oneshot Z': 'Z'
+    '&oneshot A': A
+    '&oneshot B': B
+    '&oneshot C': C
+    '&oneshot D': D
+    '&oneshot E': E
+    '&oneshot F': F
+    '&oneshot G': G
+    '&oneshot H': H
+    '&oneshot I': I
+    '&oneshot J': J
+    '&oneshot K': K
+    '&oneshot L': L
+    '&oneshot M': M
+    '&oneshot N': N
+    '&oneshot O': O
+    '&oneshot P': P
+    '&oneshot Q': Q
+    '&oneshot R': R
+    '&oneshot S': S
+    '&oneshot T': T
+    '&oneshot U': U
+    '&oneshot V': V
+    '&oneshot W': W
+    '&oneshot X': X
+    '&oneshot Y': Y
+    '&oneshot Z': Z
     '&oneshot N1': '1'
     '&oneshot N2': '2'
     '&oneshot N3': '3'
@@ -184,16 +422,14 @@ parse_config:
     '&oneshot N8': '8'
     '&oneshot N9': '9'
     '&oneshot N0': '0'
-    '&oneshot N_TILDE': 'Ñ'
-    '&oneshot ES_N_TILDE': 'Ñ'
-
-    # Símbolos
+    '&oneshot N_TILDE': Ñ
+    '&oneshot ES_N_TILDE': Ñ
     '&oneshot EXCL': '!'
     '&oneshot EXCLAMATION': '!'
     '&oneshot AT_SIGN': '@'
     '&oneshot POUND': '#'
-    '&oneshot DLLR': '$'
-    '&oneshot DOLLAR': '$'
+    '&oneshot DLLR': $
+    '&oneshot DOLLAR': $
     '&oneshot PRCNT': '%'
     '&oneshot PERCENT': '%'
     '&oneshot AMPS': '&'
@@ -201,31 +437,31 @@ parse_config:
     '&oneshot ASTRK': '*'
     '&oneshot STAR': '*'
     '&oneshot ASTERISK': '*'
-    '&oneshot LPAR': '('
-    '&oneshot LEFT_PARENTHESIS': '('
-    '&oneshot RPAR': ')'
-    '&oneshot RIGHT_PARENTHESIS': ')'
-    '&oneshot PLUS': '+'
-    '&oneshot UNDER': '_'
-    '&oneshot UNDERSCORE': '_'
+    '&oneshot LPAR': (
+    '&oneshot LEFT_PARENTHESIS': (
+    '&oneshot RPAR': )
+    '&oneshot RIGHT_PARENTHESIS': )
+    '&oneshot PLUS': +
+    '&oneshot UNDER': _
+    '&oneshot UNDERSCORE': _
     '&oneshot MINUS': '-'
-    '&oneshot FSLH': '/'
+    '&oneshot FSLH': /
     '&oneshot QMARK': '?'
     '&oneshot QUESTION': '?'
-    '&oneshot BSLH': '\'
+    '&oneshot BSLH': \
     '&oneshot PIPE2': '|'
     '&oneshot PIPE': '|'
-    '&oneshot NON_US_BACKSLASH': '\'
-    '&oneshot NUBS': '\'
+    '&oneshot NON_US_BACKSLASH': \
+    '&oneshot NUBS': \
     '&oneshot NON_US_BSLH': '|'
-    '&oneshot SEMI': ';'
+    '&oneshot SEMI': ;
     '&oneshot SINGLE_QUOTE': ''''
-    '&oneshot APOS': '.'
-    '&oneshot APOSTROPHE': '<'
+    '&oneshot APOS': .
+    '&oneshot APOSTROPHE': <
     '&oneshot DQT': '"'
     '&oneshot DOUBLE_QUOTES': '"'
-    '&oneshot LESS_THAN': '<'
-    '&oneshot PERIOD': '.'
+    '&oneshot LESS_THAN': <
+    '&oneshot PERIOD': .
     '&oneshot COMMA': ','
     '&oneshot GREATER_THAN': '>'
     '&oneshot LBKT': '['
@@ -240,33 +476,31 @@ parse_config:
     '&oneshot TILDE': '~'
     '&oneshot NUHS': '#'
     '&oneshot NON_US_HASH': '#'
-    '&oneshot INVERTED_QUESTION': '¿'
+    '&oneshot INVERTED_QUESTION': ¿
     '&oneshot GRAVE': '`'
-    '&oneshot CARET': '^'
-
-    # Símbolos específicos del layout ES
-    '&oneshot ES_IEXCL': '¡'
+    '&oneshot CARET': ^
+    '&oneshot ES_IEXCL': ¡
     '&oneshot ES_EXCL': '!'
     '&oneshot ES_DQT': '"'
     '&oneshot ES_HASH': '#'
-    '&oneshot ES_DOLLAR': '$'
-    '&oneshot ES_DLLR': '$'
+    '&oneshot ES_DOLLAR': $
+    '&oneshot ES_DLLR': $
     '&oneshot ES_PERCENT': '%'
     '&oneshot ES_PRCNT': '%'
     '&oneshot ES_AMPS': '&'
     '&oneshot ES_SQT': ''''
-    '&oneshot ES_LPAR': '('
-    '&oneshot ES_RPAR': ')'
+    '&oneshot ES_LPAR': (
+    '&oneshot ES_RPAR': )
     '&oneshot ES_STAR': '*'
-    '&oneshot ES_PLUS': '+'
+    '&oneshot ES_PLUS': +
     '&oneshot ES_COMMA': ','
     '&oneshot ES_MINUS': '-'
-    '&oneshot ES_DOT': '.'
-    '&oneshot ES_SLASH': '/'
+    '&oneshot ES_DOT': .
+    '&oneshot ES_SLASH': /
     '&oneshot ES_COLON': ':'
-    '&oneshot ES_SEMI': ';'
-    '&oneshot ES_LT': '<'
-    '&oneshot ES_LESS_THAN': '<'
+    '&oneshot ES_SEMI': ;
+    '&oneshot ES_LT': <
+    '&oneshot ES_LESS_THAN': <
     '&oneshot ES_EQUAL': '='
     '&oneshot ES_GT': '>'
     '&oneshot ES_GREATER_THAN': '>'
@@ -275,17 +509,15 @@ parse_config:
     '&oneshot ES_AT': '@'
     '&oneshot ES_AT_SIGN': '@'
     '&oneshot ES_LBRC': '{'
-    '&oneshot ES_BSLH': '\'
+    '&oneshot ES_BSLH': \
     '&oneshot ES_RBRC': '}'
     '&oneshot ES_PIPE': '|'
     '&oneshot ES_TILDE': '~'
     '&oneshot ES_GRAVE': '`'
-    '&oneshot ES_IQMARK': '¿'
-    '&oneshot ES_DEG': '°'
-    '&oneshot ES_NOT': '¬'
-    '&oneshot ES_CARET': '^'
-
-    # Teclado numérico
+    '&oneshot ES_IQMARK': ¿
+    '&oneshot ES_DEG': °
+    '&oneshot ES_NOT': ¬
+    '&oneshot ES_CARET': ^
     '&oneshot KP_N0': '0'
     '&oneshot KP_N1': '1'
     '&oneshot KP_N2': '2'
@@ -296,20 +528,18 @@ parse_config:
     '&oneshot KP_N7': '7'
     '&oneshot KP_N8': '8'
     '&oneshot KP_N9': '9'
-    '&oneshot KP_DIVIDE': '/'
+    '&oneshot KP_DIVIDE': /
     '&oneshot KP_MINUS': '-'
     '&oneshot KP_MULTIPLY': '*'
-    '&oneshot KP_PLUS': '+'
-    '&oneshot KP_DOT': '.'
+    '&oneshot KP_PLUS': +
+    '&oneshot KP_DOT': .
     '&oneshot KP_COMMA': ','
     '&oneshot KP_EQUAL': '='
     '&oneshot KP_ENTER': $$mdi:keyboard-return$$
-
-    # Modificadores
-    '&oneshot LCTRL': 'LCTRL'
-    '&oneshot LEFT_CONTROL': 'LCTRL'
-    '&oneshot LALT': 'ALT'
-    '&oneshot LEFT_ALT': 'ALT'
+    '&oneshot LCTRL': $$mdi:apple-keyboard-control$$
+    '&oneshot LEFT_CONTROL': $$mdi:apple-keyboard-control$$
+    '&oneshot LALT': $$mdi:apple-keyboard-option$$
+    '&oneshot LEFT_ALT': $$mdi:apple-keyboard-option$$
     '&oneshot LSHFT': $$mdi:apple-keyboard-shift$$
     '&oneshot LSHIFT': $$mdi:apple-keyboard-shift$$
     '&oneshot LEFT_SHIFT': $$mdi:apple-keyboard-shift$$
@@ -317,10 +547,10 @@ parse_config:
     '&oneshot LGUI': $$mdi:microsoft-windows$$
     '&oneshot LEFT_GUI': $$mdi:microsoft-windows$$
     '&oneshot LWIN': $$mdi:microsoft-windows$$
-    '&oneshot RCTRL': 'RCTRL'
-    '&oneshot RIGHT_CONTROL': 'RCTRL'
-    '&oneshot RALT': 'ALTGR'
-    '&oneshot RIGHT_ALT': 'ALTGR'
+    '&oneshot RCTRL': $$mdi:apple-keyboard-control$$
+    '&oneshot RIGHT_CONTROL': $$mdi:apple-keyboard-control$$
+    '&oneshot RALT': $$mdi:apple-keyboard-option$$
+    '&oneshot RIGHT_ALT': $$mdi:apple-keyboard-option$$
     '&oneshot RSHFT': $$mdi:apple-keyboard-shift$$
     '&oneshot RSHIFT': $$mdi:apple-keyboard-shift$$
     '&oneshot RIGHT_SHIFT': $$mdi:apple-keyboard-shift$$
@@ -331,17 +561,15 @@ parse_config:
     '&oneshot RWIN': $$mdi:microsoft-windows$$
     '&oneshot RIGHT_WIN': $$mdi:microsoft-windows$$
     '&oneshot LS(LC(LALT))': $$mdi:star-three-points$$
-
-    # Teclas de navegación y función
     '&oneshot PSCRN': $$mdi:printer-outline$$
-    '&oneshot SYSREQ': 'SysRq'
-    '&oneshot COMPOSE': 'Comp'
+    '&oneshot SYSREQ': SysRq
+    '&oneshot COMPOSE': Comp
     '&oneshot RIGHT_COMMAND': $$mdi:apple-keyboard-command$$
     '&oneshot PAGE_UP': $$mdi:chevron-double-up$$
     '&oneshot PAGE_DOWN': $$mdi:chevron-double-down$$
-    '&oneshot HOME': $$mdi:arrow-collapse-left$$
-    '&oneshot END': $$mdi:arrow-collapse-right$$
-    '&oneshot INSERT': 'Ins'
+    '&oneshot HOME': $$mdi:ray-end-arrow$$
+    '&oneshot END': $$mdi:ray-start-arrow$$
+    '&oneshot INSERT': Ins
     '&oneshot UP': $$mdi:arrow-up-bold$$
     '&oneshot UP_ARROW': $$mdi:arrow-up-bold$$
     '&oneshot DOWN': $$mdi:arrow-down-bold$$
@@ -363,38 +591,34 @@ parse_config:
     '&oneshot DELETE': $$mdi:backspace-reverse-outline$$
     '&oneshot CAPS': $$mdi:apple-keyboard-caps$$
     '&oneshot CAPSLOCK': $$mdi:apple-keyboard-caps$$
-    '&oneshot NUM_LOCK': 'NumLk'
-    '&oneshot SCROLL_LOCK': 'ScrLk'
-    '&oneshot PAUSE_BREAK': 'Pause'
-    '&oneshot PAUSE': 'Pause'
-
-    # Teclas de Función (F1-F24)
-    '&oneshot F1': 'F1'
-    '&oneshot F2': 'F2'
-    '&oneshot F3': 'F3'
-    '&oneshot F4': 'F4'
-    '&oneshot F5': 'F5'
-    '&oneshot F6': 'F6'
-    '&oneshot F7': 'F7'
-    '&oneshot F8': 'F8'
-    '&oneshot F9': 'F9'
-    '&oneshot F10': 'F10'
-    '&oneshot F11': 'F11'
-    '&oneshot F12': 'F12'
-    '&oneshot F13': 'F13'
-    '&oneshot F14': 'F14'
-    '&oneshot F15': 'F15'
-    '&oneshot F16': 'F16'
-    '&oneshot F17': 'F17'
-    '&oneshot F18': 'F18'
-    '&oneshot F19': 'F19'
-    '&oneshot F20': 'F20'
-    '&oneshot F21': 'F21'
-    '&oneshot F22': 'F22'
-    '&oneshot F23': 'F23'
-    '&oneshot F24': 'F24'
-
-    # Teclas de Medios y Sistema
+    '&oneshot NUM_LOCK': NumLk
+    '&oneshot SCROLL_LOCK': ScrLk
+    '&oneshot PAUSE_BREAK': Pause
+    '&oneshot PAUSE': Pause
+    '&oneshot F1': F1
+    '&oneshot F2': F2
+    '&oneshot F3': F3
+    '&oneshot F4': F4
+    '&oneshot F5': F5
+    '&oneshot F6': F6
+    '&oneshot F7': F7
+    '&oneshot F8': F8
+    '&oneshot F9': F9
+    '&oneshot F10': F10
+    '&oneshot F11': F11
+    '&oneshot F12': F12
+    '&oneshot F13': F13
+    '&oneshot F14': F14
+    '&oneshot F15': F15
+    '&oneshot F16': F16
+    '&oneshot F17': F17
+    '&oneshot F18': F18
+    '&oneshot F19': F19
+    '&oneshot F20': F20
+    '&oneshot F21': F21
+    '&oneshot F22': F22
+    '&oneshot F23': F23
+    '&oneshot F24': F24
     '&oneshot C_MUTE': $$mdi:volume-off$$
     '&oneshot C_VOL_UP': $$mdi:volume-high$$
     '&oneshot C_VOLUME_UP': $$mdi:volume-high$$
@@ -443,119 +667,114 @@ parse_config:
     '&oneshot C_AL_WWW_STOP': $$mdi:stop-circle-outline$$
     '&oneshot C_AL_WWW_FORWARD': $$mdi:arrow-right-bold-circle-outline$$
     '&oneshot C_AL_WWW_BACK': $$mdi:arrow-left-bold-circle-outline$$
-    # --- FIN: BLOQUE DE KEYCODES ONESHOT ---
-
-
     '&tilde A': Á
     '&tilde E': É
     '&tilde I': Í
     '&tilde O': Ó
     '&tilde U': Ú
-    
-
-
-    # Layer-Tap Hold
-    '<_hold 3': {tap: '$$mdi:keyboard-return$$', hold: 'Fn'}
-
-
-    # Mod-Tap
-    '&mt LWIN': {tap: '$$mdi:keyboard-tab$$', hold: '$$mdi:microsoft-windows$$'}
-
-   
-    # Mod-Morph (Back_Del)
-    '&Back_Del': {tap: '$$mdi:backspace$$', shifted: '$$mdi:backspace-reverse-outline$$'}
-
-
-
-    # --- KEYCODES DEL SISTEMA ---
-
-    # MOUSE
+    '&mt LWIN':
+      tap: $$mdi:keyboard-tab$$
+      hold: $$mdi:microsoft-windows$$
+    '&lt 2': $$mdi:mouse-scroll-wheel$$
+    '&Back_Del':
+      tap: $$mdi:backspace$$
+      shifted: $$mdi:backspace-reverse-outline$$
     '&msc SCRL_LEFT': $$mdi:pan-left$$
     '&msc SCRL_RIGHT': $$mdi:pan-right$$
     '&msc SCRL_UP': $$mdi:pan-up$$
     '&msc SCRL_DOWN': $$mdi:pan-down$$
-    '&mmv MOVE_UP': {t: $$mdi:menu-up$$, s: $$mdi:mouse$$}
-    '&mmv MOVE_DOWN': {t: $$mdi:menu-down$$, s: $$mdi:mouse$$}
-    '&mmv MOVE_LEFT': {t: $$mdi:menu-left$$, s: $$mdi:mouse$$}
-    '&mmv MOVE_RIGHT': {t: $$mdi:menu-right$$, s: $$mdi:mouse$$}
-    '&mkp LCLK': {t: $$mdi:cursor-default-click-outline$$, s: '1'}
-    '&mkp RCLK': {t: $$mdi:cursor-default-click-outline$$, s: '2'}
-    '&mkp MCLK': {t: $$mdi:cursor-default-click-outline$$, s: '3'}
-    '&mkp MB4': {t: $$mdi:cursor-default-click-outline$$, s: '4', h: $$mdi:undo-variant$$}
-    '&mkp MB5': {t: $$mdi:cursor-default-click-outline$$, s: '5', h: $$mdi:redo-variant$$}
+    '&mmv MOVE_UP':
+      t: $$mdi:menu-up$$
+      s: $$mdi:mouse$$
+    '&mmv MOVE_DOWN':
+      t: $$mdi:menu-down$$
+      s: $$mdi:mouse$$
+    '&mmv MOVE_LEFT':
+      t: $$mdi:menu-left$$
+      s: $$mdi:mouse$$
+    '&mmv MOVE_RIGHT':
+      t: $$mdi:menu-right$$
+      s: $$mdi:mouse$$
+    '&mkp LCLK':
+      t: $$mdi:cursor-default-click-outline$$
+      s: '1'
+    '&mkp RCLK':
+      t: $$mdi:cursor-default-click-outline$$
+      s: '2'
+    '&mkp MCLK':
+      t: $$mdi:cursor-default-click-outline$$
+      s: '3'
+    '&mkp MB4':
+      t: $$mdi:cursor-default-click-outline$$
+      s: '4'
+      h: $$mdi:undo-variant$$
+    '&mkp MB5':
+      t: $$mdi:cursor-default-click-outline$$
+      s: '5'
+      h: $$mdi:redo-variant$$
 
 
-    # BLUETOOTH
-    '&bt_sel 0': {t: $$mdi:bluetooth-connect$$, s: '1'}
-    '&bt_sel 1': {t: $$mdi:bluetooth-connect$$, s: '2'}
-    '&bt_sel 2': {t: $$mdi:bluetooth-connect$$, s: '3'}
-    '&bt_sel 3': {t: $$mdi:bluetooth-connect$$, s: '4'}
-    '&bt_sel 4': {t: $$mdi:bluetooth-connect$$, s: '5'}
-
-        # BLUETOOTH
+    # Bluetooth
+    "&bt BT_SEL 0":
+      h: $$mdi:bluetooth-connect$$
+      tap: ""
+      s: 1
+    "&bt BT_SEL 1":
+      h: $$mdi:bluetooth-connect$$
+      tap: ""
+      s: 2
+    "&bt BT_SEL 2":
+      h: $$mdi:bluetooth-connect$$
+      tap: ""
+      s: 3
+    "&bt BT_SEL 3":
+      h: $$mdi:bluetooth-connect$$
+      tap: ""
+      s: 4
+    "&bt BT_SEL 4":
+      h: $$mdi:bluetooth-connect$$
+      tap: ""
+      s: 5
     '&kp_bt 0': BT 1
     '&kp_bt 2': BT 2
     '&kp_bt 3': BT 3
     '&kp_bt 4': BT 4
-
     '&bt BT_PRV':
       shifted: $$mdi:bluetooth-connect$$
       tap: ''
       hold: $$mdi:arrow-left-bold$$
-
     '&bt BT_NXT':
       shifted: $$mdi:bluetooth-connect$$
       tap: ''
       hold: $$mdi:arrow-right-bold$$
-
     '&out OUT_TOG':
       shifted: $$mdi:usb$$
       tap: $$mdi:toggle-switch$$
       hold: $$mdi:bluetooth$$
-
-
-    # RGB
-    '&rgb_ug RGB_TOG': '$$mdi:lightbulb-on-outline$$'
-    '&rgb_ug RGB_EFF': '$$mdi:palette-swatch-outline$$'
-    '&rgb_ug RGB_EFR': '$$mdi:palette-swatch-outline$$'
-    '&rgb_ug RGB_BRI': '$$mdi:brightness-7$$'
-    '&rgb_ug RGB_BRD': '$$mdi:brightness-4$$'
-
-
-    '&none': {t: $$mdi:minus-circle-outline$$, type: none}
+    '&rgb_ug RGB_TOG': $$mdi:lightbulb-on-outline$$
+    '&rgb_ug RGB_EFF': $$mdi:palette-swatch-outline$$
+    '&rgb_ug RGB_EFR': $$mdi:palette-swatch-outline$$
+    '&rgb_ug RGB_BRI': $$mdi:brightness-7$$
+    '&rgb_ug RGB_BRD': $$mdi:brightness-4$$
+    '&none':
+      t: $$mdi:minus-circle-outline$$
+      type: none
     '&bootloader': $$mdi:progress-download$$
     '&sys_reset': $$mdi:backup-restore$$
     '&soft_off': $$mdi:power$$
     '&caps_word': $$mdi:alpha-w-box$$
-
-
   sticky_label: $$mdi:gesture-tap-hold$$
   toggle_label: toggle
   tap_toggle_label: tap-toggle
-  trans_legend: {t: ▽, type: trans}
+  trans_legend:
+    t: ▽
+    type: trans
   layer_legend_map: {}
   mark_alternate_layer_activators: true
-  modifier_fn_map:
-  left_ctrl: LCTRL
-  right_ctrl: RCTRL
-  left_shift: LSHFT
-  right_shift: RSHFT
-  left_alt: ALT
-  right_alt: ALTGR
-  left_gui: $$mdi:microsoft-windows$$
-  right_gui: $$mdi:microsoft-windows$$
-  keycode_combiner: '{mods}+{key}'
-  mod_combiner: '{mod_1}+{mod_2}'
-  special_combinations:
-    left_ctrl+left_alt+left_gui+left_shift: Hyper
-    left_ctrl+left_alt+left_shift: Meh
-
-
-  # --- KEYCODES DE QMK ---
+  modifier_fn_map: null
   qmk_remove_keycode_prefix:
   - KC_
   qmk_keycode_map:
-
     XXXXXXX: ''
     'NO': ''
     MINUS: '-'
@@ -622,16 +841,11 @@ parse_config:
     GT: '>'
     QUESTION: '?'
     QUES: '?'
-    HOME: $$mdi:arrow-collapse-left$$
-    END: $$mdi:arrow-collapse-right$$
-
-
-  # --- KEYCODES DE ZMK ---
+    HOME: $$mdi:ray-end-arrow$$
+    END: $$mdi:ray-start-arrow$$
   zmk_remove_keycode_prefix:
   - ES_
-
   zmk_keycode_map:
-
     EXCLAMATION: '!'
     EXCL: '!'
     AT_SIGN: '@'
@@ -654,34 +868,52 @@ parse_config:
     RPAR: )
     EQUAL: '='
     PLUS: +
-    MINUS: {t: '-', s: _}
+    MINUS:
+      t: '-'
+      s: _
     UNDERSCORE: _
     UNDER: _
-    SLASH: '/'
-    FSLH: '/'
+    SLASH: /
+    FSLH: /
     QUESTION: '?'
     QMARK: '?'
-    BACKSLASH: {t: \, s: '|'}
-    BSLH: {t: \, s: '|'}
+    BACKSLASH:
+      t: \
+      s: '|'
+    BSLH:
+      t: \
+      s: '|'
     PIPE: '|'
     NON_US_BACKSLASH: \
     PIPE2: '|'
     NON_US_BSLH: '|'
-    SEMICOLON: {t: ;, s: ':'}
-    SEMI: {t: ;, s: ':'}
+    SEMICOLON:
+      t: ;
+      s: ':'
+    SEMI:
+      t: ;
+      s: ':'
     COLON: ':'
-    SINGLE_QUOTE: {t: '''', s: '"'}
-    SQT: {t: '''', s: '"'}
+    SINGLE_QUOTE:
+      t: ''''
+      s: '"'
+    SQT:
+      t: ''''
+      s: '"'
     APOSTROPHE: <
     APOS: .
     DOUBLE_QUOTES: '"'
     DQT: '"'
-    NOT: '¬'
+    NOT: ¬
     LESS_THAN: <
     LT: <
     PERIOD: .
-    DOT: {t: ., s: ':'}
-    COMMA: {t: ',', s: ;}
+    DOT:
+      t: .
+      s: ':'
+    COMMA:
+      t: ','
+      s: ;
     GREATER_THAN: '>'
     GT: '>'
     LEFT_BRACKET: '['
@@ -692,33 +924,56 @@ parse_config:
     RBKT: ']'
     RIGHT_BRACE: '}'
     RBRC: '}'
-    GRAVE: {t: '`', s: '~'}
+    GRAVE:
+      t: '`'
+      s: '~'
     TILDE: '~'
     NON_US_HASH: '#'
     NUHS: '#'
     TILDE2: '~'
-    INVERTED_QUESTION: '¿'
-    N1: {t: 1, s: '!'}
-    N2: {t: 2, s: '"'}
-    N3: {t: 3, s: '#'}
-    N4: {t: 4, s: '$'}
-    N5: {t: 5, s: '%'}
-    N6: {t: 6, s: '&'}
-    N7: {t: 7, s: '/'}
-    N8: {t: 8, s: '('}
-    N9: {t: 9, s: ')'}
-    N0: {t: 0, s: '='}
-    KP_DIVIDE: '/'
+    INVERTED_QUESTION: ¿
+    N1:
+      t: 1
+      s: '!'
+    N2:
+      t: 2
+      s: '"'
+    N3:
+      t: 3
+      s: '#'
+    N4:
+      t: 4
+      s: $
+    N5:
+      t: 5
+      s: '%'
+    N6:
+      t: 6
+      s: '&'
+    N7:
+      t: 7
+      s: /
+    N8:
+      t: 8
+      s: (
+    N9:
+      t: 9
+      s: )
+    N0:
+      t: 0
+      s: '='
+    KP_DIVIDE: /
     KP_MINUS: '-'
     KP_MULTIPLY: '*'
-    KP_PLUS: '+'
-    KP_DOT: '.'
-    KP_ENTER: {tap: $$mdi:keyboard-return$$, type: enter}
-
-    LCTRL: LCTRL
-    LEFT_CONTROL: LCTRL
-    LALT: ALT
-    LEFT_ALT: ALT
+    KP_PLUS: +
+    KP_DOT: .
+    KP_ENTER:
+      tap: $$mdi:keyboard-return$$
+      type: enter
+    LCTRL: $$mdi:apple-keyboard-control$$
+    LEFT_CONTROL: $$mdi:apple-keyboard-control$$
+    LALT: $$mdi:apple-keyboard-option$$
+    LEFT_ALT: $$mdi:apple-keyboard-option$$
     LSHIFT: $$mdi:apple-keyboard-shift$$
     LEFT_SHIFT: $$mdi:apple-keyboard-shift$$
     LSHFT: $$mdi:apple-keyboard-shift$$
@@ -730,16 +985,15 @@ parse_config:
     RIGHT_GUI: $$mdi:microsoft-windows$$
     RIGHT_WIN: $$mdi:microsoft-windows$$
     RGUI: $$mdi:microsoft-windows$$
-    RCTRL: RCTRL
-    RIGHT_CONTROL: RCTRL
-    RALT: ALTGR
-    RIGHT_ALT: ALTGR
+    RCTRL: $$mdi:apple-keyboard-control$$
+    RIGHT_CONTROL: $$mdi:apple-keyboard-control$$
+    RALT: $$mdi:apple-keyboard-option$$
+    RIGHT_ALT: $$mdi:apple-keyboard-option$$
     RSHIFT: $$mdi:apple-keyboard-shift$$
     RIGHT_SHIFT: $$mdi:apple-keyboard-shift$$
     RSHFT: $$mdi:apple-keyboard-shift$$
     RCMD: $$mdi:apple-keyboard-command$$
     RG: $$mdi:apple-keyboard-command$$
-
     PSCRN: $$mdi:printer-outline$$
     RIGHT_COMMAND: $$mdi:apple-keyboard-command$$
     PAGE_UP: $$mdi:chevron-double-up$$
@@ -754,15 +1008,23 @@ parse_config:
     LEFT: $$mdi:arrow-left-bold$$
     RIGHT: $$mdi:arrow-right-bold$$
     RIGHT_ARROW: $$mdi:arrow-right-bold$$
-    ENTER: {tap: $$mdi:keyboard-return$$, type: enter}
-    RET: {tap: $$mdi:keyboard-return$$, type: enter}
+    ENTER:
+      tap: $$mdi:keyboard-return$$
+      type: enter
+    RET:
+      tap: $$mdi:keyboard-return$$
+      type: enter
     ESC: $$mdi:keyboard-esc$$
     ESCAPE: $$mdi:keyboard-esc$$
     TAB: $$mdi:keyboard-tab$$
     LS(TAB): $$mdi:keyboard-tab-reverse$$
     SPACE: $$mdi:keyboard-space$$
-    BACKSPACE: {type: backspace, t: $$mdi:backspace$$}
-    BSPC: {type: backspace, t: $$mdi:backspace$$}
+    BACKSPACE:
+      type: backspace
+      t: $$mdi:backspace$$
+    BSPC:
+      type: backspace
+      t: $$mdi:backspace$$
     DELETE: $$mdi:backspace-reverse-outline$$
     DEL: $$mdi:backspace-reverse-outline$$
     CAPSLOCK: $$mdi:apple-keyboard-caps$$
@@ -793,7 +1055,6 @@ parse_config:
     K_PLAY_PAUSE: $$mdi:play-pause$$
     C_PLAY_PAUSE: $$mdi:play-pause$$
     K_PP: $$mdi:play-pause$$
-    C_PP: $$mdi:play-pause$$
     K_NEXT: $$mdi:skip-next$$
     K_PREVIOUS: $$mdi:skip-previous$$
     C_PREVIOUS: $$mdi:skip-previous$$
@@ -801,32 +1062,39 @@ parse_config:
     C_FF: $$mdi:fast-forward$$
     C_AL_CALC: $$mdi:calculator$$
     N_TILDE: Ñ
-    HOME: $$mdi:arrow-collapse-left$$
-    END: $$mdi:arrow-collapse-right$$
-
-  # --- COMBOS ---
+    HOME: $$mdi:ray-end-arrow$$
+    END: $$mdi:ray-start-arrow$$
   zmk_combos:
-
-    Toggle_Qwerty: 
-      a: "left"
-      o: 0.25
+    Toggle_Qwerty:
+      #a: left
+      #o: 0.25
       key:
-       tap: "$$mdi:keyboard-close$$"
+        tap: $$mdi:keyboard-close$$
     Toggle_SYM_NUM:
-      a: "right"
-      o: 0.25
+      #a: right
+      #o: 0.25
       key:
-       tap: "$$mdi:numeric$$"
+        tap: $$mdi:numeric$$
     MO_SYM_NUM:
       key:
-       tap: "$$mdi:numeric$$"
-    L_BSPC: {a: "top", o: 0.25}
-    R_ESC: {a: "top", o: 0.25}
-    BtCLR: {a: "right", o: 0.3}
-    IQST: {a: "right"}
-    QST: {a: "left"}
-    R_PAR: {a: "right"}
-    L_PAR: {a: "left"}
+        tap: $$mdi:numeric$$
+    L_BSPC:
+      a: top
+      o: 0.25
+    R_ESC:
+      a: top
+      o: 0.25
+    BtCLR:
+      a: right
+      o: 0.3
+    IQST:
+      a: right
+    QST:
+      a: left
+    R_PAR:
+      a: right
+    L_PAR:
+      a: left
 
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []
