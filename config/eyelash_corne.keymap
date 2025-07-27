@@ -277,13 +277,6 @@
             layers = <0 1>;
         };
 
-        BtCLR {
-            bindings = <&bt BT_CLR>;
-            key-positions = <18 17 16>;
-            layers = <3>;
-            timeout-ms = <100>;
-        };
-/*
         BT_1 {
             bindings = <&bt BT_SEL 0>;
             key-positions = <14 1>;
@@ -318,7 +311,14 @@
             layers = <3>;
             timeout-ms = <100>;
         };
-*/
+
+        BtCLR {
+            bindings = <&bt BT_CLR>;
+            key-positions = <18 17 16>;
+            layers = <3>;
+            timeout-ms = <100>;
+        };
+
         // Combos
 
         Enter {
@@ -354,28 +354,28 @@
         L_PAR {
             bindings = <&kp ES_LPAR>;
             key-positions = <7 23>;
-            layers = <0 1 3>;
+            layers = <0 4>;
             timeout-ms = <65>;
         };
 
         R_PAR {
             bindings = <&kp ES_RPAR>;
             key-positions = <22 8>;
-            layers = <0 1 3>;
+            layers = <0>;
             timeout-ms = <65>;
         };
 
         IQST {
             bindings = <&kp ES_INVERTED_QUESTION>;
             key-positions = <16 4>;
-            layers = <0 1 3>;
+            layers = <0 4>;
             timeout-ms = <65>;
         };
 
         QST {
             bindings = <&kp ES_QUESTION>;
             key-positions = <17 3>;
-            layers = <0 1 3>;
+            layers = <0 4>;
             timeout-ms = <65>;
         };
 
@@ -422,10 +422,10 @@
         Fn {
             display-name = "Fn";
             bindings = <
-&kp K_APP  &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                      &rgb_ug RGB_BRI                   &kp C_MUTE         &kp HOME                       &kp UP            &kp END                          &kp PAGE_UP    &hrm RCTRL BACKSPACE
-&trans     &kp_bt 0 F6              &kp_bt 1 F7              &kp_bt 2 F8              &kp_bt 3 F9              &kp_bt 4 F10               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp C_VOLUME_UP    &kp LEFT                       &kp DOWN          &kp RIGHT                        &kp PAGE_DOWN  &kp RIGHT_WIN
-&trans     &bootloader              &out OUT_TOG             &out OUT_TOG             &kp F11                  &kp F12       &soft_off                     &rgb_ug RGB_BRD                   &kp C_VOLUME_DOWN  &shortcut C_REWIND C_PREVIOUS  &kp C_PLAY_PAUSE  &shortcut C_FAST_FORWARD C_NEXT  &bootloader    &hrm RSHIFT ENTER
-                                                             &trans                   &trans                   &trans                                                                        &kp ENTER          &trans                         &trans
+&kp K_APP  &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                 &rgb_ug RGB_BRI                   &kp C_MUTE         &kp HOME                       &kp UP            &kp END                          &kp PAGE_UP    &hrm RCTRL BACKSPACE
+&trans     &kp F6                   &kp F7                   &kp F8                   &kp F9                   &kp F10               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp C_VOLUME_UP    &kp LEFT                       &kp DOWN          &kp RIGHT                        &kp PAGE_DOWN  &kp RIGHT_WIN
+&trans     &bootloader              &out OUT_TOG             &out OUT_TOG             &kp F11                  &kp F12  &soft_off                     &rgb_ug RGB_BRD                   &kp C_VOLUME_DOWN  &shortcut C_REWIND C_PREVIOUS  &kp C_PLAY_PAUSE  &shortcut C_FAST_FORWARD C_NEXT  &bootloader    &hrm RSHIFT ENTER
+                                                             &trans                   &trans                   &trans                                                                   &kp ENTER          &trans                         &trans
             >;
 
             sensor-bindings = <&hue_encoder>;
@@ -444,32 +444,4 @@
         };
     };
 
-    //    underglow-layer {
-    //        compatible = "zmk,underglow-layer";
-    //
-    //        Default {
-    //            layer = <0>;
-    //            effect = <3>;  // 3 es generalmente el efecto rainbow
-    //        };
-    //
-    //        Number {
-    //            layer = <2>;
-    //            color = <RGB_COLOR_HSB(240, 100, 100)>;  // Azul
-    //       };
-    //
-    //        Symbol {
-    //            layer = <3>;
-    //            color = <RGB_COLOR_HSB(270, 100, 100)>;  // Morado
-    //        };
-    //
-    //        layer_3 {
-    //            layer = <4>;
-    //            color = <RGB_COLOR_HSB(0, 100, 100)>;    // Rojo
-    //        };
-    //
-    //        caps_word {
-    //            caps-word;
-    //            color = <RGB_COLOR_HSB(30, 100, 100)>;   // Naranja
-    //        };
-    //    };
 };
