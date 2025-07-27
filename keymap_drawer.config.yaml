@@ -77,7 +77,9 @@ draw_config:
 
         /* --- Colores para Teclas Específicas (Overrides) --- */
         
-        --texto-tecla-especial: rgb(136, 136, 136);
+        --texto-tecla-especial: vas(--texto-principal);
+        --texto-tecla-especial-shifted: rgb(201, 211, 215);
+        --texto-tecla-especial-hold: var(--texto-tecla-especial-shifted);
         --fondo-tecla-especial: rgb(137, 143, 148);
         --borde-tecla-especial: rgb(155, 158, 161);
         --fondo-tecla-roja: rgb(229, 115, 115);
@@ -143,11 +145,11 @@ draw_config:
 
     /* Layer labels */
     text.label {
-        font-size: 36px;
+        font-size: 25px;
         text-anchor: start;
         paint-order: stroke;
         fill: var(--color--layer--text);
-        translate: 500px 100px;
+        translate: 1px 15px;
     }
 
 
@@ -250,8 +252,9 @@ draw_config:
     .keypos-47 .key {
         --color--key--bg: var(--fondo-tecla-especial);
         --color--key--border: var(--borde-tecla-especial);
-        --color--key--text--shifted: var(--texto-tecla-especial);
-        --color--key--text--hold: var(--texto-tecla-especial);
+        --color--key--text--tap: var(--texto-tecla-especial);
+        --color--key--text--shifted: var(--texto-tecla-especial-shifted);
+        --color--key--text--hold: var(--texto-tecla-especial-hold);
     }
 
     .keypos-34 .key {
@@ -348,9 +351,7 @@ draw_config:
       translate: 0px 20px;
     }
 
-    .hold.mdi\:gesture-tap-hold {
-      translate: 0px -8px;
-    }
+
     .keypos-38 .hold.mdi\:gesture-tap-hold,
     .keypos-39 .hold.mdi\:gesture-tap-hold {
       translate: 0px -20px;
@@ -362,6 +363,12 @@ draw_config:
     .key .mdi\:toggle-switch ~ .mdi\:bluetooth {
       translate: 22px -26px;
     }
+
+    .hold.mdi\:desktop-classic ~.shifted {
+      translate: -33px 48px;
+      font-size: 9px;
+    }
+   
   footer_text: ''
   style_layer_activators: true
   glyphs: {}
@@ -378,6 +385,16 @@ parse_config:
     '&oneshot LC(T)': $$mdi:tab-plus$$
     '&oneshot LG(LS(S))': $$mdi:camera-outline$$
     '&oneshot LS(LG(S))': $$mdi:camera-outline$$
+    
+    '&shortcut LA(LC(F1)) F1': {t: F1, h: $$mdi:desktop-classic$$, s: '1'}
+    '&shortcut LA(LC(F2)) F2': {t: F2, h: $$mdi:desktop-classic$$, s: '2'}
+    '&shortcut LA(LC(F3)) F3': {t: F3, h: $$mdi:desktop-classic$$, s: '3'}
+    '&shortcut LA(LC(F4)) F4': {t: F4, h: $$mdi:desktop-classic$$, s: '4'}
+    '&shortcut LC(LA(F1)) F1': {t: F1, h: $$mdi:desktop-classic$$, s: '1'}
+    '&shortcut LC(LA(F2)) F2': {t: F2, h: $$mdi:desktop-classic$$, s: '2'}
+    '&shortcut LC(LA(F3)) F3': {t: F3, h: $$mdi:desktop-classic$$, s: '3'}
+    '&shortcut LC(LA(F4)) F4': {t: F4, h: $$mdi:desktop-classic$$, s: '4'}
+
     '&oneshot LA(LC(F1))': PC 1
     '&oneshot LA(LC(F2))': PC 2
     '&oneshot LA(LC(F3))': PC 3
@@ -675,7 +692,8 @@ parse_config:
     '&mt LWIN':
       tap: $$mdi:keyboard-tab$$
       hold: $$mdi:microsoft-windows$$
-    '&lt 2': $$mdi:mouse-scroll-wheel$$
+    '&mo 2': $$mdi:mouse-scroll-wheel$$
+    '&mo 4': $$mdi:numeric$$
     '&Back_Del':
       tap: $$mdi:backspace$$
       shifted: $$mdi:backspace-reverse-outline$$
@@ -752,10 +770,11 @@ parse_config:
       tap: $$mdi:toggle-switch$$
       hold: $$mdi:bluetooth$$
     '&rgb_ug RGB_TOG': $$mdi:lightbulb-on-outline$$
-    '&rgb_ug RGB_EFF': $$mdi:palette-swatch-outline$$
-    '&rgb_ug RGB_EFR': $$mdi:palette-swatch-outline$$
-    '&rgb_ug RGB_BRI': $$mdi:brightness-7$$
-    '&rgb_ug RGB_BRD': $$mdi:brightness-4$$
+    '&rgb_ug RGB_EFF': {t: $$mdi:led-on$$, s: $$mdi:chevron-right-circle$$}
+    '&rgb_ug RGB_EFR': {t: $$mdi:led-on$$, s: $$mdi:chevron-left-circle$$}
+    
+    '&rgb_ug RGB_BRI': {t: $$mdi:brightness-7$$, s: $$mdi:plus-circle$$}
+    '&rgb_ug RGB_BRD': {t: $$mdi:brightness-4$$, s: $$mdi:minus-circle$$}
     '&none':
       t: $$mdi:minus-circle-outline$$
       type: none
@@ -1078,12 +1097,12 @@ parse_config:
     MO_SYM_NUM:
       key:
         tap: $$mdi:numeric$$
-    L_BSPC:
-      a: top
-      o: 0.25
-    R_ESC:
-      a: top
-      o: 0.25
+    #L_BSPC:
+      #a: top
+      #o: 0.25
+    #R_ESC:
+      #a: top
+      #o: 0.25
     BtCLR:
       a: right
       o: 0.3
