@@ -21,15 +21,15 @@ layers:
   - {t: T, h: '$$mdi:tab-plus$$'}
   - {t: V, h: '$$mdi:content-paste$$'}
   - $$mdi:arrow-left-bold$$
-  - {t: '$$mdi:arrow-collapse-left$$', h: '$$mdi:arrow-collapse-right$$'}
+  - {t: '$$mdi:ray-end-arrow$$', h: '$$mdi:ray-start-arrow$$'}
   - $$mdi:arrow-right-bold$$
   - {t: S, h: '$$mdi:camera-outline$$'}
-  - {t: N, h: ALT}
+  - {t: N, h: '$$mdi:apple-keyboard-option$$'}
   - {t: E, h: É}
-  - {t: D, h: RCTRL}
+  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
   - {t: O, h: Ó}
   - {t: '*', h: MOUSE}
-  - ALT
+  - $$mdi:apple-keyboard-option$$
   - {t: Z, h: '$$mdi:undo$$'}
   - {t: X, h: '$$mdi:content-cut$$'}
   - K
@@ -43,7 +43,7 @@ layers:
   - {t: ., h: '>', s: ':'}
   - {t: '-', s: _}
   - Fn
-  - LCTRL
+  - $$mdi:apple-keyboard-control$$
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: SYM_NUM}
@@ -70,12 +70,12 @@ layers:
   - {t: F, h: '$$mdi:magnify$$'}
   - G
   - $$mdi:arrow-left-bold$$
-  - {t: '$$mdi:arrow-collapse-left$$', h: '$$mdi:arrow-collapse-right$$'}
+  - {t: '$$mdi:ray-end-arrow$$', h: '$$mdi:ray-start-arrow$$'}
   - $$mdi:arrow-right-bold$$
   - H
-  - {t: J, h: ALT}
+  - {t: J, h: '$$mdi:apple-keyboard-option$$'}
   - {t: K, h: '$$mdi:microsoft-windows$$'}
-  - {t: L, h: RCTRL}
+  - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - Ñ
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -156,17 +156,17 @@ layers:
   - F5
   - $$mdi:brightness-7$$
   - $$mdi:volume-off$$
-  - $$mdi:arrow-collapse-left$$
+  - $$mdi:ray-end-arrow$$
   - $$mdi:arrow-up-bold$$
-  - $$mdi:arrow-collapse-right$$
+  - $$mdi:ray-start-arrow$$
   - $$mdi:chevron-double-up$$
-  - {t: '$$mdi:backspace$$', h: RCTRL}
+  - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: ▽, type: trans}
-  - {t: F6, h: '$$mdi:bluetooth-connect$$'}
-  - {t: F7, h: '$$mdi:bluetooth-connect$$'}
-  - {t: F8, h: '$$mdi:bluetooth-connect$$'}
-  - {t: F9, h: '$$mdi:bluetooth-connect$$'}
-  - {t: F10, h: '$$mdi:bluetooth-connect$$'}
+  - {t: F6, h: '&bt_sel'}
+  - {t: F7, h: '&bt_sel 1'}
+  - {t: F8, h: '&bt_sel 2'}
+  - {t: F9, h: '&bt_sel 3'}
+  - {t: F10, h: '&bt_sel 4'}
   - $$mdi:palette-swatch-outline$$
   - $$mdi:lightbulb-on-outline$$
   - $$mdi:palette-swatch-outline$$
@@ -249,13 +249,9 @@ combos:
 - p: [13, 0]
   k: $$mdi:keyboard-close$$
   l: [ROCORN, QWERTY]
-  a: left
-  o: 0.25
 - p: [27, 12]
   k: $$mdi:numeric$$
   l: [ROCORN, QWERTY, Fn]
-  a: right
-  o: 0.25
 - p: [33, 32]
   k: $$mdi:numeric$$
   l: [ROCORN, QWERTY, Fn]
