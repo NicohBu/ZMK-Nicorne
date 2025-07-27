@@ -19,6 +19,19 @@ Accesos directos a los archivos de configuración:
 
 <details>
 <summary>Información adicional</summary>
+
+## Recursos
+| Archivo                                                                                                        | Descripción                                                                                      |
+| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| [`Keymap-Drawer`](https://keymap-drawer.streamlit.app/)                                                        | Web para dibujar el keymap manualmente.                                                          |
+| [`Pictogrammers`](https://pictogrammers.com/library/mdi/)                                                      | Web para buscar iconos para dibujar en el keymap.                                                |
+| [`Keymap_Drawer Repo`](https://github.com/caksoylar/keymap-drawer)                                             | Documentación y repositorio original de keymap drawer.                                           |
+| [`Keymap-Drawer Reference Repo`](https://keymap-drawer.streamlit.app/)                                         | Repositorio de referencia de keymap drawer.                                                      |
+| [`Keymap.backup`](https://github.com/NicohBu/ZMK-Nicorne/blob/857130589ffc2c96f7cb2c11be58c2ae0add000e/config/eyelash_corne.keymap)           | Backup antiguo del keymap |
+
+
+<details>
+<summary>Antiguo</summary>
   
 ## (Eyelash Peripherals) Corne ZMK Repository
 
