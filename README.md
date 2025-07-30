@@ -27,7 +27,7 @@ Accesos directos a los archivos de configuración:
 | [`Pictogrammers`](https://pictogrammers.com/library/mdi/)            | Web para buscar iconos para dibujar en el keymap.                       |
 | [`Keymap_Drawer Repo`](https://github.com/caksoylar/keymap-drawer)  | Documentación y repositorio original de keymap drawer.          |
 | [`Keymap-Drawer Reference Repo`](https://github.com/minusfive/knucklehead) | Repositorio de referencia de keymap drawer.                   |
-| [`Keymap.backup`](blob/857130589ffc2c96f7cb2c11be58c2ae0add000e/config/eyelash_corne.keymap) | Backup antiguo del keymap |
+| [`Keymap.backup`](https://github.com/NicohBu/ZMK-Nicorne/blob/857130589ffc2c96f7cb2c11be58c2ae0add000e/config/eyelash_corne.keymap) | Backup antiguo del keymap |
 
 
 <details>
