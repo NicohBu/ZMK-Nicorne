@@ -4,30 +4,30 @@
 
 Accesos directos a los archivos de configuración:
 
-| Archivo                                                                                                        | Descripción                                                                                      |
-| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| [`eyelash_corne.keymap`](https://github.com/NicohBu/ZMK-Nicorne/blob/main/config/eyelash_corne.keymap)         | Aquí se definen las capas y se asigna cada tecla.             |
-| [`eyelash_corne.config`](https://github.com/NicohBu/ZMK-Nicorne/blob/main/config/eyelash_corne.conf)           | Opciones de configuración o activación de funcionalidades cómo `NKRO`, etc.   |
-| [`keymap_drawer.config.yaml`](https://github.com/NicohBu/ZMK-Nicorne/blob/main/keymap_drawer.config.yaml)      | YAML con la información de keycodes para Keymap-Drawer. |
+|         Archivo      |      Descripción      |
+| --------------------- | ---------------------- |
+| [`eyelash_corne.keymap`](config/eyelash_corne.keymap)         | Aquí se definen las capas y se asigna cada tecla.             |
+| [`eyelash_corne.config`](config/eyelash_corne.conf)           | Opciones de configuración o activación de funcionalidades cómo `NKRO`, etc.   |
+| [`keymap_drawer.config.yaml`](keymap_drawer.config.yaml)      | YAML con la información de keycodes para Keymap-Drawer. |
 | [`Keymap editor`](https://nickcoutsos.github.io/keymap-editor/)                                                | Herramienta para configurar visualmente el keymap  |
 
 
 
 ## Layout
 
-![Eyelash Corne 3x6+3](https://github.com/NicohBu/zmk-Nicorne/blob/main/keymap-drawer/eyelash_corne.svg)
+![Eyelash Corne 3x6+3](keymap-drawer/eyelash_corne.svg)
 
 <details>
 <summary>Información adicional</summary>
 
 ## Recursos
-| Enlaces                                                                                                        | Descripción                                                                                      |
-| -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| [`Keymap-Drawer`](https://keymap-drawer.streamlit.app/)                                                        | Web para dibujar el keymap manualmente.                                                          |
-| [`Pictogrammers`](https://pictogrammers.com/library/mdi/)                                                      | Web para buscar iconos para dibujar en el keymap.                                                |
-| [`Keymap_Drawer Repo`](https://github.com/caksoylar/keymap-drawer)                                             | Documentación y repositorio original de keymap drawer.                                           |
-| [`Keymap-Drawer Reference Repo`](https://github.com/minusfive/knucklehead)                                     | Repositorio de referencia de keymap drawer.                                                      |
-| [`Keymap.backup`](https://github.com/NicohBu/ZMK-Nicorne/blob/857130589ffc2c96f7cb2c11be58c2ae0add000e/config/eyelash_corne.keymap)           | Backup antiguo del keymap                                         |
+|      Enlaces       |       Descripción       |
+| ------------------- | ------------------------ |
+| [`Keymap-Drawer`](https://keymap-drawer.streamlit.app/)   | Web para dibujar el keymap manualmente.      |
+| [`Pictogrammers`](https://pictogrammers.com/library/mdi/)            | Web para buscar iconos para dibujar en el keymap.                       |
+| [`Keymap_Drawer Repo`](https://github.com/caksoylar/keymap-drawer)  | Documentación y repositorio original de keymap drawer.          |
+| [`Keymap-Drawer Reference Repo`](https://github.com/minusfive/knucklehead) | Repositorio de referencia de keymap drawer.                   |
+| [`Keymap.backup`](857130589ffc2c96f7cb2c11be58c2ae0add000e/config/eyelash_corne.keymap) | Backup antiguo del keymap |
 
 
 <details>
