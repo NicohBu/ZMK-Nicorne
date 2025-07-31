@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   ROCORN:
-  - {t: '$$mdi:keyboard-esc$$', h: Num_FN}
+  - $$mdi:keyboard-esc$$
   - {t: Y, h: '$$mdi:redo$$'}
   - W
   - {t: F, h: '$$mdi:magnify$$'}
@@ -34,7 +34,7 @@ layers:
   - {t: X, h: '$$mdi:content-cut$$'}
   - K
   - {t: C, h: '$$mdi:content-copy$$'}
-  - {t: B, h: Num_FN}
+  - B
   - $$mdi:apple-keyboard-caps$$
   - $$mdi:arrow-down-bold$$
   - Ñ
@@ -204,7 +204,7 @@ layers:
   - $
   - '%'
   - $$mdi:rewind$$
-  - /
+  - +
   - {t: '7', s: /}
   - {t: '8', s: (}
   - {t: '9', s: )}
@@ -223,7 +223,7 @@ layers:
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: '&'}
-  - +
+  - /
   - $$mdi:calculator$$
   - {t: ▽, type: trans}
   - {t: '|', h: °}
@@ -233,7 +233,7 @@ layers:
   - {t: '?', h: ¿}
   - {t: ▽, type: trans}
   - $$mdi:fast-forward$$
-  - {t: '0', h: X, s: '='}
+  - {t: '0', s: '='}
   - {t: '1', s: '!'}
   - {t: '2', s: '"'}
   - {t: '3', s: '#'}
@@ -245,55 +245,6 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: '='}
   - {t: '0', h: '#', s: '='}
   - {t: ., h: '%', s: ':'}
-  Num_FN:
-  - {type: held}
-  - {t: /, h: '!'}
-  - {t: '7', h: '"', s: /}
-  - {t: '8', h: '#', s: (}
-  - {t: '9', h: $, s: )}
-  - {t: '-', h: '%', s: _}
-  - {t: ▽, type: trans}
-  - $$mdi:volume-off$$
-  - $$mdi:ray-end-arrow$$
-  - $$mdi:arrow-up-bold$$
-  - $$mdi:ray-start-arrow$$
-  - $$mdi:chevron-double-up$$
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: ▽, type: trans}
-  - {t: '*', h: '&'}
-  - {t: '4', h: /, s: $}
-  - {t: '5', h: (, s: '%'}
-  - {t: '6', h: ), s: '&'}
-  - {t: +, h: '='}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - $$mdi:volume-high$$
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-right-bold$$
-  - $$mdi:chevron-double-down$$
-  - $$mdi:microsoft-windows$$
-  - {t: ▽, type: trans}
-  - {t: '`', s: '~'}
-  - {t: '1', s: '!'}
-  - {t: '2', s: '"'}
-  - {t: '3', s: '#'}
-  - {t: '?', h: '&oneshot ES_INVERTED_QUESTION', type: held alternate}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - $$mdi:volume-low$$
-  - $$mdi:skip-previous$$
-  - $$mdi:play-pause$$
-  - $$mdi:skip-next$$
-  - {t: ▽, type: trans}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '0', s: '='}
-  - {t: ., s: ':'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
 combos:
 - p: [13, 0]
   k: $$mdi:keyboard-close$$
@@ -344,5 +295,3 @@ combos:
   k: {t: '?', h: '&oneshot ES_INVERTED_QUESTION'}
   l: [ROCORN, SYM_NUM]
   a: left
-- p: [28, 42]
-  k: '&mod_layer 3 LC(LEFT_ALT)'
