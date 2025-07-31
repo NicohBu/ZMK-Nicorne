@@ -204,7 +204,7 @@ layers:
   - $
   - '%'
   - $$mdi:rewind$$
-  - +
+  - KP SLASH
   - {t: '7', s: /}
   - {t: '8', s: (}
   - {t: '9', s: )}
@@ -223,7 +223,7 @@ layers:
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: '&'}
-  - /
+  - +
   - $$mdi:calculator$$
   - {t: ▽, type: trans}
   - {t: '|', h: °}
@@ -292,5 +292,5 @@ combos:
   l: [ROCORN, SYM_NUM]
   a: left
 - p: [18, 4]
-  k: LC(LA(F4))
+  k: LA(F4)
   l: [Fn]
