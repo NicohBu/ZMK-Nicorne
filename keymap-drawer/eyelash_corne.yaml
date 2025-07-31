@@ -282,10 +282,6 @@ combos:
   k: {t: '$$mdi:keyboard-return$$', type: enter}
 - p: [5, 4]
   k: {t: '$$mdi:backspace$$', type: backspace}
-- p: [0, 1]
-  k: $$mdi:backspace-reverse-outline$$
-- p: [12, 11]
-  k: $$mdi:backspace-reverse-outline$$
 - p: [7, 8]
   k: $$mdi:keyboard-esc$$
 - p: [36, 23]
@@ -295,3 +291,6 @@ combos:
   k: {t: '?', h: '&oneshot ES_INVERTED_QUESTION'}
   l: [ROCORN, SYM_NUM]
   a: left
+- p: [18, 4]
+  k: LC(LA(F4))
+  l: [Fn]
