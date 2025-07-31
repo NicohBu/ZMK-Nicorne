@@ -95,15 +95,6 @@
             flavor = "tap-preferred";
         };
 
-        td_caps: td_caps {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&cw_mod>, <&kp CAPS>;
-
-            label = "Enter / CapsWord / Mayusc.";
-        };
-
         hrm: home_row {
             compatible = "zmk,behavior-hold-tap";
             label = "home_row";
@@ -162,6 +153,15 @@
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
+        tilde_dieresis: tilde_dieresis {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TILDE_DIERESIS";
+            bindings = <&kp ES_ACUTE>, <&kp ES_UMLAUT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT)>;
+        };
     };
 
     macros {
@@ -210,7 +210,7 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
-                <&kp ES_ACUTE>,
+                <&tilde_dieresis>,
                 <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
@@ -317,18 +317,6 @@
             timeout-ms = <100>;
         };
 
-        L_DEL {
-            bindings = <&kp DEL>;
-            key-positions = <0 1>;
-            timeout-ms = <100>;
-        };
-
-        R_DEL {
-            bindings = <&kp DEL>;
-            key-positions = <12 11>;
-            timeout-ms = <100>;
-        };
-
         R_ESC {
             bindings = <&kp ESC>;
             key-positions = <7 8>;
@@ -347,6 +335,13 @@
             key-positions = <33 17>;
             layers = <0 4>;
             timeout-ms = <65>;
+        };
+
+        Kill_App {
+            bindings = <&kp LC(LA(F4))>;
+            key-positions = <18 4>;
+            layers = <3>;
+            require-prior-idle-ms = <0>;
         };
     };
 
