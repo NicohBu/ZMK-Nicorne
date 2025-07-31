@@ -204,7 +204,7 @@ layers:
   - $
   - '%'
   - $$mdi:rewind$$
-  - KP SLASH
+  - /
   - {t: '7', s: /}
   - {t: '8', s: (}
   - {t: '9', s: )}
