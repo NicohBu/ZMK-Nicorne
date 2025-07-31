@@ -204,7 +204,7 @@ layers:
   - $
   - '%'
   - $$mdi:rewind$$
-  - +
+  - /
   - {t: '7', s: /}
   - {t: '8', s: (}
   - {t: '9', s: )}
@@ -223,7 +223,7 @@ layers:
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: '&'}
-  - /
+  - +
   - $$mdi:calculator$$
   - {t: ▽, type: trans}
   - {t: '|', h: °}
@@ -253,11 +253,11 @@ layers:
   - {t: '9', h: $, s: )}
   - {t: '-', h: '%', s: _}
   - {t: ▽, type: trans}
-  - $$mdi:keyboard-esc$$
+  - $$mdi:volume-off$$
   - $$mdi:ray-end-arrow$$
   - $$mdi:arrow-up-bold$$
   - $$mdi:ray-start-arrow$$
-  - PG UP
+  - $$mdi:chevron-double-up$$
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: ▽, type: trans}
   - {t: '*', h: '&'}
@@ -268,12 +268,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$mdi:volume-high$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-right-bold$$
-  - PG DN
-  - $$mdi:apple-keyboard-shift$$
+  - $$mdi:chevron-double-down$$
+  - $$mdi:microsoft-windows$$
   - {t: ▽, type: trans}
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
@@ -282,10 +282,10 @@ layers:
   - {t: '?', h: '&oneshot ES_INVERTED_QUESTION', type: held alternate}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - $$mdi:volume-low$$
+  - $$mdi:skip-previous$$
+  - $$mdi:play-pause$$
+  - $$mdi:skip-next$$
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '0', s: '='}
