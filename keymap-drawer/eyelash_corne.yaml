@@ -106,7 +106,7 @@ layers:
   - F16
   - F17
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:volume-off$$
+  - MUTE
   - $$mdi:pan-left$$
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - $$mdi:pan-right$$
@@ -121,7 +121,7 @@ layers:
   - {t: '$$mdi:cursor-default-click-outline$$', h: '$$mdi:undo-variant$$', s: '4'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:cursor-default-click-outline$$', h: '$$mdi:redo-variant$$', s: '5'}
-  - $$mdi:volume-high$$
+  - VOLUME UP
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
@@ -133,12 +133,12 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - F23
   - F24
+  - {t: ▽, type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:volume-low$$
-  - {t: '$$mdi:skip-previous$$', h: '$$mdi:rewind$$'}
+  - VOLUME DOWN
+  - $$mdi:skip-previous$$
   - $$mdi:play-pause$$
-  - {t: '$$mdi:skip-next$$', h: '$$mdi:fast-forward$$'}
+  - $$mdi:skip-next$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -163,9 +163,9 @@ layers:
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: ▽, type: trans}
   - F6
-  - F7
-  - F8
-  - F9
+  - {t: F7, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: F8, h: '$$mdi:microsoft-windows$$'}
+  - {t: F9, h: '$$mdi:apple-keyboard-option$$'}
   - F10
   - {t: '$$mdi:led-on$$', s: '$$mdi:chevron-left-circle$$'}
   - $$mdi:lightbulb-on-outline$$
@@ -288,19 +288,10 @@ combos:
   k: $$mdi:backspace-reverse-outline$$
 - p: [7, 8]
   k: $$mdi:keyboard-esc$$
-- p: [7, 23]
-  k: (
+- p: [36, 23]
+  k: {t: ), h: (}
   l: [ROCORN, SYM_NUM]
-  a: left
-- p: [22, 8]
-  k: )
-  l: [ROCORN]
-  a: right
-- p: [16, 4]
-  k: ¿
-  l: [ROCORN, SYM_NUM]
-  a: right
-- p: [17, 3]
-  k: '?'
+- p: [33, 17]
+  k: {t: '?', h: '&oneshot ES_INVERTED_QUESTION'}
   l: [ROCORN, SYM_NUM]
   a: left
