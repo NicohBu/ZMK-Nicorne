@@ -162,11 +162,11 @@ layers:
   - $$mdi:chevron-double-up$$
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: ▽, type: trans}
-  - F6
-  - {t: F7, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: F8, h: '$$mdi:microsoft-windows$$'}
-  - {t: F9, h: '$$mdi:apple-keyboard-option$$'}
-  - F10
+  - {t: F6, h: '&bt_sel'}
+  - {t: F7, h: '&bt_sel 1'}
+  - {t: F8, h: '&bt_sel 2'}
+  - {t: F9, h: '&bt_sel 3'}
+  - {t: F10, h: '&bt_sel 4'}
   - {t: '$$mdi:led-on$$', s: '$$mdi:chevron-left-circle$$'}
   - $$mdi:lightbulb-on-outline$$
   - {t: '$$mdi:led-on$$', s: '$$mdi:chevron-right-circle$$'}
@@ -251,28 +251,11 @@ combos:
   l: [ROCORN, QWERTY]
 - p: [27, 12]
   k: $$mdi:numeric$$
-  l: [ROCORN, QWERTY, Fn]
 - p: [33, 32]
   k: $$mdi:numeric$$
-  l: [ROCORN, QWERTY, Fn]
 - p: [43, 46]
   k: $$mdi:alpha-w-box$$
   l: [ROCORN, QWERTY]
-- p: [14, 1]
-  k: {h: '$$mdi:bluetooth-connect$$', s: '1'}
-  l: [Fn]
-- p: [15, 2]
-  k: {h: '$$mdi:bluetooth-connect$$', s: '2'}
-  l: [Fn]
-- p: [16, 3]
-  k: {h: '$$mdi:bluetooth-connect$$', s: '3'}
-  l: [Fn]
-- p: [17, 4]
-  k: {h: '$$mdi:bluetooth-connect$$', s: '4'}
-  l: [Fn]
-- p: [18, 5]
-  k: {h: '$$mdi:bluetooth-connect$$', s: '5'}
-  l: [Fn]
 - p: [18, 17, 16]
   k: $$mdi:bluetooth-off$$
   l: [Fn]
@@ -294,3 +277,5 @@ combos:
 - p: [18, 4]
   k: LA(F4)
   l: [Fn]
+- p: [42, 28]
+  k: '&layer_mod LC(LEFT_ALT) 3'
