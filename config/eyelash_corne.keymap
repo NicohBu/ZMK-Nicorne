@@ -223,6 +223,25 @@
             bindings = <&macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER>;
             label = "BT_SEL";
         };
+
+        layer_mod: layer_mod {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_param_1to1>,
+                <&macro_press>,
+                <&kp MACRO_PLACEHOLDER &macro_param_2to1>,
+                <&macro_press>,
+                <&mo MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_param_2to1>,
+                <&macro_release>,
+                <&mo MACRO_PLACEHOLDER &macro_param_1to1>,
+                <&macro_release>,
+                <&kp MACRO_PLACEHOLDER>;
+
+            label = "LAYER_MOD";
+        };
     };
 
     combos {
@@ -241,14 +260,12 @@
             bindings = <&tog 4>;
             key-positions = <27 12>;
             timeout-ms = <100>;
-            layers = <0 1 3>;
         };
 
         MO_SYM_NUM {
             bindings = <&mo 4>;
             key-positions = <33 32>;
             timeout-ms = <100>;
-            layers = <0 1 3>;
             slow-release;
         };
 
@@ -259,41 +276,6 @@
             key-positions = <43 46>;
             timeout-ms = <150>;
             layers = <0 1>;
-        };
-
-        BT_1 {
-            bindings = <&bt BT_SEL 0>;
-            key-positions = <14 1>;
-            layers = <3>;
-            timeout-ms = <100>;
-        };
-
-        BT_2 {
-            bindings = <&bt BT_SEL 1>;
-            key-positions = <15 2>;
-            layers = <3>;
-            timeout-ms = <100>;
-        };
-
-        BT_3 {
-            bindings = <&bt BT_SEL 2>;
-            key-positions = <16 3>;
-            layers = <3>;
-            timeout-ms = <100>;
-        };
-
-        BT_4 {
-            bindings = <&bt BT_SEL 3>;
-            key-positions = <17 4>;
-            layers = <3>;
-            timeout-ms = <100>;
-        };
-
-        BT_5 {
-            bindings = <&bt BT_SEL 4>;
-            key-positions = <18 5>;
-            layers = <3>;
-            timeout-ms = <100>;
         };
 
         BtCLR {
@@ -344,6 +326,13 @@
             require-prior-idle-ms = <0>;
             timeout-ms = <100>;
         };
+
+        CTRL+ALT+FN {
+            bindings = <&layer_mod LC(LEFT_ALT) 3>;
+            key-positions = <42 28>;
+            timeout-ms = <100>;
+            slow-release;
+        };
     };
 
     keymap {
@@ -387,10 +376,10 @@
         Fn {
             display-name = "Fn";
             bindings = <
-&kp K_APP  &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                 &rgb_ug RGB_BRI                   &kp C_MUTE         &kp HOME                       &kp UP            &kp END                          &kp PAGE_UP    &hrm RCTRL BACKSPACE
-&trans     &kp F6                   &hrm LCTRL F7            &hrm LEFT_GUI F8         &hrm LEFT_ALT F9         &kp F10               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp C_VOLUME_UP    &kp LEFT                       &kp DOWN          &kp RIGHT                        &kp PAGE_DOWN  &kp RIGHT_WIN
-&trans     &bootloader              &out OUT_TOG             &out OUT_TOG             &kp F11                  &kp F12  &soft_off                     &rgb_ug RGB_BRD                   &kp C_VOLUME_DOWN  &shortcut C_REWIND C_PREVIOUS  &kp C_PLAY_PAUSE  &shortcut C_FAST_FORWARD C_NEXT  &bootloader    &hrm RSHIFT ENTER
-                                                             &trans                   &trans                   &trans                                                                   &kp ENTER          &trans                         &trans
+&kp K_APP  &shortcut LA(LC(F1)) F1  &shortcut LC(LA(F2)) F2  &shortcut LC(LA(F3)) F3  &shortcut LC(LA(F4)) F4  &kp F5                                      &rgb_ug RGB_BRI                   &kp C_MUTE         &kp HOME                       &kp UP            &kp END                          &kp PAGE_UP    &hrm RCTRL BACKSPACE
+&trans     &kp_bt 0 F6              &kp_bt 1 F7              &kp_bt 2 F8              &kp_bt 3 F9              &kp_bt 4 F10               &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &kp C_VOLUME_UP    &kp LEFT                       &kp DOWN          &kp RIGHT                        &kp PAGE_DOWN  &kp RIGHT_WIN
+&trans     &bootloader              &out OUT_TOG             &out OUT_TOG             &kp F11                  &kp F12       &soft_off                     &rgb_ug RGB_BRD                   &kp C_VOLUME_DOWN  &shortcut C_REWIND C_PREVIOUS  &kp C_PLAY_PAUSE  &shortcut C_FAST_FORWARD C_NEXT  &bootloader    &hrm RSHIFT ENTER
+                                                             &trans                   &trans                   &trans                                                                        &kp ENTER          &trans                         &trans
             >;
 
             sensor-bindings = <&hue_encoder>;
