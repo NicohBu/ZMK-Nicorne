@@ -23,7 +23,7 @@ Accesos directos a los archivos de configuración:
 ## Recursos
 |      Enlaces       |       Descripción       |
 | ------------------- | ------------------------ |
-| [`Keymap-Drawer`](https://keymap-drawer.streamlit.app/)   | Web para dibujar el keymap manualmente.      |
+| [`Keymap-Drawer`](https://keymap-drawer.streamlit.app/?zmk_url=https%3A%2F%2Fgithub.com%2FNicohBu%2FZMK-Nicorne%2Fblob%2Fmain%2Fconfig%2Feyelash_corne.keymap)   | Web para dibujar el keymap manualmente.      |
 | [`Pictogrammers`](https://pictogrammers.com/library/mdi/)            | Web para buscar iconos para dibujar en el keymap.                       |
 | [`Keymap_Drawer Repo`](https://github.com/caksoylar/keymap-drawer)  | Documentación y repositorio original de keymap drawer.          |
 | [`Keymap-Drawer Reference Repo`](https://github.com/minusfive/knucklehead) | Repositorio de referencia de keymap drawer.                   |
