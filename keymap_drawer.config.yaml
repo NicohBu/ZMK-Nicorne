@@ -1154,10 +1154,13 @@ parse_config:
     BtCLR:
       a: right
       o: 0.3
-    R_PAR:
-      a: right
-    L_PAR:
-      a: left
+    QST:
+      d: true 
+    PAR:
+      d: true
+    Kill_App:
+      d: true
+
 
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []
