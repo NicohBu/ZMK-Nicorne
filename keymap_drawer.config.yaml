@@ -72,14 +72,14 @@ draw_config:
         --borde-combo: var(--fondo-combo);
         --linea-combo: var(--borde-combo);
         --texto-combo-tap: rgb(55, 71, 79);
-        --texto-combo-shift: rgb(120, 144, 156);
-        --texto-combo-hold: var(--texto-combo-tap);
+        --texto-combo-shift: rgb(102, 115, 121);
+        --texto-combo-hold: rgb(102, 115, 121);
 
         /* --- Colores para Teclas Específicas (Overrides) --- */
         
         --texto-tecla-especial: vas(--texto-principal);
         --texto-tecla-especial-shifted: rgb(201, 211, 215);
-        --texto-tecla-especial-hold: var(--texto-tecla-especial-shifted);
+        --texto-tecla-especial-hold: rgb(201, 211, 215);
         --fondo-tecla-especial: rgb(137, 143, 148);
         --borde-tecla-especial: rgb(155, 158, 161);
         --fondo-tecla-roja: rgb(229, 115, 115);
@@ -210,15 +210,20 @@ draw_config:
       font-size: 16px;
     }
     .combo.shifted {
-      font-size: 13px;
+      font-size: 10px;
       translate: -9px -2px;
+      text-anchor: start;
     }
     .combo.shifted.glyph {
       translate: -9px -3px;
     }
     .combo.hold {
-      font-size: 16px;
-      translate: 0 0;
+      font-size: 10px;
+      translate: -12px 2px;
+      text-anchor: start;
+    }
+    .combo.hold.glyph {
+      translate: -12px 2px;
     }
 
     /*
@@ -364,11 +369,16 @@ draw_config:
       translate: 22px -26px;
     }
 
-    .hold.mdi\:desktop-classic ~.shifted {
+    .hold.mdi\:desktop-classic ~ .shifted {
       translate: -33px 48px;
       font-size: 9px;
     }
    
+    .hold.mdi\:bluetooth-connect ~ .shifted {
+      translate: -33px 48px;
+      font-size: 9px;
+    }
+
   footer_text: ''
   style_layer_activators: true
   glyphs: {}
@@ -376,6 +386,9 @@ parse_config:
   preprocess: true
   skip_binding_parsing: false
   raw_binding_map:
+    
+    '&kp LA(F4)': $$mdi:close-box$$
+  
     '&oneshot LC(Y)': $$mdi:redo$$
     '&oneshot LC(Z)': $$mdi:undo$$
     '&oneshot LC(F)': $$mdi:magnify$$
@@ -385,6 +398,8 @@ parse_config:
     '&oneshot LC(T)': $$mdi:tab-plus$$
     '&oneshot LG(LS(S))': $$mdi:camera-outline$$
     '&oneshot LS(LG(S))': $$mdi:camera-outline$$
+
+    '&shortcut ES_INVERTED_QUESTION ES_QUESTION': {t: '?', h: '¿'}
     
     '&shortcut LA(LC(F1)) F1': {t: F1, h: $$mdi:desktop-classic$$, s: '1'}
     '&shortcut LA(LC(F2)) F2': {t: F2, h: $$mdi:desktop-classic$$, s: '2'}
@@ -465,11 +480,11 @@ parse_config:
     '&oneshot FSLH': /
     '&oneshot QMARK': '?'
     '&oneshot QUESTION': '?'
-    '&oneshot BSLH': \
+    '&oneshot BSLH': '\'
     '&oneshot PIPE2': '|'
     '&oneshot PIPE': '|'
-    '&oneshot NON_US_BACKSLASH': \
-    '&oneshot NUBS': \
+    '&oneshot NON_US_BACKSLASH': '\'
+    '&oneshot NUBS': '\'
     '&oneshot NON_US_BSLH': '|'
     '&oneshot SEMI': ;
     '&oneshot SINGLE_QUOTE': ''''
@@ -665,6 +680,12 @@ parse_config:
     '&oneshot K_MUTE2': $$mdi:volume-off$$
     '&oneshot K_VOLUME_UP2': $$mdi:volume-high$$
     '&oneshot K_VOLUME_DOWN2': $$mdi:volume-low$$
+    '&oneshot K_MUTE': $$mdi:volume-off$$
+    '&oneshot K_VOLUME_UP': $$mdi:volume-high$$
+    '&oneshot K_VOLUME_DOWN': $$mdi:volume-low$$
+    '&oneshot K_MUTE': $$mdi:volume-off$$
+    '&oneshot K_VOL_UP': $$mdi:volume-high$$
+    '&oneshot K_VOL_DN': $$mdi:volume-low$$
     '&oneshot K_PLAY_PAUSE': $$mdi:play-pause$$
     '&oneshot K_PP': $$mdi:play-pause$$
     '&oneshot K_STOP': $$mdi:stop$$
@@ -693,6 +714,9 @@ parse_config:
       tap: $$mdi:keyboard-tab$$
       hold: $$mdi:microsoft-windows$$
     '&mo 2': $$mdi:mouse-scroll-wheel$$
+    '&layer_mod LC(LEFT_ALT) 3': 
+      tap: 'FN'
+      h: +MOD
     '&mo 4': $$mdi:numeric$$
     '&Back_Del':
       tap: $$mdi:backspace$$
@@ -753,10 +777,29 @@ parse_config:
       h: $$mdi:bluetooth-connect$$
       tap: ""
       s: 5
-    '&kp_bt 0': BT 1
-    '&kp_bt 2': BT 2
-    '&kp_bt 3': BT 3
-    '&kp_bt 4': BT 4
+
+
+    "&kp_bt 0 F6":
+      h: $$mdi:bluetooth-connect$$
+      tap: "F6"
+      s: 1
+    "&kp_bt 1 F7":
+      h: $$mdi:bluetooth-connect$$
+      tap: "F7"
+      s: 2
+    "&kp_bt 2 F8":
+      h: $$mdi:bluetooth-connect$$
+      tap: "F8"
+      s: 3
+    "&kp_bt 3 F9":
+      h: $$mdi:bluetooth-connect$$
+      tap: "F9"
+      s: 4
+    "&kp_bt 4 F10":
+      h: $$mdi:bluetooth-connect$$
+      tap: "F10"
+      s: 5
+
     '&bt BT_PRV':
       shifted: $$mdi:bluetooth-connect$$
       tap: ''
@@ -1071,6 +1114,11 @@ parse_config:
     K_MUTE2: $$mdi:volume-off$$
     K_VOLUME_UP2: $$mdi:volume-high$$
     K_VOLUME_DOWN2: $$mdi:volume-low$$
+    K_MUTE: $$mdi:volume-off$$
+    K_VOLUME_UP: $$mdi:volume-high$$
+    K_VOLUME_DOWN: $$mdi:volume-low$$
+    K_VOL_UP: $$mdi:volume-high$$
+    K_VOL_DN: $$mdi:volume-low$$
     K_PLAY_PAUSE: $$mdi:play-pause$$
     C_PLAY_PAUSE: $$mdi:play-pause$$
     K_PP: $$mdi:play-pause$$
@@ -1106,10 +1154,6 @@ parse_config:
     BtCLR:
       a: right
       o: 0.3
-    IQST:
-      a: right
-    QST:
-      a: left
     R_PAR:
       a: right
     L_PAR:
