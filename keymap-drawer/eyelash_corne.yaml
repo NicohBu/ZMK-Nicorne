@@ -43,7 +43,7 @@ layers:
   - {t: ., h: '>', s: ':'}
   - {t: '-', s: _}
   - Fn
-  - $$mdi:apple-keyboard-control$$
+  - {t: '$$mdi:backspace-reverse-outline$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:keyboard-return$$', h: Fn}
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:numeric$$'}
@@ -189,7 +189,7 @@ layers:
   - $$mdi:play-pause$$
   - {t: '$$mdi:skip-next$$', h: '$$mdi:fast-forward$$'}
   - $$mdi:progress-download$$
-  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$', type: held}
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-option$$', type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held alternate}
