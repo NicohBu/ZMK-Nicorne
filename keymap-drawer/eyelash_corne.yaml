@@ -270,11 +270,14 @@ combos:
 - p: [36, 23]
   k: {t: ), h: (}
   l: [ROCORN, SYM_NUM]
+  d: true
 - p: [33, 17]
   k: {t: '?', h: ¿}
   l: [ROCORN, SYM_NUM]
+  d: true
 - p: [18, 4]
   k: $$mdi:close-box$$
   l: [Fn]
+  d: true
 - p: [42, 28]
   k: {t: FN, h: +MOD}
