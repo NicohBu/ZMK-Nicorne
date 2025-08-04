@@ -106,7 +106,7 @@ layers:
   - F16
   - F17
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - MUTE
+  - $$mdi:volume-off$$
   - $$mdi:pan-left$$
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - $$mdi:pan-right$$
@@ -121,7 +121,7 @@ layers:
   - {t: '$$mdi:cursor-default-click-outline$$', h: '$$mdi:undo-variant$$', s: '4'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:cursor-default-click-outline$$', h: '$$mdi:redo-variant$$', s: '5'}
-  - VOLUME UP
+  - $$mdi:volume-high$$
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
@@ -135,7 +135,7 @@ layers:
   - F24
   - {t: ▽, type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - VOLUME DOWN
+  - $$mdi:volume-low$$
   - $$mdi:skip-previous$$
   - $$mdi:play-pause$$
   - $$mdi:skip-next$$
@@ -162,11 +162,11 @@ layers:
   - $$mdi:chevron-double-up$$
   - {t: '$$mdi:backspace$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: ▽, type: trans}
-  - {t: F6, h: '&bt_sel'}
-  - {t: F7, h: '&bt_sel 1'}
-  - {t: F8, h: '&bt_sel 2'}
-  - {t: F9, h: '&bt_sel 3'}
-  - {t: F10, h: '&bt_sel 4'}
+  - {t: F6, h: '$$mdi:bluetooth-connect$$', s: '1'}
+  - {t: F7, h: '$$mdi:bluetooth-connect$$', s: '2'}
+  - {t: F8, h: '$$mdi:bluetooth-connect$$', s: '3'}
+  - {t: F9, h: '$$mdi:bluetooth-connect$$', s: '4'}
+  - {t: F10, h: '$$mdi:bluetooth-connect$$', s: '5'}
   - {t: '$$mdi:led-on$$', s: '$$mdi:chevron-left-circle$$'}
   - $$mdi:lightbulb-on-outline$$
   - {t: '$$mdi:led-on$$', s: '$$mdi:chevron-right-circle$$'}
@@ -271,11 +271,10 @@ combos:
   k: {t: ), h: (}
   l: [ROCORN, SYM_NUM]
 - p: [33, 17]
-  k: {t: '?', h: '&oneshot ES_INVERTED_QUESTION'}
+  k: {t: '?', h: ¿}
   l: [ROCORN, SYM_NUM]
-  a: left
 - p: [18, 4]
-  k: LA(F4)
+  k: $$mdi:close-box$$
   l: [Fn]
 - p: [42, 28]
-  k: '&layer_mod LC(LEFT_ALT) 3'
+  k: {t: FN, h: +MOD}
