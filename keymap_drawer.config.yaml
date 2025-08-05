@@ -50,55 +50,376 @@ draw_config:
     /* font and background color specifications */
     svg.keymap {
         /*
-         * =============================================
-         * ===== Bloque de Personalización de Tema =====
-         * =============================================
+         * ===================================================================
+         * ===== PAQUETE DE TEMAS: ¡DESCOMENTA EL QUE QUIERAS USAR! =====
+         * ===================================================================
+         * Instrucciones: Solo UN bloque de tema debe estar descomentado.
+         * Para activar un tema, borra el "/*" de su inicio y el "*/" de su final.
+         * Para desactivar el actual, envuélvelo en "/*" y "*/".
          */
 
-        /* --- Colores Base --- */
-        --fondo-general: transparent;
-        --texto-principal: rgb(38, 50, 56);
-        --texto-capa: rgb(120, 144, 156);
-
-        /* --- Colores de Teclas Estándar --- */
-        --fondo-tecla: rgb(236, 239, 241);
-        --borde-tecla: white;
-        --texto-tecla-tap: var(--texto-principal);
-        --texto-tecla-shift: rgb(120, 144, 156);
-        --texto-tecla-hold: rgb(120, 144, 156);
-
-        /* --- Colores de Combos --- */
-        --fondo-combo: rgb(201, 211, 215);
-        --borde-combo: var(--fondo-combo);
-        --linea-combo: var(--borde-combo);
-        --texto-combo-tap: rgb(55, 71, 79);
-        --texto-combo-shift: rgb(102, 115, 121);
-        --texto-combo-hold: rgb(102, 115, 121);
-
-        /* --- Colores para Teclas Específicas (Overrides) --- */
+        /* --- TEMA: Gris --- */
         
-        --texto-tecla-especial: vas(--texto-principal);
-        --texto-tecla-especial-shifted: rgb(201, 211, 215);
-        --texto-tecla-especial-hold: rgb(201, 211, 215);
-        --fondo-tecla-especial: rgb(137, 143, 148);
-        --borde-tecla-especial: rgb(155, 158, 161);
-        --fondo-tecla-roja: rgb(229, 115, 115);
-        --borde-tecla-roja: rgb(239, 154, 154);
-        --fondo-tecla-verde: rgb(128, 203, 196);
-        --borde-tecla-verde: rgb(178, 223, 219);
-
-        /* --- Logo (opcional) --- */
+        --fondo-general: transparent;
+        --texto-principal: rgb(220, 225, 230);
+        --texto-capa: rgb(0, 160, 170);
+        --fondo-tecla: rgb(40, 45, 55);
+        --borde-tecla: rgb(55, 60, 70);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: rgb(0, 160, 170);
+        --texto-tecla-hold: rgb(0, 160, 170);
+        --fondo-combo: rgb(80, 90, 100);
+        --borde-combo: var(--fondo-combo);
+        --linea-combo: rgb(110, 59, 38);
+        --texto-combo-tap: var(--texto-principal);
+        --texto-combo-shift: var(--fondo-tecla-acento-1);
+        --texto-combo-hold: var(--fondo-tecla-acento-1);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(75, 80, 90);
+        --fondo-tecla-acento-1: rgb(200, 110, 70);
+        --borde-tecla-acento-1: rgb(220, 130, 90);
+        --fondo-tecla-acento-2: rgb(0, 130, 140);
+        --borde-tecla-acento-2: rgb(0, 150, 160);
         --logo-path: none;
         --logo-size: 12%;
         --logo-position: 49.5% 5%;
+        
+
+        /* --- TEMA: Gris con celeste --- */
+        /*
+        --fondo-general: transparent;
+        --texto-principal: rgb(225, 230, 235);
+        --texto-capa: rgb(100, 180, 220);
+        --fondo-tecla: rgb(45, 50, 60);
+        --borde-tecla: rgb(60, 65, 75);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: rgb(100, 180, 220);
+        --texto-tecla-hold: rgb(100, 180, 220);
+        --fondo-combo: rgb(85, 90, 100);
+        --borde-combo: var(--fondo-combo);
+        --linea-combo: var(--borde-combo);
+        --texto-combo-tap: var(--texto-principal);
+        --texto-combo-shift: var(--texto-tecla-shift);
+        --texto-combo-hold: var(--texto-tecla-hold);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(80, 85, 95);
+        --fondo-tecla-acento-1: rgb(140, 150, 160);
+        --borde-tecla-acento-1: rgb(155, 165, 175);
+        --fondo-tecla-acento-2: rgb(80, 160, 200);
+        --borde-tecla-acento-2: rgb(100, 175, 215);
+        --logo-path: none;
+        --logo-size: 12%;
+        --logo-position: 49.5% 5%;
+        */
+
+        /* --- TEMA: Azul y Oro --- */
+        /*
+        --fondo-general: transparent;
+        --texto-principal: rgb(225, 220, 205);
+        --texto-capa: rgb(220, 180, 100);
+        --fondo-tecla: rgb(20, 45, 80);
+        --borde-tecla: rgb(35, 60, 100);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: rgb(220, 180, 100);
+        --texto-tecla-hold: rgb(220, 180, 100);
+        --fondo-combo: rgb(60, 90, 130);
+        --borde-combo: var(--fondo-combo);
+        --linea-combo: var(--borde-combo);
+        --texto-combo-tap: var(--texto-principal);
+        --texto-combo-shift: var(--texto-tecla-shift);
+        --texto-combo-hold: var(--texto-tecla-hold);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(50, 80, 120);
+        --fondo-tecla-acento-1: rgb(190, 150, 70);
+        --borde-tecla-acento-1: rgb(205, 165, 85);
+        --fondo-tecla-acento-2: rgb(80, 110, 180);
+        --borde-tecla-acento-2: rgb(95, 125, 195);
+        --logo-path: none;
+        --logo-size: 12%;
+        --logo-position: 49.5% 5%;
+        */
+
+
+        /* --- TEMA: Azul --- */
+        /*
+        --fondo-general: transparent;
+        --texto-principal: rgb(210, 220, 230);
+        --texto-capa: rgb(130, 160, 190);
+        --fondo-tecla: rgb(28, 45, 68);
+        --borde-tecla: rgb(42, 60, 85);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: rgb(130, 160, 190);
+        --texto-tecla-hold: rgb(130, 160, 190);
+        --fondo-combo: rgb(70, 95, 125);
+        --borde-combo: var(--fondo-combo);
+        --linea-combo: var(--borde-combo);
+        --texto-combo-tap: var(--fondo-tecla);
+        --texto-combo-shift: var(--texto-tecla-shift);
+        --texto-combo-hold: var(--texto-tecla-hold);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(58, 80, 110);
+        --fondo-tecla-acento: rgb(220, 235, 245);
+        --borde-tecla-acento: rgb(200, 215, 225);
+        --logo-path: none;
+        --logo-size: 12%;
+        --logo-position: 49.5% 5%;
+        */
+
+        /* --- TEMA: Gris Splatoon (Verde y Rosado) --- */
+        /*
+        --fondo-general: transparent;
+        --texto-principal: rgb(225, 225, 225);
+        --texto-capa: rgb(220, 130, 150);
+        --fondo-tecla: rgb(40, 45, 50);
+        --borde-tecla: rgb(55, 60, 65);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: rgb(220, 130, 150);
+        --texto-tecla-hold: rgb(220, 130, 150);
+        --fondo-combo: rgb(80, 85, 90);
+        --borde-combo: var(--fondo-combo);
+        --linea-combo: var(--borde-combo);
+        --texto-combo-tap: var(--texto-principal);
+        --texto-combo-shift: var(--texto-tecla-shift);
+        --texto-combo-hold: var(--texto-tecla-hold);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(75, 80, 85);
+        --fondo-tecla-acento-1: rgb(200, 80, 110);
+        --borde-tecla-acento-1: rgb(215, 95, 125);
+        --fondo-tecla-acento-2: rgb(40, 100, 80);
+        --borde-tecla-acento-2: rgb(55, 115, 95);
+        --logo-path: none;
+        --logo-size: 12%;
+        --logo-position: 49.5% 5%;
+        */
+        
+        /* --- TEMA: Gris y Blanco --- */
+        /*
+        --fondo-general: transparent;
+        --texto-principal: rgb(230, 235, 240);
+        --texto-capa: rgb(160, 170, 180);
+        --fondo-tecla: rgb(40, 42, 50);
+        --borde-tecla: rgb(55, 58, 68);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: rgb(160, 170, 180);
+        --texto-tecla-hold: rgb(160, 170, 180);
+        --fondo-combo: rgb(80, 85, 95);
+        --borde-combo: var(--fondo-combo);
+        --linea-combo: var(--borde-combo);
+        --texto-combo-tap: var(--texto-principal);
+        --texto-combo-shift: var(--texto-tecla-shift);
+        --texto-combo-hold: var(--texto-tecla-hold);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(75, 80, 90);
+        --fondo-tecla-acento-1: rgb(110, 115, 125);
+        --borde-tecla-acento-1: rgb(125, 130, 140);
+        --fondo-tecla-acento-2: rgb(140, 145, 155);
+        --borde-tecla-acento-2: rgb(155, 160, 170);
+        --logo-path: none;
+        --logo-size: 12%;
+        --logo-position: 49.5% 5%;
+        */
+
+
+        /* --- TEMA: Azul Medianoche --- */
+        /*
+        --fondo-tecla: rgb(28, 45, 68);
+        --borde-tecla: rgb(42, 60, 85);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(58, 80, 110);
+        --fondo-tecla-acento-1: rgb(130, 160, 190);
+        --borde-tecla-acento-1: rgb(145, 175, 205);
+        --fondo-tecla-acento-2: rgb(220, 235, 245);
+        --borde-tecla-acento-2: rgb(200, 215, 225);
+        --fondo-combo: rgb(70, 95, 125);
+        --texto-principal: rgb(210, 220, 230);
+        --texto-capa: rgb(130, 160, 190);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: var(--texto-capa);
+        --texto-tecla-hold: var(--texto-capa);
+        --texto-combo-tap: var(--fondo-tecla);
+        --texto-acento-claro: var(--fondo-tecla);
+        --texto-acento-oscuro: var(--texto-principal);
+        */
+        /*
+
+        /* --- TEMA: Neón Nocturno --- */
+        /*
+        --fondo-tecla: rgb(25, 20, 40);
+        --borde-tecla: rgb(40, 32, 60);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(60, 50, 85);
+        --fondo-tecla-acento-1: rgb(0, 255, 255);
+        --borde-tecla-acento-1: rgb(100, 255, 255);
+        --fondo-tecla-acento-2: rgb(255, 0, 150);
+        --borde-tecla-acento-2: rgb(255, 100, 200);
+        --fondo-combo: rgb(255, 0, 150);
+        --texto-principal: rgb(0, 255, 255);
+        --texto-capa: rgb(255, 0, 150);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: var(--texto-capa);
+        --texto-tecla-hold: var(--texto-capa);
+        --texto-combo-tap: var(--fondo-tecla);
+        --texto-acento-claro: var(--fondo-tecla);
+        --texto-acento-oscuro: var(--texto-principal);
+        */
+
+        /* --- TEMA: Cielo Nocturno (Nebulosa) --- */
+        /*
+        --fondo-tecla: rgb(20, 15, 45);
+        --borde-tecla: rgb(35, 28, 65);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(55, 35, 90);
+        --fondo-tecla-acento-1: rgb(0, 190, 200);
+        --borde-tecla-acento-1: rgb(50, 210, 220);
+        --fondo-tecla-acento-2: rgb(210, 60, 150);
+        --borde-tecla-acento-2: rgb(230, 90, 170);
+        --fondo-combo: rgb(210, 60, 150);
+        --texto-principal: rgb(225, 230, 240);
+        --texto-capa: rgb(180, 170, 210);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: var(--texto-capa);
+        --texto-tecla-hold: var(--texto-capa);
+        --texto-combo-tap: var(--fondo-tecla);
+        --texto-acento-claro: var(--fondo-tecla);
+        --texto-acento-oscuro: var(--texto-principal);
+        */
+
+        /* --- TEMA: Celaje Crepuscular --- */
+        /*
+        --fondo-tecla: rgb(40, 35, 75);
+        --borde-tecla: rgb(55, 50, 95);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(75, 70, 115);
+        --fondo-tecla-acento-1: rgb(255, 100, 50);
+        --borde-tecla-acento-1: rgb(255, 130, 80);
+        --fondo-tecla-acento-2: rgb(220, 80, 130);
+        --borde-tecla-acento-2: rgb(240, 110, 150);
+        --fondo-combo: rgb(220, 80, 130);
+        --texto-principal: rgb(245, 225, 210);
+        --texto-capa: rgb(255, 100, 50);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: var(--texto-capa);
+        --texto-tecla-hold: var(--texto-capa);
+        --texto-combo-tap: var(--fondo-tecla);
+        --texto-acento-claro: var(--fondo-tecla);
+        --texto-acento-oscuro: var(--texto-principal);
+        */
+
+        /* --- TEMA: Zafiro Imperial --- */
+        /*
+        --fondo-tecla: rgb(20, 40, 90);
+        --borde-tecla: rgb(35, 55, 110);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(50, 75, 130);
+        --fondo-tecla-acento-1: rgb(60, 100, 190);
+        --borde-tecla-acento-1: rgb(75, 115, 205);
+        --fondo-tecla-acento-2: rgb(90, 130, 210);
+        --borde-tecla-acento-2: rgb(105, 145, 225);
+        --fondo-combo: rgb(60, 90, 140);
+        --texto-principal: rgb(220, 225, 240);
+        --texto-capa: rgb(130, 160, 220);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: var(--texto-capa);
+        --texto-tecla-hold: var(--texto-capa);
+        --texto-combo-tap: var(--texto-principal);
+        --texto-acento-claro: #fff;
+        --texto-acento-oscuro: var(--texto-principal);
+        */
+
+        /* --- TEMA: Rubí Sangriento --- */
+        /*
+        --fondo-tecla: rgb(70, 20, 35);
+        --borde-tecla: rgb(90, 35, 50);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(110, 55, 70);
+        --fondo-tecla-acento-1: rgb(200, 50, 80);
+        --borde-tecla-acento-1: rgb(215, 70, 95);
+        --fondo-tecla-acento-2: rgb(220, 80, 110);
+        --borde-tecla-acento-2: rgb(235, 100, 125);
+        --fondo-combo: rgb(120, 60, 75);
+        --texto-principal: rgb(235, 220, 225);
+        --texto-capa: rgb(240, 150, 160);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: var(--texto-capa);
+        --texto-tecla-hold: var(--texto-capa);
+        --texto-combo-tap: var(--texto-principal);
+        --texto-acento-claro: #fff;
+        --texto-acento-oscuro: var(--texto-principal);
+        */
+
+        /* --- TEMA: Ópalo de Fuego --- */
+        /*
+        --fondo-tecla: rgb(30, 35, 50);
+        --borde-tecla: rgb(45, 50, 70);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(65, 70, 90);
+        --fondo-tecla-acento-1: rgb(0, 200, 130);
+        --borde-tecla-acento-1: rgb(30, 220, 150);
+        --fondo-tecla-acento-2: rgb(255, 100, 60);
+        --borde-tecla-acento-2: rgb(255, 120, 80);
+        --fondo-combo: rgb(70, 80, 95);
+        --texto-principal: rgb(225, 230, 240);
+        --texto-capa: rgb(255, 120, 80);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: var(--texto-capa);
+        --texto-tecla-hold: rgb(0, 220, 150);
+        --texto-combo-tap: var(--texto-principal);
+        --texto-acento-claro: var(--fondo-tecla);
+        --texto-acento-oscuro: var(--texto-principal);
+        */
+
+        // --- MODO DÍA ---
+
+        /* --- TEMA: Amanecer en el Viñedo (Vino y Oro - DÍA) --- */
+        /*
+        --fondo-tecla: rgb(250, 248, 240);
+        --borde-tecla: rgb(230, 225, 215);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(210, 205, 195);
+        --fondo-tecla-acento-1: rgb(210, 160, 90);
+        --borde-tecla-acento-1: rgb(225, 175, 105);
+        --fondo-tecla-acento-2: rgb(150, 50, 70);
+        --borde-tecla-acento-2: rgb(170, 70, 90);
+        --fondo-combo: rgb(220, 210, 200);
+        --texto-principal: rgb(65, 25, 40);
+        --texto-capa: rgb(150, 50, 70);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: var(--texto-capa);
+        --texto-tecla-hold: var(--texto-capa);
+        --texto-combo-tap: var(--texto-principal);
+        --texto-acento-claro: #fff;
+        --texto-acento-oscuro: var(--texto-principal);
+        */
+
+        /* --- TEMA: Diamante y Plata (DÍA) --- */
+        /*
+        --fondo-tecla: rgb(250, 250, 255);
+        --borde-tecla: rgb(225, 230, 235);
+        --fondo-tecla-especial: var(--borde-tecla);
+        --borde-tecla-especial: rgb(205, 210, 215);
+        --fondo-tecla-acento-1: rgb(170, 180, 190);
+        --borde-tecla-acento-1: rgb(185, 195, 205);
+        --fondo-tecla-acento-2: rgb(130, 170, 210);
+        --borde-tecla-acento-2: rgb(150, 190, 230);
+        --fondo-combo: rgb(215, 220, 225);
+        --texto-principal: rgb(45, 50, 60);
+        --texto-capa: rgb(110, 120, 130);
+        --texto-tecla-tap: var(--texto-principal);
+        --texto-tecla-shift: var(--texto-capa);
+        --texto-tecla-hold: var(--texto-capa);
+        --texto-combo-tap: var(--texto-principal);
+        --texto-acento-claro: var(--fondo-tecla);
+        --texto-acento-oscuro: #fff;
+        */
 
         /*
-         * ====================
-         * Theme Variables (NO TOCAR)
-         * ====================
+         * =============================================
+         * ===== FIN DE LA SELECCIÓN DE TEMAS =====
+         * =============================================
          */
 
-        --color--bg: var(--fondo-general);
+        /* --- Variables Internas (No Tocar) --- */
+        --color--bg: transparent;
         --color--text: var(--texto-principal);
         --color--layer--text: var(--texto-capa);
         --color--key--bg: var(--fondo-tecla);
@@ -113,12 +434,7 @@ draw_config:
         --color--combo--text--shifted: var(--texto-combo-shift);
         --color--combo--text--hold: var(--texto-combo-hold);
 
-        /*
-         * ====================
-         * /End Theme Variables
-         * ====================
-         */
-
+        /* --- Estilos Generales --- */
         font-family: system-ui, sans-serif;
         font-size: 20px;
         font-weight: 600;
@@ -126,259 +442,42 @@ draw_config:
         text-rendering: optimizeLegibility;
         fill: var(--color--text);
         background-color: var(--color--bg);
-        background-image: var(--logo-path);
-        background-repeat: no-repeat;
-        background-position: var(--logo-position);
-        background-size: var(--logo-size) auto;
     }
 
-    rect,
-    path {
-      shape-rendering: geometricPrecision;
-    }
-
-    text {
-        text-anchor: middle;
-        dominant-baseline: middle;
-        line-height: 1;
-    }
-
-    /* Layer labels */
-    text.label {
-        font-size: 25px;
-        text-anchor: start;
-        paint-order: stroke;
-        fill: var(--color--layer--text);
-        translate: 1px 15px;
-    }
-
-
-    /* Keys */
-    rect.key,
-    rect.combo {
-        fill: var(--color--key--bg);
-        stroke: var(--color--key--border);
-    }
-    .tap {
-      fill: var(--color--key--text--tap);
-    }
-    .shifted,
-    .hold {
-        font-size: 16px;
-        text-anchor: middle;
-    }
-
-    .shifted {
-        dominant-baseline: hanging;
-        fill: var(--color--key--text--shifted);
-        translate: 26px 2px;
-    }
-    .shifted.glyph {
-        translate: 26px 0px;
-    }
-
-    .hold {
-        dominant-baseline: ideographic;
-        fill: var(--color--key--text--hold);
-        translate: 26px 4px;
-    }
-    .hold.glyph {
-        translate: 26px 2px;
-    }
-
-
-    /*
-     * Combos
-     */
-    .combo {
-      --color--key--bg: var(--color--combo--bg);
-      --color--key--border: var(--color--combo--border);
-      --color--key--text--tap: var(--color--combo--text--tap);
-      --color--key--text--shifted: var(--color--combo--text--shifted);
-      --color--key--text--hold: var(--color--combo--text--hold);
-    }
-    rect.combo {
-      opacity: 0.9;
-      stroke-width: 0;
-    }
-    path.combo {
-      stroke-width: 1;
-      stroke: var(--color--combo--dendron);
-      fill: none;
-    }
-    .combo.tap {
-      font-size: 16px;
-    }
-    .combo.shifted {
-      font-size: 10px;
-      translate: -9px -2px;
-      text-anchor: start;
-    }
-    .combo.shifted.glyph {
-      translate: -9px -3px;
-    }
-    .combo.hold {
-      font-size: 10px;
-      translate: -12px 2px;
-      text-anchor: start;
-    }
-    .combo.hold.glyph {
-      translate: -12px 2px;
-    }
-
-    /*
-     * Transparent, None, and Ghost Keys
-     */
-    .trans,
-    .held,
-    .ghost {
-      opacity: 1.0;
-    }
-
-    .none {
-      opacity: 0.6;
-    }
-
-    /*
-     * Overrides
-     */
-    /* Outer column + thumb keys */
-    .keypos-0 .key,
-    .keypos-12 .key,
-    .keypos-13 .key,
-    .keypos-27 .key,
-    .keypos-28 .key,
-    .keypos-41 .key,
-    .keypos-42 .key,
-    .keypos-43 .key,
-    .keypos-44 .key,
-    .keypos-45 .key,
-    .keypos-46 .key,
-    .keypos-47 .key {
-        --color--key--bg: var(--fondo-tecla-especial);
-        --color--key--border: var(--borde-tecla-especial);
-        --color--key--text--tap: var(--texto-tecla-especial);
-        --color--key--text--shifted: var(--texto-tecla-especial-shifted);
-        --color--key--text--hold: var(--texto-tecla-especial-hold);
-    }
-
-    .keypos-34 .key {
-        --color--key--bg: var(--fondo-tecla-roja);
-        --color--key--border: var(--borde-tecla-roja);
-        --color--key--text--shifted: var(--color--key--text--tap);
-        --color--key--text--hold: var(--color--key--text--tap);
-    }
-
-    .keypos-20 .key {
-        --color--key--bg: var(--fondo-tecla-verde);
-        --color--key--border: var(--borde-tecla-verde);
-    }
-
-    /* El resto del código no necesita cambios ya que hereda las variables */
-
-    .keypos-0 .shifted,
-    .keypos-1 .shifted,
-    .keypos-2 .shifted,
-    .keypos-3 .shifted,
-    .keypos-4 .shifted,
-    .keypos-5 .shifted,
-    .keypos-13 .shifted,
-    .keypos-14 .shifted,
-    .keypos-15 .shifted,
-    .keypos-16 .shifted,
-    .keypos-17 .shifted,
-    .keypos-18 .shifted,
-    .keypos-28 .shifted,
-    .keypos-29 .shifted,
-    .keypos-30 .shifted,
-    .keypos-31 .shifted,
-    .keypos-32 .shifted,
-    .keypos-33 .shifted,
-    .keypos-42 .shifted,
-    .keypos-43 .shifted,
-    .keypos-44 .shifted {
-      translate: -26px 2px;
-    }
-
-    .keypos-0 .hold,
-    .keypos-1 .hold,
-    .keypos-2 .hold,
-    .keypos-3 .hold,
-    .keypos-4 .hold,
-    .keypos-5 .hold,
-    .keypos-13 .hold,
-    .keypos-14 .hold,
-    .keypos-15 .hold,
-    .keypos-16 .hold,
-    .keypos-17 .hold,
-    .keypos-18 .hold,
-    .keypos-28 .hold,
-    .keypos-29 .hold,
-    .keypos-30 .hold,
-    .keypos-31 .hold,
-    .keypos-32 .hold,
-    .keypos-33 .hold,
-    .keypos-42 .hold,
-    .keypos-43 .hold,
-    .keypos-44 .hold {
-      translate: -26px 4px;
-    }
-
-    .keypos-0 .hold.glyph,
-    .keypos-1 .hold.glyph,
-    .keypos-2 .hold.glyph,
-    .keypos-3 .hold.glyph,
-    .keypos-4 .hold.glyph,
-    .keypos-5 .hold.glyph,
-    .keypos-13 .hold.glyph,
-    .keypos-14 .hold.glyph,
-    .keypos-15 .hold.glyph,
-    .keypos-16 .hold.glyph,
-    .keypos-17 .hold.glyph,
-    .keypos-18 .hold.glyph,
-    .keypos-28 .hold.glyph,
-    .keypos-29 .hold.glyph,
-    .keypos-30 .hold.glyph,
-    .keypos-31 .hold.glyph,
-    .keypos-32 .hold.glyph,
-    .keypos-33 .hold.glyph,
-    .keypos-42 .hold.glyph,
-    .keypos-43 .hold.glyph,
-    .keypos-44 .hold.glyph {
-      translate: -26px 2px;
-    }
-
-    .shifted.mdi\:alpha-w-box {
-      translate: 0px 8px;
-    }
-    .keypos-38 .shifted.mdi\:alpha-w-box,
-    .keypos-39 .shifted.mdi\:alpha-w-box {
-      translate: 0px 20px;
-    }
-
-
-    .keypos-38 .hold.mdi\:gesture-tap-hold,
-    .keypos-39 .hold.mdi\:gesture-tap-hold {
-      translate: 0px -20px;
-    }
-
-    .key .mdi\:toggle-switch ~ .mdi\:usb {
-      translate: -22px 26px;
-    }
-    .key .mdi\:toggle-switch ~ .mdi\:bluetooth {
-      translate: 22px -26px;
-    }
-
-    .hold.mdi\:desktop-classic ~ .shifted {
-      translate: -33px 48px;
-      font-size: 9px;
-    }
-   
-    .hold.mdi\:bluetooth-connect ~ .shifted {
-      translate: -33px 48px;
-      font-size: 9px;
-    }
-
+    rect, path { shape-rendering: geometricPrecision; }
+    text { text-anchor: middle; dominant-baseline: middle; line-height: 1; }
+    text.label { font-size: 25px; text-anchor: start; paint-order: stroke; fill: var(--color--layer--text); translate: 1px 15px; }
+    rect.key, rect.combo { fill: var(--color--key--bg); stroke: var(--color--key--border); }
+    .tap { fill: var(--color--key--text--tap); }
+    .shifted, .hold { font-size: 16px; text-anchor: middle; }
+    .shifted { dominant-baseline: hanging; fill: var(--color--key--text--shifted); translate: 26px 2px; }
+    .shifted.glyph { translate: 26px 0px; }
+    .hold { dominant-baseline: ideographic; fill: var(--color--key--text--hold); translate: 26px 4px; }
+    .hold.glyph { translate: 26px 2px; }
+    .combo { --color--key--bg: var(--color--combo--bg); --color--key--border: var(--color--combo--border); --color--key--text--tap: var(--color--combo--text--tap); --color--key--text--shifted: var(--color--combo--text--shifted); --color--key--text--hold: var(--color--combo--text--hold); }
+    rect.combo { opacity: 0.9; stroke-width: 0; }
+    path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; }
+    .combo.tap { font-size: 16px; }
+    .combo.shifted { font-size: 10px; translate: -9px -2px; text-anchor: start; }
+    .combo.shifted.glyph { translate: -9px -3px; }
+    .combo.hold { font-size: 10px; translate: -12px 2px; text-anchor: start; }
+    .combo.hold.glyph { translate: -12px 2px; }
+    .trans, .held, .ghost { opacity: 1.0; }
+    .none { opacity: 0.6; }
+    .keypos-0 .key, .keypos-12 .key, .keypos-13 .key, .keypos-27 .key, .keypos-28 .key, .keypos-41 .key, .keypos-42 .key, .keypos-43 .key, .keypos-44 .key, .keypos-45 .key, .keypos-46 .key, .keypos-47 .key { --color--key--bg: var(--fondo-tecla-especial); --color--key--border: var(--borde-tecla-especial); }
+    .keypos-34 .key { --color--key--bg: var(--fondo-tecla-acento-1); --color--key--border: var(--borde-tecla-acento-1); --color--key--text--tap: var(--texto-acento-claro); --color--key--text--shifted: var(--texto-acento-claro); --color--key--text--hold: var(--texto-acento-claro); }
+    .keypos-20 .key { --color--key--bg: var(--fondo-tecla-acento-2); --color--key--border: var(--borde-tecla-acento-2); --color--key--text--tap: var(--texto-acento-oscuro); --color--key--text--shifted: var(--texto-acento-oscuro); --color--key--text--hold: var(--texto-acento-oscuro); }
+    .keypos-0 .shifted, .keypos-1 .shifted, .keypos-2 .shifted, .keypos-3 .shifted, .keypos-4 .shifted, .keypos-5 .shifted, .keypos-13 .shifted, .keypos-14 .shifted, .keypos-15 .shifted, .keypos-16 .shifted, .keypos-17 .shifted, .keypos-18 .shifted, .keypos-28 .shifted, .keypos-29 .shifted, .keypos-30 .shifted, .keypos-31 .shifted, .keypos-32 .shifted, .keypos-33 .shifted, .keypos-42 .shifted, .keypos-43 .shifted, .keypos-44 .shifted { translate: -26px 2px; }
+    .keypos-0 .hold, .keypos-1 .hold, .keypos-2 .hold, .keypos-3 .hold, .keypos-4 .hold, .keypos-5 .hold, .keypos-13 .hold, .keypos-14 .hold, .keypos-15 .hold, .keypos-16 .hold, .keypos-17 .hold, .keypos-18 .hold, .keypos-28 .hold, .keypos-29 .hold, .keypos-30 .hold, .keypos-31 .hold, .keypos-32 .hold, .keypos-33 .hold, .keypos-42 .hold, .keypos-43 .hold, .keypos-44 .hold { translate: -26px 4px; }
+    .keypos-0 .hold.glyph, .keypos-1 .hold.glyph, .keypos-2 .hold.glyph, .keypos-3 .hold.glyph, .keypos-4 .hold.glyph, .keypos-5 .hold.glyph, .keypos-13 .hold.glyph, .keypos-14 .hold.glyph, .keypos-15 .hold.glyph, .keypos-16 .hold.glyph, .keypos-17 .hold.glyph, .keypos-18 .hold.glyph, .keypos-28 .hold.glyph, .keypos-29 .hold.glyph, .keypos-30 .hold.glyph, .keypos-31 .hold.glyph, .keypos-32 .hold.glyph, .keypos-33 .hold.glyph, .keypos-42 .hold.glyph, .keypos-43 .hold.glyph, .keypos-44 .hold.glyph { translate: -26px 2px; }
+    .shifted.mdi\:alpha-w-box { translate: 0px 8px; }
+    .keypos-38 .shifted.mdi\:alpha-w-box, .keypos-39 .shifted.mdi\:alpha-w-box { translate: 0px 20px; }
+    .keypos-38 .hold.mdi\:gesture-tap-hold, .keypos-39 .hold.mdi\:gesture-tap-hold { translate: 0px -20px; }
+    .key .mdi\:toggle-switch ~ .mdi\:usb { translate: -22px 26px; }
+    .key .mdi\:toggle-switch ~ .mdi\:bluetooth { translate: 22px -26px; }
+    .hold.mdi\:desktop-classic ~ .shifted { translate: -33px 48px; font-size: 9px; }
+    .hold.mdi\:bluetooth-connect ~ .shifted { translate: -33px 48px; font-size: 9px; }
+  
   footer_text: ''
   style_layer_activators: true
   glyphs: {}
@@ -1160,7 +1259,6 @@ parse_config:
       d: true
     Kill_App:
       d: true
-
 
   zmk_preamble: '#define KEYMAP_DRAWER'
   zmk_additional_includes: []
