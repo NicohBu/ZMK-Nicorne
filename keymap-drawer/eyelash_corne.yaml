@@ -14,7 +14,7 @@ layers:
   - {t: U, h: Ú}
   - {t: Q, h: '@'}
   - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:microsoft-windows$$'}
+  - $$mdi:microsoft-windows$$
   - H
   - {t: A, h: Á}
   - {t: R, h: '$$mdi:microsoft-windows$$'}
