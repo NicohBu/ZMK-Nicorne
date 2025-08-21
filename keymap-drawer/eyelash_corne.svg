@@ -869,19 +869,18 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <g transform="translate(902, 321) rotate(-24.0)" class="key keypos-45">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:keyboard-space" xlink:href="#mdi:keyboard-space" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:keyboard-space"/>
-<use href="#mdi:numeric" xlink:href="#mdi:numeric" x="-8" y="18" height="16" width="16.0" class="key hold glyph mdi:numeric"/>
+<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-8" y="18" height="16" width="16.0" class="key hold glyph mdi:apple-keyboard-shift"/>
 </g>
 <g transform="translate(993, 299) rotate(-12.0)" class="key keypos-46">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:keyboard-tab" xlink:href="#mdi:keyboard-tab" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:keyboard-tab"/>
-<use href="#mdi:apple-keyboard-shift" xlink:href="#mdi:apple-keyboard-shift" x="-8" y="18" height="16" width="16.0" class="key hold glyph mdi:apple-keyboard-shift"/>
+<use href="#mdi:numeric" xlink:href="#mdi:numeric" x="-8" y="18" height="16" width="16.0" class="key hold glyph mdi:numeric"/>
 </g>
 <g transform="translate(1080, 290)" class="key keypos-47">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
 <use href="#mdi:backspace-reverse-outline" xlink:href="#mdi:backspace-reverse-outline" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:backspace-reverse-outline"/>
-<a href="#Fn">
-<text x="0" y="34" class="key hold layer-activator">Fn</text>
-</a></g>
+<use href="#mdi:apple-keyboard-control" xlink:href="#mdi:apple-keyboard-control" x="-8" y="18" height="16" width="16.0" class="key hold glyph mdi:apple-keyboard-control"/>
+</g>
 <g class="combo combopos-0">
 <rect rx="4" ry="4" x="25" y="95" width="30" height="30" class="combo"/>
 <use href="#mdi:keyboard-close" xlink:href="#mdi:keyboard-close" x="29" y="99" height="22" width="22.0" class="combo tap glyph mdi:keyboard-close"/>
@@ -1649,8 +1648,9 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(1080, 290)" class="key held alternate keypos-47">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key held alternate"/>
+<g transform="translate(1080, 290)" class="key trans keypos-47">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g class="combo combopos-0">
 <rect rx="4" ry="4" x="1345" y="95" width="30" height="30" class="combo"/>
