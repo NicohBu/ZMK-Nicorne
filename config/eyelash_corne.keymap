@@ -44,11 +44,6 @@
     acceleration-exponent = <1>;
 };
 
-&mt {
-    tapping-term-ms = <150>;
-    hold-while-undecided;
-};
-
 / {
     behaviors {
         bt_encoder: bt_encoder {
@@ -161,6 +156,17 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LALT)>;
+        };
+
+        mt_hold: mt_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_HOLD";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "hold-preferred";
+            hold-while-undecided;
         };
     };
 
@@ -341,10 +347,10 @@
         Alpha_Ctm {
             display-name = "ROCORN";
             bindings = <
-&kp ESC   &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F  &kp P              &kp G                                        &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &kp BACKSPACE
-&kp LWIN  &kp H              &tilde_kp A A      &hrm LGUI R        &shortcut LC(T) T  &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &lt 2 ES_STAR
-&kp LALT  &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K              &shortcut LC(C) C  &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 3
-                                                &mt LCTRL DEL      &mt LSHIFT TAB     &lt_hold 3 ENTER                                                            &lt 4 SPACE            &mt RSHIFT TAB         &lt 3 DEL
+&kp ESC   &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F   &kp P                &kp G                                        &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &kp BACKSPACE
+&kp LWIN  &kp H              &tilde_kp A A      &hrm LGUI R         &shortcut LC(T) T    &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &lt 2 ES_STAR
+&kp LALT  &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K               &shortcut LC(C) C    &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 3
+                                                &mt_hold LCTRL DEL  &mt_hold LSHIFT TAB  &lt_hold 3 ENTER                                                            &mt LSHIFT SPACE       &lt_hold 4 TAB         &mt_hold RCTRL DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
