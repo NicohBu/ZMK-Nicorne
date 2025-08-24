@@ -932,6 +932,22 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <text x="180" y="260" class="combo tap">FN</text>
 <text x="180" y="271" class="combo hold"><tspan style="font-size: 75%">+MOD</tspan></text>
 </g>
+<g class="combo combopos-10">
+<path d="M180,180 l119,94" class="combo"/>
+<path d="M180,180 l-119,-94" class="combo"/>
+<rect rx="4" ry="4" x="165" y="165" width="30" height="30" class="combo"/>
+<text x="180" y="180" class="combo tap">
+<tspan x="180" dy="-0.5em" style="font-size: 60%">LA(</tspan><tspan x="180" dy="1.0em" style="font-size: 60%">LG(S…</tspan>
+</text>
+</g>
+<g class="combo combopos-11">
+<path d="M1220,180 l-119,94" class="combo"/>
+<path d="M1220,180 l119,-94" class="combo"/>
+<rect rx="4" ry="4" x="1205" y="165" width="30" height="30" class="combo"/>
+<text x="1220" y="180" class="combo tap">
+<tspan x="1220" dy="-0.5em" style="font-size: 60%">LA(</tspan><tspan x="1220" dy="1.0em" style="font-size: 60%">LG(S…</tspan>
+</text>
+</g>
 </g>
 </g>
 <g transform="translate(0, 375)" class="layer-QWERTY">

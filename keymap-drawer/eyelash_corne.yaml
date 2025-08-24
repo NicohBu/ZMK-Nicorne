@@ -281,3 +281,9 @@ combos:
   d: true
 - p: [42, 28]
   k: {t: FN, h: +MOD}
+- p: [42, 0]
+  k: LA(LG(SPACE))
+  l: [ROCORN]
+- p: [47, 12]
+  k: LA(LG(SPACE))
+  l: [ROCORN]
