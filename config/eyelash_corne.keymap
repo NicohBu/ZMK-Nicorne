@@ -341,6 +341,20 @@
             timeout-ms = <100>;
             slow-release;
         };
+
+        L_Pallet {
+            bindings = <&kp LA(LG(SPACE))>;
+            key-positions = <42 0>;
+            timeout-ms = <30>;
+            layers = <0>;
+        };
+
+        R_Pallet {
+            bindings = <&kp LA(LG(SPACE))>;
+            key-positions = <47 12>;
+            layers = <0>;
+            timeout-ms = <30>;
+        };
     };
 
     keymap {
