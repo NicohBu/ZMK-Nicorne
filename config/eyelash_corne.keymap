@@ -44,7 +44,7 @@
     acceleration-exponent = <1>;
 };
 
-&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE SPACE>; };
+&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE SPACE LBRC NUBS>; };
 
 / {
     behaviors {
@@ -260,20 +260,17 @@
         Toggle_Qwerty {
             bindings = <&tog 1>;
             key-positions = <13 0>;
-            timeout-ms = <100>;
             layers = <0 1>;
         };
 
         Toggle_SYM_NUM {
             bindings = <&tog 4>;
             key-positions = <27 12>;
-            timeout-ms = <100>;
         };
 
         MO_SYM_NUM {
             bindings = <&mo 4>;
             key-positions = <33 32>;
-            timeout-ms = <100>;
             slow-release;
         };
 
@@ -342,18 +339,9 @@
             slow-release;
         };
 
-        L_Pallet {
-            bindings = <&kp LA(LG(SPACE))>;
-            key-positions = <42 0>;
-            timeout-ms = <30>;
-            layers = <0>;
-        };
-
-        R_Pallet {
-            bindings = <&kp LA(LG(SPACE))>;
-            key-positions = <47 12>;
-            layers = <0>;
-            timeout-ms = <30>;
+        CTRL+V {
+            bindings = <&kp LC(V)>;
+            key-positions = <22 23 24>;
         };
     };
 
