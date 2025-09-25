@@ -933,11 +933,15 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <text x="180" y="271" class="combo hold"><tspan style="font-size: 75%">+MOD</tspan></text>
 </g>
 <g class="combo combopos-10">
-<path d="M1040,130 l-54,6" class="combo"/>
-<path d="M1040,130 l54,-6" class="combo"/>
-<rect rx="4" ry="4" x="1025" y="115" width="30" height="30" class="combo"/>
-<text x="1040" y="130" class="combo tap">
-<tspan x="1040" dy="-0.5em">LC(</tspan><tspan x="1040" dy="1.0em">V)</tspan>
+<rect rx="4" ry="4" x="985" y="119" width="30" height="30" class="combo"/>
+<text x="1000" y="134" class="combo tap">
+<tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">V)</tspan>
+</text>
+</g>
+<g class="combo combopos-11">
+<rect rx="4" ry="4" x="985" y="199" width="30" height="30" class="combo"/>
+<text x="1000" y="214" class="combo tap">
+<tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">C)</tspan>
 </text>
 </g>
 </g>
@@ -1200,11 +1204,15 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <text x="180" y="271" class="combo hold"><tspan style="font-size: 75%">+MOD</tspan></text>
 </g>
 <g class="combo combopos-8">
-<path d="M1040,130 l-54,6" class="combo"/>
-<path d="M1040,130 l54,-6" class="combo"/>
-<rect rx="4" ry="4" x="1025" y="115" width="30" height="30" class="combo"/>
-<text x="1040" y="130" class="combo tap">
-<tspan x="1040" dy="-0.5em">LC(</tspan><tspan x="1040" dy="1.0em">V)</tspan>
+<rect rx="4" ry="4" x="985" y="119" width="30" height="30" class="combo"/>
+<text x="1000" y="134" class="combo tap">
+<tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">V)</tspan>
+</text>
+</g>
+<g class="combo combopos-9">
+<rect rx="4" ry="4" x="985" y="199" width="30" height="30" class="combo"/>
+<text x="1000" y="214" class="combo tap">
+<tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">C)</tspan>
 </text>
 </g>
 </g>
@@ -1443,11 +1451,15 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <text x="180" y="271" class="combo hold"><tspan style="font-size: 75%">+MOD</tspan></text>
 </g>
 <g class="combo combopos-6">
-<path d="M1040,130 l-54,6" class="combo"/>
-<path d="M1040,130 l54,-6" class="combo"/>
-<rect rx="4" ry="4" x="1025" y="115" width="30" height="30" class="combo"/>
-<text x="1040" y="130" class="combo tap">
-<tspan x="1040" dy="-0.5em">LC(</tspan><tspan x="1040" dy="1.0em">V)</tspan>
+<rect rx="4" ry="4" x="985" y="119" width="30" height="30" class="combo"/>
+<text x="1000" y="134" class="combo tap">
+<tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">V)</tspan>
+</text>
+</g>
+<g class="combo combopos-7">
+<rect rx="4" ry="4" x="985" y="199" width="30" height="30" class="combo"/>
+<text x="1000" y="214" class="combo tap">
+<tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">C)</tspan>
 </text>
 </g>
 </g>
@@ -1717,11 +1729,15 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <text x="180" y="271" class="combo hold"><tspan style="font-size: 75%">+MOD</tspan></text>
 </g>
 <g class="combo combopos-8">
-<path d="M1040,130 l-54,6" class="combo"/>
-<path d="M1040,130 l54,-6" class="combo"/>
-<rect rx="4" ry="4" x="1025" y="115" width="30" height="30" class="combo"/>
-<text x="1040" y="130" class="combo tap">
-<tspan x="1040" dy="-0.5em">LC(</tspan><tspan x="1040" dy="1.0em">V)</tspan>
+<rect rx="4" ry="4" x="985" y="119" width="30" height="30" class="combo"/>
+<text x="1000" y="134" class="combo tap">
+<tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">V)</tspan>
+</text>
+</g>
+<g class="combo combopos-9">
+<rect rx="4" ry="4" x="985" y="199" width="30" height="30" class="combo"/>
+<text x="1000" y="214" class="combo tap">
+<tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">C)</tspan>
 </text>
 </g>
 </g>
@@ -1991,11 +2007,15 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <text x="180" y="271" class="combo hold"><tspan style="font-size: 75%">+MOD</tspan></text>
 </g>
 <g class="combo combopos-8">
-<path d="M1040,130 l-54,6" class="combo"/>
-<path d="M1040,130 l54,-6" class="combo"/>
-<rect rx="4" ry="4" x="1025" y="115" width="30" height="30" class="combo"/>
-<text x="1040" y="130" class="combo tap">
-<tspan x="1040" dy="-0.5em">LC(</tspan><tspan x="1040" dy="1.0em">V)</tspan>
+<rect rx="4" ry="4" x="985" y="119" width="30" height="30" class="combo"/>
+<text x="1000" y="134" class="combo tap">
+<tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">V)</tspan>
+</text>
+</g>
+<g class="combo combopos-9">
+<rect rx="4" ry="4" x="985" y="199" width="30" height="30" class="combo"/>
+<text x="1000" y="214" class="combo tap">
+<tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">C)</tspan>
 </text>
 </g>
 </g>
