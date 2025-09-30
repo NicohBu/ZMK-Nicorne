@@ -943,6 +943,7 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <text x="1000" y="214" class="combo tap">
 <tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">C)</tspan>
 </text>
+<use href="#mdi:content-cut" xlink:href="#mdi:content-cut" x="992" y="209" height="16" width="16.0" class="combo hold glyph mdi:content-cut"/>
 </g>
 </g>
 </g>
@@ -1214,6 +1215,7 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <text x="1000" y="214" class="combo tap">
 <tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">C)</tspan>
 </text>
+<use href="#mdi:content-cut" xlink:href="#mdi:content-cut" x="992" y="209" height="16" width="16.0" class="combo hold glyph mdi:content-cut"/>
 </g>
 </g>
 </g>
@@ -1461,6 +1463,7 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <text x="1000" y="214" class="combo tap">
 <tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">C)</tspan>
 </text>
+<use href="#mdi:content-cut" xlink:href="#mdi:content-cut" x="992" y="209" height="16" width="16.0" class="combo hold glyph mdi:content-cut"/>
 </g>
 </g>
 </g>
@@ -1739,6 +1742,7 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <text x="1000" y="214" class="combo tap">
 <tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">C)</tspan>
 </text>
+<use href="#mdi:content-cut" xlink:href="#mdi:content-cut" x="992" y="209" height="16" width="16.0" class="combo hold glyph mdi:content-cut"/>
 </g>
 </g>
 </g>
@@ -2017,6 +2021,7 @@ path.combo { stroke-width: 1; stroke: var(--color--combo--dendron); fill: none; 
 <text x="1000" y="214" class="combo tap">
 <tspan x="1000" dy="-0.5em">LC(</tspan><tspan x="1000" dy="1.0em">C)</tspan>
 </text>
+<use href="#mdi:content-cut" xlink:href="#mdi:content-cut" x="992" y="209" height="16" width="16.0" class="combo hold glyph mdi:content-cut"/>
 </g>
 </g>
 </g>
