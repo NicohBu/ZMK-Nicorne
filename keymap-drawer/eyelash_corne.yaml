@@ -240,7 +240,7 @@ layers:
   - {t: ., h: ':'}
   - {t: '$$mdi:keyboard-return$$', h: '='}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: '$$mdi:apple-keyboard-caps$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: ▽, type: trans}
   - {t: '$$mdi:keyboard-return$$', h: '='}
   - {t: '0', h: '#', s: '='}
@@ -285,3 +285,5 @@ combos:
   k: LC(V)
 - p: [36, 37]
   k: {t: LC(C), h: '$$mdi:content-cut$$'}
+- p: [12, 11]
+  k: {t: '$$mdi:backspace$$', type: backspace}
