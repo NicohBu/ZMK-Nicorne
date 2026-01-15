@@ -250,6 +250,13 @@
 
             label = "LAYER_MOD";
         };
+
+        Parentesis: Parentesis {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "PARENTESIS";
+        };
     };
 
     combos {
@@ -259,13 +266,13 @@
 
         Toggle_Qwerty {
             bindings = <&tog 1>;
-            key-positions = <13 0>;
+            key-positions = <13 0 12 27>;
             layers = <0 1>;
         };
 
         Toggle_SYM_NUM {
             bindings = <&tog 4>;
-            key-positions = <27 12>;
+            key-positions = <>;
         };
 
         MO_SYM_NUM {
@@ -306,7 +313,7 @@
 
         R_ESC {
             bindings = <&kp ESC>;
-            key-positions = <7 8>;
+            key-positions = <7 8 9>;
             timeout-ms = <100>;
         };
 
@@ -341,17 +348,22 @@
 
         Pegar {
             bindings = <&kp LC(V)>;
-            key-positions = <22 23>;
+            key-positions = <23 24 23 22>;
         };
 
         Copiar_Cortar {
             bindings = <&shortcut LC(X) LC(C)>;
-            key-positions = <36 37>;
+            key-positions = <36 37 38>;
         };
 
         R_BSPC {
             bindings = <&kp BSPC>;
             key-positions = <12 11>;
+        };
+
+        Parentesis {
+            bindings = <&Parentesis>;
+            key-positions = <9 10 8>;
         };
     };
 
@@ -364,7 +376,7 @@
 &kp ESC   &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F   &kp P                &kp G                                        &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &kp BACKSPACE
 &kp LWIN  &kp H              &tilde_kp A A      &hrm LGUI R         &shortcut LC(T) T    &shortcut LC(V) V                  &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &lt 2 ES_STAR
 &kp LALT  &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K               &shortcut LC(C) C    &kp B              &kp CAPSLOCK              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 3
-                                                &mt_hold LCTRL DEL  &mt_hold LSHIFT TAB  &lt_hold 3 ENTER                                                            &lt 4 SPACE            &mt_hold LSHIFT TAB    &mt_hold RCTRL DEL
+                                                &mt_hold LCTRL DEL  &mt_hold LSHIFT TAB  &lt_hold 3 ENTER                                                            &lt 4 SPACE            &mt_hold LSHIFT TAB    &mt_hold RALT DEL
             >;
 
             sensor-bindings = <&inc_dec_kp LS(RIGHT) LS(LEFT)>;
@@ -387,7 +399,7 @@
 &trans  &kp F13  &kp F14  &kp F15  &kp F16  &kp F17                        &none            &kp K_MUTE    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &trans
 &trans  &kp F18  &kp F19  &kp F20  &kp F21  &kp F22              &mkp MB4  &none  &mkp MB5  &kp K_VOL_UP  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &trans
 &trans  &none    &none    &none    &kp F23  &kp F24    &trans              &none            &kp K_VOL_DN  &kp K_PREVIOUS  &kp K_PP        &kp K_NEXT       &none           &trans
-                          &trans   &trans   &mkp RCLK                                       &mkp LCLK     &mkp MCLK       &trans
+                          &trans   &trans   &mkp RCLK                                       &mkp LCLK     &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
