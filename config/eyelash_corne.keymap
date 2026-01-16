@@ -254,7 +254,7 @@
         Parentesis: Parentesis {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            bindings = <&kp ES_LPAR &kp ES_RPAR &kp LEFT>;
             label = "PARENTESIS";
         };
     };
