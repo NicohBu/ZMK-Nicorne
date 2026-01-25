@@ -373,10 +373,10 @@
         Alpha_Ctm {
             display-name = "ROCORN";
             bindings = <
-&kp ESC   &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F   &kp P                &kp G                                      &kp UP                         &kp J                  &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &kp BACKSPACE
-&kp LWIN  &kp H              &tilde_kp A A      &hrm LGUI R         &shortcut LC(T) T    &shortcut LC(V) V                &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut LG(LS(S)) S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &lt 2 ES_STAR
-&kp LALT  &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K               &shortcut LC(C) C    &kp B              &kp C_MUTE              &kp DOWN                       &kp ES_N_TILDE         &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 3
-                                                &mt_hold LCTRL DEL  &mt_hold LSHIFT TAB  &lt_hold 3 ENTER                                                          &lt 4 SPACE            &mt_hold LSHIFT TAB    &mt_hold RALT DEL
+&kp ESC   &shortcut LC(Y) Y  &kp W              &shortcut LC(F) F   &kp P                &kp G                                      &kp UP                         &kp J                    &kp L                  &tilde_kp I I             &tilde_kp U U           &shortcut ES_AT Q  &kp BACKSPACE
+&kp LWIN  &kp H              &tilde_kp A A      &hrm LGUI R         &shortcut LC(T) T    &shortcut LC(V) V                &kp LEFT  &shortcut END HOME  &kp RIGHT  &shortcut PRINTSCREEN S  &hrm LEFT_ALT N        &tilde_kp E E             &hrm RCTRL D            &tilde_kp O O      &lt 2 ES_STAR
+&kp LALT  &shortcut LC(Z) Z  &shortcut LC(X) X  &kp K               &shortcut LC(C) C    &kp B              &kp C_MUTE              &kp DOWN                       &kp ES_N_TILDE           &shortcut C_AL_MAIL M  &shortcut ES_LT ES_COMMA  &shortcut ES_GT ES_DOT  &kp ES_MINUS       &mo 3
+                                                &mt_hold LCTRL DEL  &mt_hold LSHIFT TAB  &lt_hold 3 ENTER                                                          &lt 4 SPACE              &mt_hold LSHIFT TAB    &mt_hold RALT DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
